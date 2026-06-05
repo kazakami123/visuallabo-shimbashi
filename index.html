@@ -37,6 +37,7 @@
   "sameAs": ["https://instagram.com/visuallabo_dietsalon/"]
 }
 </script>
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root{
   --ink:#1a1a1a;
@@ -370,6 +371,19 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:70px 0 40px}
   </div>
 </section>
 
+<!-- NEWS -->
+<section style="background:var(--paper-2);border-bottom:1px solid var(--line);padding:30px 0">
+  <div class="wrap" style="max-width:880px">
+    <div style="display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;margin-bottom:6px">
+      <span style="font-family:'Outfit';font-size:12px;letter-spacing:.3em;color:var(--gold)">NEWS</span>
+    </div>
+    <div style="display:grid;gap:10px;font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.7">
+      <div><span style="font-family:'Outfit';font-size:12px;color:var(--ink-mute);margin-right:14px">2026.07</span>VISUAL LABO 新橋店、7月中旬にOPEN予定。<b style="color:var(--ink);font-weight:500">先行予約・モニター様を受付中</b>です。</div>
+      <div><span style="font-family:'Outfit';font-size:12px;color:var(--ink-mute);margin-right:14px">2026.06</span>公式サイトを公開しました。最新情報は<a href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" style="color:var(--gold);border-bottom:1px solid var(--gold)">公式LINE</a>でお届けします。</div>
+    </div>
+  </div>
+</section>
+
 <!-- WHAT WE DO (一目でわかる) -->
 <section class="sec" style="background:var(--paper);padding-top:clamp(64px,9vw,110px);padding-bottom:clamp(64px,9vw,110px)">
   <div class="wrap">
@@ -647,7 +661,8 @@ render();
         <img loading="lazy" src="images/access-map.png" alt="VISUAL LABO 新橋店 アクセスマップ" style="width:100%;height:auto;border:1px solid var(--line);border-radius:2px;display:block">
       </div>
     </div>
-    <div style="margin-top:26px;text-align:center">
+    <p class="rv" style="margin-top:24px;text-align:center;font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.9">「VORT新橋一丁目」ビルの<b style="color:var(--ink);font-weight:500">3階</b>です。1階エントランスから、エレベーターで3Fへお上がりください。</p>
+    <div style="margin-top:20px;text-align:center">
       <a class="btn btn-dark" href="https://share.google/ohKDqkLGRMrle61JZ" target="_blank" rel="noopener">Googleマップで開く →</a>
     </div>
   </div>
@@ -736,6 +751,15 @@ render();
   </div>
 </section>
 
+<!-- STAFF -->
+<section class="sec" style="padding:clamp(56px,8vw,90px) 0">
+  <div class="wrap" style="text-align:center;max-width:720px">
+    <div class="kicker rv" style="justify-content:center">Staff</div>
+    <h2 class="lead rv" style="font-size:clamp(22px,3.6vw,32px)">スタッフ紹介は、<em>近日公開</em>。</h2>
+    <p class="body-txt rv" style="margin-top:20px">OPENに向けてトレーニング中のメンバーを、順次ご紹介していきます。<br>「誰が担当してくれるのか」も、安心材料のひとつだから。</p>
+  </div>
+</section>
+
 <!-- RECRUIT -->
 <section class="sec" style="background:var(--paper-2);padding:clamp(56px,8vw,90px) 0">
   <div class="wrap" style="text-align:center">
@@ -770,7 +794,7 @@ render();
         </div>
         <div class="col">
           <h5>INFO</h5>
-          <a href="menu.html#vip">VIP MENU</a>
+          <a href="vip.html">VIP MENU</a>
           <a href="guide.html">会員制度ガイド</a>
           <a href="beforeafter.html">変化の記録</a>
           <a href="sauna.html">サウナ</a>
