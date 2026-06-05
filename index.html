@@ -126,6 +126,27 @@ header.solid .burger span{background:var(--ink)}
 /* お客様の声 */
 .voice-band{background:var(--paper-2);border:1px solid var(--line);border-radius:2px;padding:clamp(32px,5vw,48px);text-align:center}
 @media(max-width:600px){.nayami-grid{grid-template-columns:1fr}.reason-list{grid-template-columns:1fr}}
+/* 30秒診断 */
+.sh-wrap{max-width:720px;margin:48px auto 0;background:var(--white);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,5vw,46px)}
+.sh-prog{font-family:"Outfit";font-size:11px;letter-spacing:.22em;color:var(--gold);margin-bottom:16px}
+.sh-q{font-size:clamp(16px,2.6vw,19px);font-weight:500;letter-spacing:.02em;margin-bottom:20px;line-height:1.6}
+.sh-opts{display:grid;gap:10px}
+.sh-opt{text-align:left;padding:15px 18px;border:1px solid var(--line);border-radius:3px;background:var(--paper);cursor:pointer;font-size:14px;font-weight:300;font-family:"Noto Sans JP";color:var(--ink);transition:.2s;line-height:1.5}
+.sh-opt:hover{border-color:var(--gold);background:var(--white);transform:translateX(2px)}
+.sh-back{margin-top:18px;background:none;border:none;font-size:12px;color:var(--ink-mute);cursor:pointer;font-family:"Noto Sans JP"}
+.sh-res .sh-head{font-family:"Outfit";font-size:11px;letter-spacing:.22em;color:var(--gold);margin-bottom:14px}
+.sh-res .sh-future{font-size:clamp(19px,3.2vw,25px);font-weight:300;line-height:1.6;margin-bottom:22px}
+.sh-res .sh-future b{color:var(--gold);font-weight:500}
+.sh-card{border:1px solid var(--gold);border-radius:4px;padding:24px 22px;margin-bottom:18px;background:var(--paper)}
+.sh-card .m{font-family:"Outfit";font-size:12px;letter-spacing:.18em;color:var(--ink-mute)}
+.sh-card .n{font-size:clamp(18px,3vw,23px);font-weight:500;margin:6px 0 4px;letter-spacing:.02em}
+.sh-card .c{font-size:14px;color:var(--ink-soft);font-weight:300}
+.sh-card .p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
+.sh-card .p b{color:var(--ink);font-weight:500;font-size:16px}
+.sh-why{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.95;margin-bottom:20px}
+.sh-note{font-size:11.5px;color:var(--ink-mute);line-height:1.8;margin-top:18px}
+.sh-ctas{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:560px){.sh-ctas .btn{width:100%;justify-content:center}}
 @media(max-width:560px){.closer-band{margin-top:30px;padding:24px 16px}.closer-band .cb-main{font-size:14px;line-height:1.85}.closer-band .cb-note{font-size:10.5px;margin-top:12px}}
 
 /* Concept */
@@ -372,6 +393,67 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:70px 0 40px}
     <p class="rv" style="text-align:center;margin-top:38px;font-size:clamp(16px,2.6vw,21px);font-weight:300;line-height:1.7">ひとつでも当てはまったら——<br><b style="color:var(--gold);font-weight:500">寝ながら整える、VISUAL LABO へ。</b></p>
   </div>
 </section>
+
+<!-- 30秒診断 -->
+<section class="sec" id="shindan" style="background:var(--paper)">
+  <div class="wrap">
+    <div style="text-align:center" class="rv">
+      <div class="kicker" style="justify-content:center">30-Second Check</div>
+      <h2 class="lead">あなたに合うメニューを、<em>30秒で診断</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:20px auto 0">4つの質問に答えるだけ。あなたにおすすめのメニュー・コース・時間がわかります。</p>
+    </div>
+    <div class="sh-wrap rv" id="shBox"></div>
+  </div>
+</section>
+<script>
+(function(){
+const QS=[
+ {q:'Q1. いちばん気になるのは？',opts:[['ぽっこり下腹','lower'],['くびれ・ウエストライン','waist'],['横腹・腰・背中の段差（浮輪肉）','ukiwa'],['反り腰・姿勢のくせ','sori'],['お腹の張り・ためこみがち','hari'],['複数の部位／全体的に','multi']]},
+ {q:'Q2. どうなれたら、うれしい？',opts:[['好きな服を、きれいに着たい','a'],['横から見たラインに自信が欲しい','b'],['後ろ姿に自信が欲しい','c'],['姿勢よく、疲れにくい毎日にしたい','d'],['軽い体で、仕事に集中したい','e']]},
+ {q:'Q3. 運動やダイエットは？',opts:[['いつも続かない…','easy'],['時間がなくて、できない','short'],['しっかり変えたい気持ちはある','hard'],['まずはお試しから','trial']]},
+ {q:'Q4. 1回にかけられる時間は？',opts:[['60分くらい','60'],['90分くらい','90'],['120分しっかり','120'],['おまかせ／わからない','auto']]}
+];
+const COURSE={
+ lower:{no:'02',name:'下っ腹バイバイコース',t:60,why:'ぽっこり下腹には、下腹を中心に温め＋EMSで集中アプローチする「下っ腹バイバイコース」。骨盤まわり〜下腹を整えていきます。'},
+ waist:{no:'03',name:'くびれメイクコース',t:60,why:'くびれが欲しい方には、脇腹〜ウエストを中心にアプローチする「くびれメイクコース」。横から見たラインを整えます。'},
+ ukiwa:{no:'05',name:'浮輪肉撃退コース',t:90,why:'浮輪肉は前面だけでは完結しないため、仰向け＋背面の両方からケアできる90分の「浮輪肉撃退コース」がおすすめです。'},
+ sori:{no:'07',name:'反り腰リセットコース',t:90,why:'反り腰で下腹が出て見える方には、腰・骨盤まわり・下腹を中心に整える90分の「反り腰リセットコース」がおすすめです。'},
+ hari:{no:'01',name:'お腹スッキリ腸活コース',t:60,why:'お腹の張り・ためこみが気になる方には、お腹全体を温めながらドレナージュ中心で流す「お腹スッキリ腸活コース」。'},
+ multi:{no:'FREE',name:'組み合わせ自由',t:120,why:'複数の部位が気になる方には、30分×3／45分×2／90分×1で自由に組み合わせられる120分がおすすめです。'}};
+const FUTURE={a:'好きな服を、きれいに着られる自分へ。',b:'横から見たラインに、自信を。',c:'後ろ姿から、変わる自分へ。',d:'姿勢から整う、疲れにくい毎日へ。',e:'軽やかな体で、毎日にキレを。'};
+const PRICE={60:'¥3,980',90:'¥6,980',120:'¥9,980'};
+let step=0,ans=[];
+const box=document.getElementById('shBox');
+function render(){
+ if(step<QS.length){
+  const d=QS[step];
+  box.innerHTML='<div class="sh-prog">QUESTION '+(step+1)+' / '+QS.length+'</div><div class="sh-q">'+d.q+'</div><div class="sh-opts">'+d.opts.map((o,i)=>'<button class="sh-opt" data-i="'+i+'">'+o[0]+'</button>').join('')+'</div>'+(step>0?'<button class="sh-back">← ひとつ戻る</button>':'');
+  box.querySelectorAll('.sh-opt').forEach(b=>b.onclick=()=>{ans[step]=d.opts[+b.dataset.i][1];step++;render();});
+  const bk=box.querySelector('.sh-back'); if(bk)bk.onclick=()=>{step--;render();};
+ }else{
+  const c=COURSE[ans[0]];
+  let t=c.t;
+  if(ans[3]==='90'&&t<90)t=90; if(ans[3]==='120')t=120;
+  const hyper=(ans[2]==='easy'||ans[2]==='short')&&c.t===60&&ans[3]!=='120';
+  let html='<div class="sh-res"><div class="sh-head">YOUR RESULT</div>';
+  html+='<div class="sh-future">目指すのは——<br><b>'+FUTURE[ans[1]]+'</b></div>';
+  if(hyper){
+   html+='<div class="sh-card"><div class="m">RECOMMENDED ／ まずはここから</div><div class="n">HYPER EMS DIET（60分）</div><div class="c">貼って過ごすだけ。がんばらない筋肉強化メニュー</div><div class="p">初回体験 <b>¥1,980</b>（満足保証つき）</div></div>';
+   html+='<div class="sh-why">続かない・時間がない方こそ、まずは「貼って過ごすだけ」のHYPER EMS DIETで習慣づくりから。慣れてきたら、WAIST DESIGN「'+c.name+'」で集中ケアへステップアップするのがおすすめです。</div>';
+  }else{
+   html+='<div class="sh-card"><div class="m">RECOMMENDED</div><div class="n">WAIST DESIGN '+t+'　'+(ans[0]==='multi'?'組み合わせ自由':'「'+c.name+'」')+'</div><div class="c">高周波MystiCore®＋手技＋EMSの集中メニュー</div><div class="p">初回体験 <b>'+PRICE[t]+'</b>（満足保証つき）</div></div>';
+   html+='<div class="sh-why">'+c.why+(t>c.t?'　お時間に余裕がある分は、サウナや気になる部位の追加ケアにも使えます。':'')+'</div>';
+  }
+  html+='<div class="sh-ctas"><a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">この内容で初回体験を予約</a><a class="btn btn-dark" href="menu.html">メニューを詳しく見る</a></div>';
+  html+='<div class="sh-note">※ 本診断は目安です。当日のカウンセリングで、お悩みや体の状態に合わせて最適なコースをご提案します。効果・感じ方には個人差があります。</div>';
+  html+='<button class="sh-back">← もう一度診断する</button></div>';
+  box.innerHTML=html;
+  box.querySelector('.sh-back').onclick=()=>{step=0;ans=[];render();};
+ }
+}
+render();
+})();
+</script>
 
 <!-- CONCEPT -->
 <section class="sec concept" id="concept">
