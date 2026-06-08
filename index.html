@@ -552,15 +552,16 @@ render();
   <div class="wrap">
     <div class="menu-head rv">
       <div class="kicker" style="justify-content:center">02 — Menu</div>
-      <h2 class="lead">2つの、<em>体型管理メニュー</em>。</h2>
+      <h2 class="lead">2つの、<em>通い方</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:22px auto 0">「自分で気軽に」も、「プロにしっかり整えてもらう」も。<br>あなたのなりたい度合いに合わせて選べます。</p>
     </div>
     <div class="menu-grid">
       <div class="mcard rv">
         <div class="mcard-img"><img loading="lazy" src="images/hyper-ems-diet.jpg" alt="HYPER EMS DIET" onerror="this.onerror=null;this.src='https://visuallabo-recruit-lp.pages.dev/images/04_misticore.jpg'"></div>
         <div class="mcard-body">
-          <div class="mno">MENU 01</div>
+          <div class="mno">MENU 01 ／ 貼って、寝てるだけ</div>
           <h3>HYPER EMS DIET</h3>
-          <div class="jp">お腹の集中トレーニング。</div>
+          <div class="jp">気軽に、続けたいあなたへ。</div>
           <p>60分／お腹にEMS＋低温RF。EMSパッドを貼って過ごす、筋肉強化メニュー。体型管理を習慣にしたい方へ。</p>
           <div class="tags"><span>短時間で続けたい</span><span>ジムが続かない</span><span>お腹まわりが気になる</span><span>腹筋をつけたい</span></div>
           <div class="price-from">初回体験・60分 <b>¥1,980</b></div>
@@ -569,16 +570,20 @@ render();
       <div class="mcard rv">
         <div class="mcard-img"><img loading="lazy" src="images/woman-treat.jpg" alt="WAIST DESIGN｜スタッフによる施術" onerror="this.onerror=null;this.src='https://visuallabo-recruit-lp.pages.dev/images/02_staff-treatment.jpg'"></div>
         <div class="mcard-body">
-          <div class="mno">MENU 02</div>
+          <div class="mno">MENU 02 ／ プロに、お任せ</div>
           <h3>WAIST DESIGN</h3>
-          <div class="jp">温めて、整えて、EMSで仕上げる。</div>
+          <div class="jp">しっかり整えたい、あなたへ。</div>
           <p>高周波MystiCore®でウエストを深部から温め、仕上げにHYPER EMS 30分。高周波の時間で選べる3プランの集中メニューです。</p>
           <div class="tags"><span>60｜高周波30分＋EMS30分</span><span>90｜高周波60分＋EMS30分</span><span>120｜高周波90分＋EMS30分</span></div>
           <div class="price-from">初回体験・60分 <b>¥3,980</b> 〜　<span style="color:var(--gold);font-size:12px">人気は WAIST DESIGN 90</span></div>
         </div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:50px" class="rv"><a class="btn btn-dark" href="menu.html">メニュー・料金をすべて見る</a></div>
+    <div class="rv" style="max-width:760px;margin:40px auto 0;background:var(--paper-2);border:1px solid var(--gold);border-radius:4px;padding:26px 28px">
+      <div style="font-size:16px;font-weight:500;color:var(--ink);margin-bottom:10px;letter-spacing:.02em">迷ったら、<span style="color:var(--gold)">WAIST DESIGN</span>の体験から。</div>
+      <p style="font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.95;margin:0">お腹まわりの厚みやお肉が気になる方は、まず<b style="color:var(--ink);font-weight:500">WAIST DESIGNで集中的に整えてから</b>、HYPER EMS DIET（貼るだけ）で習慣としてキープしていくのがおすすめ。気になる部分を先にケアするほうが、その後のボディメイクもスムーズです。</p>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="rv"><a class="btn btn-dark" href="menu.html">メニュー・料金をすべて見る</a></div>
   </div>
 </section>
 
@@ -757,14 +762,48 @@ render();
   </div>
 </section>
 
-<!-- お客様の声 -->
+<!-- ビフォーアフター -->
 <section class="sec" style="background:var(--paper)">
-  <div class="wrap narrow">
-    <div class="voice-band rv">
-      <div class="kicker" style="justify-content:center">Voice</div>
-      <h2 class="lead" style="margin-bottom:18px">お客様の声は、<em>これから</em>。</h2>
-      <p class="body-txt" style="max-width:560px;margin:0 auto 26px">VISUAL LABOは2026年7月中旬OPEN予定。実際のお客様の変化の記録は、ご本人の同意のもと、これから掲載していきます。今だけ、お得なモニター様も募集中です。</p>
-      <a class="btn btn-dark" href="beforeafter.html">変化の記録・モニター募集を見る</a>
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:44px" class="rv">
+      <div class="kicker" style="justify-content:center">Before / After</div>
+      <h2 class="lead">変わった人が、<em>ここにいます</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:22px auto 0">すべて、実際に施術を受けた方の記録（WAIST DESIGN 90）。<br>ご本人の同意のもと掲載しています。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="rv">
+      <figure style="margin:0"><img loading="lazy" src="images/ba-case1-front.jpg" alt="ビフォーアフター 正面｜WAIST DESIGN 90" style="display:block;width:100%;border:1px solid var(--line);border-radius:4px"></figure>
+      <figure style="margin:0"><img loading="lazy" src="images/ba-case3-side.jpg" alt="ビフォーアフター 側面｜WAIST DESIGN 90" style="display:block;width:100%;border:1px solid var(--line);border-radius:4px"></figure>
+      <figure style="margin:0"><img loading="lazy" src="images/ba-w1-back-2.jpg" alt="ビフォーアフター 背面｜WAIST DESIGN 90" style="display:block;width:100%;border:1px solid var(--line);border-radius:4px"></figure>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--ink-mute);margin-top:16px">※ 効果には個人差があります。</p>
+    <div style="text-align:center;margin-top:30px" class="rv"><a class="btn btn-dark" href="beforeafter.html">すべての変化の記録を見る →</a></div>
+  </div>
+</section>
+
+<!-- はじめ方の階段 -->
+<section class="sec" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:46px" class="rv">
+      <div class="kicker" style="justify-content:center">How to start</div>
+      <h2 class="lead">あなたの<em>はじめ方</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:22px auto 0">いきなり高い契約は不要です。まず¥1,980で試して、合えば続ける。それだけ。</p>
+    </div>
+    <div style="max-width:920px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="rv">
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:4px;padding:30px 24px;text-align:center">
+        <div class="serif" style="font-size:38px;color:var(--gold);line-height:1">01</div>
+        <h3 style="font-size:16px;font-weight:500;margin:12px 0 8px">まず、試す</h3>
+        <p style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.9">初回体験¥1,980（満足保証つき）。貼って寝るだけのHYPER EMS DIETで、まず体感。合わなければ返金です。</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gold);border-radius:4px;padding:30px 24px;text-align:center">
+        <div class="serif" style="font-size:38px;color:var(--gold);line-height:1">02</div>
+        <h3 style="font-size:16px;font-weight:500;margin:12px 0 8px">気軽に、続ける</h3>
+        <p style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.9">当日入会で入会金¥0。月額制で、無理なく習慣に。仕事帰りに通いながら、体型管理をあたりまえに。</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--line);border-radius:4px;padding:30px 24px;text-align:center">
+        <div class="serif" style="font-size:38px;color:var(--gold);line-height:1">03</div>
+        <h3 style="font-size:16px;font-weight:500;margin:12px 0 8px">しっかり、整える</h3>
+        <p style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.9">もっと変えたくなったら、プロが施術するWAIST DESIGNや、完全個室のVIPへ。なりたい度合いで選べます。</p>
+      </div>
     </div>
   </div>
 </section>
