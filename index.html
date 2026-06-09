@@ -118,14 +118,17 @@ header.solid .burger span{background:var(--ink)}
 .hero-bg{position:absolute;inset:0;z-index:-2}
 .hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.02)}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.4) 0%,rgba(10,10,10,.12) 36%,rgba(10,10,10,.74) 100%)}
-.hero-inner{position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:0 22px clamp(40px,7vw,84px);text-align:center}
-.hero-tag{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-size:11px;letter-spacing:.26em;opacity:.92;margin-bottom:22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
-.hero-tag .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.hero h1{font-weight:300;font-size:clamp(27px,7vw,58px);line-height:1.32;letter-spacing:.03em;margin-bottom:22px;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
-.hero h1 .big{display:block;font-size:1.32em;font-weight:400;letter-spacing:.04em;margin-top:8px}
-.hero-facts{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;margin-bottom:26px}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:0 24px clamp(44px,7vw,88px);text-align:left}
+.hero-tag{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-size:10.5px;letter-spacing:.24em;opacity:.9;margin-bottom:20px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+.hero-tag .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.hero-pre{font-size:clamp(14px,3.8vw,19px);font-weight:300;letter-spacing:.05em;opacity:.95;margin-bottom:10px;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1{font-weight:300;font-size:clamp(40px,12vw,92px);line-height:1.12;letter-spacing:.04em;margin-bottom:26px}
+.hero h1 .en-d{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-weight:400;letter-spacing:.06em}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:flex-start;margin-bottom:26px}
 .hero-facts span{font-size:12.5px;letter-spacing:.02em;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:7px 14px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
 .hero-facts span b{color:var(--gold);font-weight:600;font-family:"Futura","Century Gothic","Outfit"}
+.hero .cta-pair{justify-content:flex-start}
+.hero .cta-pair .btn{flex:0 1 auto}
 .scroll-i{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:3;font-family:"Futura","Century Gothic","Outfit";font-size:10px;letter-spacing:.3em;opacity:.8}
 
 /* generic card */
@@ -304,6 +307,10 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   .pc.full{flex-direction:column;align-items:flex-start}
   .opt-sauna{flex-wrap:wrap}
 }
+@media(max-width:540px){
+  .hero .cta-pair{flex-direction:column;width:100%}
+  .hero .cta-pair .btn{width:100%;max-width:none}
+}
 @media(max-width:430px){
   .ba-row{gap:7px}
   .ba-cap{font-size:10px}
@@ -349,7 +356,8 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   <div class="hero-bg"><img src="https://visuallabo-recruit-lp.pages.dev/images/00_hero-mainvisual.jpg" alt="寝ながら、お腹まわりの体型管理｜VISUAL LABO 新橋店"></div>
   <div class="hero-inner">
     <div class="hero-tag"><span>VISUAL LABO</span><span class="dot"></span><span>SHIMBASHI</span><span class="dot"></span><span>2026.7 OPEN</span></div>
-    <h1>ジムが続かなかった、あなたへ。<span class="big">寝ながら、お腹まわりの体型管理。</span></h1>
+    <p class="hero-pre">ジムが続かなかった、あなたへ。</p>
+    <h1>寝ながら<span class="en-d">DIET</span>。</h1>
     <div class="hero-facts">
       <span>新橋駅 <b>徒歩3分</b></span>
       <span>初回体験 <b>¥1,980</b></span>
