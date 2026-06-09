@@ -134,6 +134,10 @@ header.solid .burger span{background:var(--ink)}
 .card .cn{font-family:"Futura","Century Gothic","Outfit";font-size:30px;color:var(--gold);line-height:1}
 .card h3{font-size:17px;font-weight:500;letter-spacing:.02em;margin:10px 0 8px}
 .card p{font-size:14px;color:var(--ink-soft);font-weight:300;line-height:1.95}
+.link-card{display:block;transition:.25s}
+.link-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.link-card .lk{font-family:"Futura","Century Gothic","Outfit";font-size:10.5px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
+.link-card .ll{margin-top:12px;font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.02em}
 
 /* problem */
 .prob-card{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:22px 22px}
@@ -403,32 +407,10 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     <div class="access-grid" style="align-items:center;margin-bottom:clamp(28px,4vw,40px)">
       <figure class="rv" style="margin:0"><img loading="lazy" src="images/misticore-solo.jpg" alt="自社開発マシン MystiCore®｜高周波×EMS" style="border:1px solid var(--line);border-radius:8px" onerror="this.onerror=null;this.src='https://visuallabo-recruit-lp.pages.dev/images/04_misticore.jpg'"></figure>
       <div class="cards rv" style="gap:11px">
-        <div class="card"><h3 style="margin-top:0">高周波で、温める</h3><p>お腹まわりを、内側からじんわり温めます。冷えて固まりがちな深部にアプローチ。</p></div>
-        <div class="card"><h3 style="margin-top:0">EMSで、筋肉にアプローチ</h3><p>電気の刺激で、自分では動かしにくい筋肉にはたらきかけます。寝たまま、お腹まわりへ。</p></div>
-        <div class="card"><h3 style="margin-top:0">自社開発マシン MystiCore®</h3><p>手順が決まっているので施術が安定しやすく、はじめての方でも受けやすいのが特長です。</p></div>
+        <a class="card link-card" href="rf.html"><div class="lk">RADIO FREQUENCY</div><h3 style="margin-top:0">高周波で、温める</h3><p>お腹まわりを、内側からじんわり温めます。冷えて固まりがちな深部にアプローチ。</p><div class="ll">高周波を詳しく見る →</div></a>
+        <a class="card link-card" href="ems.html"><div class="lk">EMS</div><h3 style="margin-top:0">EMSで、筋肉にアプローチ</h3><p>電気の刺激で、自分では動かしにくい筋肉にはたらきかけます。寝たまま、お腹まわりへ。</p><div class="ll">EMSを詳しく見る →</div></a>
+        <a class="card link-card" href="machine.html"><div class="lk">MystiCore®</div><h3 style="margin-top:0">自社開発マシン MystiCore®</h3><p>手順が決まっているので施術が安定しやすく、はじめての方でも受けやすいのが特長です。</p><div class="ll">MystiCoreを詳しく見る →</div></a>
       </div>
-    </div>
-
-    <!-- 詳細ページへの3カードリンク -->
-    <div class="learn-grid rv">
-      <a class="learn-card" href="rf.html">
-        <div class="lk">RADIO FREQUENCY</div>
-        <h4>高周波とは？</h4>
-        <p>体の内側からじんわり温める仕組みを、わかりやすく説明します。</p>
-        <div class="ll">高周波を詳しく見る →</div>
-      </a>
-      <a class="learn-card" href="ems.html">
-        <div class="lk">EMS</div>
-        <h4>EMSとは？</h4>
-        <p>電気の刺激で筋肉にアプローチする仕組みを、わかりやすく説明します。</p>
-        <div class="ll">EMSを詳しく見る →</div>
-      </a>
-      <a class="learn-card" href="machine.html">
-        <div class="lk">MystiCore®</div>
-        <h4>MystiCoreとは？</h4>
-        <p>VISUAL LABOで使用する自社開発マシンの特徴を紹介します。</p>
-        <div class="ll">MystiCoreを詳しく見る →</div>
-      </a>
     </div>
 
     <!-- 続きを読む：もっと深く -->
