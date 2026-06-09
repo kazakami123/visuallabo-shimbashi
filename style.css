@@ -473,3 +473,11 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:60px 0 36px}
 .kaisu-box li:last-child{border-bottom:none;padding-bottom:0}
 .kaisu-box li b{font-weight:500;color:var(--ink);font-family:"Futura","Century Gothic","Outfit";white-space:nowrap}
 .kaisu-box .kn{font-size:11.5px;color:var(--ink-mute);margin-top:12px;line-height:1.7}
+
+/* メニュー内ジャンプナビ */
+.menu-nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:880px;margin:30px auto 0;padding:0 22px}
+.menu-nav a{font-size:13px;letter-spacing:.03em;color:var(--ink-soft);border:1px solid var(--line);background:var(--white);border-radius:999px;padding:9px 18px;transition:.25s;white-space:nowrap}
+.menu-nav a:hover{border-color:var(--gold);color:var(--gold)}
+.menu-nav a b{font-family:"Futura","Century Gothic","Outfit";font-weight:500;color:var(--gold);margin-right:6px}
+section[id]{scroll-margin-top:84px}
+.psub[id]{scroll-margin-top:90px}
