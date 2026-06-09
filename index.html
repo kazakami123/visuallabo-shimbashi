@@ -141,6 +141,17 @@ header.solid .burger span{background:var(--ink)}
 .link-card:hover{border-color:var(--gold);transform:translateY(-2px)}
 .link-card .lk{font-family:"Futura","Century Gothic","Outfit";font-size:10.5px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
 .link-card .ll{margin-top:12px;font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.02em}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto}
+.diff-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 24px;border-left:3px solid var(--gold)}
+.diff-card .dk{font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.03em;margin-bottom:8px}
+.diff-card p{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.9}
+@media(max-width:760px){.diff-grid{grid-template-columns:1fr;max-width:520px}}
+.subnote-grid{max-width:760px;margin:16px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.subnote{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
+.subnote .sk{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:6px}
+.subnote h4{font-size:14.5px;font-weight:500;margin-bottom:6px}
+.subnote p{font-size:12.5px;color:var(--ink-soft);font-weight:300;line-height:1.8}
+@media(max-width:620px){.subnote-grid{grid-template-columns:1fr}}
 
 /* problem */
 .prob-card{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:22px 22px}
@@ -459,6 +470,23 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   </div>
 </section>
 
+<!-- 他と何が違うの？ -->
+<section class="sec" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center mt-head rv">
+      <div class="kicker c">Difference</div>
+      <h2 class="lead">他と、<em>何が違うの</em>？</h2>
+      <p class="body-txt" style="max-width:640px;margin:18px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">VISUAL LABOは、ジムのように頑張る場所ではなく、サウナだけで終わる場所でもありません。高周波で温め、EMSで筋肉にアプローチし、仕事帰りにも通いやすい価格と立地で、体型管理を続けやすくするサロンです。</p>
+    </div>
+    <div class="diff-grid rv">
+      <div class="diff-card"><div class="dk">ジムとの違い</div><p>きつい運動を自分で頑張るのではなく、横になって受けられる体型管理です。</p></div>
+      <div class="diff-card"><div class="dk">サウナとの違い</div><p>汗をかいて終わりではなく、高周波・EMSメニューと組み合わせて、お腹まわりのケアにつなげます。</p></div>
+      <div class="diff-card"><div class="dk">エステとの違い</div><p>長時間・高額契約前提ではなく、初回体験から始めやすく、月額制で続けやすい設計です。</p></div>
+      <div class="diff-card"><div class="dk">整体・リラクとの違い</div><p>癒しだけでなく、お腹まわり・下腹・くびれなど、体型のお悩みにも向き合います。</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ⑥ お客さまの声・実績 -->
 <section class="sec" style="background:var(--paper)">
   <div class="wrap">
@@ -552,6 +580,11 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <div class="os-price">¥1,500</div>
     </div>
 
+    <div class="subnote-grid rv">
+      <div class="subnote"><div class="sk">PAIR OK</div><h4>ペア来店OK</h4><p>2名様同時施術にも対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。ご希望の際は、事前にLINEでご相談ください。</p></div>
+      <div class="subnote"><div class="sk">VIP ROOM</div><h4>VIP対応もご相談可能</h4><p>人目を気にせず、ゆったり過ごしたい方へ。ペア来店やVIP利用をご希望の方は、LINEより事前にご相談ください。</p></div>
+    </div>
+
     <div class="center secta rv">
       <div class="cta-pair">
         <a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a>
@@ -592,6 +625,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <div class="fitem"><button class="fq">運動や食事制限は必要ですか？</button><div class="fa"><p>厳しい運動や食事制限は不要です。続けやすい「がんばらない体型管理習慣」としてご提案しています。</p></div></div>
       <div class="fitem"><button class="fq">寝ているだけで、意味があるのですか？</button><div class="fa"><p>高周波でお腹まわりを温め、EMSで自分では動かしにくい筋肉にはたらきかけます。運動が苦手な方・時間がない方でも始めやすい仕組みです。※効果・感じ方には個人差があります。</p></div></div>
       <div class="fitem"><button class="fq">サウナだけでも予約できますか？</button><div class="fa"><p>恐れ入りますが、ドームサウナは単品予約ではなく、高周波・EMSメニューに追加できる温活オプション（30分¥1,500）です。体型管理メニューと組み合わせてご利用ください。</p></div></div>
+      <div class="fitem"><button class="fq">2名で一緒に受けられますか？</button><div class="fa"><p>はい、2名様同時施術に対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。完全個室のVIP利用もご相談いただけます。ご希望の際は、事前にLINEでご相談ください。</p></div></div>
     </div>
     <div class="center secta rv"><a class="btn btn-out" href="faq.html">よくあるご質問をすべて見る →</a></div>
   </div>
