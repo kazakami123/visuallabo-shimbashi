@@ -211,6 +211,24 @@ header.solid .burger span{background:var(--ink)}
 .opt-sauna h4 span{font-size:13px;color:var(--ink-mute);font-weight:300}
 .opt-sauna p{font-size:12.5px;color:var(--ink-soft);font-weight:300;line-height:1.8}
 .opt-sauna .os-price{font-family:"Futura","Century Gothic","Outfit";font-size:20px;font-weight:500;white-space:nowrap}
+.pc-target{font-size:12px;color:var(--gold);font-weight:500;margin-top:8px;line-height:1.5}
+.pc-link{margin-top:12px;font-size:12.5px;color:var(--ink);font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:1px;align-self:flex-start}
+.pc-link:hover{color:var(--gold)}
+.price-group-label{max-width:760px;margin:36px auto 14px;font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:.04em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price-group-label::before{content:"";width:22px;height:1px;background:var(--gold);align-self:center}
+.price-group-label .sm{font-size:11.5px;color:var(--ink-mute);font-weight:300}
+.pc.month .pc-price{color:var(--ink)}
+.pc.month.feat .pc-price{color:var(--gold)}
+.vip-block{max-width:760px;margin:24px auto 0;background:#fff;border:1.5px solid var(--gold);border-radius:8px;padding:clamp(24px,4vw,34px)}
+.vip-block .vk{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.16em;color:var(--gold);margin-bottom:8px}
+.vip-block h3{font-size:clamp(18px,3vw,22px);font-weight:500;margin-bottom:10px}
+.vip-block .vtxt{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.9;margin-bottom:16px}
+.vip-points{list-style:none;display:grid;gap:9px;margin-bottom:20px}
+.vip-points li{font-size:13.5px;color:var(--ink-soft);font-weight:300;padding-left:24px;position:relative;line-height:1.6}
+.vip-points li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:600}
+.vip-points li b{color:var(--ink);font-weight:500}
+.vip-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.vip-ctas .btn{flex:1 1 200px}
 
 /* flow */
 .flow-grid{display:grid;gap:12px;max-width:760px;margin:0 auto}
@@ -524,65 +542,114 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     <div class="center mt-head rv">
       <div class="kicker c">Price</div>
       <h2 class="lead">まずは、<em>¥1,980</em>で試せます。</h2>
-      <p class="body-txt" style="max-width:520px;margin:16px auto 0;font-size:14px">貼って過ごす「HYPER EMS DIET」。続けやすい月額制です。</p>
+      <p class="body-txt" style="max-width:540px;margin:16px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">貼って過ごす「HYPER EMS DIET」。<br>続けるほど、1回あたりがお得な月額制です。</p>
     </div>
+
+    <!-- はじめての方・お試し -->
+    <div class="price-group-label rv">はじめての方・お試し<span class="sm">まずは気軽に</span></div>
     <div class="price-cards rv">
       <div class="pc feat">
-        <div class="pc-badge">いちばん人気</div>
+        <div class="pc-badge">まずはここから</div>
         <div class="pc-name">初回体験</div>
         <div class="pc-price">¥1,980</div>
         <div class="pc-sub">満足保証つき／合わなければ返金<br>当日入会で入会金¥0（通常¥22,000）</div>
+        <div class="pc-target">はじめての方に</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
       <div class="pc">
         <div class="pc-name">単発</div>
         <div class="pc-price">¥3,980</div>
-        <div class="pc-sub">まず1回だけ試したい方に</div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">月2回プラン</div>
-        <div class="pc-price">¥4,980<small>／月</small></div>
-        <div class="pc-sub">1回あたり ¥2,490</div>
-      </div>
-      <div class="pc">
-        <div class="pc-name">月4回プラン</div>
-        <div class="pc-price">¥8,980<small>／月</small></div>
-        <div class="pc-sub">1回あたり ¥2,245 ／ 習慣に</div>
+        <div class="pc-sub">1回あたり ¥3,980</div>
+        <div class="pc-target">その都度、通いたい方に</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
       <div class="pc full">
         <div class="pc-r">
-          <div class="pc-name" style="margin-bottom:2px">月8回プラン <span style="color:var(--gold);font-size:12px">短期集中におすすめ</span></div>
-          <div class="pc-price">¥16,800<small>／月（1回あたり ¥2,100）</small></div>
+          <div class="pc-name" style="margin-bottom:2px">回数券（4回）<span style="color:var(--gold);font-size:12px">月額制まではまだ不安な方へ</span></div>
+          <div class="pc-price">¥13,200<small>／全4回（1回あたり ¥3,300・有効期限3ヶ月）</small></div>
+          <div class="pc-sub" style="margin-top:8px">ご自身のペースで通いたい方、予定が不規則な方の受け皿に。</div>
         </div>
-        <a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">このプランで予約する</a>
+        <a class="btn btn-out" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINEで相談する</a>
+      </div>
+    </div>
+
+    <!-- 月額制（主役） -->
+    <div class="price-group-label rv">続けるほどお得な、月額制<span class="sm">通うほど、1回あたりがお得に</span></div>
+    <div class="price-cards rv">
+      <div class="pc month">
+        <div class="pc-name">月2回プラン</div>
+        <div class="pc-price">¥2,490<small>／1回あたり</small></div>
+        <div class="pc-sub">月額 ¥4,980（税込）</div>
+        <div class="pc-target">月2回ペースで続けたい方</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      </div>
+      <div class="pc month feat">
+        <div class="pc-badge">おすすめ</div>
+        <div class="pc-name">月4回プラン</div>
+        <div class="pc-price">¥2,245<small>／1回あたり</small></div>
+        <div class="pc-sub">月額 ¥8,980（税込）</div>
+        <div class="pc-target">習慣にしたい方に</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      </div>
+      <div class="pc month feat">
+        <div class="pc-badge">短期集中</div>
+        <div class="pc-name">月8回プラン</div>
+        <div class="pc-price">¥2,100<small>／1回あたり</small></div>
+        <div class="pc-sub">月額 ¥16,800（税込）</div>
+        <div class="pc-target">しっかり変えたい方に</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      </div>
+      <div class="pc month">
+        <div class="pc-name">月12回プラン <span style="color:var(--gold);font-size:11px">最上位</span></div>
+        <div class="pc-price">¥1,900<small>／1回あたり</small></div>
+        <div class="pc-sub">月額 ¥22,800（税込）</div>
+        <div class="pc-target">いちばんお得に通いたい方</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
     </div>
     <div class="price-note rv">
       <span>・表示はすべて税込です／回数プランは月額制です</span>
-      <span>・月12回・通い放題プランは料金ページでご覧いただけます</span>
+      <span>・初回体験当日のご入会で入会金 ¥0（通常 ¥22,000）</span>
     </div>
 
     <!-- WAIST DESIGN 別カード -->
-    <div class="rv" style="max-width:760px;margin:22px auto 0;background:var(--ink);color:#fff;border-radius:8px;padding:clamp(24px,4vw,34px);text-align:center">
+    <div class="rv" style="max-width:760px;margin:30px auto 0;background:var(--ink);color:#fff;border-radius:8px;padding:clamp(24px,4vw,34px);text-align:center">
       <div style="font-family:'Futura','Century Gothic','Outfit';font-size:12px;letter-spacing:.14em;color:var(--gold);margin-bottom:8px">WAIST DESIGN</div>
       <div style="font-size:clamp(17px,3vw,21px);font-weight:400;margin-bottom:10px">しっかり整えたい方の、集中メニュー。</div>
       <p style="font-size:13.5px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.9;margin-bottom:20px">高周波で温め、手技でほぐし、EMSで仕上げる。ウエスト集中の60・90・120分プラン（初回体験¥3,980〜）。</p>
       <a class="btn btn-gold" href="menu.html">WAIST DESIGN の料金を見る →</a>
     </div>
 
-    <!-- 温活サウナ オプション（控えめ） -->
+    <!-- VIP（別枠・上位プラン） -->
+    <div class="vip-block rv">
+      <div class="vk">VIP ／ 上位プラン</div>
+      <h3>VIP利用も、ご相談可能。</h3>
+      <p class="vtxt">人目を気にせず、ゆったり過ごしたい方へ。完全個室で、ペア来店や優先的なご利用にも対応します。安さではなく「特別な時間」のためのプランです。</p>
+      <ul class="vip-points">
+        <li>完全個室・<b>ペア来店OK</b>（同室でのご利用）</li>
+        <li>VIPルームチャージ <b>60分 ¥10,000〜</b>（施術料金とは別）</li>
+        <li>VIP利用時は、<b>温活ドームサウナ オプション無料</b></li>
+      </ul>
+      <div class="vip-ctas">
+        <a class="btn btn-out" href="vip.html">VIPの詳細を見る →</a>
+        <a class="btn btn-line" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINEで相談する</a>
+      </div>
+    </div>
+
+    <!-- 温活サウナ オプション（通常は有料） -->
     <div class="opt-sauna rv">
       <img loading="lazy" src="images/sauna-option.jpg" alt="温活ドームサウナ 30分 ¥1,500" onerror="this.onerror=null;this.src='images/sauna-woman2.jpg'">
       <div style="flex:1;min-width:180px">
         <div class="os-k">OPTION ／ 温活</div>
         <h4>温活ドームサウナ <span>30分</span></h4>
-        <p>体型管理メニューに追加できる温活オプション。じんわり汗をかいて、よりすっきり感を。<br>※単品予約不可／他メニューと組み合わせてご予約ください</p>
+        <p>体型管理メニューに追加できる温活オプション。じんわり汗をかいて、よりすっきり感を。<br>※単品予約不可／他メニューと組み合わせてご予約ください<br><b style="color:var(--gold)">VIP利用時は、このオプションが無料です。</b></p>
       </div>
       <div class="os-price">¥1,500</div>
     </div>
 
-    <div class="subnote-grid rv">
+    <!-- ペア来店（補足） -->
+    <div class="subnote-grid rv" style="grid-template-columns:1fr">
       <div class="subnote"><div class="sk">PAIR OK</div><h4>ペア来店OK</h4><p>2名様同時施術にも対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。ご希望の際は、事前にLINEでご相談ください。</p></div>
-      <div class="subnote"><div class="sk">VIP ROOM</div><h4>VIP対応もご相談可能</h4><p>人目を気にせず、ゆったり過ごしたい方へ。ペア来店での同室利用やVIP利用をご希望の方は、LINEより事前にご相談ください。</p></div>
     </div>
 
     <div class="center secta rv">
