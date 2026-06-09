@@ -58,7 +58,7 @@ a{color:inherit;text-decoration:none}
 .kicker.c{justify-content:center}
 .kicker::before{content:"";width:30px;height:1px;background:var(--gold)}
 .kicker.c::after{content:"";width:30px;height:1px;background:var(--gold)}
-h2.lead{font-size:clamp(23px,5.4vw,40px);font-weight:300;line-height:1.5;letter-spacing:.03em}
+h2.lead{font-size:clamp(23px,5.4vw,40px);font-weight:300;line-height:1.5;letter-spacing:.03em;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 h2.lead em{font-style:normal;color:var(--gold);font-weight:400}
 .body-txt{color:var(--ink-soft);font-size:15px;line-height:2.05;font-weight:300}
 .center{text-align:center}
@@ -121,7 +121,7 @@ header.solid .burger span{background:var(--ink)}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:0 22px clamp(40px,7vw,84px);text-align:center}
 .hero-tag{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-size:11px;letter-spacing:.26em;opacity:.92;margin-bottom:22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
 .hero-tag .dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.hero h1{font-weight:300;font-size:clamp(27px,7vw,58px);line-height:1.32;letter-spacing:.03em;margin-bottom:22px}
+.hero h1{font-weight:300;font-size:clamp(27px,7vw,58px);line-height:1.32;letter-spacing:.03em;margin-bottom:22px;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 .hero h1 .big{display:block;font-size:1.32em;font-weight:400;letter-spacing:.04em;margin-top:8px}
 .hero-facts{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;margin-bottom:26px}
 .hero-facts span{font-size:12.5px;letter-spacing:.02em;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:7px 14px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
@@ -166,6 +166,14 @@ header.solid .burger span{background:var(--ink)}
 .voice-card .vc-b{padding:18px 18px 20px}
 .voice-card .vc-who{font-size:12px;color:var(--gold);font-weight:500;letter-spacing:.04em;margin-bottom:8px}
 .voice-card .vc-t{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.85}
+/* pickup (single record) */
+.pickup{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.pickup-img{margin:0}
+.pickup-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.pickup-b{padding:clamp(22px,3.5vw,34px);display:flex;flex-direction:column;justify-content:center}
+.pickup-b .vc-who{font-size:12px;color:var(--gold);font-weight:500;letter-spacing:.04em;margin-bottom:10px}
+.pickup-b .vc-t{font-size:14.5px;color:var(--ink-soft);font-weight:300;line-height:1.95}
+@media(max-width:620px){.pickup{grid-template-columns:1fr}.pickup-img img{aspect-ratio:4/3}}
 
 /* price cards */
 .price-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:0 auto}
@@ -207,7 +215,7 @@ header.solid .burger span{background:var(--ink)}
 /* diagnosis quiz */
 .sh-wrap{max-width:680px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,5vw,40px)}
 .sh-prog{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:14px}
-.sh-q{font-size:clamp(16px,3vw,19px);font-weight:500;letter-spacing:.01em;margin-bottom:18px;line-height:1.6}
+.sh-q{font-size:clamp(16px,3vw,19px);font-weight:500;letter-spacing:.01em;margin-bottom:18px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
 .sh-opts{display:grid;gap:9px}
 .sh-opt{text-align:left;padding:15px 18px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer;font-size:14px;font-weight:300;font-family:"Noto Sans JP";color:var(--ink);transition:.2s;line-height:1.5}
 .sh-opt:hover{border-color:var(--gold);background:#fff}
@@ -251,7 +259,7 @@ details.more-box[open]>summary::after{content:"− 閉じる"}
 
 /* final CTA */
 .final-cta{background:var(--ink);color:#fff;text-align:center}
-.final-cta h2{font-size:clamp(22px,5vw,36px);font-weight:300;line-height:1.5;margin-bottom:18px}
+.final-cta h2{font-size:clamp(22px,5vw,36px);font-weight:300;line-height:1.5;margin-bottom:18px;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 .final-cta h2 em{font-style:normal;color:var(--gold);font-weight:400}
 .final-cta p{font-size:14px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.9;margin-bottom:22px}
 .final-cta .checks{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:30px;font-size:13px;color:rgba(255,255,255,.78)}
@@ -444,21 +452,14 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <div class="kicker c">Records & Voices</div>
       <h2 class="lead">実際の変化を、<em>ご覧ください</em>。</h2>
     </div>
-    <div class="voice-grid rv">
-      <div class="voice-card">
-        <img loading="lazy" src="images/ba-case1-front.jpg" alt="お腹まわりの変化 正面｜体験者の記録">
-        <div class="vc-b"><div class="vc-who">男性・30代</div><p class="vc-t">施術中はぽかぽか温かくて、終わったあとお腹が軽く感じました。寝ているだけなので、仕事帰りでも続けられそうです。</p></div>
-      </div>
-      <div class="voice-card">
-        <img loading="lazy" src="images/ba-w1-front-2.jpg" alt="お腹まわりの変化 正面｜体験者の記録">
-        <div class="vc-b"><div class="vc-who">女性・40代</div><p class="vc-t">運動が苦手で続いた試しがなかったのですが、横になるだけなので無理なく通えています。鏡を見るのが少し楽しみに。</p></div>
-      </div>
-      <div class="voice-card">
-        <img loading="lazy" src="images/ba-case2-side.jpg" alt="お腹まわりの変化 側面｜体験者の記録">
-        <div class="vc-b"><div class="vc-who">男性・40代</div><p class="vc-t">横から見たラインが気になっていました。スタッフの方が丁寧で、はじめてでも安心して受けられました。</p></div>
+    <div class="pickup rv">
+      <figure class="pickup-img"><img loading="lazy" src="images/ba-w1-front-2.jpg" alt="お腹まわりの変化｜体験者の記録（WAIST DESIGN）"></figure>
+      <div class="pickup-b">
+        <div class="vc-who">女性・40代 ／ WAIST DESIGN</div>
+        <p class="vc-t">運動が苦手で続いた試しがなかったのですが、横になるだけなので無理なく通えています。施術中はぽかぽか温かくて、鏡を見るのが少し楽しみになりました。</p>
+        <p class="note-s" style="text-align:left;margin-top:14px">※ 掲載内容は個人の感想であり、効果・感じ方には個人差があります。</p>
       </div>
     </div>
-    <p class="note-s" style="margin-top:18px">※ 掲載内容は個人の感想であり、効果・感じ方には個人差があります。OPEN後、実際にいただいた声を順次掲載します。</p>
     <div class="center secta rv"><a class="btn btn-out" href="beforeafter.html">変化の記録をもっと見る →</a></div>
   </div>
 </section>
@@ -557,7 +558,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <div class="fstep rv"><div class="fn">01</div><div><h4>ご予約</h4><p>ホットペッパー、またはLINEからご予約いただけます。</p></div></div>
       <div class="fstep rv"><div class="fn">02</div><div><h4>来店・カウンセリング</h4><p>お悩みやご希望をうかがい、合うプランをご提案します。</p></div></div>
       <div class="fstep rv"><div class="fn">03</div><div><h4>お着替え</h4><p>お着替えはサロンでご用意。手ぶらでお越しいただけます。</p></div></div>
-      <div class="fstep rv"><div class="fn">04</div><div><h4>施術</h4><p>横になって、貼って過ごすだけ。リラックスしてお過ごしください。</p></div></div>
+      <div class="fstep rv"><div class="fn">04</div><div><h4>施術</h4><p>横になって、過ごすだけ。リラックスしてお過ごしください。</p></div></div>
       <div class="fstep rv"><div class="fn">05</div><div><h4>続けたい方だけ、プラン案内</h4><p>合えば続ける、それだけ。無理な勧誘はありません。</p></div></div>
     </div>
     <div class="center secta rv"><a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a></div>
