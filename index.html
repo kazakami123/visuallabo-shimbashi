@@ -40,33 +40,33 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <style>
 :root{
-  --ink:#1a1a1a; --ink-soft:#333333; --ink-mute:#6b6b6b;
-  --line:#e4e2dd; --paper:#faf9f6; --paper-2:#f2f0ea; --paper-3:#efece5;
-  --beige:#e9e3d6; --gold:#b89b5e; --gold-d:#a6884a; --white:#ffffff;
+  --ink:#1a1a1a; --ink-soft:#333333; --ink-mute:#595959;
+  --line:#e4e2dd; --paper:#ffffff; --paper-2:#ffffff; --paper-3:#ffffff;
+  --beige:#ffffff; --gold:#b89b5e; --gold-d:#a6884a; --white:#ffffff;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-weight:300;-webkit-font-smoothing:antialiased;letter-spacing:.02em;overflow-x:hidden}
-.en{font-family:"Futura","Century Gothic","Outfit",sans-serif;letter-spacing:.18em}
-.num{font-family:"Futura","Century Gothic","Outfit",sans-serif}
+body{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-weight:400;-webkit-font-smoothing:antialiased;letter-spacing:.02em;overflow-x:hidden}
+.en{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.18em}
+.num{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
 img{display:block;width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 .narrow{max-width:760px;margin:0 auto;padding:0 22px}
 .sec{padding:clamp(58px,10vw,120px) 0}
-.kicker{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-size:11px;letter-spacing:.32em;color:var(--ink-mute);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.kicker{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.32em;color:var(--ink-mute);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:22px}
 .kicker.c{justify-content:center}
 .kicker::before{content:"";width:30px;height:1px;background:var(--gold)}
 .kicker.c::after{content:"";width:30px;height:1px;background:var(--gold)}
-h2.lead{font-size:clamp(23px,5.4vw,40px);font-weight:300;line-height:1.5;letter-spacing:.03em;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+h2.lead{font-size:clamp(23px,5.4vw,40px);font-weight:600;line-height:1.5;letter-spacing:.03em;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 h2.lead em{font-style:normal;color:var(--gold);font-weight:400}
-.body-txt{color:var(--ink-soft);font-size:15px;line-height:2.05;font-weight:300}
+.body-txt{color:var(--ink-soft);font-size:15px;line-height:2.05;font-weight:400}
 .center{text-align:center}
 .gold{color:var(--gold)}
 .mt-head{margin-bottom:clamp(30px,5vw,48px)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Noto Sans JP";font-size:14.5px;font-weight:500;letter-spacing:.05em;padding:16px 28px;border-radius:999px;transition:.3s;cursor:pointer;border:1px solid transparent;line-height:1.3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:14.5px;font-weight:500;letter-spacing:.05em;padding:16px 28px;border-radius:999px;transition:.3s;cursor:pointer;border:1px solid transparent;line-height:1.3}
 .btn-gold{background:var(--gold);color:#fff}
 .btn-gold:hover{background:var(--gold-d);transform:translateY(-2px)}
 .btn-line{background:#06C755;color:#fff}
@@ -90,15 +90,15 @@ header.solid{background:rgba(250,249,246,.94);backdrop-filter:blur(14px);border-
 .brand{display:flex;align-items:center}
 .logo-img{height:40px;width:auto;display:block;filter:brightness(0) invert(1)}
 header.solid .logo-img{filter:none}
-.brand-fallback{display:none;font-family:"Futura","Century Gothic","Outfit";font-weight:600;letter-spacing:.2em;font-size:15px;color:#fff}
+.brand-fallback{display:none;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-weight:600;letter-spacing:.2em;font-size:15px;color:#fff}
 header.solid .brand-fallback{color:var(--ink)}
 .brand-fallback b{color:var(--gold)}
 .nav-right{display:flex;align-items:center;gap:18px}
 .navlinks{display:flex;gap:24px;align-items:center}
-.navlinks a{font-family:"Noto Sans JP";font-size:13px;font-weight:400;letter-spacing:.04em;color:#fff;opacity:.9;transition:.25s}
+.navlinks a{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:13px;font-weight:400;letter-spacing:.04em;color:#fff;opacity:.9;transition:.25s}
 header.solid .navlinks a{color:var(--ink-soft)}
 .navlinks a:hover{color:var(--gold);opacity:1}
-.nav-cta{font-family:"Noto Sans JP";font-size:13px;font-weight:600;letter-spacing:.04em;padding:9px 18px;border-radius:999px;background:var(--gold);color:#fff!important;white-space:nowrap}
+.nav-cta{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;padding:9px 18px;border-radius:999px;background:var(--gold);color:#fff!important;white-space:nowrap}
 .nav-cta:hover{background:var(--gold-d)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
 .burger span{width:23px;height:1.6px;background:#fff;transition:.3s}
@@ -119,43 +119,43 @@ header.solid .burger span{background:var(--ink)}
 .hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.02)}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,.4) 0%,rgba(10,10,10,.12) 36%,rgba(10,10,10,.74) 100%)}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1140px;margin:0 auto;padding:0 24px clamp(44px,7vw,88px);text-align:left}
-.hero-tag{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-size:10.5px;letter-spacing:.24em;opacity:.9;margin-bottom:20px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;justify-content:flex-start}
+.hero-tag{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:10.5px;letter-spacing:.24em;opacity:.9;margin-bottom:20px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;justify-content:flex-start}
 .hero-tag .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
-.hero-pre{font-size:clamp(14px,3.8vw,19px);font-weight:300;letter-spacing:.05em;opacity:.95;margin-bottom:10px;word-break:keep-all;overflow-wrap:anywhere}
-.hero h1{font-weight:300;font-size:clamp(40px,12vw,92px);line-height:1.12;letter-spacing:.04em;margin-bottom:26px}
-.hero h1 .en-d{font-family:"Futura","Century Gothic","Outfit",sans-serif;font-weight:400;letter-spacing:.06em}
+.hero-pre{font-size:clamp(14px,3.8vw,19px);font-weight:400;letter-spacing:.05em;opacity:.95;margin-bottom:10px;word-break:keep-all;overflow-wrap:anywhere}
+.hero h1{font-weight:400;font-size:clamp(40px,12vw,92px);line-height:1.12;letter-spacing:.04em;margin-bottom:26px}
+.hero h1 .en-d{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-weight:400;letter-spacing:.06em}
 .hero-facts{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:flex-start;margin-bottom:26px}
 .hero-facts span{font-size:12.5px;letter-spacing:.02em;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:7px 14px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
-.hero-facts span b{color:var(--gold);font-weight:600;font-family:"Futura","Century Gothic","Outfit"}
+.hero-facts span b{color:var(--gold);font-weight:600;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
 .hero .cta-pair{justify-content:flex-start}
 .hero .cta-pair .btn{flex:0 1 auto}
-.scroll-i{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:3;font-family:"Futura","Century Gothic","Outfit";font-size:10px;letter-spacing:.3em;opacity:.8}
+.scroll-i{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:3;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:10px;letter-spacing:.3em;opacity:.8}
 
 /* generic card */
 .cards{display:grid;gap:14px}
 .card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px 24px}
-.card .cn{font-family:"Futura","Century Gothic","Outfit";font-size:30px;color:var(--gold);line-height:1}
+.card .cn{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:30px;color:var(--gold);line-height:1}
 .card h3{font-size:17px;font-weight:500;letter-spacing:.02em;margin:10px 0 8px}
-.card p{font-size:14px;color:var(--ink-soft);font-weight:300;line-height:1.95}
+.card p{font-size:14px;color:var(--ink-soft);font-weight:400;line-height:1.95}
 .link-card{display:block;transition:.25s}
 .link-card:hover{border-color:var(--gold);transform:translateY(-2px)}
-.link-card .lk{font-family:"Futura","Century Gothic","Outfit";font-size:10.5px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
+.link-card .lk{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:10.5px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
 .link-card .ll{margin-top:12px;font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.02em}
 .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto}
 .diff-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 24px;border-left:3px solid var(--gold)}
 .diff-card .dk{font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.03em;margin-bottom:8px}
-.diff-card p{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.9}
+.diff-card p{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.9}
 @media(max-width:760px){.diff-grid{grid-template-columns:1fr;max-width:520px}}
 .subnote-grid{max-width:760px;margin:16px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .subnote{background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px}
-.subnote .sk{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:6px}
+.subnote .sk{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:6px}
 .subnote h4{font-size:14.5px;font-weight:500;margin-bottom:6px}
-.subnote p{font-size:12.5px;color:var(--ink-soft);font-weight:300;line-height:1.8}
+.subnote p{font-size:12.5px;color:var(--ink-soft);font-weight:400;line-height:1.8}
 @media(max-width:620px){.subnote-grid{grid-template-columns:1fr}}
 
 /* problem */
 .prob-card{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:22px 22px}
-.prob-card .ck{flex:none;width:26px;height:26px;border-radius:50%;background:var(--paper-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-family:"Futura","Century Gothic","Outfit";margin-top:2px}
+.prob-card .ck{flex:none;width:26px;height:26px;border-radius:50%;background:var(--paper-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;margin-top:2px}
 .prob-card .t{font-size:15px;color:var(--ink-soft);font-weight:400;line-height:1.65;word-break:keep-all;overflow-wrap:anywhere}
 .prob-grid{grid-template-columns:repeat(3,1fr);max-width:900px;margin:0 auto}
 @media(max-width:760px){.prob-grid{grid-template-columns:1fr;max-width:520px}}
@@ -164,15 +164,15 @@ header.solid .burger span{background:var(--ink)}
 .ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ba-row figure{margin:0}
 .ba-row img{border:1px solid var(--line);border-radius:6px}
-.ba-cap{font-size:11.5px;color:var(--ink-mute);text-align:center;margin-top:8px;font-family:"Futura","Century Gothic","Outfit";letter-spacing:.08em}
-.note-s{font-size:11.5px;color:var(--ink-mute);text-align:center;margin-top:14px}
+.ba-cap{font-size:13px;color:var(--ink-mute);text-align:center;margin-top:8px;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.08em}
+.note-s{font-size:13px;color:var(--ink-mute);text-align:center;margin-top:14px}
 
 /* proof: detail card links */
 .learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .learn-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 22px;display:flex;flex-direction:column}
-.learn-card .lk{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
+.learn-card .lk{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.18em;color:var(--gold);margin-bottom:8px}
 .learn-card h4{font-size:16px;font-weight:500;margin-bottom:8px}
-.learn-card p{font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.85;flex:1}
+.learn-card p{font-size:13px;color:var(--ink-soft);font-weight:400;line-height:1.85;flex:1}
 .learn-card .ll{margin-top:14px;font-size:13px;color:var(--gold);font-weight:500;letter-spacing:.02em}
 
 /* voices */
@@ -181,14 +181,14 @@ header.solid .burger span{background:var(--ink)}
 .voice-card img{aspect-ratio:3/4;object-fit:cover}
 .voice-card .vc-b{padding:18px 18px 20px}
 .voice-card .vc-who{font-size:12px;color:var(--gold);font-weight:500;letter-spacing:.04em;margin-bottom:8px}
-.voice-card .vc-t{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.85}
+.voice-card .vc-t{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.85}
 /* pickup (single record) */
 .pickup{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
 .pickup-img{margin:0}
 .pickup-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
 .pickup-b{padding:clamp(22px,3.5vw,34px);display:flex;flex-direction:column;justify-content:center}
 .pickup-b .vc-who{font-size:12px;color:var(--gold);font-weight:500;letter-spacing:.04em;margin-bottom:10px}
-.pickup-b .vc-t{font-size:14.5px;color:var(--ink-soft);font-weight:300;line-height:1.95}
+.pickup-b .vc-t{font-size:14.5px;color:var(--ink-soft);font-weight:400;line-height:1.95}
 @media(max-width:620px){.pickup{grid-template-columns:1fr}.pickup-img img{aspect-ratio:4/3}}
 
 /* price cards */
@@ -197,34 +197,34 @@ header.solid .burger span{background:var(--ink)}
 .pc.feat{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.12)}
 .pc .pc-badge{position:absolute;top:-11px;left:22px;background:var(--gold);color:#fff;font-size:11px;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:999px}
 .pc .pc-name{font-size:14px;color:var(--ink-soft);font-weight:400;margin-bottom:6px}
-.pc .pc-price{font-family:"Futura","Century Gothic","Outfit";font-size:30px;font-weight:500;color:var(--ink);line-height:1}
-.pc .pc-price small{font-size:13px;color:var(--ink-mute);font-weight:400;margin-left:4px;font-family:"Noto Sans JP"}
-.pc .pc-sub{font-size:12.5px;color:var(--ink-mute);margin-top:8px;line-height:1.7}
+.pc .pc-price{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:30px;font-weight:500;color:var(--ink);line-height:1}
+.pc .pc-price small{font-size:13px;color:var(--ink-mute);font-weight:400;margin-left:4px;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
+.pc .pc-sub{font-size:13px;color:var(--ink-mute);margin-top:8px;line-height:1.7}
 .pc.full{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;background:var(--paper-2)}
 .pc.full .pc-r{text-align:left}
 .price-note{max-width:760px;margin:18px auto 0;font-size:12px;color:var(--ink-mute);line-height:1.9;display:flex;flex-direction:column;gap:3px}
 /* option sauna */
 .opt-sauna{max-width:760px;margin:20px auto 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 22px;display:flex;align-items:center;gap:18px}
 .opt-sauna img{width:88px;height:88px;flex:none;object-fit:cover;border-radius:6px}
-.opt-sauna .os-k{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.14em;color:var(--gold)}
+.opt-sauna .os-k{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.14em;color:var(--gold)}
 .opt-sauna h4{font-size:15px;font-weight:500;margin:3px 0 6px}
-.opt-sauna h4 span{font-size:13px;color:var(--ink-mute);font-weight:300}
-.opt-sauna p{font-size:12.5px;color:var(--ink-soft);font-weight:300;line-height:1.8}
-.opt-sauna .os-price{font-family:"Futura","Century Gothic","Outfit";font-size:20px;font-weight:500;white-space:nowrap}
+.opt-sauna h4 span{font-size:13px;color:var(--ink-mute);font-weight:400}
+.opt-sauna p{font-size:12.5px;color:var(--ink-soft);font-weight:400;line-height:1.8}
+.opt-sauna .os-price{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:20px;font-weight:500;white-space:nowrap}
 .pc-target{font-size:12px;color:var(--gold);font-weight:500;margin-top:8px;line-height:1.5}
 .pc-link{margin-top:12px;font-size:12.5px;color:var(--ink);font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:1px;align-self:flex-start}
 .pc-link:hover{color:var(--gold)}
 .price-group-label{max-width:760px;margin:36px auto 14px;font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:.04em;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .price-group-label::before{content:"";width:22px;height:1px;background:var(--gold);align-self:center}
-.price-group-label .sm{font-size:11.5px;color:var(--ink-mute);font-weight:300}
+.price-group-label .sm{font-size:13px;color:var(--ink-mute);font-weight:400}
 .pc.month .pc-price{color:var(--ink)}
 .pc.month.feat .pc-price{color:var(--gold)}
 .vip-block{max-width:760px;margin:24px auto 0;background:#fff;border:1.5px solid var(--gold);border-radius:8px;padding:clamp(24px,4vw,34px)}
-.vip-block .vk{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.16em;color:var(--gold);margin-bottom:8px}
+.vip-block .vk{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.16em;color:var(--gold);margin-bottom:8px}
 .vip-block h3{font-size:clamp(18px,3vw,22px);font-weight:500;margin-bottom:10px}
-.vip-block .vtxt{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.9;margin-bottom:16px}
+.vip-block .vtxt{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.9;margin-bottom:16px}
 .vip-points{list-style:none;display:grid;gap:9px;margin-bottom:20px}
-.vip-points li{font-size:13.5px;color:var(--ink-soft);font-weight:300;padding-left:24px;position:relative;line-height:1.6}
+.vip-points li{font-size:13.5px;color:var(--ink-soft);font-weight:400;padding-left:24px;position:relative;line-height:1.6}
 .vip-points li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:600}
 .vip-points li b{color:var(--ink);font-weight:500}
 .vip-ctas{display:flex;gap:12px;flex-wrap:wrap}
@@ -233,82 +233,82 @@ header.solid .burger span{background:var(--ink)}
 /* flow */
 .flow-grid{display:grid;gap:12px;max-width:760px;margin:0 auto}
 .fstep{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px 22px}
-.fstep .fn{font-family:"Futura","Century Gothic","Outfit";font-size:24px;color:var(--gold);line-height:1;flex:none;width:34px}
+.fstep .fn{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:24px;color:var(--gold);line-height:1;flex:none;width:34px}
 .fstep h4{font-size:15.5px;font-weight:500;margin-bottom:4px}
-.fstep p{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.8}
+.fstep p{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.8}
 
 /* faq / objection accordion */
 .faq-list{max-width:760px;margin:0 auto}
 .fitem{border-bottom:1px solid var(--line)}
 .fq{width:100%;background:none;border:none;text-align:left;padding:22px 40px 22px 0;font-size:15.5px;font-weight:500;cursor:pointer;position:relative;color:var(--ink);font-family:inherit;letter-spacing:.01em;line-height:1.6}
-.fq::after{content:"+";position:absolute;right:4px;top:21px;font-size:21px;color:var(--gold);font-weight:300;transition:.3s}
+.fq::after{content:"+";position:absolute;right:4px;top:21px;font-size:21px;color:var(--gold);font-weight:400;transition:.3s}
 .fitem.open .fq::after{transform:rotate(45deg)}
 .fa{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.fa p{padding:0 0 24px;font-size:14px;color:var(--ink-soft);font-weight:300;line-height:2}
+.fa p{padding:0 0 24px;font-size:14px;color:var(--ink-soft);font-weight:400;line-height:2}
 
 /* diagnosis quiz */
 .sh-wrap{max-width:680px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,5vw,40px)}
-.sh-prog{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:14px}
+.sh-prog{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:14px}
 .sh-q{font-size:clamp(16px,3vw,19px);font-weight:500;letter-spacing:.01em;margin-bottom:18px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
 .sh-opts{display:grid;gap:9px}
-.sh-opt{text-align:left;padding:15px 18px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer;font-size:14px;font-weight:300;font-family:"Noto Sans JP";color:var(--ink);transition:.2s;line-height:1.5}
+.sh-opt{text-align:left;padding:15px 18px;border:1px solid var(--line);border-radius:6px;background:var(--paper);cursor:pointer;font-size:14px;font-weight:400;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;color:var(--ink);transition:.2s;line-height:1.5}
 .sh-opt:hover{border-color:var(--gold);background:#fff}
-.sh-back{margin-top:18px;background:none;border:none;color:var(--ink-mute);font-size:13px;cursor:pointer;font-family:"Noto Sans JP"}
-.sh-head{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:14px}
-.sh-future{font-size:clamp(18px,3.4vw,24px);font-weight:300;line-height:1.6;margin-bottom:22px}
+.sh-back{margin-top:18px;background:none;border:none;color:var(--ink-mute);font-size:13px;cursor:pointer;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
+.sh-head{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:14px}
+.sh-future{font-size:clamp(18px,3.4vw,24px);font-weight:400;line-height:1.6;margin-bottom:22px}
 .sh-card{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:22px 22px;margin-bottom:18px}
-.sh-card .m{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:8px}
+.sh-card .m{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:8px}
 .sh-card .n{font-size:18px;font-weight:500;margin-bottom:6px}
-.sh-card .c{font-size:13px;color:var(--ink-soft);font-weight:300}
+.sh-card .c{font-size:13px;color:var(--ink-soft);font-weight:400}
 .sh-card .p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
-.sh-why{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.95;margin-bottom:20px}
+.sh-why{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.95;margin-bottom:20px}
 .sh-ctas{display:flex;gap:12px;flex-wrap:wrap}
 .sh-ctas .btn{flex:1 1 220px}
-.sh-note{font-size:11.5px;color:var(--ink-mute);line-height:1.8;margin-top:18px}
+.sh-note{font-size:13px;color:var(--ink-mute);line-height:1.8;margin-top:18px}
 
 /* learn-more details */
 .more{max-width:880px;margin:0 auto}
 details.more-box{border:1px solid var(--line);border-radius:8px;background:#fff;margin-top:14px;overflow:hidden}
 details.more-box>summary{list-style:none;cursor:pointer;padding:20px 22px;font-size:15px;font-weight:500;color:var(--ink);display:flex;align-items:center;justify-content:space-between}
 details.more-box>summary::-webkit-details-marker{display:none}
-details.more-box>summary::after{content:"＋ 続きを読む";font-size:12px;color:var(--gold);font-weight:400;font-family:"Noto Sans JP"}
+details.more-box>summary::after{content:"＋ 続きを読む";font-size:12px;color:var(--gold);font-weight:400;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
 details.more-box[open]>summary::after{content:"− 閉じる"}
 .more-body{padding:4px 22px 26px}
 .more-body h4{font-size:15px;font-weight:500;margin:18px 0 8px;color:var(--ink)}
-.more-body p{font-size:13.5px;color:var(--ink-soft);font-weight:300;line-height:1.95}
+.more-body p{font-size:13.5px;color:var(--ink-soft);font-weight:400;line-height:1.95}
 .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
 .mini-grid .m{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 16px}
-.mini-grid .m .mn{font-family:"Futura","Century Gothic","Outfit";font-size:22px;color:var(--gold)}
+.mini-grid .m .mn{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:22px;color:var(--gold)}
 .mini-grid .m h5{font-size:14px;font-weight:500;margin:6px 0 6px}
 .mini-grid .m p{font-size:12.5px;line-height:1.8}
 .kw-wrap{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.kw-wrap span{font-size:11.5px;color:var(--ink-soft);border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px}
+.kw-wrap span{font-size:12.5px;color:var(--ink-soft);border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 11px}
 
 /* access */
 .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .access-info dl{display:grid;grid-template-columns:84px 1fr;gap:10px 14px;font-size:13.5px}
-.access-info dt{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.12em;color:var(--gold);padding-top:3px}
-.access-info dd{color:var(--ink-soft);font-weight:300;line-height:1.7}
+.access-info dt{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.12em;color:var(--gold);padding-top:3px}
+.access-info dd{color:var(--ink-soft);font-weight:400;line-height:1.7}
 .access-map img{border:1px solid var(--line);border-radius:6px}
 
 /* final CTA */
 .final-cta{background:var(--ink);color:#fff;text-align:center}
-.final-cta h2{font-size:clamp(22px,5vw,36px);font-weight:300;line-height:1.5;margin-bottom:18px;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
+.final-cta h2{font-size:clamp(22px,5vw,36px);font-weight:400;line-height:1.5;margin-bottom:18px;word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 .final-cta h2 em{font-style:normal;color:var(--gold);font-weight:400}
-.final-cta p{font-size:14px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.9;margin-bottom:22px}
+.final-cta p{font-size:14px;color:rgba(255,255,255,.8);font-weight:400;line-height:1.9;margin-bottom:22px}
 .final-cta .checks{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin-bottom:30px;font-size:13px;color:rgba(255,255,255,.78)}
 
 /* footer */
 footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px) 0 30px}
 .foot-top{display:grid;grid-template-columns:1.3fr 2fr;gap:40px}
-.foot-brand .fb{font-family:"Futura","Century Gothic","Outfit";font-size:18px;letter-spacing:.16em;color:#fff;margin-bottom:14px}
+.foot-brand .fb{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:18px;letter-spacing:.16em;color:#fff;margin-bottom:14px}
 .foot-brand .fb b{color:var(--gold)}
-.foot-brand p{font-size:12.5px;line-height:1.95;font-weight:300}
+.foot-brand p{font-size:12.5px;line-height:1.95;font-weight:400}
 .foot-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.foot-nav .col h5{font-family:"Futura","Century Gothic","Outfit";font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.5);margin-bottom:14px}
-.foot-nav .col a{display:block;font-size:12.5px;color:rgba(255,255,255,.72);padding:5px 0;font-weight:300}
+.foot-nav .col h5{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.5);margin-bottom:14px}
+.foot-nav .col a{display:block;font-size:12.5px;color:rgba(255,255,255,.72);padding:5px 0;font-weight:400}
 .foot-nav .col a:hover{color:var(--gold)}
-.copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-family:"Futura","Century Gothic","Outfit";font-size:10.5px;letter-spacing:.1em;color:rgba(255,255,255,.45)}
+.copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:10.5px;letter-spacing:.1em;color:rgba(255,255,255,.45)}
 
 /* mobile sticky bar */
 .mbar{position:fixed;left:0;bottom:0;width:100%;z-index:150;display:none;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(250,249,246,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
@@ -346,9 +346,59 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 @media(max-width:430px){
   .ba-row{gap:7px}
   .ba-cap{font-size:10px}
-  .hero-facts span{font-size:11.5px;padding:6px 11px}
+  .hero-facts span{font-size:12.5px;padding:6px 11px}
   .price-cards{grid-template-columns:1fr}
 }
+/* ===== v2: 2メニュー選択カード ===== */
+.menu2-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px;margin:0 auto}
+.m2{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 26px 26px;position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.m2.gold{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.12)}
+.m2 .m2-badge{position:absolute;top:-12px;left:24px;background:var(--ink);color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;padding:4px 14px;border-radius:999px}
+.m2.gold .m2-badge{background:var(--gold)}
+.m2 .m2-no{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.16em;color:var(--ink-mute);margin-bottom:6px}
+.m2 .m2-name{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(18px,2.6vw,22px);font-weight:500;color:var(--ink);letter-spacing:.04em;line-height:1.3}
+.m2 .m2-cat{font-size:15px;font-weight:600;color:var(--gold-d);margin:8px 0 10px}
+.m2 p{font-size:13px;color:var(--ink-soft);font-weight:400;line-height:1.9;margin-bottom:16px}
+.m2 .m2-price{font-size:13px;color:var(--ink-mute);margin-bottom:16px}
+.m2 .m2-price b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:27px;color:var(--ink);font-weight:500;margin-left:6px;letter-spacing:.01em}
+.m2 .m2-price small{font-size:12px;color:var(--ink-mute);font-weight:400}
+.m2 .pc-link{margin-top:auto}
+@media(max-width:760px){.menu2-grid{grid-template-columns:1fr;max-width:520px}}
+/* ===== v2: 3列価格カード ===== */
+.price-cards.c3{grid-template-columns:repeat(3,1fr);max-width:900px}
+@media(max-width:760px){
+.price-cards.c3{grid-template-columns:repeat(3,1fr);gap:8px;max-width:none}
+.price-cards.c3 .pc{padding:18px 9px 14px}
+.price-cards.c3 .pc-name{font-size:11.5px}
+.price-cards.c3 .pc-price{font-size:17px}
+.price-cards.c3 .pc-price small{font-size:9.5px;margin-left:2px}
+.price-cards.c3 .pc-sub{font-size:10.5px}
+.price-cards.c3 .pc-target{font-size:10px}
+.price-cards.c3 .pc-badge{font-size:9px;padding:3px 9px;top:-9px;left:9px}
+.price-cards.c3 .pc-link{font-size:11px}
+}
+/* ===== v2: POINTグリッド ===== */
+.point-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1000px;margin:0 auto clamp(30px,4.5vw,46px)}
+.point-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px 18px 24px;text-align:center}
+.point-card .pk{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px}
+.point-card .pv{font-size:clamp(16px,1.9vw,19px);font-weight:600;color:var(--ink);line-height:1.55;margin-bottom:10px;word-break:keep-all}
+.point-card .pv em{font-style:normal;color:var(--gold-d)}
+.point-card p{font-size:13px;color:var(--ink-mute);font-weight:400;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+@media(max-width:900px){.point-grid{grid-template-columns:1fr 1fr;gap:10px}}
+@media(max-width:400px){.point-grid{grid-template-columns:1fr}}
+/* ===== v2: その他プラン帯 ===== */
+.other-plans{max-width:860px;margin:26px auto 0;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.other-plans .op-t{font-size:13px;color:var(--ink-soft);font-weight:400;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.other-plans .op-t b{font-weight:600;color:var(--ink)}
+/* ===== v3: チップ（訴求・部位・不安解消） ===== */
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:22px auto 0}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:13px;font-weight:500;color:var(--ink-soft);white-space:nowrap}
+.chip b{color:var(--gold-d);font-weight:600}
+.chip.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.part-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:760px;margin:0 auto}
+.part-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px 14px;text-align:center;font-size:14.5px;font-weight:600;color:var(--ink);letter-spacing:.02em}
+.part-card span{display:block;font-size:11px;font-weight:500;letter-spacing:.16em;color:var(--gold);margin-bottom:8px;font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
+@media(max-width:560px){.part-grid{grid-template-columns:repeat(2,1fr);gap:9px}.part-card{padding:16px 10px;font-size:13.5px}}
 </style>
 </head>
 <body>
@@ -388,13 +438,14 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   <div class="hero-bg"><img src="https://visuallabo-recruit-lp.pages.dev/images/00_hero-mainvisual.jpg" alt="寝ながら、お腹まわりの体型管理｜VISUAL LABO 新橋店"></div>
   <div class="hero-inner">
     <div class="hero-tag"><span>VISUAL LABO</span><span class="dot"></span><span>SHIMBASHI</span><span class="dot"></span><span>2026.7 OPEN</span></div>
-    <p class="hero-pre">ジムが続かなかった、あなたへ。</p>
+    <p class="hero-pre">会食も、予定も、仕事の疲れもある。それでも——</p>
     <h1>寝ながら<span class="en-d">DIET</span>。</h1>
+    <p class="hero-sub" style="font-size:clamp(13px,2.4vw,15px);font-weight:400;line-height:2;margin-top:14px;word-break:keep-all;overflow-wrap:anywhere">新橋で、寝ながらお腹まわりの体型管理。<br>厳しい食事制限やハードな運動だけに頼らない、<br>忙しい大人のための続けやすいケアを。</p>
     <div class="hero-facts">
       <span>新橋駅 <b>徒歩3分</b></span>
       <span>初回体験 <b>¥1,980〜</b></span>
-      <span>満足保証つき</span>
-      <span>男女 利用可能</span>
+      <span>男女OK</span>
+      <span><b>2名同時施術</b>OK</span>
     </div>
     <div class="cta-pair">
       <a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a>
@@ -410,13 +461,17 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     <div class="center mt-head rv">
       <div class="kicker c">Check</div>
       <h2 class="lead">こんなお悩み、<em>ありませんか？</em></h2>
-      <p class="body-txt" style="max-width:560px;margin:18px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">運動する時間も気力もない。<br>でも、ぽっこりお腹はこのままにしたくない。<br>そんな方のための、新しい体型管理ダイエットサロンです。</p>
+      <p class="body-txt" style="max-width:560px;margin:18px auto 0;font-size:14.5px;word-break:keep-all;overflow-wrap:anywhere">痩せたい気持ちはある。<br>でも、毎日の生活を大きく変えるのは簡単ではありません。</p>
     </div>
     <div class="cards prob-grid">
-      <div class="prob-card rv"><span class="ck">01</span><span class="t">ジムやダイエットが、いつも続かない</span></div>
-      <div class="prob-card rv"><span class="ck">02</span><span class="t">ぽっこりお腹・下腹が気になる</span></div>
-      <div class="prob-card rv"><span class="ck">03</span><span class="t">仕事終わりは疲れて、運動する気力がない</span></div>
+      <div class="prob-card rv"><span class="ck">01</span><span class="t">会食や外食が多く、食事制限が続かない</span></div>
+      <div class="prob-card rv"><span class="ck">02</span><span class="t">仕事終わりは疲れて、ジムに行けない</span></div>
+      <div class="prob-card rv"><span class="ck">03</span><span class="t">運動しなきゃと思っても、続かない</span></div>
+      <div class="prob-card rv"><span class="ck">04</span><span class="t">下腹・浮き輪肉が気になる</span></div>
+      <div class="prob-card rv"><span class="ck">05</span><span class="t">昔よりお腹まわりが落ちにくくなった</span></div>
+      <div class="prob-card rv"><span class="ck">06</span><span class="t">自己流ダイエットで、何度も挫折した</span></div>
     </div>
+    <p class="body-txt rv" style="max-width:560px;margin:26px auto 0;text-align:center;font-size:15px;font-weight:500;color:var(--ink);word-break:keep-all;overflow-wrap:anywhere">VISUAL LABOは、そんな<b style="color:var(--gold-d)">忙しい大人のための体型管理サロン</b>です。</p>
   </div>
 </section>
 
@@ -425,8 +480,15 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   <div class="wrap">
     <div class="center mt-head rv">
       <div class="kicker c">Our Promise</div>
-      <h2 class="lead">あなたは寝ているだけ。<br>本当に続けられる<em>ダイエット</em>。</h2>
-      <p class="body-txt" style="max-width:600px;margin:18px auto 0;word-break:keep-all;overflow-wrap:anywhere">運動も食事制限も続かなかった人が、横になるだけで、<br>お腹まわりの体型管理を習慣にできる。</p>
+      <h2 class="lead">頑張りすぎなくても、<br><em>体型管理は始められる</em>。</h2>
+      <p class="body-txt" style="max-width:620px;margin:18px auto 0;word-break:keep-all;overflow-wrap:anywhere">食事制限も運動も、できる日ばかりではありません。<br>大切なのは、無理をしすぎず、続けられる習慣を持つこと。<br>横になったまま受けられるケアで、お腹まわり・下腹・くびれ・浮き輪肉などの体型悩みに向き合います。</p>
+      <div class="chip-row rv">
+        <span class="chip">寝ながら受けられる</span>
+        <span class="chip">仕事帰りでも通いやすい</span>
+        <span class="chip"><b>会食・外食が多くても</b>始めやすい</span>
+        <span class="chip">運動が苦手でもOK</span>
+        <span class="chip">月額制で習慣化しやすい</span>
+      </div>
     </div>
     <div style="max-width:840px;margin:0 auto">
       <div class="ba-row rv">
@@ -450,7 +512,8 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   <div class="wrap">
     <div class="center mt-head rv">
       <div class="kicker c">Why it works</div>
-      <h2 class="lead">なぜ、寝ながら<em>整えられる</em>のか。</h2>
+      <h2 class="lead">高周波×EMSで、<em>温めて、動かす</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:16px auto 0;font-size:14.5px;word-break:keep-all;overflow-wrap:anywhere">高周波は、体を深部からじんわり温める技術。<br>EMSは、電気刺激で筋肉にアプローチする技術。<br>温めた状態で動かすから、寝ながらでも続けやすい。</p>
     </div>
     <div class="access-grid" style="align-items:center;margin-bottom:clamp(24px,4vw,38px)">
       <figure class="rv" style="margin:0"><img loading="lazy" src="images/misticore-solo.jpg" alt="自社開発マシン MystiCore®｜高周波×EMS" style="border:1px solid var(--line);border-radius:8px" onerror="this.onerror=null;this.src='https://visuallabo-recruit-lp.pages.dev/images/04_misticore.jpg'"></figure>
@@ -488,19 +551,53 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   </div>
 </section>
 
-<!-- 他と何が違うの？ -->
+<!-- 選ばれる理由（POINT）＋他との違い -->
 <section class="sec" style="background:var(--paper)">
   <div class="wrap">
     <div class="center mt-head rv">
-      <div class="kicker c">Difference</div>
-      <h2 class="lead">他と、<em>何が違うの</em>？</h2>
-      <p class="body-txt" style="max-width:640px;margin:18px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">VISUAL LABOは、ジムのように頑張る場所ではなく、サウナだけで終わる場所でもありません。<br>高周波で温め、EMSで筋肉にアプローチし、<br>仕事の前後でも通いやすい価格と立地で、<br>体型管理を続けやすくするサロンです。</p>
+      <div class="kicker c">Reason</div>
+      <h2 class="lead">VISUAL LABOが選ばれる、<em>4つの理由</em>。</h2>
+    </div>
+    <div class="point-grid rv">
+      <div class="point-card"><div class="pk">POINT 01</div><div class="pv">新橋駅<br><em>徒歩3分</em></div><p>仕事帰りに、寄るだけ。銀座・汐留・内幸町からも。</p></div>
+      <div class="point-card"><div class="pk">POINT 02</div><div class="pv">あなたは<br><em>寝ているだけ</em></div><p>きつい運動も、食事制限もなし。横になって過ごすだけ。</p></div>
+      <div class="point-card"><div class="pk">POINT 03</div><div class="pv">初回<em>¥1,980</em><br>満足保証つき</div><p>合わなければ返金。当日入会で入会金¥0。</p></div>
+      <div class="point-card"><div class="pk">POINT 04</div><div class="pv">持ち物<br><em>ゼロ</em></div><p>ウェアはサロンでご用意。手ぶらでお越しください。</p></div>
+    </div>
+    <div class="center rv" style="margin-bottom:18px">
+      <div class="kicker c" style="font-size:11px">Difference</div>
+      <p style="font-size:clamp(16px,2.6vw,20px);font-weight:600;color:var(--ink);line-height:1.6;word-break:keep-all">ジムでも、サウナだけでもない。<br>忙しい人のための体型管理。</p>
     </div>
     <div class="diff-grid rv">
-      <div class="diff-card"><div class="dk">ジムとの違い</div><p>きつい運動を自分で頑張るのではなく、効率的に効かせたい筋肉へEMSでアプローチ。寝ながら筋トレができます。</p></div>
-      <div class="diff-card"><div class="dk">サウナとの違い</div><p>汗をかいて終わりではなく、高周波と組み合わせて、深部からしっかりと加温し、お腹まわりのケアにつなげます。</p></div>
-      <div class="diff-card"><div class="dk">エステとの違い</div><p>長時間・高額契約前提ではなく、初回体験から始めやすく、月額制で続けやすい設計です。</p></div>
-      <div class="diff-card"><div class="dk">整体・リラクとの違い</div><p>癒しだけでなく、お腹まわり・下腹・くびれなど、体型のお悩みにも向き合います。凝り固まった筋肉をゆるめ、姿勢へのアプローチも。</p></div>
+      <div class="diff-card"><div class="dk">ジムとの違い</div><p>疲れていて運動が難しい日でも、横になって受けられる体型管理です。ジムが続かなかった方にも始めやすいケアを提案します。</p></div>
+      <div class="diff-card"><div class="dk">サウナとの違い</div><p>温めて終わりではなく、高周波とEMSを組み合わせて、お腹まわりの体型管理につなげます。</p></div>
+      <div class="diff-card"><div class="dk">エステとの違い</div><p>高額契約前提ではなく、初回体験と月額制から始めやすい設計です。続けやすさを大切にしています。</p></div>
+      <div class="diff-card"><div class="dk">整体・リラクゼーションとの違い</div><p>癒しだけでなく、お腹まわり・下腹・くびれ・背中などの体型悩みにも向き合います。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 部位別メニュー -->
+<section class="sec" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center mt-head rv">
+      <div class="kicker c">Target Area</div>
+      <h2 class="lead">気になる部分に合わせて、<em>選べるメニュー</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:16px auto 0;font-size:14.5px;word-break:keep-all;overflow-wrap:anywhere">お腹まわりといっても、お悩みは人それぞれ。<br>気になる部分に合わせて、メニューをご提案します。</p>
+    </div>
+    <div class="part-grid rv">
+      <div class="part-card"><span>01</span>ぽっこりお腹</div>
+      <div class="part-card"><span>02</span>下腹</div>
+      <div class="part-card"><span>03</span>くびれ</div>
+      <div class="part-card"><span>04</span>浮き輪肉</div>
+      <div class="part-card"><span>05</span>背中</div>
+      <div class="part-card"><span>06</span>腹筋スイッチ</div>
+    </div>
+    <div class="center secta rv">
+      <div class="cta-pair">
+        <a class="btn btn-out" href="menu.html">部位別コースの詳細を見る →</a>
+        <a class="btn btn-line" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">自分に合うメニューを相談する</a>
+      </div>
     </div>
   </div>
 </section>
@@ -510,7 +607,8 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   <div class="wrap">
     <div class="center mt-head rv">
       <div class="kicker c">Records & Voices</div>
-      <h2 class="lead">実際の変化を、<em>ご覧ください</em>。</h2>
+      <h2 class="lead">変化を、<em>目指す方のために</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:16px auto 0;font-size:14.5px;word-break:keep-all;overflow-wrap:anywhere">気になる部分に向き合いながら、無理なく続けやすいケアをご提案します。</p>
     </div>
     <div class="pickup rv">
       <figure class="pickup-img"><img loading="lazy" src="images/ba-w1-front-2.jpg" alt="お腹まわりの変化｜体験者の記録（WAIST DESIGN）"></figure>
@@ -540,105 +638,135 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 <section class="sec" id="price" style="background:var(--paper)">
   <div class="wrap">
     <div class="center mt-head rv">
-      <div class="kicker c">Price</div>
-      <h2 class="lead">まずは、<em>¥1,980</em>で試せます。</h2>
-      <p class="body-txt" style="max-width:540px;margin:16px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">貼って過ごす「HYPER EMS DIET」。<br>続けるほど、1回あたりがお得な月額制です。</p>
+      <div class="kicker c">Menu &amp; Price</div>
+      <h2 class="lead">選ぶのは、<em>2つだけ</em>。</h2>
+      <p class="body-txt" style="max-width:560px;margin:16px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">「貼るだけ筋トレ」か、「しっかりサイズダウン」か。<br>あなたの目的で選ぶだけ。どちらも、まずは初回体験から。</p>
     </div>
 
-    <!-- はじめての方・お試し -->
-    <div class="price-group-label rv">はじめての方・お試し<span class="sm">まずは気軽に</span></div>
-    <div class="price-cards rv">
-      <div class="pc feat">
-        <div class="pc-badge">まずはここから</div>
-        <div class="pc-name">初回体験</div>
-        <div class="pc-price">¥1,980</div>
-        <div class="pc-sub">満足保証つき／合わなければ返金<br>当日入会で入会金¥0（通常¥22,000）</div>
-        <div class="pc-target">はじめての方に</div>
-        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+    <!-- 2メニュー選択 -->
+    <div class="menu2-grid rv">
+      <div class="m2">
+        <div class="m2-badge">気軽にはじめたい方</div>
+        <div class="m2-no">MENU 01</div>
+        <div class="m2-name">HYPER EMS DIET</div>
+        <div class="m2-cat">貼るだけ筋トレ</div>
+        <p>60分、お腹まわりに貼って過ごすだけ。EMS＋低温RFで、引き締め・キープ・腹筋づくりに。</p>
+        <div class="m2-price">初回体験（60分）<b>¥1,980</b><small>〜</small></div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">EMS体験を予約する →</a>
       </div>
-      <div class="pc">
-        <div class="pc-name">単発</div>
-        <div class="pc-price">¥3,980</div>
-        <div class="pc-sub">1回あたり ¥3,980</div>
-        <div class="pc-target">その都度、通いたい方に</div>
-        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      <div class="m2 gold">
+        <div class="m2-badge">本気で変えたい方</div>
+        <div class="m2-no">MENU 02</div>
+        <div class="m2-name">WAIST DESIGN</div>
+        <div class="m2-cat">しっかりサイズダウン</div>
+        <p>高周波で深部から温め、手技でほぐし、EMSで仕上げる。ウエスト集中の本格ケアメニュー。</p>
+        <div class="m2-price">初回体験（60分）<b>¥3,980</b><small>〜</small></div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">WAIST DESIGN体験を予約する →</a>
       </div>
     </div>
+    <p class="note-s rv" style="margin-top:14px">迷ったら、<a href="#shindan" style="color:var(--gold-d);text-decoration:underline">30秒診断</a>へ。初回体験はどちらも満足保証つき（合わなければ返金）。</p>
 
-    <!-- 月額制（主役） -->
-    <div class="price-group-label rv">続けるほどお得な、月額制<span class="sm">通うほど、1回あたりがお得に</span></div>
-    <div class="price-cards rv">
+    <!-- 続けるなら：月額3択 -->
+    <div class="price-group-label rv" style="margin-top:clamp(36px,5vw,56px)">いちばんおすすめ、月額制<span class="sm">体型管理を習慣にしたい方へ。月2回・月4回・月8回の3択。</span></div>
+
+    <div class="price-group-label rv" style="font-size:13px;margin-bottom:14px">HYPER EMS DIET ／ 月額プラン（60分）</div>
+    <div class="price-cards c3 rv">
       <div class="pc month">
         <div class="pc-name">月2回プラン</div>
-        <div class="pc-price">¥2,490<small>／1回あたり</small></div>
-        <div class="pc-sub">月額 ¥4,980（税込）</div>
-        <div class="pc-target">月2回ペースで続けたい方</div>
+        <div class="pc-price">¥4,980<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥2,490</div>
+        <div class="pc-target">まずはゆっくり続けたい方</div>
         <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
       <div class="pc month feat">
         <div class="pc-badge">おすすめ</div>
         <div class="pc-name">月4回プラン</div>
-        <div class="pc-price">¥2,245<small>／1回あたり</small></div>
-        <div class="pc-sub">月額 ¥8,980（税込）</div>
-        <div class="pc-target">習慣にしたい方に</div>
+        <div class="pc-price">¥8,980<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥2,245</div>
+        <div class="pc-target">週1ペースで習慣にしたい方</div>
         <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
-      <div class="pc month feat">
-        <div class="pc-badge">短期集中</div>
+      <div class="pc month">
+        <div class="pc-badge" style="background:var(--ink)">短期集中</div>
         <div class="pc-name">月8回プラン</div>
-        <div class="pc-price">¥2,100<small>／1回あたり</small></div>
-        <div class="pc-sub">月額 ¥16,800（税込）</div>
+        <div class="pc-price">¥16,800<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥2,100</div>
         <div class="pc-target">しっかり変えたい方に</div>
         <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
+    </div>
+
+    <div class="price-group-label rv" style="font-size:13px;margin:26px 0 14px">WAIST DESIGN ／ 月額プラン（60分）</div>
+    <div class="price-cards c3 rv">
+      <div class="pc month">
+        <div class="pc-name">月2回プラン</div>
+        <div class="pc-price">¥13,200<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥6,600</div>
+        <div class="pc-target">まずはゆっくり続けたい方</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      </div>
       <div class="pc month feat">
-        <div class="pc-badge">乗り換えに</div>
-        <div class="pc-name">通い放題プラン</div>
-        <div class="pc-price">¥19,800<small>／月</small></div>
-        <div class="pc-sub">回数無制限／週2回以上に</div>
-        <div class="pc-target">ジム・ヨガから乗り換えの方に</div>
+        <div class="pc-badge">人気</div>
+        <div class="pc-name">月4回プラン</div>
+        <div class="pc-price">¥24,000<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥6,000</div>
+        <div class="pc-target">週1ペースで整えたい方</div>
+        <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
+      </div>
+      <div class="pc month">
+        <div class="pc-badge" style="background:var(--ink)">短期集中</div>
+        <div class="pc-name">月8回プラン</div>
+        <div class="pc-price">¥43,200<small>／月</small></div>
+        <div class="pc-sub">1回あたり ¥5,400</div>
+        <div class="pc-target">短期間でしっかり変えたい方</div>
         <a class="pc-link" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">予約する →</a>
       </div>
     </div>
+
     <div class="price-note rv">
-      <span>・表示はすべて税込です／回数プランは月額制です</span>
+      <span>・表示はすべて税込です／月額制（毎月自動更新）です</span>
       <span>・初回体験当日のご入会で入会金 ¥0（通常 ¥22,000）</span>
+      <span>・初回体験は満足保証つき。ご満足いただけなかった場合、体験料金を返金いたします</span>
     </div>
 
-    <!-- 回数券（月額制までは不安な方へ・一番下） -->
-    <div class="price-group-label rv">ご自身のペースで通いたい方へ<span class="sm">月額制まではまだ不安な方に</span></div>
+    <!-- 回数券（月額制までは不安な方へ） -->
+    <div class="price-group-label rv" style="margin-top:clamp(30px,4.5vw,46px)">回数券<span class="sm">予定が不規則な方・月額制までは不安な方・自分のペースで通いたい方へ</span></div>
     <div class="price-cards rv">
       <div class="pc full">
         <div class="pc-r">
-          <div class="pc-name" style="margin-bottom:2px">回数券（4回）</div>
-          <div class="pc-price">¥13,200<small>／全4回（1回あたり ¥3,300・有効期限3ヶ月）</small></div>
-          <div class="pc-sub" style="margin-top:8px">予定が不規則で、毎月決まった回数は通いにくい方の受け皿に。単発よりお得に、ご自身のペースで。</div>
+          <div class="pc-name" style="margin-bottom:2px">HYPER EMS DIET 回数券</div>
+          <div class="pc-price" style="font-size:22px">4回 ¥13,200<small>（1回 ¥3,300・有効期限3ヶ月）</small></div>
+          <div class="pc-price" style="font-size:22px;margin-top:4px">10回 ¥26,800<small>（1回 ¥2,680・有効期限6ヶ月）</small></div>
         </div>
         <a class="btn btn-out" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINEで相談する</a>
       </div>
       <div class="pc full">
         <div class="pc-r">
-          <div class="pc-name" style="margin-bottom:2px">回数券（10回）</div>
-          <div class="pc-price">¥26,800<small>／全10回（1回あたり ¥2,680・有効期限6ヶ月）</small></div>
-          <div class="pc-sub" style="margin-top:8px">まとめて前払いで、4回券よりさらにお得。サブスクは苦手だけど、しっかり続けたい方に。</div>
+          <div class="pc-name" style="margin-bottom:2px">WAIST DESIGN 60 回数券</div>
+          <div class="pc-price" style="font-size:22px">4回 ¥32,000<small>（1回 ¥8,000・有効期限3ヶ月）</small></div>
+          <div class="pc-price" style="font-size:22px;margin-top:4px">10回 ¥75,000<small>（1回 ¥7,500・有効期限6ヶ月）</small></div>
         </div>
         <a class="btn btn-out" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINEで相談する</a>
       </div>
     </div>
 
-    <!-- WAIST DESIGN 別カード -->
-    <div class="rv" style="max-width:760px;margin:30px auto 0;background:var(--ink);color:#fff;border-radius:8px;padding:clamp(24px,4vw,34px);text-align:center">
-      <div style="font-family:'Futura','Century Gothic','Outfit';font-size:12px;letter-spacing:.14em;color:var(--gold);margin-bottom:8px">WAIST DESIGN</div>
-      <div style="font-size:clamp(17px,3vw,21px);font-weight:400;margin-bottom:10px">しっかり整えたい方の、集中メニュー。</div>
-      <p style="font-size:13.5px;color:rgba(255,255,255,.8);font-weight:300;line-height:1.9;margin-bottom:20px">高周波で温め、手技でほぐし、EMSで仕上げる。ウエスト集中の60・90・120分プラン（初回体験¥3,980〜）。<br><b style="color:var(--gold);font-weight:500">痩身エステのような高額ローンは不要。月額制で、やめたい月にやめられます。</b></p>
-      <a class="btn btn-gold" href="menu.html">WAIST DESIGN の料金を見る →</a>
+    <!-- 単発（最上価格） -->
+    <div class="price-group-label rv" style="margin-top:26px">単発（都度払い）<span class="sm">その都度、通いたい方に</span></div>
+    <div class="price-cards rv">
+      <div class="pc full" style="background:#fff">
+        <div class="pc-r">
+          <div class="pc-sub" style="margin-top:0;font-size:14px;color:var(--ink-soft)">HYPER EMS DIET <b style="font-weight:600;color:var(--ink)">¥3,980</b>／回　・　WAIST DESIGN 60 <b style="font-weight:600;color:var(--ink)">¥9,000</b>／回</div>
+          <div class="pc-sub" style="margin-top:6px">体型管理を習慣にしたい方には、1回あたりがお得な月額制がおすすめです。</div>
+        </div>
+        <a class="btn btn-out" href="menu.html">90分・120分コースなど料金詳細 →</a>
+      </div>
     </div>
 
     <!-- VIP（別枠・上位プラン） -->
     <div class="vip-block rv">
       <div class="vk">VIP ／ 上位プラン</div>
       <h3>VIP利用も、ご相談可能。</h3>
-      <p class="vtxt">人目を気にせず、ゆったり過ごしたい方へ。完全個室で、ペア来店や優先的なご利用にも対応します。安さではなく「特別な時間」のためのプランです。</p>
+      <p class="vtxt">人目を気にせず、ゆったり利用したい方へ。ペア来店や特別なご利用をご希望の方は、LINEより事前にご相談ください。</p>
       <ul class="vip-points">
         <li>完全個室・<b>ペア来店OK</b>（同室でのご利用）</li>
         <li>VIPルームチャージ <b>60分 ¥10,000〜</b>（施術料金とは別）</li>
@@ -650,20 +778,17 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       </div>
     </div>
 
-    <!-- 温活サウナ オプション（通常は有料） -->
-    <div class="opt-sauna rv">
-      <img loading="lazy" src="images/sauna-option.jpg" alt="温活ドームサウナ 30分 ¥1,500" onerror="this.onerror=null;this.src='images/sauna-woman2.jpg'">
-      <div style="flex:1;min-width:180px">
-        <div class="os-k">OPTION ／ 温活</div>
-        <h4>温活ドームサウナ <span>30分</span></h4>
-        <p>体型管理メニューに追加できる温活オプション。じんわり汗をかいて、よりすっきり感を。<br>※単品予約不可／他メニューと組み合わせてご予約ください<br><b style="color:var(--gold)">VIP利用時は、このオプションが無料です。</b></p>
+    <!-- オプション：温活ドームサウナ -->
+    <div class="price-group-label rv" style="margin-top:26px">オプション<span class="sm">体型管理メニューに追加できます</span></div>
+    <div class="price-cards rv">
+      <div class="pc full">
+        <div class="pc-r">
+          <div class="pc-name" style="margin-bottom:2px">温活ドームサウナ 30分</div>
+          <div class="pc-price" style="font-size:22px">¥1,500<small>／単品予約不可・他メニューと組み合わせてご予約ください</small></div>
+          <div class="pc-sub" style="margin-top:6px">じんわり汗をかいて、よりすっきり感を。<b style="color:var(--gold-d);font-weight:600">VIP利用時は、このオプションが無料です。</b></div>
+        </div>
+        <a class="btn btn-out" href="sauna.html">サウナの詳細を見る →</a>
       </div>
-      <div class="os-price">¥1,500</div>
-    </div>
-
-    <!-- ペア来店（補足） -->
-    <div class="subnote-grid rv" style="grid-template-columns:1fr">
-      <div class="subnote"><div class="sk">PAIR OK</div><h4>ペア来店OK</h4><p>2名様同時施術にも対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。ご希望の際は、事前にLINEでご相談ください。</p></div>
     </div>
 
     <div class="center secta rv">
@@ -681,15 +806,30 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     <div class="center mt-head rv">
       <div class="kicker c">Flow</div>
       <h2 class="lead">初めてでも、<em>ご安心ください</em>。</h2>
+      <p class="body-txt" style="max-width:540px;margin:16px auto 0;font-size:14px;word-break:keep-all;overflow-wrap:anywhere">初回はカウンセリング込みで、<b style="color:var(--ink);font-weight:600">約90分</b>。<br>持ち物は不要です。手ぶらでお越しください。</p>
     </div>
     <div class="flow-grid">
       <div class="fstep rv"><div class="fn">01</div><div><h4>ご予約</h4><p>ホットペッパー、またはLINEからご予約いただけます。</p></div></div>
-      <div class="fstep rv"><div class="fn">02</div><div><h4>来店・カウンセリング</h4><p>お悩みやご希望をうかがい、合うプランをご提案します。</p></div></div>
-      <div class="fstep rv"><div class="fn">03</div><div><h4>お着替え</h4><p>お着替えはサロンでご用意。手ぶらでお越しいただけます。</p></div></div>
-      <div class="fstep rv"><div class="fn">04</div><div><h4>施術</h4><p>横になって、過ごすだけ。リラックスしてお過ごしください。</p></div></div>
-      <div class="fstep rv"><div class="fn">05</div><div><h4>続けたい方だけ、プラン案内</h4><p>合えば続ける、それだけ。無理な勧誘はありません。</p></div></div>
+      <div class="fstep rv"><div class="fn">02</div><div><h4>ご来店</h4><p>ご予約時間にお越しください。持ち物は不要です（ウェアはサロンでご用意）。</p></div></div>
+      <div class="fstep rv"><div class="fn">03</div><div><h4>カウンセリング</h4><p>お悩みやご希望をうかがい、合うメニューをご提案します。</p></div></div>
+      <div class="fstep rv"><div class="fn">04</div><div><h4>お着替え・施術</h4><p>お身体やお悩みに合わせて施術します。横になって、過ごすだけ。熱さは調整できますので、お気軽にお声がけください。</p></div></div>
+      <div class="fstep rv"><div class="fn">05</div><div><h4>アフター案内・続けたい方だけプラン提案</h4><p>合えば続ける、それだけ。無理な勧誘はありません。初回はカウンセリング込みで約90分です。</p></div></div>
     </div>
-    <div class="center secta rv"><a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a></div>
+    <div class="chip-row rv" style="margin-top:30px">
+      <span class="chip">熱さは調整可能</span>
+      <span class="chip">痛みが不安な方も相談OK</span>
+      <span class="chip">男性も利用可能</span>
+      <span class="chip">2名同時施術OK</span>
+      <span class="chip">食事制限ができなくても相談OK</span>
+      <span class="chip">ジムが続かなかった方にも</span>
+      <span class="chip">仕事帰りにも通いやすい</span>
+    </div>
+    <div class="center secta rv">
+      <div class="cta-pair">
+        <a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a>
+        <a class="btn btn-line" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">不安なことをLINEで相談する</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -705,6 +845,9 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <div class="fitem"><button class="fq">高い契約をすすめられませんか？</button><div class="fa"><p>まずは初回体験だけで大丈夫です。合うかどうかを体感してからお決めいただけます。高額コースを無理におすすめすることはありません。</p></div></div>
       <div class="fitem"><button class="fq">運動や食事制限は必要ですか？</button><div class="fa"><p>厳しい運動や食事制限は不要です。続けやすい「がんばらない体型管理習慣」としてご提案しています。</p></div></div>
       <div class="fitem"><button class="fq">寝ているだけで、意味があるのですか？</button><div class="fa"><p>高周波でお腹まわりを温め、EMSで自分では動かしにくい筋肉にはたらきかけます。運動が苦手な方・時間がない方でも始めやすい仕組みです。※効果・感じ方には個人差があります。</p></div></div>
+      <div class="fitem"><button class="fq">会食や外食が多くても通えますか？</button><div class="fa"><p>はい、ご相談ください。厳しい食事制限だけに頼るのではなく、今の生活リズムの中で続けやすい体型管理をご提案します。</p></div></div>
+      <div class="fitem"><button class="fq">どのくらいの頻度で通うのがおすすめですか？</button><div class="fa"><p>目的やお身体の状態により異なりますが、体型管理を習慣にしたい方には月額制での継続利用がおすすめです。初回時にご希望に合わせてご提案します。</p></div></div>
+      <div class="fitem"><button class="fq">高周波とEMSは何が違いますか？</button><div class="fa"><p>高周波は体を温めるための技術、EMSは筋肉にアプローチするための技術です。VISUAL LABOでは、この2つを組み合わせて体型管理をサポートします。</p></div></div>
       <div class="fitem"><button class="fq">サウナだけでも予約できますか？</button><div class="fa"><p>恐れ入りますが、ドームサウナは単品予約ではなく、高周波・EMSメニューに追加できる温活オプション（30分¥1,500）です。体型管理メニューと組み合わせてご利用ください。</p></div></div>
       <div class="fitem"><button class="fq">2名で一緒に受けられますか？</button><div class="fa"><p>はい、2名様同時施術に対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。完全個室のVIP利用もご相談いただけます。ご希望の際は、事前にLINEでご相談ください。</p></div></div>
     </div>
@@ -715,8 +858,8 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 <!-- ⑩ 申し込みボタン -->
 <section class="sec final-cta" id="cta">
   <div class="narrow">
-    <h2 class="rv">まずは、<em>¥1,980</em>で試すだけ。</h2>
-    <p class="rv">合わなければ返金。入会金¥0。<br>新橋駅 徒歩3分で、仕事帰りにも通いやすい体型管理サロンです。</p>
+    <h2 class="rv">会食も、仕事の疲れも、<em>予定の多さも</em>。</h2>
+    <p class="rv">今の生活のまま、体型管理を始めたい方へ。<br>初回体験¥1,980・合わなければ返金・入会金¥0。新橋駅 徒歩3分。</p>
     <div class="checks rv">
       <span>✓ 初回体験 ¥1,980</span>
       <span>✓ 満足保証・合わなければ返金</span>
@@ -745,7 +888,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
             <dt>CLOSED</dt><dd>日曜・隔週土曜・祝日</dd>
           </dl>
         </div>
-        <p style="font-size:13px;color:var(--ink-soft);font-weight:300;line-height:1.9;margin-top:18px">「VORT新橋一丁目」ビルの<b style="color:var(--ink);font-weight:500">3階</b>です。1階に着いたら、3階のインターホンを押してお知らせください。</p>
+        <p style="font-size:13px;color:var(--ink-soft);font-weight:400;line-height:1.9;margin-top:18px">「VORT新橋一丁目」ビルの<b style="color:var(--ink);font-weight:500">3階</b>です。1階に着いたら、3階のインターホンを押してお知らせください。</p>
         <div style="margin-top:18px"><a class="btn btn-out" href="https://share.google/ohKDqkLGRMrle61JZ" target="_blank" rel="noopener">Googleマップで開く →</a></div>
       </div>
       <div class="access-map rv">
