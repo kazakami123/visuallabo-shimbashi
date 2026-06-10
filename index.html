@@ -327,11 +327,16 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   .access-grid{grid-template-columns:1fr;gap:24px}
 }
 @media(max-width:760px){
-  .hero-bg::after{background:linear-gradient(to bottom,rgba(10,10,10,.28) 0%,rgba(10,10,10,.06) 26%,rgba(10,10,10,.5) 52%,rgba(10,10,10,.85) 78%,rgba(10,10,10,.96) 100%)}
-  .hero-inner{padding-bottom:80px}
-  .hero h1{margin-bottom:18px}
+  .hero{min-height:auto;display:block;background:#13110e}
+  .hero-bg{position:relative;inset:auto;z-index:0}
+  .hero-bg picture{display:block;width:100%;height:auto}
+  .hero-bg img{width:100%;height:auto;display:block;object-fit:unset}
+  .hero-bg::after{background:linear-gradient(to bottom,rgba(19,17,14,.2) 0%,rgba(19,17,14,0) 38%,rgba(19,17,14,.45) 72%,#13110e 100%)}
+  .hero-inner{position:relative;z-index:2;margin-top:-110px;padding:0 24px 86px}
+  .hero h1{margin-bottom:16px}
   .hero-sub{margin-bottom:18px!important}
-  .hero-tag{margin-bottom:14px}
+  .hero-tag{margin-bottom:12px}
+  .scroll-i{display:none}
   .navlinks{display:none}
   .burger{display:flex}
   .cards,.flow-grid{gap:11px}
@@ -595,7 +600,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
       <p class="body-txt" style="max-width:560px;margin:16px auto 0;font-size:14.5px;word-break:keep-all;overflow-wrap:anywhere">気になる部分に向き合いながら、<br>無理なく続けやすいケアをご提案します。</p>
     </div>
     <div class="pickup rv">
-      <figure class="pickup-img"><img loading="lazy" src="images/ba-w1-front-2.jpg" alt="お腹まわりの変化｜体験者の記録（WAIST DESIGN）"></figure>
+      <figure class="pickup-img"><img loading="lazy" src="images/ba-male-side.jpg" alt="男性のお腹まわりの変化 側面｜BEFORE/AFTER｜施術回数1回・90分・WAIST DESIGN 90｜効果には個人差があります"></figure>
       <div class="pickup-b">
         <div class="vc-who">男性 ／ WAIST DESIGN</div>
         <p class="vc-t">会食や予定の調整が難しく、お酒もたくさん飲むので、どんどん大きくなるお腹をどうにかしたいと思い駆け込みました。どれだけ疲れが溜まっていても横になるだけなので、無理なく通えています。</p>
