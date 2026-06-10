@@ -362,6 +362,23 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 }
 /* ===== v2: 2メニュー選択カード ===== */
 .menu2-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px;margin:0 auto}
+/* v3: テキストHTML＋写真埋め込みカード */
+.m3{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;display:grid;grid-template-columns:54% 46%;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.05)}
+.m3.gold{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.14)}
+.m3-badge{position:absolute;top:-12px;left:22px;background:var(--ink);color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;padding:5px 16px;border-radius:999px;z-index:2;white-space:nowrap}
+.m3.gold .m3-badge{background:var(--gold)}
+.m3-t{padding:34px 16px 26px 24px;display:flex;flex-direction:column;align-items:flex-start}
+.m3 .no{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ink-mute);margin-bottom:8px}
+.m3 .nm{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(18px,2.3vw,23px);font-weight:500;letter-spacing:.05em;color:var(--ink);line-height:1.25}
+.m3 .cat{font-size:14px;font-weight:600;color:var(--gold-d);margin:8px 0 12px}
+.m3 .ds{font-size:12.5px;color:var(--ink-soft);line-height:2;margin:0 0 16px;font-weight:400;word-break:keep-all;overflow-wrap:anywhere}
+.m3 .pr{font-size:12px;color:var(--ink-mute);margin-bottom:16px}
+.m3 .pr b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(20px,2.6vw,25px);color:var(--ink);font-weight:500;margin-left:6px}
+.m3 .pr small{font-size:13px;color:var(--ink)}
+.m3 .lk2{display:inline-block;font-size:12.5px;font-weight:600;color:var(--ink);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:9px 2px;letter-spacing:.02em;white-space:nowrap}
+.m3 .lk2:hover{color:var(--gold-d)}
+.m3-ph{width:100%;height:100%;object-fit:cover;display:block;min-height:300px}
+@media(max-width:760px){.m3-t{padding:30px 12px 22px 18px}.m3 .ds{font-size:12px}.m3-ph{min-height:260px}}
 .m2{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 26px 26px;position:relative;display:flex;flex-direction:column;align-items:flex-start}
 .m2.gold{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.12)}
 .m2 .m2-badge{position:absolute;top:-12px;left:24px;background:var(--ink);color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;padding:4px 14px;border-radius:999px}
@@ -633,9 +650,31 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     </div>
 
     <!-- 2メニュー選択 -->
-    <div class="menu2-grid rv" style="align-items:start;max-width:980px">
-      <a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener" style="display:block"><img loading="lazy" src="images/menu-hyper-ems.jpg" alt="MENU 01 HYPER EMS DIET（貼るだけ筋トレ）｜気軽にはじめたい方｜60分、お腹まわりに貼って過ごすだけ。EMS＋低温RFで、引き締め・キープ・腹筋づくりに。初回体験（60分）¥1,980〜｜EMS体験を予約する" style="width:100%;display:block"></a>
-      <a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener" style="display:block"><img loading="lazy" src="images/menu-waist-design.jpg" alt="MENU 02 WAIST DESIGN（しっかりサイズダウン）｜本気で変えたい方｜高周波で深部から温め、手技でほぐし、EMSで仕上げる。ウエスト集中の本格ケアメニュー。初回体験（60分）¥3,980〜｜WAIST DESIGN体験を予約する" style="width:100%;display:block"></a>
+    <div class="menu2-grid rv" style="max-width:980px">
+      <div class="m3">
+        <div class="m3-badge">気軽にはじめたい方</div>
+        <div class="m3-t">
+          <div class="no">MENU 01</div>
+          <div class="nm">HYPER EMS DIET</div>
+          <div class="cat">貼るだけ筋トレ</div>
+          <p class="ds">60分、お腹まわりに貼って過ごすだけ。<br>EMS＋低温RFで、<br>引き締め・キープ・腹筋づくりに。</p>
+          <div class="pr">初回体験（60分）<b>¥1,980</b><small>〜</small></div>
+          <a class="lk2" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">EMS体験を予約する →</a>
+        </div>
+        <img class="m3-ph" loading="lazy" src="images/menu-ems-photo.jpg" alt="HYPER EMS DIETの施術風景｜寝たままお腹にEMSパッドを貼って過ごす男性と自社開発マシンMystiCore">
+      </div>
+      <div class="m3 gold">
+        <div class="m3-badge">本気で変えたい方</div>
+        <div class="m3-t">
+          <div class="no">MENU 02</div>
+          <div class="nm">WAIST DESIGN</div>
+          <div class="cat">しっかりサイズダウン</div>
+          <p class="ds">高周波で深部から温め、手技でほぐし、EMSで仕上げる。ウエスト集中の本格ケアメニュー。</p>
+          <div class="pr">初回体験（60分）<b>¥3,980</b><small>〜</small></div>
+          <a class="lk2" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">WAIST DESIGN体験を予約する →</a>
+        </div>
+        <img class="m3-ph" loading="lazy" src="images/menu-wd-photo.jpg" alt="WAIST DESIGNの施術風景｜高周波プローブでお腹まわりをケアするスタッフ">
+      </div>
     </div>
     <p class="note-s rv" style="margin-top:14px">迷ったら、<a href="#shindan" style="color:var(--gold-d);text-decoration:underline">30秒診断</a>へ。<br>初回体験はどちらも満足保証つき（合わなければ返金）。</p>
 
