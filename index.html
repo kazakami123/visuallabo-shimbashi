@@ -362,23 +362,27 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 }
 /* ===== v2: 2メニュー選択カード ===== */
 .menu2-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px;margin:0 auto}
-/* v3: テキストHTML＋写真埋め込みカード */
-.m3{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;display:grid;grid-template-columns:54% 46%;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.05)}
-.m3.gold{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.14)}
-.m3-badge{position:absolute;top:-12px;left:22px;background:var(--ink);color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;padding:5px 16px;border-radius:999px;z-index:2;white-space:nowrap}
+/* v3: テキストHTML＋写真埋め込みカード（1カード1行・ゆったり） */
+.m3{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;grid-template-columns:1fr 44%;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.m3.gold{border:1.5px solid var(--gold);box-shadow:0 12px 34px rgba(184,155,94,.14)}
+.m3-badge{position:absolute;top:-13px;left:26px;background:var(--ink);color:#fff;font-size:11.5px;font-weight:500;letter-spacing:.08em;padding:6px 18px;border-radius:999px;z-index:2;white-space:nowrap}
 .m3.gold .m3-badge{background:var(--gold)}
-.m3-t{padding:34px 16px 26px 24px;display:flex;flex-direction:column;align-items:flex-start}
-.m3 .no{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.18em;color:var(--ink-mute);margin-bottom:8px}
-.m3 .nm{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(18px,2.3vw,23px);font-weight:500;letter-spacing:.05em;color:var(--ink);line-height:1.25}
-.m3 .cat{font-size:14px;font-weight:600;color:var(--gold-d);margin:8px 0 12px}
-.m3 .ds{font-size:12.5px;color:var(--ink-soft);line-height:2;margin:0 0 16px;font-weight:400;word-break:keep-all;overflow-wrap:anywhere}
-.m3 .pr{font-size:12px;color:var(--ink-mute);margin-bottom:16px}
-.m3 .pr b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(20px,2.6vw,25px);color:var(--ink);font-weight:500;margin-left:6px}
-.m3 .pr small{font-size:13px;color:var(--ink)}
-.m3 .lk2{display:inline-block;font-size:12.5px;font-weight:600;color:var(--ink);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:9px 2px;letter-spacing:.02em;white-space:nowrap}
+.m3-t{padding:clamp(34px,5vw,52px) clamp(20px,3vw,36px) clamp(28px,4vw,44px) clamp(24px,4vw,44px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.m3 .no{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11.5px;letter-spacing:.2em;color:var(--ink-mute);margin-bottom:10px}
+.m3 .nm{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(21px,3.2vw,28px);font-weight:500;letter-spacing:.05em;color:var(--ink);line-height:1.25}
+.m3 .cat{font-size:clamp(14px,2vw,16px);font-weight:600;color:var(--gold-d);margin:10px 0 16px}
+.m3 .ds{font-size:clamp(13px,1.8vw,14px);color:var(--ink-soft);line-height:2.05;margin:0 0 20px;font-weight:400;word-break:keep-all;overflow-wrap:anywhere}
+.m3 .pr{font-size:13px;color:var(--ink-mute);margin-bottom:20px}
+.m3 .pr b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(23px,3.4vw,30px);color:var(--ink);font-weight:500;margin-left:8px}
+.m3 .pr small{font-size:14px;color:var(--ink)}
+.m3 .lk2{display:inline-block;font-size:13.5px;font-weight:600;color:var(--ink);border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:10px 2px;letter-spacing:.02em;white-space:nowrap}
 .m3 .lk2:hover{color:var(--gold-d)}
-.m3-ph{width:100%;height:100%;object-fit:cover;display:block;min-height:300px}
-@media(max-width:760px){.m3-t{padding:30px 12px 22px 18px}.m3 .ds{font-size:12px}.m3-ph{min-height:260px}}
+.m3-ph{width:100%;height:100%;object-fit:cover;display:block;min-height:340px}
+@media(max-width:760px){
+  .m3{grid-template-columns:1fr}
+  .m3-ph{order:-1;min-height:0;height:min(64vw,340px)}
+  .m3-t{padding:26px 22px 28px}
+}
 .m2{background:#fff;border:1px solid var(--line);border-radius:10px;padding:32px 26px 26px;position:relative;display:flex;flex-direction:column;align-items:flex-start}
 .m2.gold{border:1.5px solid var(--gold);box-shadow:0 10px 30px rgba(184,155,94,.12)}
 .m2 .m2-badge{position:absolute;top:-12px;left:24px;background:var(--ink);color:#fff;font-size:11px;font-weight:500;letter-spacing:.08em;padding:4px 14px;border-radius:999px}
@@ -650,7 +654,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     </div>
 
     <!-- 2メニュー選択 -->
-    <div class="menu2-grid rv" style="max-width:980px">
+    <div class="menu2-grid rv" style="max-width:880px;grid-template-columns:1fr;gap:30px">
       <div class="m3">
         <div class="m3-badge">気軽にはじめたい方</div>
         <div class="m3-t">
