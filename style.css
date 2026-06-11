@@ -484,3 +484,11 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:60px 0 36px}
 .menu-nav a b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-weight:500;color:var(--gold);margin-right:6px}
 section[id]{scroll-margin-top:84px}
 .psub[id]{scroll-margin-top:90px}
+
+/* mobile: 300kHz callout 余白圧縮 */
+@media(max-width:760px){
+  .callout .wrap{padding:0 14px}
+  .callout .box{padding:34px 18px;border-radius:10px}
+  .callout p{font-size:14px;line-height:2.05}
+  .callout h2{font-size:clamp(21px,5.6vw,26px)}
+}
