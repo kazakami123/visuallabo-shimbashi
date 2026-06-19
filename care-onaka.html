@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -120,6 +129,22 @@
   </div>
 </section>
 
+<section class="sec">
+  <div class="wrap">
+    <div class="center mt-head rv">
+      <div class="kicker c">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>食事を減らしても、下腹だけ落ちにくいのはなぜですか？</summary><div class="a">お腹まわりは内臓に近く冷えやすい層といわれ、冷えて巡りが滞ると、まわりの組織が固まり変化しにくい状態に。まず温めてゆるめ、EMSで腹筋・インナーマッスルを動かすことが、お腹まわりのケアの第一歩です。</div></details>
+      <details><summary>寝ているだけのEMSで、意味があるのですか？</summary><div class="a">高周波でお腹を温めてから、EMSで自分では動かしにくい腹筋・インナーマッスルにはたらきかけます。運動が苦手な方・時間がない方でも始めやすい仕組みです。※効果・感じ方には個人差があります。</div></details>
+      <details><summary>お腹が冷たく硬いのですが、大丈夫ですか？</summary><div class="a">冷えて巡りが滞ると、お腹まわりが固まりがちになるといわれています。強く揉むより、まず高周波で深部から温めてゆるめることをおすすめしています。</div></details>
+      <details><summary>運動や食事制限は必要ですか？</summary><div class="a">厳しい運動や食事制限は不要です。続けやすい「がんばらない体型管理習慣」としてご提案しています。</div></details>
+      <details><summary>男性でも受けられますか？</summary><div class="a">はい、男女どちらもご利用いただけます。スーツのウエストが気になる男性のご相談も多くいただきます。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>まずは、<em>初回体験</em>から。</h2>
@@ -176,6 +201,54 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "食事を減らしても、下腹だけ落ちにくいのはなぜですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "お腹まわりは内臓に近く冷えやすい層といわれ、冷えて巡りが滞ると、まわりの組織が固まり変化しにくい状態に。まず温めてゆるめ、EMSで腹筋・インナーマッスルを動かすことが、お腹まわりのケアの第一歩です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "寝ているだけのEMSで、意味があるのですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "高周波でお腹を温めてから、EMSで自分では動かしにくい腹筋・インナーマッスルにはたらきかけます。運動が苦手な方・時間がない方でも始めやすい仕組みです。※効果・感じ方には個人差があります。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "お腹が冷たく硬いのですが、大丈夫ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "冷えて巡りが滞ると、お腹まわりが固まりがちになるといわれています。強く揉むより、まず高周波で深部から温めてゆるめることをおすすめしています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "運動や食事制限は必要ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "厳しい運動や食事制限は不要です。続けやすい「がんばらない体型管理習慣」としてご提案しています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "男性でも受けられますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい、男女どちらもご利用いただけます。スーツのウエストが気になる男性のご相談も多くいただきます。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>

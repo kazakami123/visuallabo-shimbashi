@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -193,6 +202,24 @@
   </div>
 </section>
 
+<section class="sec">
+  <div class="wrap">
+    <div class="center mt-head rv">
+      <div class="kicker c">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>足首がパンパンにむくむのはなぜですか？</summary><div class="a">足首は心臓から遠く、立ち仕事やデスクワークでふくらはぎの筋肉ポンプが働かないと、血液や水分が滞りやすい場所です。冷えや塩分のとりすぎ、運動不足でも一時的にむくみやすくなるといわれています。温めて巡りやすくし、ふくらはぎの筋肉を動かすケアが向いています。※片脚だけ急にむくむ・強い痛みがある場合は医療機関へご相談ください。</div></details>
+      <details><summary>足の甲がむくむ・だるいのはなぜですか？</summary><div class="a">足の甲は体の中でもっともむくみやすい部位のひとつといわれます。座っている時間が長い方に多く、巡りの滞りが原因とされています。高周波で温めて巡りをサポートし、EMSで筋肉ポンプを動かすことで、すっきりとした状態を目指します。</div></details>
+      <details><summary>立ち仕事で、かかと（踵）や脚が痛い・重いです。</summary><div class="a">立ちっぱなしだと、ふくらはぎのポンプがほとんど働かず、血液が脚に滞って痛み・だるさ・むくみにつながりやすいといわれています。VISUAL LABOは、温めて巡りやすくし、EMSで筋肉を動かしてポンプをサポートします。※強い痛みやしびれが続く場合は、まず医療機関へご相談ください。</div></details>
+      <details><summary>マッサージしても、すぐ戻ってしまうのはなぜですか？</summary><div class="a">表面をさするマッサージは、一時的に流れても、肝心の筋肉ポンプそのものが動かなければ、また滞りやすいといわれています。冷えて固まった脚は流れにくい状態。温めて巡りやすくし、筋肉そのものを動かすことが大切です。</div></details>
+      <details><summary>ふくらはぎが太いのは、脂肪ですか？筋肉ですか？</summary><div class="a">むくみタイプ・脂肪/セルライトタイプ・筋肉（張り）タイプの3つがあり、多くの方は複数が混在しています。タイプによって向き合い方が変わるため、来店時のカウンセリングで一緒に見極めます。</div></details>
+      <details><summary>運動が苦手でも受けられますか？</summary><div class="a">はい。寝たままEMSで筋肉を動かすので、運動が苦手な方・時間がない方でも始めやすい仕組みです。厳しい運動や食事制限に頼らず続けられます。</div></details>
+      <details><summary>男性でも受けられますか？</summary><div class="a">はい、男女どちらもご利用いただけます。立ち仕事・デスクワークでの脚のむくみ・だるさは、男性のご相談も多くいただきます。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>まずは、<em>初回体験</em>から。</h2>
@@ -249,6 +276,70 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "足首がパンパンにむくむのはなぜですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "足首は心臓から遠く、立ち仕事やデスクワークでふくらはぎの筋肉ポンプが働かないと、血液や水分が滞りやすい場所です。冷えや塩分のとりすぎ、運動不足でも一時的にむくみやすくなるといわれています。温めて巡りやすくし、ふくらはぎの筋肉を動かすケアが向いています。※片脚だけ急にむくむ・強い痛みがある場合は医療機関へご相談ください。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "足の甲がむくむ・だるいのはなぜですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "足の甲は体の中でもっともむくみやすい部位のひとつといわれます。座っている時間が長い方に多く、巡りの滞りが原因とされています。高周波で温めて巡りをサポートし、EMSで筋肉ポンプを動かすことで、すっきりとした状態を目指します。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "立ち仕事で、かかと（踵）や脚が痛い・重いです。",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "立ちっぱなしだと、ふくらはぎのポンプがほとんど働かず、血液が脚に滞って痛み・だるさ・むくみにつながりやすいといわれています。VISUAL LABOは、温めて巡りやすくし、EMSで筋肉を動かしてポンプをサポートします。※強い痛みやしびれが続く場合は、まず医療機関へご相談ください。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "マッサージしても、すぐ戻ってしまうのはなぜですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "表面をさするマッサージは、一時的に流れても、肝心の筋肉ポンプそのものが動かなければ、また滞りやすいといわれています。冷えて固まった脚は流れにくい状態。温めて巡りやすくし、筋肉そのものを動かすことが大切です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "ふくらはぎが太いのは、脂肪ですか？筋肉ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "むくみタイプ・脂肪/セルライトタイプ・筋肉（張り）タイプの3つがあり、多くの方は複数が混在しています。タイプによって向き合い方が変わるため、来店時のカウンセリングで一緒に見極めます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "運動が苦手でも受けられますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。寝たままEMSで筋肉を動かすので、運動が苦手な方・時間がない方でも始めやすい仕組みです。厳しい運動や食事制限に頼らず続けられます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "男性でも受けられますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい、男女どちらもご利用いただけます。立ち仕事・デスクワークでの脚のむくみ・だるさは、男性のご相談も多くいただきます。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>
