@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -223,6 +232,20 @@
 </section>
 
 <!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="nexthead rv">
+      <div class="kicker">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>MystiCore®とは何ですか？</summary><div class="a">高周波(RF)・EMS・TENSを備えた自社開発マシンです。深部加温と筋肉へのアプローチを組み合わせます。</div></details>
+      <details><summary>出力はどのくらいですか？</summary><div class="a">RF出力400W・300kHzなど、一般的な機種（約250W）を上回る高出力で、奥までしっかり温めることを目指します。</div></details>
+      <details><summary>はじめてでも受けられますか？</summary><div class="a">手順が決まっていて施術が安定しやすいので、はじめての方でも受けやすい設計です。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>まずは、<em>初回体験</em>から。</h2>
@@ -281,6 +304,38 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "MystiCore®とは何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "高周波(RF)・EMS・TENSを備えた自社開発マシンです。深部加温と筋肉へのアプローチを組み合わせます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "出力はどのくらいですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "RF出力400W・300kHzなど、一般的な機種（約250W）を上回る高出力で、奥までしっかり温めることを目指します。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "はじめてでも受けられますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "手順が決まっていて施術が安定しやすいので、はじめての方でも受けやすい設計です。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>

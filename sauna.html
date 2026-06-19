@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -93,6 +102,20 @@
 </section>
 
 <!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="nexthead rv">
+      <div class="kicker">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>ドームサウナだけ予約できますか？</summary><div class="a">単品予約は承っておらず、高周波・EMSメニューに追加できる温活オプション（30分¥1,500）です。</div></details>
+      <details><summary>VIP利用だと無料ですか？</summary><div class="a">はい。VIP利用時は、温活ドームサウナがオプション無料です。</div></details>
+      <details><summary>どんな方におすすめですか？</summary><div class="a">じんわり温まり、汗をかいてすっきりしたい方におすすめです。※感じ方には個人差があります。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>サウナも、<em>体型管理</em>も。</h2>
@@ -150,6 +173,38 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "ドームサウナだけ予約できますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "単品予約は承っておらず、高周波・EMSメニューに追加できる温活オプション（30分¥1,500）です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "VIP利用だと無料ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい。VIP利用時は、温活ドームサウナがオプション無料です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "どんな方におすすめですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "じんわり温まり、汗をかいてすっきりしたい方におすすめです。※感じ方には個人差があります。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>

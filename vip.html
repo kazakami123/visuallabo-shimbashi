@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -158,6 +167,21 @@
 </section>
 
 <!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="nexthead rv">
+      <div class="kicker">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>VIPルームとは何ですか？</summary><div class="a">完全個室で、人目を気にせずゆったりご利用いただけます。ペア来店も可能です。</div></details>
+      <details><summary>VIPの料金は？</summary><div class="a">VIPルームチャージは60分¥10,000〜（施術料金とは別）です。詳細はLINEでご相談ください。</div></details>
+      <details><summary>2名で一緒に受けられますか？</summary><div class="a">はい、2名同時施術に対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。</div></details>
+      <details><summary>VIP利用の特典はありますか？</summary><div class="a">VIP利用時は、温活ドームサウナがオプション無料です。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>VIPルームの<em>ご相談</em>は、LINEで。</h2>
@@ -215,6 +239,46 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "VIPルームとは何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "完全個室で、人目を気にせずゆったりご利用いただけます。ペア来店も可能です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "VIPの料金は？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "VIPルームチャージは60分¥10,000〜（施術料金とは別）です。詳細はLINEでご相談ください。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "2名で一緒に受けられますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "はい、2名同時施術に対応しています。ご友人・ご夫婦・カップルでのご来店も可能です。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "VIP利用の特典はありますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "VIP利用時は、温活ドームサウナがオプション無料です。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>

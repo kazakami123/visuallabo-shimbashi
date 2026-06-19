@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+.faqd{max-width:720px;margin:0 auto}
+.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
+.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
+.faqd details[open] summary::after{content:"\2013"}
+.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
+</style>
 </head>
 <body>
 
@@ -160,6 +169,21 @@
 </section>
 
 <!-- CTA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="nexthead rv">
+      <div class="kicker">FAQ</div>
+      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
+    </div>
+    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
+      <details><summary>高周波（RF）とは何ですか？</summary><div class="a">1秒間に数十万回振動する電気の波で、体の内側から温める技術です。表面ではなく、深部からじんわり温まるのが特長といわれています。</div></details>
+      <details><summary>高周波は熱くないですか？</summary><div class="a">出力は調整できます。じんわり温かい程度で、熱さが気になるときはお声がけください。</div></details>
+      <details><summary>インディバとの違いは何ですか？</summary><div class="a">インディバなどで知られる高周波（RF）深部加温のカテゴリです。MystiCore®は複数の周波数を使い分け、状態に合わせてアプローチします。</div></details>
+      <details><summary>どのくらいの頻度で受けるのがおすすめですか？</summary><div class="a">目的により異なりますが、温めは継続が大切です。月2回〜の継続がおすすめです。※効果・感じ方には個人差があります。</div></details>
+    </div>
+  </div>
+</section>
+
 <section class="sec cta">
   <div class="wrap">
     <h2>まずは、<em>初回体験</em>から。</h2>
@@ -218,6 +242,46 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "高周波（RF）とは何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "1秒間に数十万回振動する電気の波で、体の内側から温める技術です。表面ではなく、深部からじんわり温まるのが特長といわれています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "高周波は熱くないですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "出力は調整できます。じんわり温かい程度で、熱さが気になるときはお声がけください。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "インディバとの違いは何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "インディバなどで知られる高周波（RF）深部加温のカテゴリです。MystiCore®は複数の周波数を使い分け、状態に合わせてアプローチします。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "どのくらいの頻度で受けるのがおすすめですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "目的により異なりますが、温めは継続が大切です。月2回〜の継続がおすすめです。※効果・感じ方には個人差があります。"
+   }
+  }
+ ]
+}
 </script>
 </body>
 </html>
