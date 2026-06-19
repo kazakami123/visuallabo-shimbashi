@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お悩み診断｜痩身ケア？体のケア？あなたに合うメニュー診断｜VISUAL LABO 新橋店</title>
+<meta name="description" content="30秒のお悩み診断。痩身ケア（サイズダウン・引き締め）か、体のケア（むくみ・だるさ・巡り）か。4つの質問に答えるだけで、あなたに合うメニューがわかります。新橋駅徒歩3分・初回体験¥1,980〜。">
+<meta name="keywords" content="新橋 体型管理,お悩み診断,痩身,体のケア,むくみ,新橋 EMS,新橋 高周波,メニュー診断">
+<meta property="og:title" content="お悩み診断｜VISUAL LABO 新橋店">
+<meta property="og:description" content="痩身ケアか体のケアか。4つの質問で、あなたに合うメニューを。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://visuallabo-recruit-lp.pages.dev/images/04_misticore.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.dx{max-width:660px;margin:0 auto}
+.dx .prog{font-family:Outfit,sans-serif;font-size:12px;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:14px}
+.dx .q{font-size:clamp(18px,3.6vw,24px);font-weight:500;color:var(--ink);line-height:1.6;margin-bottom:22px}
+.dx .opts{display:grid;gap:12px}
+.dx .opt{text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;font-size:15px;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s;font-family:inherit;line-height:1.5}
+.dx .opt:hover{border-color:var(--gold);background:var(--paper-2)}
+.dx .back{margin-top:18px;background:none;border:none;color:var(--ink-mute);font-size:13px;cursor:pointer;font-family:inherit;padding:6px 0}
+.dx .res .tk{display:inline-block;background:var(--gold);color:#fff;font-size:12px;letter-spacing:.08em;border-radius:999px;padding:5px 16px;margin-bottom:16px}
+.dx .res h3{font-size:clamp(20px,4.4vw,30px);font-weight:500;color:var(--ink);margin:0 0 8px;line-height:1.4}
+.dx .card{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:20px 0}
+.dx .card .lb{font-family:Outfit,sans-serif;font-size:11px;letter-spacing:.12em;color:var(--ink-mute);margin-bottom:8px}
+.dx .card .mn{font-weight:600;color:var(--ink);font-size:18px;line-height:1.5}
+.dx .card .pr{font-family:Outfit,sans-serif;color:var(--gold);font-weight:600;margin-top:8px}
+.dx .why{font-size:14px;line-height:1.95;color:var(--ink-soft);margin:0}
+.dx .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.dx .ctas .btn{flex:1 1 200px}
+.dx .note{font-size:11.5px;color:var(--ink-mute);margin-top:18px;line-height:1.7}
+.dx .guide{display:inline-block;margin-top:10px;font-size:13px;color:var(--ink);border-bottom:1px solid var(--gold)}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="brand" href="index.html"><img class="logo-img" src="images/logo.png" alt="VISUAL LABO" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="brand-fallback">VISUAL&nbsp;<b>LABO</b></span></a>
+    <div class="navlinks">
+      <a href="index.html#concept">CONCEPT</a>
+      <a href="menu.html">MENU</a>
+      <a href="treatment.html">施術内容</a>
+      <a href="rf.html">高周波とは</a>
+      <a href="ems.html">EMSとは</a>
+      <a href="index.html#price">PRICE</a>
+      <a class="nav-cta" href="index.html#cta">初回体験を予約</a>
+    </div>
+    <a class="back" href="menu.html">← MENUへ</a>
+  </nav>
+</header>
+
+<section class="mhero">
+  <div class="mhero-bg"><img src="images/relax-treatment.jpg" style="object-position:center 35%" alt="お悩み診断｜VISUAL LABO 新橋店" onerror="this.onerror=null;this.src='https://visuallabo-recruit-lp.pages.dev/images/02_staff-treatment.jpg'"></div>
+  <div class="wrap mhero-inner">
+    <div class="tag">DIAGNOSIS ／ お悩み診断</div>
+    <h1>お悩み診断<span class="jp">痩身ケア？ 体のケア？</span></h1>
+    <p class="sub">4つの質問で、あなたに合うメニューを。</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="dx" id="dx"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="fb">VISUAL <b>LABO</b></div>
+        <p>がんばらない、体型管理習慣。新橋の、会員制 体型管理サロン。<br>東京都港区新橋1丁目14-8 VORT新橋一丁目 3F ／ 新橋駅 徒歩3分<br>11:00 — 21:00<br>定休日：日曜・隔週土曜・祝日<br><span style="font-size:12px;opacity:.85">対応エリア：新橋・銀座・汐留・内幸町・有楽町・虎ノ門</span></p>
+        <div class="foot-sns"><a href="https://instagram.com/visuallabo_dietsalon/" target="_blank" rel="noopener">Instagram</a></div>
+      </div>
+      <div class="foot-nav">
+        <div class="col">
+          <h5>TREATMENT</h5>
+          <a href="treatment.html">施術内容</a>
+          <a href="machine.html">MystiCore®とは</a>
+          <a href="rf.html">高周波とは</a>
+          <a href="ems.html">EMSとは</a>
+          <a href="sauna.html">サウナ</a>
+        </div>
+        <div class="col">
+          <h5>INFO</h5>
+          <a href="guide.html">会員制度ガイド</a>
+          <a href="beforeafter.html">変化の記録</a>
+          <a href="menu.html">MENU・PRICE</a>
+          <a href="index.html#access">ACCESS</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="col">
+          <h5>RESERVE</h5>
+          <a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">ホットペッパー</a>
+          <a href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINE予約・相談</a>
+        </div>
+        <div class="col">
+          <h5>COMPANY</h5>
+          <a href="https://visuallabo-recruit-lp.pages.dev/" target="_blank" rel="noopener">採用情報</a>
+          <a href="tokushoho.html">特定商取引法に基づく表記</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy"><span>© VISUAL LABO. All rights reserved.</span><span>SHIMBASHI ／ 2026 OPEN</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+const QS=[
+ {q:'Q1. いちばんの目的は？',opts:[
+   ['見た目を変えたい（サイズダウン・引き締め）','slim'],
+   ['むくみ・だるさ・冷えをラクにしたい','care'],
+   ['太りにくい体を維持したい・習慣にしたい','maintain']]},
+ {q:'Q2. いちばん気になる部位は？',opts:[
+   ['お腹・下腹','onaka'],
+   ['二の腕・背中・肩まわり','upper'],
+   ['脚・ふくらはぎ・太もも','lower'],
+   ['全身・複数の部位','multi']]},
+ {q:'Q3. 通い方の希望は？',opts:[
+   ['まずは気軽に・短時間で','easy'],
+   ['しっかり本格的に整えたい','deep']]},
+ {q:'Q4. 運動・食事制限は？',opts:[
+   ['続かない・できればしたくない','no'],
+   ['ある程度ならがんばれる','ok']]}
+];
+const box=document.getElementById('dx');
+let step=0, ans=[];
+function esc(s){return s;}
+function render(){
+ if(step<QS.length){
+  const d=QS[step];
+  box.className='dx';
+  box.innerHTML='<div class="prog">QUESTION '+(step+1)+' / '+QS.length+'</div>'
+   +'<div class="q">'+d.q+'</div>'
+   +'<div class="opts">'+d.opts.map((o,i)=>'<button class="opt" data-i="'+i+'">'+o[0]+'</button>').join('')+'</div>'
+   +(step>0?'<button class="back">← ひとつ戻る</button>':'');
+  box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{ans[step]=d.opts[+b.dataset.i][1];step++;render();window.scrollTo({top:box.getBoundingClientRect().top+window.scrollY-110,behavior:'smooth'});});
+  const bk=box.querySelector('.back'); if(bk)bk.onclick=()=>{step--;render();};
+  return;
+ }
+ const goal=ans[0],area=ans[1],pace=ans[2],effort=ans[3];
+ let track = goal==='slim' ? '痩身ケア' : goal==='care' ? '体のケア' : '体型管理・維持';
+ let menu,price,guide=null;
+ if(area==='lower'){menu='BODY MAINTENANCE MENU 90（下半身）';price='¥6,980';guide=['ふくらはぎのガイドを見る →','care-fukurahagi.html'];}
+ else if(area==='multi'){menu='BODY MAINTENANCE MENU 120（全身1〜3部位）';price='¥9,980';}
+ else if(area==='upper'){menu='BODY MAINTENANCE MENU 60（上半身）';price='¥3,980';guide=['二の腕のガイドを見る →','care-ninoude.html'];}
+ else {
+   if(goal==='slim' && pace==='easy'){menu='HYPER EMS MENU（60分・貼るだけ）';price='¥1,980';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
+   else {menu='BODY MAINTENANCE MENU 60（上半身）';price='¥3,980';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
+ }
+ let why;
+ if(track==='痩身ケア'){why='サイズダウン・引き締めを目指したいあなたへ。気になる部位を、高周波で温めてからEMSで動かし、効率よくアプローチします。';}
+ else if(track==='体のケア'){why='むくみ・だるさ・巡りを整えたいあなたへ。高周波で温めて巡りをサポートし、EMSで動かします。'+(area!=='lower'?'温活ドームサウナの追加もおすすめです。':'温活ドームサウナとの組み合わせもおすすめです。');}
+ else {why='太りにくい体を、習慣で維持したいあなたへ。続けやすい月額プラン（月4回【人気】）での習慣化がおすすめです。';}
+ if(effort==='no' && menu.indexOf('HYPER EMS')<0){why+=' 厳しい運動や食事制限に頼らず、寝ながら続けられます。';}
+ let html='<div class="res">'
+  +'<div class="tk">YOUR RESULT</div>'
+  +'<h3>あなたにおすすめは<br>「'+track+'」。</h3>'
+  +'<div class="card"><div class="lb">RECOMMENDED MENU</div><div class="mn">'+menu+'</div><div class="pr">初回体験 '+price+'〜（満足保証つき）</div>'
+  +(guide?'<a class="guide" href="'+guide[1]+'">'+guide[0]+'</a>':'')+'</div>'
+  +'<p class="why">'+why+'</p>'
+  +'<div class="ctas"><a class="btn btn-gold" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する</a><a class="btn btn-ghost" href="menu.html">メニューを詳しく見る</a></div>'
+  +'<div class="note">※ 本診断は目安です。当日のカウンセリングで、お悩みや体の状態に合わせて最適なメニューをご提案します。効果・感じ方には個人差があります。</div>'
+  +'<button class="back">← もう一度診断する</button></div>';
+ box.innerHTML=html;
+ box.querySelector('.back').onclick=()=>{step=0;ans=[];render();};
+}
+render();
+})();
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
