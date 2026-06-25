@@ -609,6 +609,52 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   </div>
 </section>
 
+<!-- VISUAL BODY SCORE（タイプ診断） -->
+<section class="sec" id="score" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="center mt-head rv" style="text-align:center">
+      <div class="kicker c" style="justify-content:center">VISUAL BODY SCORE</div>
+      <h2 class="lead">あなたは、<em>どのタイプ</em>？</h2>
+      <p class="body-txt" style="max-width:520px;margin:14px auto 0;font-size:14.5px">気になるものを選ぶと、おすすめのケアが表示されます。</p>
+    </div>
+    <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;max-width:760px;margin:clamp(24px,4vw,34px) auto 0">
+      <button type="button" class="vscore-btn" data-k="onaka" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;cursor:pointer;text-align:center;transition:.15s"><div style="font-size:28px;margin-bottom:8px">🤰</div><div style="font-size:15px;font-weight:600;color:var(--ink)">下腹タイプ</div><div style="font-size:11.5px;color:var(--ink-mute);margin-top:4px">お腹まわり・ぽっこり</div></button>
+      <button type="button" class="vscore-btn" data-k="posture" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;cursor:pointer;text-align:center;transition:.15s"><div style="font-size:28px;margin-bottom:8px">🧍</div><div style="font-size:15px;font-weight:600;color:var(--ink)">姿勢タイプ</div><div style="font-size:11.5px;color:var(--ink-mute);margin-top:4px">反り腰・猫背・肩こり</div></button>
+      <button type="button" class="vscore-btn" data-k="mukumi" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;cursor:pointer;text-align:center;transition:.15s"><div style="font-size:28px;margin-bottom:8px">🦵</div><div style="font-size:15px;font-weight:600;color:var(--ink)">むくみタイプ</div><div style="font-size:11.5px;color:var(--ink-mute);margin-top:4px">脚の重さ・だるさ・冷え</div></button>
+      <button type="button" class="vscore-btn" data-k="taisha" style="background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 16px;cursor:pointer;text-align:center;transition:.15s"><div style="font-size:28px;margin-bottom:8px">🔥</div><div style="font-size:15px;font-weight:600;color:var(--ink)">代謝タイプ</div><div style="font-size:11.5px;color:var(--ink-mute);margin-top:4px">痩せにくい・戻りやすい</div></button>
+    </div>
+    <div id="vscore-result" class="rv" style="max-width:680px;margin:18px auto 0;background:#fff;border:1px solid var(--gold);border-radius:12px;padding:22px 24px;display:none">
+      <div style="font-family:'Futura','Century Gothic','Outfit';font-size:11px;letter-spacing:.12em;color:var(--gold-d);margin-bottom:8px">RECOMMENDED</div>
+      <div id="vscore-title" style="font-size:17px;font-weight:600;color:var(--ink);margin-bottom:8px"></div>
+      <p id="vscore-desc" style="margin:0 0 16px;font-size:14px;line-height:1.95;color:var(--ink-soft)"></p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px"><a id="vscore-guide" href="#" class="btn btn-out" style="font-size:13px">部位ガイドを見る →</a><a class="btn btn-gold" style="font-size:13px" href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">初回体験を予約する →</a></div>
+    </div>
+    <p class="center rv" style="text-align:center;margin-top:18px"><a href="care-shindan.html" style="font-size:13px;color:var(--gold-d);border-bottom:1px solid var(--gold)">もっと詳しいお悩み診断（30秒）→</a></p>
+  </div>
+</section>
+<script>
+(function(){
+  var data={
+    onaka:{t:'下腹タイプ ／ お腹まわりを集中ケア',d:'冷えて固まりがちなお腹まわりを高周波で温め、EMSで奥の腹筋にアプローチ。ぽっこり・落ちにくいお腹の土台から整えます。',g:'care-onaka.html'},
+    posture:{t:'姿勢タイプ ／ 反り腰・猫背を整える',d:'前ももや背中のこわばりをゆるめ、姿勢を支えるインナーマッスルを動かします。反り腰・猫背・肩こりが気になる方に。',g:'care-soriko.html'},
+    mukumi:{t:'むくみタイプ ／ 脚の巡りを促す',d:'深部加温で巡りを促し、ふくらはぎ・脚の重さやだるさをケア。冷え・むくみが気になる方に。',g:'care-fukurahagi.html'},
+    taisha:{t:'代謝タイプ ／ ためこみにくい体へ',d:'「温めて動かす」を習慣に。続けることで、めぐりやすく・戻りにくいコンディションづくりをサポートします。',g:'learn-metabolism.html'}
+  };
+  var res=document.getElementById('vscore-result');
+  document.querySelectorAll('.vscore-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.vscore-btn').forEach(function(x){x.style.borderColor='var(--line)';x.style.background='#fff';});
+      b.style.borderColor='var(--gold)';b.style.background='#faf6ec';
+      var d=data[b.getAttribute('data-k')];
+      document.getElementById('vscore-title').textContent=d.t;
+      document.getElementById('vscore-desc').textContent=d.d;
+      document.getElementById('vscore-guide').setAttribute('href',d.g);
+      res.style.display='block';
+    });
+  });
+})();
+</script>
+
 <!-- 2. 初回料金（選べる2つの体験メニュー） -->
 <section class="sec" id="price" style="background:var(--paper)">
   <div class="wrap">
