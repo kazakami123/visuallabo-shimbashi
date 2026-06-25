@@ -507,15 +507,15 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 <!-- VISUAL METHOD（独自メソッド） -->
 <style>
 .vm-flow{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:920px;margin:clamp(34px,5vw,52px) auto 0}
-.vm-flow::before{content:"";position:absolute;top:31px;left:12.5%;right:12.5%;height:2px;background:rgba(184,155,94,.35);z-index:0}
+.vm-flow::before{content:"";position:absolute;top:31px;left:12.5%;right:12.5%;height:2px;background:var(--line);z-index:0}
 .vm-step{position:relative;text-align:center;padding:0 8px}
-.vm-node{position:relative;z-index:1;width:64px;height:64px;border-radius:50%;border:1.5px solid rgba(184,155,94,.55);background:#1a1a1a;color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Futura','Century Gothic','Outfit';font-size:18px;font-weight:600;margin:0 auto 18px;transition:.2s}
-.vm-step.is-last .vm-node{background:var(--gold);color:#1a1a1a;border-color:var(--gold)}
-.vm-en{font-family:'Futura','Century Gothic','Outfit';letter-spacing:.12em;font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
+.vm-node{position:relative;z-index:1;width:64px;height:64px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;transition:.2s}
+.vm-step.is-last .vm-node{background:var(--green);color:#fff;border-color:var(--green)}
+.vm-en{font-family:'Futura','Century Gothic','Outfit';letter-spacing:.12em;font-size:15px;font-weight:600;color:var(--ink);margin-bottom:3px}
 .vm-jp{font-size:13.5px;color:var(--gold);margin-bottom:8px}
 .vm-node svg{width:27px;height:27px}
 .vm-no{font-family:'Futura','Century Gothic','Outfit';font-size:11px;letter-spacing:.14em;color:var(--gold);margin-bottom:5px}
-.vm-d{font-size:12px;line-height:1.85;color:rgba(255,255,255,.62);max-width:185px;margin:0 auto}
+.vm-d{font-size:12px;line-height:1.85;color:var(--ink-mute);max-width:185px;margin:0 auto}
 @media(max-width:680px){
   .vm-flow{grid-template-columns:1fr;gap:0;max-width:360px}
   .vm-flow::before{display:none}
@@ -527,21 +527,21 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
   .vm-body{padding-top:8px}
 }
 </style>
-<section class="sec" id="method" style="background:var(--ink);color:#fff">
+<section class="sec" id="method" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="rv" style="text-align:center">
       <div style="font-family:'Futura','Century Gothic','Outfit';font-size:12px;letter-spacing:.26em;color:var(--gold);margin-bottom:14px">VISUAL METHOD<sup style="font-size:.6em;vertical-align:super">®</sup></div>
       <h2 style="font-size:clamp(23px,4.6vw,38px);font-weight:500;line-height:1.45;margin:0;letter-spacing:.02em">VISUAL LABO独自の、<br>体型管理メソッド。</h2>
-      <p style="max-width:580px;margin:20px auto 0;font-size:14.5px;line-height:2;color:rgba(255,255,255,.82);word-break:keep-all;overflow-wrap:anywhere">高周波やEMSは、あくまで手段。<br>VISUAL LABOが大切にするのは、<b style="color:#fff;font-weight:500">「温めて、ほぐして、動かして、維持する」</b>という一連の設計です。</p>
+      <p style="max-width:580px;margin:20px auto 0;font-size:14.5px;line-height:2;color:var(--ink-soft);word-break:keep-all;overflow-wrap:anywhere">高周波やEMSは、あくまで手段。<br>VISUAL LABOが大切にするのは、<b style="color:var(--ink);font-weight:500">「温めて、ほぐして、動かして、維持する」</b>という一連の設計です。</p>
     </div>
     <div class="vm-flow rv">
-      <div class="vm-step"><div class="vm-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15c0-2.2 2-2.4 2-4.5S8 8 8 6"/><path d="M12 15c0-2.2 2-2.4 2-4.5S12 8 12 6"/><path d="M16 15c0-2.2 2-2.4 2-4.5S16 8 16 6"/></svg></div><div class="vm-body"><div class="vm-no">STEP 01</div><div class="vm-en">HEAT</div><div class="vm-jp">温める</div><p class="vm-d">高周波で深部から、じっくり温める。</p></div></div>
-      <div class="vm-step"><div class="vm-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c3-3 6 3 9 0s6-3 9 0"/><path d="M3 15c3-3 6 3 9 0s6-3 9 0"/></svg></div><div class="vm-body"><div class="vm-no">STEP 02</div><div class="vm-en">RELEASE</div><div class="vm-jp">ほぐす</div><p class="vm-d">手技でこわばり・硬さをほぐし、めぐりを促す。</p></div></div>
-      <div class="vm-step"><div class="vm-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg></div><div class="vm-body"><div class="vm-no">STEP 03</div><div class="vm-en">MOVE</div><div class="vm-jp">動かす</div><p class="vm-d">EMSで、奥のインナーマッスルを動かす。</p></div></div>
-      <div class="vm-step is-last"><div class="vm-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l3 3-3 3"/><path d="M20 6H9a5 5 0 0 0-5 5"/><path d="M7 21l-3-3 3-3"/><path d="M4 18h11a5 5 0 0 0 5-5"/></svg></div><div class="vm-body"><div class="vm-no">STEP 04</div><div class="vm-en" style="color:var(--gold)">KEEP</div><div class="vm-jp">維持する</div><p class="vm-d">続けて、整った状態を維持する。</p></div></div>
+      <div class="vm-step"><div class="vm-node" style="border-color:var(--orange);background:var(--orange-bg);color:var(--orange-d)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15c0-2.2 2-2.4 2-4.5S8 8 8 6"/><path d="M12 15c0-2.2 2-2.4 2-4.5S12 8 12 6"/><path d="M16 15c0-2.2 2-2.4 2-4.5S16 8 16 6"/></svg></div><div class="vm-body"><div class="vm-no">STEP 01</div><div class="vm-en">HEAT</div><div class="vm-jp">温める</div><p class="vm-d">高周波で深部から、じっくり温める。</p></div></div>
+      <div class="vm-step"><div class="vm-node" style="border-color:var(--green);background:var(--green-bg);color:var(--green-d)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c3-3 6 3 9 0s6-3 9 0"/><path d="M3 15c3-3 6 3 9 0s6-3 9 0"/></svg></div><div class="vm-body"><div class="vm-no">STEP 02</div><div class="vm-en">RELEASE</div><div class="vm-jp">ほぐす</div><p class="vm-d">手技でこわばり・硬さをほぐし、めぐりを促す。</p></div></div>
+      <div class="vm-step"><div class="vm-node" style="border-color:var(--orange);background:var(--orange-bg);color:var(--orange-d)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 14h6l-1 8 8-12h-6z"/></svg></div><div class="vm-body"><div class="vm-no">STEP 03</div><div class="vm-en">MOVE</div><div class="vm-jp">動かす</div><p class="vm-d">EMSで、奥のインナーマッスルを動かす。</p></div></div>
+      <div class="vm-step is-last"><div class="vm-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l3 3-3 3"/><path d="M20 6H9a5 5 0 0 0-5 5"/><path d="M7 21l-3-3 3-3"/><path d="M4 18h11a5 5 0 0 0 5-5"/></svg></div><div class="vm-body"><div class="vm-no">STEP 04</div><div class="vm-en" style="color:var(--green-d)">KEEP</div><div class="vm-jp">維持する</div><p class="vm-d">続けて、整った状態を維持する。</p></div></div>
     </div>
-    <p class="rv" style="text-align:center;margin:clamp(24px,4vw,32px) auto 0;font-size:clamp(15px,2.8vw,18px);font-weight:500;color:#fff;letter-spacing:.02em">この順番だから、<span style="color:var(--gold)">“その日だけ”で終わらない。</span></p>
-    <p class="rv" style="text-align:center;margin:8px auto 0;font-size:11.5px;color:rgba(255,255,255,.5)">※ 体型管理・コンディショニングを目的とした設計です。効果・感じ方には個人差があります。</p>
+    <p class="rv" style="text-align:center;margin:clamp(24px,4vw,32px) auto 0;font-size:clamp(15px,2.8vw,18px);font-weight:500;color:var(--ink);letter-spacing:.02em">この順番だから、<span style="color:var(--gold-d)">“その日だけ”で終わらない。</span></p>
+    <p class="rv" style="text-align:center;margin:8px auto 0;font-size:11.5px;color:var(--ink-mute)">※ 体型管理・コンディショニングを目的とした設計です。効果・感じ方には個人差があります。</p>
   </div>
 </section>
 
@@ -806,7 +806,7 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
         <th style="padding:13px 10px;text-align:center;background:var(--paper-2);color:var(--ink-soft);font-weight:400;font-size:12px;white-space:nowrap">ピラティス</th>
         <th style="padding:13px 10px;text-align:center;background:var(--paper-2);color:var(--ink-soft);font-weight:400;font-size:12px;white-space:nowrap">整体</th>
         <th style="padding:13px 10px;text-align:center;background:var(--paper-2);color:var(--ink-soft);font-weight:400;font-size:12px;white-space:nowrap">エステ</th>
-        <th style="padding:14px 12px;text-align:center;background:var(--ink);color:#fff;font-weight:600;font-size:13px;white-space:nowrap">VISUAL&nbsp;LABO</th>
+        <th style="padding:14px 12px;text-align:center;background:var(--gold);color:#fff;font-weight:600;font-size:13px;white-space:nowrap">VISUAL&nbsp;LABO</th>
       </tr></thead>
       <tbody>
         <tr>
@@ -870,13 +870,13 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
     </div>
     <p class="note-s rv" style="margin-top:12px;text-align:center;max-width:760px;margin-left:auto;margin-right:auto">※ 一般的な傾向にもとづく比較イメージです。すべての店舗・サービスにあてはまるものではありません。<br>VISUAL LABOは「温める（高周波）×動かす（EMS）」を、寝ながら一度に受けられるのが特長です。</p>
 
-    <div class="rv" style="max-width:780px;margin:clamp(28px,4vw,40px) auto 0;background:var(--ink);color:#fff;border-radius:10px;padding:clamp(24px,4vw,36px)">
+    <div class="rv" style="max-width:780px;margin:clamp(28px,4vw,40px) auto 0;background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:clamp(24px,4vw,36px)">
       <div style="font-family:'Futura','Century Gothic','Outfit';font-size:11px;letter-spacing:.2em;color:var(--gold);text-align:center;margin-bottom:14px">POSITION</div>
       <div style="text-align:center;font-size:clamp(15px,3vw,20px);font-weight:500;line-height:1.7;margin-bottom:20px">エステ・リラクと、医療・クリニックの<br><span style="color:var(--gold)">“ちょうど、あいだ”。</span></div>
-      <div style="display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.72)">
+      <div style="display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;font-size:12px;color:var(--ink-soft)">
         <span>エステ／リラク</span><span style="color:var(--gold)">—</span><span>インディバ系</span><span style="color:var(--gold)">—</span><span style="background:var(--gold);color:var(--ink);font-weight:600;border-radius:999px;padding:6px 15px">VISUAL LABO</span><span style="color:var(--gold)">—</span><span>医療ダイエット</span><span style="color:var(--gold)">—</span><span>美容クリニック</span>
       </div>
-      <p style="text-align:center;font-size:13px;line-height:1.95;color:rgba(255,255,255,.72);margin:18px 0 0;word-break:keep-all;overflow-wrap:anywhere">医療ほど大がかりでなく、エステより設計された。<br>高周波×EMSで“整えて、動かす”を、月額で続けられるボディメンテナンス。</p>
+      <p style="text-align:center;font-size:13px;line-height:1.95;color:var(--ink-soft);margin:18px 0 0;word-break:keep-all;overflow-wrap:anywhere">医療ほど大がかりでなく、エステより設計された。<br>高周波×EMSで“整えて、動かす”を、月額で続けられるボディメンテナンス。</p>
     </div>
   </div>
 </section>
@@ -1007,11 +1007,11 @@ footer{background:#161616;color:rgba(255,255,255,.7);padding:clamp(48px,7vw,72px
 </section>
 
 <!-- ブランドで締める -->
-<section class="sec" style="background:var(--ink);color:#fff;text-align:center">
+<section class="sec" style="background:var(--paper-2);text-align:center">
   <div class="wrap">
     <p class="rv" style="font-size:clamp(20px,4.4vw,34px);font-weight:500;line-height:1.7;letter-spacing:.03em;margin:0">痩せることは、目的じゃない。<br><span style="color:var(--gold)">調子のいい体で、生きていく。</span></p>
-    <div class="rv" style="margin-top:26px;font-family:'Futura','Century Gothic','Outfit';letter-spacing:.18em;font-size:13px;color:#fff">VISUAL&nbsp;LABO</div>
-    <div class="rv" style="font-family:'Futura','Century Gothic','Outfit';letter-spacing:.18em;font-size:11px;color:rgba(255,255,255,.6);margin-top:6px">BODY MAINTENANCE SALON</div>
+    <div class="rv" style="margin-top:26px;font-family:'Futura','Century Gothic','Outfit';letter-spacing:.18em;font-size:13px;color:var(--ink)">VISUAL&nbsp;LABO</div>
+    <div class="rv" style="font-family:'Futura','Century Gothic','Outfit';letter-spacing:.18em;font-size:11px;color:var(--ink-mute);margin-top:6px">BODY MAINTENANCE SALON</div>
   </div>
 </section>
 
