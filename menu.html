@@ -15,6 +15,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://kazakami123.github.io/visuallabo-shimbashi/menu.html">
+<meta property="og:url" content="https://kazakami123.github.io/visuallabo-shimbashi/menu.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+.m2sel{max-width:860px;margin:26px auto 0;display:flex;flex-direction:column;gap:20px}
+.m2sel .m2badge{position:absolute;top:-16px;left:22px;background:var(--gold);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.06em;border-radius:999px;padding:7px 18px}
+.m2sel .m2badge.dark{background:var(--ink)}
+.m2big,.m2small{position:relative;background:#fff;border-radius:18px;overflow:visible;display:grid}
+.m2big{border:1.5px solid var(--gold);grid-template-columns:1fr;box-shadow:0 14px 40px rgba(0,0,0,.07)}
+.m2small{border:1px solid var(--line);grid-template-columns:1fr}
+.m2sel .m2t{padding:clamp(26px,4vw,38px) clamp(22px,3vw,32px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.m2sel .m2no{font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.22em;color:var(--ink-mute);margin-bottom:8px}
+.m2sel .m2name{font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:clamp(21px,3.4vw,30px);font-weight:600;letter-spacing:.04em;color:var(--ink);line-height:1.2}
+.m2sel .m2cat{font-size:clamp(14px,2vw,16px);font-weight:600;color:var(--gold-d);margin:8px 0 14px}
+.m2sel p{margin:0 0 18px;font-size:13.5px;line-height:2;color:var(--ink-soft);word-break:keep-all;overflow-wrap:anywhere}
+.m2sel .m2pr{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+.m2sel .m2pr span{font-size:13px;color:var(--ink-mute)}
+.m2sel .m2pr b{font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:clamp(26px,4vw,34px);font-weight:600;color:var(--ink)}
+.m2sel .m2cta{display:inline-block;font-size:13.5px;font-weight:600;color:var(--ink);letter-spacing:.04em;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:11px 4px;text-decoration:none;transition:.25s}
+.m2sel .m2cta:hover{color:var(--gold-d)}
+.m2sel figure{margin:0;overflow:hidden;border-radius:18px 18px 0 0;order:-1}
+.m2sel figure img{width:100%;height:auto;display:block}
+.m2sel .m2badge{top:12px;left:14px;z-index:2}
+</style>
 </head>
 <body>
 
@@ -47,49 +71,42 @@
 <section class="sec intro">
   <div class="wrap narrow">
     <div class="section-num rv">Menu — 2 Programs</div>
-    <p class="big rv">2つの、<b>体型管理メニュー</b>。</p>
-    <p class="body-txt rv"><b style="color:var(--ink);font-weight:500">BODY MAINTENANCE MENU</b><br>高周波で深部から温め、手技でほぐし、HYPER EMSで仕上げる90分間の本格ケア。</p>
-    <p class="body-txt rv" style="margin-top:12px"><b style="color:var(--ink);font-weight:500">HYPER EMS MENU</b><br>気軽に続けたい方には、HYPER EMS 会員もご用意。</p>
-    <p class="body-txt rv" style="margin-top:12px">月額制で、ライフスタイルに合わせて続けられます。<br>気になることは、<a href="care-shindan.html" style="color:var(--gold);border-bottom:1px solid var(--gold)">お悩み診断</a>へ。</p>
-    <nav class="menu-nav rv">
-      <a href="#care">お悩み別</a>
-      <a href="#menu">メニュー</a>
-      <a href="#courses">選べる部位</a>
-      <a href="#logic">温める仕組み</a>
-      <a href="#effect">効果</a>
-      <a href="price.html">料金・プラン</a>
-    </nav>
+    <p class="big rv">選ぶのは、<b>2つだけ</b>。</p>
+    <p class="body-txt rv" style="text-align:center">「しっかり整える本格ケア」か、「貼るだけ筋トレ」か。<br>あなたの目的で選ぶだけ。まずは初回体験から。</p>
+    <div class="rv m2sel">
+      <div class="m2big">
+        <span class="m2badge">本気で変えたい方</span>
+        <div class="m2t">
+          <div class="m2no">MENU 01</div>
+          <div class="m2name">BODY MAINTENANCE</div>
+          <div class="m2cat">しっかり整える、本格ケア</div>
+          <p>高周波で深部から温め、手技でほぐし、HYPER EMSで仕上げる。気になる部位を選べる90分／120分の集中メニュー。</p>
+          <div class="m2pr"><span>初回体験（90分）</span><b>¥3,000</b></div>
+          <a class="m2cta" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">初回体験を予約する →</a>
+        </div>
+        <figure><img loading="lazy" src="images/menu-wd-neck.jpg" alt="BODY MAINTENANCE｜高周波プローブでお腹をケアする施術風景"></figure>
+      </div>
+      <div class="m2small">
+        <span class="m2badge dark">気軽にはじめたい方</span>
+        <div class="m2t">
+          <div class="m2no">MENU 02</div>
+          <div class="m2name">HYPER EMS</div>
+          <div class="m2cat">貼るだけ筋トレ</div>
+          <p>好きな箇所に貼って過ごすHYPER EMSトレーニングメニュー。引き締め・キープ・腹筋づくりに（最大45分）。</p>
+          <a class="m2cta" href="price.html">料金・プランを見る →</a>
+        </div>
+        <figure><img loading="lazy" src="images/menu-ems-neck.jpg" alt="HYPER EMS｜お腹にパッドを貼って寝ながら過ごす"></figure>
+      </div>
+    </div>
+    <p class="body-txt rv" style="margin-top:18px">月額制で、ライフスタイルに合わせて続けられます。<br>迷ったら、<a href="care-shindan.html" style="color:var(--gold);border-bottom:1px solid var(--gold)">お悩み診断</a>へ。</p>
   </div>
 </section>
 
-<!-- こんなこと、整えられます（悩み・部位別） -->
-<section class="sec" style="padding-top:0" id="care">
-  <div class="wrap narrow">
-    <div class="rv" style="text-align:center">
-      <img loading="lazy" src="images/vita-normal-c.png" alt="VITA" style="width:76px;height:auto;display:block;margin:0 auto 10px"><p style="font-size:clamp(16px,2.8vw,19px);font-weight:500;color:var(--gold-d);line-height:1.8;margin:0 0 4px">その日のあなたの体に合わせたケアを、</p>
-      <p style="font-size:clamp(16px,2.8vw,19px);font-weight:500;color:var(--ink);line-height:1.8;margin:0 0 16px">スタッフと一緒に決められます。</p>
-      <p class="body-txt" style="max-width:600px;margin:0 auto 26px">気になる部位を選んで、90分で集中ケア。下のテーマから、整えたいところを選んでみてください。各ページで「なぜそうなるのか」と「どう整えるのか」を解説しています。</p>
-    </div>
-    <div class="rv" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:740px;margin:0 auto">
-      <a href="care-onaka.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">お腹・下腹</a>
-      <a href="care-kubire.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">くびれ・ウエスト</a>
-      <a href="care-ninoude.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">二の腕</a>
-      <a href="care-senaka.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">背中・ブラ下</a>
-      <a href="care-katakubi.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">肩こり・巻き肩</a>
-      <a href="care-soriko.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">反り腰・姿勢</a>
-      <a href="care-hip.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">ヒップ</a>
-      <a href="care-maemomo.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">前もも・張り</a>
-      <a href="care-uchimomo.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">内もも</a>
-      <a href="care-fukurahagi.html" style="background:var(--gold);color:#fff;font-size:14px;font-weight:500;border-radius:8px;padding:13px 22px;text-decoration:none">ふくらはぎ・むくみ</a>
-    </div>
-  </div>
-</section>
 
 <!-- MENU : BODY MAINTENANCE MENU -->
 <section class="sec menu-alt" id="menu">
   <div class="wrap">
-    <div class="kicker rv">MENU</div>
-    <div class="rv" style="text-align:center;margin:6px 0 4px"><img loading="lazy" src="images/vita-normal-c.png" alt="VITA" style="width:80px;height:auto;display:inline-block"></div>
+    <div class="kicker rv">MENU 01</div>
     <div class="mtop">
       <div class="rv">
         <div class="mname2">BODY MAINTENANCE MENU</div>
@@ -106,43 +123,26 @@
     <div class="rv" style="background:var(--paper-2);border:1px solid var(--gold);border-radius:3px;padding:18px 22px;margin:22px 0 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)"><b style="color:var(--ink);font-weight:500">上半身</b>：首 ／ 肩 ／ 肩甲骨 ／ 二の腕 ／ 背中 ／ お腹<br><b style="color:var(--ink);font-weight:500">下半身</b>：前もも ／ 内もも ／ 裏もも ／ 外ばり ／ ふくらはぎ・足首<br><span style="font-size:12.5px;color:var(--ink-mute)">気になる部位を中心に、90分でじっくり整えます。</span></div>
     <p class="pnote2 rv" style="margin-top:6px"><span>・部位はご予約時またはカウンセリングでお選びいただけます。</span><span>・体型管理を目的とした施術です。感じ方・変化には個人差があります。</span></p>
 
-    <div class="rv" style="margin:22px 0 50px;background:var(--paper-2);border:1px solid var(--line);border-radius:8px;padding:18px 20px">
-      <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;color:var(--ink);margin-bottom:10px">部位別の詳しいガイド</div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px">
-        <a href="care-onaka.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">お腹・下腹 →</a>
-        <a href="care-fukurahagi.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">ふくらはぎ →</a>
-        <a href="care-ninoude.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">二の腕 →</a>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <div class="psub rv" id="logic" style="margin-top:60px">がんばらず、続けられる理由<span class="pm">なぜ「深部加温 ＋ HYPER EMS」を続けるのか</span></div>
-    <div class="des-box rv">
-      <p class="body-txt" style="margin:0">BODY MAINTENANCE MENUの基本は、<b style="color:var(--ink);font-weight:500">高周波で深部を温め、仕上げにHYPER EMSで動かす</b>こと。「温める → ゆるめる → 動かす」をひとつの流れにまとめています。</p>
-      <div class="des-flow">
-        <div class="des-step">
-          <div class="ds-t">STEP 01 ／ 60min</div>
-          <h4>深部を、温める</h4>
-          <p>高周波MystiCore®で、深い層まで60分かけてじんわり加温。冷えて固まりがちな部位をゆるめ、めぐりを促す土台をつくります。</p>
-        </div>
-        <div class="des-step">
-          <div class="ds-t">POINT ／ 続ける意味</div>
-          <h4>“続ける”深部加温</h4>
-          <p>体は深部が温まると、エネルギーを生み出すミトコンドリアがはたらきやすい温度環境に近づくと考えられています。一度きりではなく、深部加温を習慣として続けることが、めぐりとコンディションづくりの土台に。</p>
-        </div>
-        <div class="des-step">
-          <div class="ds-t">STEP 02 ／ 30min</div>
-          <h4>仕上げに、動かす</h4>
-          <p>温まってゆるんだ筋肉に、高出力HYPER EMS。自分では動かしにくい深部の筋肉まで、効率よく動かして仕上げます。</p>
-        </div>
-      </div>
-      <div style="background:var(--ink);color:#fff;border-radius:3px;padding:clamp(24px,4vw,34px);margin:26px 0">
-        <div style="font-size:clamp(17px,3vw,22px);font-weight:500;letter-spacing:.02em;line-height:1.6;margin-bottom:14px">温めることは、いちばんの<span style="color:var(--gold)">ダイエット習慣</span>。</div>
-        <p style="font-size:14px;font-weight:300;line-height:2;color:rgba(255,255,255,.82);margin:0">体が冷えていると、エネルギーを使いにくく、ためこみやすい。だからVISUAL LABOは、自分では届かない深部から、しっかり温める。体温が上がると基礎代謝も上がるといわれています。続けるほど、<b style="color:#fff;font-weight:500">太りにくい体づくりをサポート</b>します。</p>
-      </div>
-      <div class="des-eq">温める <b style="color:var(--gold)">→</b> ゆるめる <b style="color:var(--gold)">→</b> 動かす ＝ <b style="color:var(--ink)">深部加温＋HYPER EMSの基本設計</b></div>
-      <p class="disc" style="margin-top:18px">※ 体型管理・コンディショニングを目的とした施術です。効果・感じ方には個人差があります。</p>
-    </div>
 
+
+<!-- MENU : HYPER EMS MENU -->
+<section class="sec" id="ems-menu" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="kicker rv">MENU 02</div>
+    <div class="mtop">
+      <div class="rv">
+        <div class="mname2">HYPER EMS MENU</div>
+        <div class="mjp2">好きな箇所に貼って過ごす、貼るだけ筋トレ。</div>
+        <p>パッドを貼って横になるだけで、HYPER EMSが筋肉にアプローチ。自分では動かしにくいインナーマッスルまで、寝ながら効率よく動かします。引き締め・キープ・腹筋づくりに、すきま時間で気軽に続けられるメニューです。家庭用EMSとは出力・モードが異なり、目的に合わせて使い分けます。</p>
+        <div class="mtags"><span>気軽に続けたい</span><span>すきま時間で</span><span>貼るだけ筋トレ</span></div>
+        <div class="mmeta">所要時間：最大45分 ／ HYPER EMS（月額会員あり）</div>
+        <p class="rv" style="margin-top:18px"><a class="btn btn-gold" href="price.html" style="font-size:13.5px">HYPER EMSの料金・プランを見る →</a></p>
+      </div>
+      <figure class="rv"><img loading="lazy" src="images/menu-ems-close.jpg" alt="HYPER EMS MENU｜お腹に貼ったパッドとMystiCore®"></figure>
+    </div>
   </div>
 </section>
 
@@ -156,25 +156,60 @@
     </div>
     <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:920px;margin:clamp(28px,4vw,42px) auto 0">
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 24px;text-align:center">
-        <div style="width:72px;height:72px;border-radius:50%;background:var(--orange-bg);color:var(--orange-d);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 16px">♨</div>
+        <div style="width:72px;height:72px;border-radius:50%;background:#f3eede;color:var(--gold-d);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7.5 3.5c-1.4 1.9-1.4 3.6 0 5.5s1.4 3.6 0 5.5M12 3.5c-1.4 1.9-1.4 3.6 0 5.5s1.4 3.6 0 5.5M16.5 3.5c-1.4 1.9-1.4 3.6 0 5.5s1.4 3.6 0 5.5"/><path d="M5 20.5h14"/></svg></div>
         <h3 style="margin:0 0 10px;font-size:17px;font-weight:600;color:var(--ink)">巡り・むくみ・冷えのケア</h3>
         <p style="margin:0;font-size:14px;line-height:1.95;color:var(--ink-soft)">高周波で深部からじんわり温め、血流やリンパの巡りをサポート。冷えてこわばった部分をゆるめ、めぐりやすい状態へ整えます。</p>
-        <div style="margin-top:16px;background:var(--orange-bg);color:var(--orange-d);border-radius:999px;padding:8px 14px;font-size:12px;line-height:1.6">冷え・むくみ・脚の重さが気になる方に</div>
+        <div style="margin-top:16px;background:var(--paper-2);border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:500;line-height:1.6">冷え・むくみ・脚の重さが気になる方に</div>
       </div>
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 24px;text-align:center">
-        <div style="width:72px;height:72px;border-radius:50%;background:var(--green-bg);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 16px">💪</div>
+        <div style="width:72px;height:72px;border-radius:50%;background:#f3eede;color:var(--gold-d);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7v10M17 7v10M4 9.5v5M20 9.5v5M7 12h10M2 12h2M20 12h2"/></svg></div>
         <h3 style="margin:0 0 10px;font-size:17px;font-weight:600;color:var(--ink)">引き締め・筋力サポート</h3>
         <p style="margin:0;font-size:14px;line-height:1.95;color:var(--ink-soft)">HYPER EMSで、自分では動かしにくい奥のインナーマッスルに直接アプローチ。温めてゆるんだあとに動かすから、引き締めや姿勢を支える筋肉づくりを効率よくサポートします。</p>
-        <div style="margin-top:16px;background:var(--green-bg);color:var(--green-d);border-radius:999px;padding:8px 14px;font-size:12px;line-height:1.6">引き締めたい・姿勢を整えたい方に</div>
+        <div style="margin-top:16px;background:var(--paper-2);border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:500;line-height:1.6">引き締めたい・姿勢を整えたい方に</div>
       </div>
       <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px 24px;text-align:center">
-        <div style="width:72px;height:72px;border-radius:50%;background:#f3eede;color:var(--gold-d);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 16px">↗</div>
+        <div style="width:72px;height:72px;border-radius:50%;background:#f3eede;color:var(--gold-d);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14.5 7H21v6.5"/></svg></div>
         <h3 style="margin:0 0 10px;font-size:17px;font-weight:600;color:var(--ink)">代謝・コンディション維持</h3>
         <p style="margin:0;font-size:14px;line-height:1.95;color:var(--ink-soft)">「温めて動かす」を習慣にすることで、体温・基礎代謝が上がるといわれています。ためこみにくく、整った状態をキープしやすいコンディションへ。</p>
-        <div style="margin-top:16px;background:#f3eede;color:var(--gold-d);border-radius:999px;padding:8px 14px;font-size:12px;line-height:1.6">代謝・体型をキープしたい方に</div>
+        <div style="margin-top:16px;background:var(--paper-2);border:1px solid var(--gold);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:500;line-height:1.6">代謝・体型をキープしたい方に</div>
       </div>
     </div>
-    <p class="note-s rv" style="margin-top:16px;text-align:center">※ 体型管理・コンディショニングを目的とした施術です。効果・感じ方には個人差があります。</p>
+  </div>
+</section>
+
+<!-- 部位別ガイド -->
+<section class="sec">
+  <div class="wrap narrow">
+    <div class="rv" style="margin:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:18px 20px">
+      <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-weight:600;font-size:13px;letter-spacing:.04em;color:var(--ink);margin-bottom:12px">部位別の詳しいガイド（なぜそうなるか・どう整えるか）</div>
+      <div style="display:flex;flex-wrap:wrap;gap:9px">
+        <a href="care-onaka.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">お腹・下腹</a>
+        <a href="care-kubire.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">くびれ・ウエスト</a>
+        <a href="care-ninoude.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">二の腕</a>
+        <a href="care-senaka.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">背中・ブラ下</a>
+        <a href="care-katakubi.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">肩こり・巻き肩</a>
+        <a href="care-soriko.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">反り腰・姿勢</a>
+        <a href="care-hip.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">ヒップ</a>
+        <a href="care-maemomo.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">前もも・張り</a>
+        <a href="care-uchimomo.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">内もも</a>
+        <a href="care-fukurahagi.html" style="background:var(--gold);color:#fff;font-size:13px;font-weight:500;border-radius:999px;padding:9px 16px;text-decoration:none">ふくらはぎ・むくみ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 一緒に決められる -->
+<section class="sec" id="logic-sec">
+  <div class="wrap">
+    <div class="psub rv" id="logic" style="margin-top:0">その日のあなたの体に合わせたケアを、一緒に決められます<span class="pm">がんばらずに、続けられる理由</span></div>
+    <div class="rv" style="text-align:center;margin:18px 0 0"><img loading="lazy" src="images/vita-nikkori.png" alt="VITA" style="height:92px;width:auto;display:inline-block"></div>
+    <p class="body-txt rv" style="max-width:680px;margin:16px auto 0;text-align:center">決まったコースを押しつけません。その日の体調・気になる部位をカウンセリングで伺い、<b style="color:var(--ink);font-weight:500">当日のケア内容をスタッフと一緒に決める</b>から、無理なく続けられます。</p>
+    <div class="rv" style="position:relative;background:#fff;border:1px solid var(--gold);border-radius:3px;padding:clamp(26px,4.5vw,38px);margin:26px auto 0;max-width:880px">
+      <div style="position:absolute;inset:6px;border:1px solid rgba(184,155,94,.25);pointer-events:none;border-radius:2px"></div>
+      <div style="font-size:clamp(17px,3vw,22px);font-weight:600;letter-spacing:.02em;line-height:1.6;margin-bottom:14px;color:var(--ink)">温めることは、いちばんの<span style="color:var(--gold-d)">ダイエット習慣</span>。</div>
+      <p style="font-size:14px;line-height:2;color:var(--ink-soft);margin:0">体が冷えていると、エネルギーを使いにくく、ためこみやすい。だからVISUAL LABOは、自分では届かない深部から、しっかり温める。体温が上がると基礎代謝も上がるといわれています。続けるほど、<b style="color:var(--ink);font-weight:600">太りにくい体づくりをサポート</b>します。</p>
+    </div>
+
   </div>
 </section>
 
@@ -182,7 +217,7 @@
 <section class="sec cta">
   <div class="wrap">
     <h2>料金・プランを、<em>見る</em>。</h2>
-    <p>単発・月額（STANDARD／PREMIUM）・HYPER EMS・オプション・VIP まで。<br>初回体験 ¥3,000・満足保証つき。新橋駅 徒歩3分。</p>
+    <p>単発・月額（STANDARD／PREMIUM）・HYPER EMS・オプション・VIP まで。<br>初回体験 90分 ¥3,000・満足保証つき。新橋駅 徒歩3分。</p>
     <div class="btns">
       <a class="btn btn-gold" href="price.html">料金・プランを見る →</a>
       <a class="btn btn-ghost" href="index.html#cta">初回体験を予約する</a>

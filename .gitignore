@@ -1,0 +1,62 @@
+# ===== 非公開ファイル（絶対にpushしない） =====
+# 引き継ぎ書（社内ルール・OEM情報を含むためローカル専用）
+CLAUDE.md
+
+# 事業・社内文書
+*.pptx
+*.docx
+*.pdf
+VISUAL_LABO_HP構成・ワイヤー設計.md
+SNS用_ハッシュタグ・キーワード集.md
+visuallabo-shimbashi-SKILL.md
+*.skill
+QRコード/
+influencer-consent/
+
+# バックアップ・作業ファイル
+index_backup_*.html
+images/_originals/
+images/_montage.png
+images/_p1_*.png
+
+# 元素材（重い・公開不要）
+images/機械イメージ*.PNG
+images/機械.PNG
+images/MystiCore機械*.png
+images/MystiCore機械*.PNG
+images/MysriCore機械女性イメージ.png
+images/MystiCore単体イメージ図.png
+images/MystiCore男女イメージ.png
+images/IINDIVAとMystiCoreの違い.png
+images/VITA表情.png
+images/VITA.png
+images/logo-stack.png
+images/F3A2D6A7-215F-4535-B4E7-599E506EA658.PNG
+
+# 内部ドキュメント（サイト表示に不使用・公開しない）
+reference.md
+SKILL_compact.md
+visual-labo-brand_SKILL_修正版.md
+threads_madoka_kazakami_14posts.md
+threads_madoka_kazakami_42posts.md
+threads_weekly/
+
+# 顧客・モニター様の実名写真（公開しない・個人情報）
+images/加藤さん*
+images/岩尾さん*
+images/ユキトさん*
+images/*ゆきとさん*
+images/*渡辺様*
+images/*吉田恵美様*
+images/*横溝様*
+images/*田中様*
+images/*無料モニター様*
+
+# 禁止された旧メニュー名を含む画像（HYPER EMS DIET / WAIST DESIGN / EMS DIET）
+images/HYPER EMS DIET*
+images/WAIST DESIGN*
+images/EMS DIET*
+
+# システム
+.DS_Store
+Thumbs.db

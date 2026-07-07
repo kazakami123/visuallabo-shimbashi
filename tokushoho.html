@@ -12,6 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://kazakami123.github.io/visuallabo-shimbashi/tokushoho.html">
+<meta property="og:url" content="https://kazakami123.github.io/visuallabo-shimbashi/tokushoho.html">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -103,5 +106,18 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  if(document.querySelectorAll('.rv').length===0){
+    document.querySelectorAll('.sec .wrap > *').forEach(function(el){el.classList.add('rv')});
+  }
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(el){el.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
 </body>
 </html>
