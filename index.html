@@ -541,10 +541,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 <!-- ② ファーストビュー -->
 <section class="hero">
   <div class="hero-bg">
-    <video id="heroVideo" muted loop playsinline preload="none" poster="images/hero-bg-poster.jpg">
-      <source data-src="images/hero-bg.mp4" type="video/mp4">
-      <img src="images/hero-bg-poster.jpg" alt="寝ながら、楽に痩せたい人へ。VISUAL LABO 新橋店">
-    </video>
+    <img src="images/hero-bg-poster.jpg" alt="寝ながら、楽に痩せたい人へ。VISUAL LABO 新橋店" fetchpriority="high">
   </div>
   <div class="hero-shade"></div>
   <div class="hero-side">SHIMBASHI — TOKYO</div>
@@ -1052,12 +1049,6 @@ document.querySelectorAll('.fq').forEach(b=>{
     document.querySelectorAll('.fitem.open').forEach(o=>{o.classList.remove('open');o.querySelector('.fa').style.maxHeight=null});
     if(!open){it.classList.add('open');fa.style.maxHeight=fa.scrollHeight+'px'}
   });
-});
-
-// hero video: 初期表示後に読み込み（LCP改善）
-window.addEventListener('load',()=>{
-  const v=document.getElementById('heroVideo');
-  if(v){const src=v.querySelector('source');src.src=src.dataset.src;v.load();v.play().catch(()=>{});}
 });
 
 // PC floating CTA
