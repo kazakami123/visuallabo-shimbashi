@@ -1,0 +1,2 @@
+サブエージェントが学習内容を書き込む永続メモリの置き場（.claude/agent-memory/<agent名>/MEMORY.md）。
+MEMORY.md 自体は .gitignore 済み。

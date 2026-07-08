@@ -60,3 +60,11 @@ images/EMS DIET*
 # システム
 .DS_Store
 Thumbs.db
+.igharness_api_key
+
+# Claude Code 個人設定・シークレット（soireve-claude構成）
+.claude/settings.local.json
+*.local
+.env
+.dev.vars
+.claude/agent-memory/**/MEMORY.md

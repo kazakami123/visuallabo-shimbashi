@@ -1,0 +1,44 @@
+# VISUAL LABO 表現コンプライアンス正典
+# 事業: VISUAL LABO（会員制体型管理サロン）
+# 注意: SOIREVE（M'DREA / meguru / FROLA / PINK PINK）とは別事業。
+#       この事業の封印語をSOIREVE側に流用しない、SOIREVE側の封印語をここに混在させない。
+# 出典: CLAUDE.md「表現ルール（薬機法・広告）」セクション（2026年7月時点）
+# 同期先: .claude/compliance/blocklist.txt（Tier Aのみのミラー。ここを更新したら必ず同期する）
+
+business: "VISUAL LABO（会員制体型管理サロン・新橋店）"
+
+tier_a_sealed_words:
+  # いかなる媒体でも使用禁止。hook (compliance-guard.sh) が書き込み時に機械ブロックする。
+  - "必ず痩せる"
+  - "脂肪が落ちる"
+  - "むくみが取れる"
+  - "治る"
+  - "治療"
+  - "改善保証"
+  - "寝るだけで痩せる"
+  - "貼るだけで痩せる"
+  - "二日酔い"
+
+tier_b_staff_only:
+  # スタッフ教材・社内資料のみ。顧客向け公開物には出さない。
+  # 現時点で登録なし。教材限定の表現が出てきたらここに追加する。
+  []
+
+tier_c_conditional:
+  - phrase: "効果・効能に触れる表現全般"
+    condition: "近くに「※効果・感じ方には個人差があります」を明記する"
+  - phrase: "インディバとの比較表現"
+    condition: "「448kHz特化 vs 300/500/1000kHz可変の設計思想の違い」で語る。「同じ」「より上」という優劣表現は禁止"
+  - phrase: "MystiCoreのスペック表記"
+    condition: "正: RF 300/500/1000kHz・出力400W超（4×100W）・CET/RET/MIX・Hi-EMS・Hi-TENS(2/5/25Hz)。OEM元名（Tecar Back等）は公開ページに書かない"
+
+general_rules:
+  - "医薬品的効能効果を断定しない（「治る」「必ず痩せる」等の言い切り禁止）"
+  - "事実と体感を区別する。ビフォーアフター表現は景表法の裏付けルールに従う"
+  - "機械関連ページには禁忌注記（ペースメーカー・妊娠中・金属インプラント等）を必ず残す"
+
+# 参考: 表現コンプラとは別カテゴリ（薬機法・景表法ではなく「旧データ」の再発防止）。
+# hookのTier Aブロック対象には含めない（誤検知防止のため分離）。
+# CLAUDE.md「価格・メニュー」セクションを参照し、旧価格・旧メニュー名（¥3,980系3コース、
+# STANDARD/PREMIUM、EMS会員¥4,980、HYPER EMS DIET等）を復活させないこと。
+deprecated_data_note: "旧価格・旧メニュー名の一覧はCLAUDE.md参照。表現コンプラのTier Aとは別管理。"
