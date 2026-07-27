@@ -180,7 +180,7 @@
   <div class="wrap">
     <figure class="rv" style="margin:0 auto 56px;max-width:980px"><img loading="lazy" src="images/flow-treatment.jpg" alt="施術の流れ｜カウンセリング→高周波→HYPER EMS→アフター案内" style="border-radius:4px;border:1px solid var(--line)"></figure>
     <div style="display:flex;justify-content:center">
-      <figure class="rv" style="max-width:540px"><img loading="lazy" src="images/relax-treatment.jpg" alt="施術中も、安心してお過ごしいただけます｜タオルワーク・個室・丁寧なご案内" style="border-radius:4px"></figure>
+      <figure class="rv" style="max-width:540px;margin-left:auto;margin-right:auto"><video id="trMovie" muted loop playsinline preload="none" poster="images/tr-movie-poster.jpg" style="width:100%;height:auto;display:block;border-radius:8px" aria-label="施術の様子｜高周波プローブによるお腹・脚へのアプローチ"><source data-src="images/tr-movie.mp4" type="video/mp4"></video></figure>
     </div>
   </div>
 </section>
@@ -289,6 +289,10 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+window.addEventListener('load',()=>{
+  const v=document.getElementById('trMovie');
+  if(v){const src=v.querySelector('source');src.src=src.dataset.src;v.load();v.play().catch(()=>{});}
+});
 </script>
 <script type="application/ld+json">
 {

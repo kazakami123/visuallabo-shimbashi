@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#0e0c0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,7 +62,7 @@
   --line:rgba(240,234,224,.13); --line-2:rgba(240,234,224,.07);
   --gold:#c9a768; --gold-l:#e0c48d; --gold-d:#a98c50;
   --paper:#f4efe6; --paper-ink:#211d18;
-  --serif:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+  --serif:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
   --eng:"Cormorant Garamond",Georgia,serif;
   --sans:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
   --ui:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
@@ -430,6 +430,12 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
   .reason-card p{font-size:12px;line-height:1.85}
 }
 
+/* proof背景ムービー */
+#proof{position:relative;overflow:hidden}
+#proof .bgvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:saturate(.75)}
+#proof .bgveil{position:absolute;inset:0;background:rgba(247,243,236,.68);z-index:1}
+#proof>.wrap{position:relative;z-index:2}
+
 /* light (paper) sections — hybrid */
 .lt{color:var(--ink-soft);background:#f7f3ec;--bg:#f7f3ec;--bg2:#eee8dc;--bg3:#e6dfd0;--ink:#241f19;--ink-soft:#4d453a;--mute:#8a7e6d;--line:rgba(36,31,25,.16);--line-2:rgba(36,31,25,.08);--gold:#a98c50;--gold-l:#b89b5e;--gold-d:#8f7440}
 .lt .vm-card,.lt .learn-card,.lt .bl-card,.lt .mw-card,.lt .pickup,.lt table.cmp{background:#fff}
@@ -513,7 +519,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
     <a class="brand" href="index.html"><img class="logo-img" src="images/logo.png" alt="VISUAL LABO 新橋店" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="brand-fallback">VISUAL&nbsp;<b>LABO</b></span></a>
     <div class="nav-right">
       <div class="navlinks">
-        <a href="#price">料金</a>
+        <a href="price.html">料金</a>
         <a href="#access">アクセス</a>
         <a href="#faq">よくある質問</a>
       </div>
@@ -529,7 +535,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
     <button class="drawer-close" id="dclose" aria-label="閉じる">×</button>
     <a class="main" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">初回体験を予約する（LINE） <span>→</span></a>
     <a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">ホットペッパーで予約する</a>
-    <a href="#price">料金・サービス</a>
+    <a href="price.html">料金・サービス</a>
     <a href="#access">アクセス</a>
     <a href="#faq">よくある質問</a>
     <a href="#proof">施術のしくみ</a>
@@ -634,6 +640,8 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 
 <!-- 3. 高周波×HYPER EMS -->
 <section class="sec lt" id="proof">
+  <video class="bgvid" id="proofBg" muted loop playsinline preload="none" aria-hidden="true"><source data-src="images/bm-movie.mp4" type="video/mp4"></video>
+  <div class="bgveil"></div>
   <div class="wrap">
     <div class="center mt-head rv">
       <div class="kicker c">How It Works</div>
@@ -684,7 +692,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
     </div>
     <div class="pickup2 rv">
       <div class="pickup">
-        <figure class="pickup-img"><img loading="lazy" src="images/ba-male-side.jpg" alt="お腹まわりの変化 側面 男性｜BODY MAINTENANCE MENU｜効果には個人差があります"></figure>
+        <figure class="pickup-img"><img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="お腹まわりの変化 側面 男性（60分・施術1回）｜BODY MAINTENANCE｜効果には個人差があります"></figure>
         <div class="pickup-b">
           <div class="who">男性 ／ Body Maintenance</div>
           <p class="t">会食が多く、お酒の量も多い毎日。横になるだけで続けられるので、無理なく通えています。最近「変わった？」と言われることが増えました。</p>
@@ -692,10 +700,10 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
         </div>
       </div>
       <div class="pickup">
-        <figure class="pickup-img"><img loading="lazy" src="images/ba-waist-1.jpg" alt="ウエストまわりの変化 側面 女性｜BODY MAINTENANCE MENU 1回60分｜効果には個人差があります"></figure>
+        <figure class="pickup-img"><img loading="lazy" src="images/ba2026-f1-side-90.jpg" alt="ウエストまわりの変化 側面 女性（90分・施術1回）｜BODY MAINTENANCE｜効果には個人差があります"></figure>
         <div class="pickup-b">
           <div class="who">女性 ／ Body Maintenance</div>
-          <p class="t">1回・60分の変化記録。横から見たウエストのラインに、無理なく向き合った記録です。</p>
+          <p class="t">1回・90分の変化記録。横から見たウエストのラインに、無理なく向き合った記録です。</p>
           <p class="n">※ 効果・感じ方には個人差があります。症例写真は当サロンでの施術例です。</p>
         </div>
       </div>
@@ -1048,6 +1056,12 @@ document.querySelectorAll('.fq').forEach(b=>{
     document.querySelectorAll('.fitem.open').forEach(o=>{o.classList.remove('open');o.querySelector('.fa').style.maxHeight=null});
     if(!open){it.classList.add('open');fa.style.maxHeight=fa.scrollHeight+'px'}
   });
+});
+
+// proof背景ムービー（表示後に読み込み）
+window.addEventListener('load',()=>{
+  const v=document.getElementById('proofBg');
+  if(v){const src=v.querySelector('source');src.src=src.dataset.src;v.load();v.play().catch(()=>{});}
 });
 
 // PC floating CTA

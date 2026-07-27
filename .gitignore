@@ -69,3 +69,10 @@ Thumbs.db
 .env
 .dev.vars
 .claude/agent-memory/**/MEMORY.md
+
+# 症例の元PNG（顧客名入りファイル名のため公開禁止・Web用はba2026-*.jpg）
+images/2026*.PNG
+images/加藤さん*.PNG
+
+# 動画の元ファイル（Web用はbm-movie.mp4）
+images/VID_*.MP4
