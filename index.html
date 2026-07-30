@@ -62,6 +62,7 @@
   --line:rgba(240,234,224,.13); --line-2:rgba(240,234,224,.07);
   --gold:#c9a768; --gold-l:#e0c48d; --gold-d:#a98c50;
   --paper:#f4efe6; --paper-ink:#211d18;
+  --greige:#9a958c;
   --serif:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
   --eng:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
   --sans:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;
@@ -92,16 +93,16 @@ body::after{content:"";position:fixed;inset:12px;border:1px solid rgba(180,153,1
 body::before{content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
 
 /* typography */
-.kicker{font-family:var(--eng);font-style:italic;font-size:clamp(14px,1.8vw,17px);letter-spacing:.14em;color:var(--gold);display:flex;align-items:center;gap:16px;margin-bottom:26px}
-.kicker::before{content:"";width:44px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.kicker{font-family:var(--eng);font-style:italic;font-size:clamp(14px,1.8vw,17px);letter-spacing:.14em;color:var(--greige);display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.kicker::before{content:"";width:44px;height:1px;background:linear-gradient(90deg,var(--greige),transparent)}
 .kicker.c{justify-content:center}
-.kicker.c::before{background:linear-gradient(270deg,var(--gold),transparent)}
-.kicker.c::after{content:"";width:44px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.kicker.c::before{background:linear-gradient(270deg,var(--greige),transparent)}
+.kicker.c::after{content:"";width:44px;height:1px;background:linear-gradient(90deg,var(--greige),transparent)}
 /* EN⇄JP swap on hover (toriaina-style) */
 .kicker{cursor:default}
 .kicker .kw{position:relative;display:inline-block;white-space:nowrap}
 .kicker .kw .ke,.kicker .kw .kj{display:inline-block;transition:opacity .45s ease,transform .45s ease}
-.kicker .kw .kj{position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% + 9px));opacity:0;font-family:var(--ui);font-style:normal;letter-spacing:.22em;font-size:.94em;color:var(--gold)}
+.kicker .kw .kj{position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% + 9px));opacity:0;font-family:var(--ui);font-style:normal;letter-spacing:.22em;font-size:.94em;color:var(--greige)}
 .kicker:hover .kw .ke{opacity:0;transform:translateY(-9px)}
 .kicker:hover .kw .kj{opacity:1;transform:translate(-50%,-50%)}
 @media(max-width:760px){
@@ -131,7 +132,7 @@ h1,h2,h3,.hero-pre,.hero-sub,.body-txt,.price-body .ds,.mw-note p,.pos-box .pt,.
 .secta{padding:clamp(40px,6vw,60px) 0 0}
 
 /* thin gold hairline between sections */
-.hairline{width:1px;height:clamp(50px,7vw,90px);margin:0 auto;background:linear-gradient(to bottom,transparent,var(--gold),transparent);opacity:.55}
+.hairline{width:1px;height:clamp(50px,7vw,90px);margin:0 auto;background:linear-gradient(to bottom,transparent,var(--greige),transparent);opacity:.55}
 
 /* header */
 header{position:fixed;top:0;left:0;width:100%;z-index:200;transition:.4s;background:linear-gradient(180deg,rgba(14,12,10,.7) 0%,rgba(14,12,10,.35) 60%,transparent 100%)}
@@ -176,7 +177,7 @@ header.solid{background:rgba(14,12,10,.92);backdrop-filter:blur(16px);border-bot
 .hero-side{position:absolute;right:clamp(14px,3vw,44px);top:50%;transform:translateY(-50%);z-index:3;writing-mode:vertical-rl;font-family:var(--eng);font-style:italic;letter-spacing:.5em;font-size:11px;color:rgba(240,234,224,.5);display:flex;align-items:center;gap:18px}
 .hero-side::after{content:"";width:1px;height:70px;background:linear-gradient(to bottom,var(--gold),transparent)}
 .hero-inner{position:relative;z-index:2;width:100%;max-width:1160px;margin:0 auto;padding:110px 24px clamp(60px,9vw,110px)}
-.hero-tag{font-family:var(--eng);font-size:clamp(12px,1.6vw,15px);letter-spacing:.42em;color:var(--gold);margin-bottom:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;text-transform:uppercase}
+.hero-tag{font-family:var(--eng);font-size:clamp(12px,1.6vw,15px);letter-spacing:.42em;color:rgba(235,232,226,.85);margin-bottom:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;text-transform:uppercase}
 .hero-tag .dot{width:3px;height:3px;border-radius:50%;background:var(--gold)}
 .hero-pre{font-family:var(--serif);font-size:clamp(14px,2.6vw,18px);font-weight:400;letter-spacing:.14em;color:var(--ink-soft);margin-bottom:18px;word-break:keep-all;overflow-wrap:anywhere}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(24px,6.4vw,60px);line-height:1.55;letter-spacing:.06em;margin-bottom:26px}
@@ -452,7 +453,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 #proof>.wrap{position:relative;z-index:2}
 
 /* light (paper) sections — hybrid */
-.lt{color:var(--ink-soft);background:#ffffff;--bg:#ffffff;--bg2:#ffffff;--bg3:#f5f3ef;--ink:#000000;--ink-soft:#1a1a1a;--mute:#595959;--line:rgba(36,31,25,.16);--line-2:rgba(36,31,25,.08);--gold:#a98c50;--gold-l:#b89b5e;--gold-d:#8f7440}
+.lt{color:var(--ink-soft);background:#ffffff;--bg:#ffffff;--bg2:#ffffff;--bg3:#f5f3ef;--ink:#000000;--ink-soft:#1a1a1a;--mute:#595959;--greige:#7c786f;--line:rgba(36,31,25,.16);--line-2:rgba(36,31,25,.08);--gold:#a98c50;--gold-l:#b89b5e;--gold-d:#8f7440}
 .lt .vm-card,.lt .learn-card,.lt .bl-card,.lt .mw-card,.lt .pickup,.lt table.cmp{background:#fff}
 .lt .vm-card:hover,.lt .learn-card:hover,.lt .bl-card:hover{background:#fbf7ef}
 .lt .frame{background:#fff;box-shadow:0 20px 50px rgba(36,31,25,.14)}
@@ -544,7 +545,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 /* ===== plan preview (明朗会計) ===== */
 .plan-pre{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px;margin:clamp(26px,4vw,40px) auto 0}
 .plan-pre .pp{background:#fff;border:1px solid var(--line);padding:28px 20px 26px;text-align:center;position:relative;display:flex;flex-direction:column;gap:8px}
-.plan-pre .pp .en{font-family:var(--eng);font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.plan-pre .pp .en{font-family:var(--eng);font-size:11px;letter-spacing:.3em;color:var(--greige);text-transform:uppercase}
 .plan-pre .pp .nm{font-size:16px;font-weight:600;color:var(--ink);letter-spacing:.06em}
 .plan-pre .pp .cond{font-size:11.5px;color:var(--mute);line-height:1.8}
 .plan-pre .pp .pr{font-family:var(--ui);font-size:clamp(22px,3vw,28px);font-weight:600;color:var(--ink);margin-top:4px}
@@ -569,6 +570,10 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 .nay-item{display:flex;align-items:center;gap:14px;padding:17px 4px;border-bottom:1px solid var(--line);font-size:clamp(13.5px,1.6vw,15.5px);font-weight:500;color:var(--ink);line-height:1.8;word-break:normal}
 .nay-item svg{width:23px;height:23px;flex:0 0 23px}
 @media(max-width:700px){.nay-list{grid-template-columns:1fr;max-width:460px}.nay-item{padding:14px 2px}}
+
+/* ===== hero brand ===== */
+.hero-brand{font-family:var(--ui);font-size:clamp(30px,6.4vw,64px);font-weight:600;letter-spacing:.16em;color:#fff;line-height:1.15;margin-bottom:14px;animation:riseIn 1s .05s ease both}
+@media(max-width:760px){.hero-brand{font-size:clamp(26px,8.5vw,34px);letter-spacing:.1em}}
 </style>
 </head>
 <body>
@@ -636,7 +641,8 @@ setTimeout(hide,3500);
   <div class="hero-side">SHIMBASHI — TOKYO</div>
   <div class="scr" aria-hidden="true"><span>SCROLL</span><i></i></div>
   <div class="hero-inner">
-    <div class="hero-tag"><span>Visual Labo</span><span class="dot"></span><span>Shimbashi</span><span class="dot"></span><span>2026.8 Open</span></div>
+    <div class="hero-brand">VISUAL LABO</div>
+    <div class="hero-tag"><span>Body Maintenance Salon</span><span class="dot"></span><span>Shimbashi</span><span class="dot"></span><span>2026.8 Open</span></div>
     <p class="hero-pre">無理な運動も食事制限も、もう要らない。</p>
     <h1>忙しい大人の新習慣。<br>寝ながらできる、<span class="g">体型管理</span>。</h1>
     <p class="hero-sub">温めて整えて、“戻りにくい体”へ。<br><span style="white-space:nowrap">BODY MAINTENANCE SALON。</span></p>
