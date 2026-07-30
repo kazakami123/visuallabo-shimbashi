@@ -638,6 +638,17 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
   .pos-line .me{padding:9px 26px}
   .pos-box .pt{font-size:12.5px;line-height:2.2}
 }
+
+/* ===== waist self-check ===== */
+.wcheck{max-width:680px;margin:clamp(30px,5vw,46px) auto 0;background:#fff;border:1px solid #eceae6;border-radius:18px;padding:clamp(26px,4vw,36px) clamp(18px,3.5vw,32px);text-align:center;box-shadow:0 16px 38px -26px rgba(0,0,0,.14)}
+.wcheck .wt{font-size:clamp(15px,2.2vw,17px);font-weight:700;color:#111;letter-spacing:.06em}
+.wcheck .fx{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,16px);margin-top:18px;flex-wrap:wrap;font-weight:600;color:#111}
+.wcheck .fx .cell{background:#f5f3ef;border-radius:12px;padding:12px 18px;font-size:clamp(13px,1.9vw,15px)}
+.wcheck .fx .op{font-size:clamp(16px,2.4vw,20px);color:var(--greige)}
+.wcheck .fx .res{background:rgba(188,92,48,.08);border:1.5px solid #bc5c30;border-radius:12px;padding:12px 18px;color:#bc5c30;font-size:clamp(13px,1.9vw,15px)}
+.wcheck .ex{display:flex;justify-content:center;gap:clamp(8px,2vw,14px);margin-top:16px;flex-wrap:wrap}
+.wcheck .ex span{font-size:11.5px;color:#595959;background:#faf9f6;border:1px solid #eceae6;border-radius:999px;padding:6px 14px}
+.wcheck .nt{margin-top:14px;font-size:11px;color:#8a8a8a;line-height:1.9}
 </style>
 </head>
 <body>
@@ -766,6 +777,14 @@ setTimeout(hide,3500);
       <div class="nay-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="var(--gold)"/><path d="M7.2 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>下腹・浮き輪肉が気になる</span></div>
       <div class="nay-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="var(--gold)"/><path d="M7.2 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>昔よりお腹まわりが落ちにくくなった</span></div>
       <div class="nay-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="var(--gold)"/><path d="M7.2 12.4l3.1 3.1 6.3-6.6" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>自己流ダイエットで、何度も挫折した</span></div>
+    </div>
+    <div class="wcheck rv">
+      <div class="wt">メジャー1本でできる、お腹まわりセルフチェック</div>
+      <div class="fx">
+        <span class="cell">ウエスト（へそ周り）</span><span class="op">÷</span><span class="cell">身長</span><span class="op">＝</span><span class="res">0.5以上なら要注意</span>
+      </div>
+      <div class="ex"><span>身長160cm → ウエスト80cm以上</span><span>身長170cm → 85cm以上</span><span>身長180cm → 90cm以上</span></div>
+      <p class="nt">ウエストが「身長の半分」を超えていたら、内臓脂肪がつき始めているサインとされています。<br>※ウエスト身長比（WHtR）による目安です。医学的な診断ではありません。</p>
     </div>
     <p class="nay-close rv d1"><span>VISUAL LABOは、そんな<b>忙しい大人のための体型管理サロン</b>です。</span></p>
     <p class="body-txt rv d2" style="max-width:620px;margin:clamp(16px,2.5vw,24px) auto 0;text-align:center;font-size:13.5px">無理な食事制限や過度な運動に頼らない、<b class="gold">新しいアプローチ</b>があります。</p>
