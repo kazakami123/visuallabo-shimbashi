@@ -683,6 +683,15 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
   .ctag.t2{bottom:-4%;right:0}
   .hero-stats span{padding:8px 14px;font-size:11.5px}
 }
+
+/* clock legend */
+.clockwrap::before{content:"";position:absolute;inset:-8%;background:radial-gradient(circle,rgba(14,12,10,.5),transparent 70%);z-index:0;border-radius:50%}
+.clockwrap svg{position:relative;z-index:1}
+.clegend{position:relative;z-index:1;display:flex;flex-direction:column;gap:8px;margin-top:16px;align-items:center}
+.clegend span{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#fff;background:rgba(14,12,10,.6);border:1px solid rgba(240,234,224,.28);border-radius:999px;padding:9px 18px;backdrop-filter:blur(4px);white-space:nowrap}
+.clegend i{width:10px;height:10px;border-radius:50%;flex:0 0 auto}
+.clegend .gtag{border-color:var(--gold);color:var(--gold-l)}
+@media(max-width:860px){.clegend span{font-size:12px;padding:8px 14px}}
 </style>
 </head>
 <body>
@@ -778,13 +787,12 @@ setTimeout(hide,3500);
           <circle cx="110" cy="22" r="4" fill="#f0eae0"/>
           <text x="110" y="104" text-anchor="middle" fill="#f0eae0" font-size="30" font-weight="700">90<tspan font-size="14" font-weight="500">分</tspan></text>
           <text x="110" y="126" text-anchor="middle" fill="rgba(240,234,224,.85)" font-size="10.5" letter-spacing="2">寝ているだけ</text>
-          <text x="178" y="150" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="600" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">温活タイム</text>
-          <text x="178" y="164" text-anchor="middle" fill="#e0c48d" font-size="11" font-weight="700" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">60分</text>
-          <text x="40" y="62" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="600" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">筋トレタイム</text>
-          <text x="40" y="76" text-anchor="middle" fill="#e89a6e" font-size="11" font-weight="700" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">30分</text>
         </svg>
-        <span class="ctag t1">寝てるだけで筋トレ</span>
-        <span class="ctag t2">手ぶらでOK・仕事帰りに</span>
+        <div class="clegend">
+          <span><i style="background:#c9a768"></i>温活タイム（高周波）60分</span>
+          <span><i style="background:#bc5c30"></i>筋トレタイム（HYPER EMS）30分</span>
+          <span class="gtag">寝ながら筋トレ、手ぶらでOK</span>
+        </div>
       </div>
     </div>
   </div>
