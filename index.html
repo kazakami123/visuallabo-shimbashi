@@ -566,6 +566,26 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 /* ===== hero brand ===== */
 .hero-brand{font-family:var(--ui);font-size:clamp(30px,6.4vw,64px);font-weight:600;letter-spacing:.16em;color:#fff;line-height:1.15;margin-bottom:14px;animation:riseIn 1s .05s ease both}
 @media(max-width:760px){.hero-brand{font-size:clamp(26px,8.5vw,34px);letter-spacing:.1em}}
+
+/* ===== top offer card (LP style) ===== */
+.offer-sec{background:#fff;padding:clamp(46px,7vw,80px) 24px}
+.offer-card{position:relative;max-width:560px;margin:0 auto;background:#fff;border:1px solid #eee;border-radius:20px;box-shadow:0 24px 60px -28px rgba(0,0,0,.22);padding:clamp(30px,5vw,44px) clamp(20px,4vw,40px) clamp(26px,4vw,36px);text-align:center}
+.offer-rib{position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#f57c1f;color:#fff;font-size:clamp(12px,1.8vw,14.5px);font-weight:700;letter-spacing:.08em;padding:9px 26px;border-radius:999px;white-space:nowrap}
+.offer-ttl{font-size:clamp(22px,3.6vw,30px);font-weight:700;color:#111;letter-spacing:.06em;margin-top:6px}
+.offer-was{margin-top:16px;font-size:clamp(13px,1.8vw,15px);color:#444;font-weight:500}
+.offer-was s{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#f57c1f}
+.offer-was .dn{color:#f57c1f;font-weight:700;margin-left:6px}
+.offer-now{display:flex;align-items:baseline;justify-content:center;gap:6px;margin-top:2px;color:#f57c1f;font-family:var(--ui)}
+.offer-now .yen{font-size:clamp(26px,4vw,34px);font-weight:700}
+.offer-now .num{font-size:clamp(58px,10vw,84px);font-weight:700;line-height:1.1;letter-spacing:.01em}
+.offer-now .tax{font-size:clamp(13px,1.8vw,15px);color:#666;font-weight:500}
+.offer-burst{position:absolute;left:clamp(-10px,-1vw,-16px);top:clamp(120px,18vw,150px);width:clamp(92px,14vw,116px);height:auto}
+.offer-note{margin-top:10px;font-size:12px;color:#666;line-height:1.9}
+.offer-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;background:#06C755;color:#fff;font-size:clamp(15px,2.2vw,17px);font-weight:700;letter-spacing:.04em;padding:17px 34px;border-radius:999px;box-shadow:0 10px 24px -10px rgba(6,199,85,.55);transition:.3s;width:100%;max-width:400px}
+.offer-cta:hover{background:#05b14c;transform:translateY(-2px)}
+.offer-cta .ar{display:inline-flex;width:20px;height:20px;border-radius:50%;background:#fff}
+.offer-cta .ar svg{width:20px;height:20px;fill:#06C755}
+@media(max-width:520px){.offer-burst{top:auto;bottom:150px}}
 </style>
 </head>
 <body>
@@ -634,7 +654,7 @@ setTimeout(hide,3500);
   <div class="scr" aria-hidden="true"><span>SCROLL</span><i></i></div>
   <div class="hero-inner">
     <div class="hero-brand">VISUAL LABO</div>
-    <div class="hero-tag"><span>Body Maintenance Salon</span><span class="dot"></span><span>Shimbashi</span><span class="dot"></span><span>2026.8 Open</span></div>
+    <div class="hero-tag"><span>Body Maintenance Salon</span><span class="dot"></span><span>Shimbashi</span></div>
     <p class="hero-pre">無理な運動も食事制限も、もう要らない。</p>
     <h1>忙しい大人の新習慣。<br>寝ながらできる、<span class="g">体型管理</span>。</h1>
     <p class="hero-sub">温めて整えて、“戻りにくい体”へ。<br><span style="white-space:nowrap">BODY MAINTENANCE SALON。</span></p>
@@ -650,6 +670,19 @@ setTimeout(hide,3500);
     <p class="hero-note">※ 満足保証つき・合わなければ返金。</p>
   </div>
   <div class="scroll-i">SCROLL</div>
+</section>
+
+<!-- 0. 初回体験オファー -->
+<section class="offer-sec">
+  <div class="offer-card rv">
+    <div class="offer-rib">寝ているだけの、90分。</div>
+    <div class="offer-ttl">初回体験コース</div>
+    <p class="offer-was">通常価格 <s>14,800円（税込）</s><span class="dn">▼</span></p>
+    <div class="offer-now"><span class="yen">¥</span><span class="num">3,000</span><span class="tax">（税込）</span></div>
+    <svg class="offer-burst" viewBox="0 0 120 120" aria-hidden="true"><path fill="#f57c1f" d="M60 2l9 12 13-7 4 14 15-2-2 15 14 4-7 13 12 9-12 9 7 13-14 4 2 15-15-2-4 14-13-7-9 12-9-12-13 7-4-14-15 2 2-15-14-4 7-13L2 60l12-9-7-13 14-4-2-15 15 2 4-14 13 7z"/><text x="60" y="46" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="sans-serif">おトクな</text><text x="60" y="62" text-anchor="middle" fill="#fff" font-size="13" font-weight="700" font-family="sans-serif">初回体験</text><text x="60" y="86" text-anchor="middle" fill="#fff" font-size="22" font-weight="700" font-family="sans-serif">79%OFF</text></svg>
+    <p class="offer-note">機械60分＋EMS30分のBODY MAINTENANCEコース。<br>満足保証つき・合わなければ返金。当日入会で入会金¥0。</p>
+    <a class="offer-cta" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="offer_line"><span style="background:#fff;color:#06C755;font-size:12px;font-weight:700;padding:3px 8px;border-radius:5px">LINE</span>で初回体験を予約する<span class="ar"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 14.5v-9l7 4.5-7 4.5z"/></svg></span></a>
+  </div>
 </section>
 
 <!-- 1. 悩み -->
