@@ -48,7 +48,7 @@
   }
 }
 </script>
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" href="favicon.png?v=2">
 <link rel="preload" as="image" href="images/hero-bg-poster.jpg" fetchpriority="high">
 <!-- ▼計測タグ：IDを差し替えてコメントを外すと有効になります
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -602,10 +602,32 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 /* pill buttons */
 .btn,.nav-cta,.mbar a{border-radius:999px}
 /* floating circle CTA (Rintosull-style) */
-.fcta{right:26px;bottom:26px;width:118px;height:118px;border-radius:50%;background:#111;color:#fff;padding:0;align-items:center;justify-content:center;text-align:center;gap:4px;box-shadow:0 16px 40px -12px rgba(0,0,0,.45);border:1px solid rgba(201,167,104,.55)}
-.fcta:hover{background:#000;transform:scale(1.05)}
-.fcta.on:hover{transform:scale(1.05)}
-.fcta b{color:var(--gold);font-size:15px;font-weight:700;display:block}
+.fcta{right:24px;bottom:24px;width:auto;height:auto;border-radius:16px;background:#fff;color:#111;padding:16px 20px 14px;flex-direction:column;gap:5px;border:1.5px solid #c9a768;box-shadow:0 18px 44px -18px rgba(0,0,0,.32);text-align:center}
+.fcta:hover{background:#fff;transform:translateY(-3px)}
+.fcta .l1{font-size:11px;font-weight:600;color:#595959;letter-spacing:.1em}
+.fcta .pr2{font-family:"Noto Serif JP",serif;font-size:25px;font-weight:600;color:#111;line-height:1.2}
+.fcta .pr2 s{font-size:11px;color:#999;font-family:var(--sans);margin-right:7px}
+.fcta .go{display:block;background:#06C755;color:#fff;font-size:12.5px;font-weight:700;border-radius:999px;padding:9px 20px;margin-top:3px}
+
+/* ===== jump nav / price math ===== */
+.jumpnav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:780px;margin:clamp(28px,4.5vw,44px) auto 0}
+.jumpnav a{border:1px solid #d8d4cc;border-radius:999px;padding:10px 22px;font-size:12.5px;font-weight:600;color:#1a1a1a;letter-spacing:.06em;transition:.3s;background:#fff}
+.jumpnav a:hover{border-color:var(--gold);color:var(--gold-d)}
+@media(max-width:560px){.jumpnav{gap:8px}.jumpnav a{padding:9px 0;font-size:11.5px;flex:1 1 31%;text-align:center}}
+.pmath{max-width:720px;margin:clamp(28px,4.5vw,44px) auto 0;background:#fff;border:1px solid #eceae6;border-radius:18px;padding:clamp(26px,4vw,38px) clamp(18px,3.5vw,34px);text-align:center;box-shadow:0 16px 38px -26px rgba(0,0,0,.14)}
+.pmath .t{font-size:clamp(15px,2.2vw,17px);font-weight:700;color:#111;letter-spacing:.06em}
+.pmath .row{display:flex;align-items:stretch;justify-content:center;gap:clamp(10px,2.6vw,20px);margin-top:20px;flex-wrap:wrap}
+.pmath .bx{padding:16px 20px;border-radius:14px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.pmath .a{background:#f5f3ef}
+.pmath .a .lb{color:#8a8a8a}
+.pmath .a .n{font-family:"Noto Serif JP",serif;font-size:clamp(20px,3vw,26px);color:#9a9a9a;text-decoration:line-through}
+.pmath .b{background:rgba(188,92,48,.07);border:1.5px solid #bc5c30}
+.pmath .b .lb{color:#bc5c30}
+.pmath .b .n{font-family:"Noto Serif JP",serif;font-size:clamp(26px,3.8vw,34px);color:#bc5c30;font-weight:600}
+.pmath .lb{font-size:11.5px;font-weight:600;letter-spacing:.04em}
+.pmath .arw2{align-self:center;font-size:clamp(18px,3vw,24px);color:#bc5c30;font-weight:700}
+.pmath .chip{display:inline-block;margin-top:18px;background:#bc5c30;color:#fff;border-radius:999px;padding:8px 22px;font-size:12.5px;font-weight:700;letter-spacing:.06em}
+.pmath .nt{margin-top:12px;font-size:11px;color:#8a8a8a;line-height:1.9}
 </style>
 </head>
 <body>
@@ -709,6 +731,14 @@ setTimeout(hide,3500);
       <p class="offer-note">※お一人さま1回まで　※機械60分＋EMS30分　※満足保証つき・合わなければ返金　※体験当日のご入会で入会金¥0</p>
     </div>
   </div>
+  <nav class="jumpnav rv" aria-label="ページ内リンク">
+    <a href="#records">変化の記録</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#reason">選ばれる理由</a>
+    <a href="#price">料金</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#access">アクセス</a>
+  </nav>
 </section>
 
 <!-- 1. 悩み -->
@@ -814,7 +844,7 @@ setTimeout(hide,3500);
 </section>
 
 <!-- 5. 変化記録 -->
-<section class="sec lt">
+<section class="sec lt" id="records">
   <div class="wrap">
     <div class="mt-head rv">
       <div class="kicker"><span class="kw"><span class="ke">Records</span><span class="kj">変化の記録</span></span></div>
@@ -917,7 +947,7 @@ setTimeout(hide,3500);
 </section>
 
 <!-- 6. 選ばれる理由 -->
-<section class="sec lt" style="background:var(--bg2)">
+<section class="sec lt" id="reason" style="background:var(--bg2)">
   <div class="wrap">
     <div class="center mt-head rv">
       <div class="kicker c"><span class="kw"><span class="ke">Reason</span><span class="kj">選ばれる理由</span></span></div>
@@ -1054,6 +1084,16 @@ setTimeout(hide,3500);
       </div>
     </div>
     <p class="plan-note rv">温活メニュー（HYPER EMS 40／DOME SAUNA 40）は単発 ¥2,980〜。<br>入会金 ¥16,500は、体験当日のご入会で ¥0 になります。すべて税込表示です。</p>
+    <div class="pmath rv">
+      <div class="t">同じ「月2回」でも、会員ならこんなに違う。</div>
+      <div class="row">
+        <div class="bx a"><span class="lb">単発 ¥14,800 × 2回</span><span class="n">¥29,600</span></div>
+        <div class="arw2">→</div>
+        <div class="bx b"><span class="lb">月2回会員なら</span><span class="n">¥14,800</span></div>
+      </div>
+      <div class="chip">単発1回分の価格で、月2回通えます</div>
+      <p class="nt">※一般会員・90分コースの場合。すべて税込。</p>
+    </div>
     <div class="center secta rv">
       <a class="btn btn-out" href="price.html">月額・単発・VIP・サウナなど、すべての料金を見る →</a>
     </div>
@@ -1242,7 +1282,7 @@ setTimeout(hide,3500);
 </footer>
 
 <!-- PC floating CTA -->
-<a class="fcta" id="fcta" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="float_line"><span style="font-size:11px;font-weight:500">初回体験</span><b>¥3,000</b><span style="font-size:11px;font-weight:500">予約する →</span></a>
+<a class="fcta" id="fcta" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="float_line"><span class="l1">初回体験 90分</span><span class="pr2"><s>¥14,800</s>¥3,000</span><span class="go">LINEで予約する →</span></a>
 
 <!-- mobile sticky -->
 <div class="mbar">
