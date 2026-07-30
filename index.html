@@ -104,6 +104,11 @@ body::before{content:"";position:fixed;inset:0;z-index:1000;pointer-events:none;
 .kicker .kw .kj{position:absolute;left:50%;top:50%;transform:translate(-50%,calc(-50% + 9px));opacity:0;font-family:var(--ui);font-style:normal;letter-spacing:.22em;font-size:.94em;color:var(--gold)}
 .kicker:hover .kw .ke{opacity:0;transform:translateY(-9px)}
 .kicker:hover .kw .kj{opacity:1;transform:translate(-50%,-50%)}
+@media(max-width:760px){
+  .kicker .kw .kj{position:static;display:block;opacity:1;transform:none;margin-top:3px;font-size:10.5px;letter-spacing:.18em}
+  .kicker.c .kw{text-align:center}
+  .kicker:hover .kw .ke{opacity:1;transform:none}
+}
 h1,h2,h3,.hero-pre,.hero-sub,.body-txt,.price-body .ds,.mw-note p,.pos-box .pt,.closing .big{word-break:keep-all;line-break:strict;overflow-wrap:anywhere}
 .lead{font-family:var(--serif);font-size:clamp(26px,5.2vw,44px);font-weight:500;line-height:1.65;letter-spacing:.06em;color:var(--ink)}
 .lead em{font-style:normal;color:var(--gold);font-weight:500}
@@ -534,7 +539,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
         <a href="menu.html"><span class="ke">Menu</span><span class="kj">メニュー</span></a>
         <a href="price.html"><span class="ke">Price</span><span class="kj">料金</span></a>
         <a href="beforeafter.html"><span class="ke">Records</span><span class="kj">変化の記録</span></a>
-        <a href="machine.html"><span class="ke">Machine</span><span class="kj">導入マシン</span></a>
+        <a href="machine.html"><span class="ke">MystiCore</span><span class="kj">導入マシン</span></a>
         <a href="flow.html"><span class="ke">Flow</span><span class="kj">ご利用の流れ</span></a>
         <a href="#access"><span class="ke">Access</span><span class="kj">アクセス</span></a>
         <a href="#faq"><span class="ke">FAQ</span><span class="kj">よくある質問</span></a>
