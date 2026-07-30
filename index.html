@@ -663,6 +663,26 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
   .nay-flex .nl-head{text-align:center}
   .nay-flex .nl-head .kicker{justify-content:center}
 }
+
+/* ===== hero B: catchy stats + 90min ring ===== */
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,64px);align-items:center;margin-top:6px}
+.hero-zero{font-size:clamp(14px,2.1vw,18px);color:#f0eae0;margin-top:20px;letter-spacing:.08em;font-weight:500}
+.hero-zero b{color:var(--gold);font-weight:700}
+.hero-stats{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.hero-stats span{border:1px solid rgba(240,234,224,.42);border-radius:999px;padding:9px 18px;font-size:12.5px;color:#f0eae0;letter-spacing:.04em;white-space:nowrap}
+.hero-stats b{color:var(--gold);font-family:var(--ui);font-weight:700;margin-right:2px}
+.clockwrap{position:relative;max-width:min(380px,78vw);margin:0 auto}
+.clockwrap svg{display:block;width:100%;height:auto}
+.ctag{position:absolute;background:rgba(14,12,10,.72);border:1px solid var(--gold);border-radius:999px;padding:7px 15px;font-size:11.5px;font-weight:600;color:#f0eae0;white-space:nowrap;backdrop-filter:blur(4px)}
+.ctag.t1{top:2%;left:-6%}
+.ctag.t2{bottom:4%;right:-4%}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .clockwrap{max-width:270px;margin-top:6px}
+  .ctag.t1{top:-4%;left:-2%}
+  .ctag.t2{bottom:-4%;right:0}
+  .hero-stats span{padding:8px 14px;font-size:11.5px}
+}
 </style>
 </head>
 <body>
@@ -732,7 +752,41 @@ setTimeout(hide,3500);
   <div class="hero-inner">
     <div class="hero-brand">VISUAL LABO</div>
     <div class="hero-tag"><span>Body Maintenance Salon</span><span class="dot"></span><span>Shimbashi</span></div>
-    <h1>忙しい大人の新習慣。<br>寝ながらできる、<span class="g">体型管理</span>。</h1>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-pre">忙しい大人の新習慣。</p>
+        <h1>90分間、<br>寝るだけ<span class="g">DIET</span>。</h1>
+        <p class="hero-zero">運動ゼロ・食事制限ゼロ、<b>手ぶらでOK</b>。</p>
+        <div class="hero-stats">
+          <span><b>90分</b>で完了</span>
+          <span><b>月2回</b>だけ</span>
+          <span>新橋駅 <b>3分</b></span>
+        </div>
+        <p style="margin-top:14px;font-size:10.5px;color:rgba(240,234,224,.6);letter-spacing:.04em">※効果・感じ方には個人差があります</p>
+      </div>
+      <div class="clockwrap" aria-hidden="true">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif">
+          <circle cx="110" cy="110" r="88" fill="none" stroke="rgba(240,234,224,.14)" stroke-width="18"/>
+          <g transform="rotate(-90 110 110)">
+            <circle cx="110" cy="110" r="88" fill="none" stroke="#c9a768" stroke-width="18" stroke-dasharray="368.6 552.9" stroke-linecap="butt"/>
+            <circle cx="110" cy="110" r="88" fill="none" stroke="#bc5c30" stroke-width="18" stroke-dasharray="184.3 552.9" stroke-dashoffset="-368.6" stroke-linecap="butt"/>
+          </g>
+          <g stroke="rgba(240,234,224,.3)" stroke-width="1.4">
+            <line x1="110" y1="36" x2="110" y2="44"/><line x1="110" y1="176" x2="110" y2="184"/>
+            <line x1="36" y1="110" x2="44" y2="110"/><line x1="176" y1="110" x2="184" y2="110"/>
+          </g>
+          <circle cx="110" cy="22" r="4" fill="#f0eae0"/>
+          <text x="110" y="104" text-anchor="middle" fill="#f0eae0" font-size="30" font-weight="700">90<tspan font-size="14" font-weight="500">分</tspan></text>
+          <text x="110" y="126" text-anchor="middle" fill="rgba(240,234,224,.85)" font-size="10.5" letter-spacing="2">寝ているだけ</text>
+          <text x="178" y="150" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="600" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">温活タイム</text>
+          <text x="178" y="164" text-anchor="middle" fill="#e0c48d" font-size="11" font-weight="700" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">60分</text>
+          <text x="40" y="62" text-anchor="middle" fill="#fff" font-size="10.5" font-weight="600" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">筋トレタイム</text>
+          <text x="40" y="76" text-anchor="middle" fill="#e89a6e" font-size="11" font-weight="700" stroke="#0e0c0a" stroke-width="3" paint-order="stroke">30分</text>
+        </svg>
+        <span class="ctag t1">寝てるだけで筋トレ</span>
+        <span class="ctag t2">手ぶらでOK・仕事帰りに</span>
+      </div>
+    </div>
   </div>
   <div class="scroll-i">SCROLL</div>
 </section>
