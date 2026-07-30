@@ -535,18 +535,22 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 @media(prefers-reduced-motion:reduce){.scr i::after{animation:none;top:40%}}
 
 /* ===== plan preview (明朗会計) ===== */
-.plan-pre{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px;margin:clamp(26px,4vw,40px) auto 0}
-.plan-pre .pp{background:#fff;border:1px solid var(--line);padding:28px 20px 26px;text-align:center;position:relative;display:flex;flex-direction:column;gap:8px}
-.plan-pre .pp .en{font-family:var(--eng);font-size:11px;letter-spacing:.3em;color:var(--greige);text-transform:uppercase}
-.plan-pre .pp .nm{font-size:16px;font-weight:600;color:var(--ink);letter-spacing:.06em}
-.plan-pre .pp .cond{font-size:11.5px;color:var(--mute);line-height:1.8}
-.plan-pre .pp .pr{font-family:var(--ui);font-size:clamp(22px,3vw,28px);font-weight:600;color:var(--ink);margin-top:4px}
-.plan-pre .pp .pr small{font-size:12px;font-weight:400;color:var(--mute)}
-.plan-pre .pp .per{font-size:11px;color:var(--mute)}
-.plan-pre .pp.feat{border-color:var(--gold);box-shadow:0 18px 40px -24px rgba(169,140,80,.5)}
-.plan-pre .pp .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.08em;padding:4px 14px;white-space:nowrap}
-.plan-note{max-width:960px;margin:14px auto 0;font-size:11.5px;color:var(--mute);text-align:center;line-height:2}
-@media(max-width:760px){.plan-pre{grid-template-columns:1fr;max-width:420px;gap:20px}}
+.plan-pre{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:clamp(26px,4vw,40px) auto 0}
+.plan-pre .pp{position:relative;background:#fff;border:1px solid #eceae6;border-radius:18px;padding:32px 22px 28px;text-align:center;display:flex;flex-direction:column;box-shadow:0 16px 38px -26px rgba(0,0,0,.16)}
+.plan-pre .pp .en{font-family:var(--eng);font-style:italic;font-size:12px;letter-spacing:.3em;color:var(--greige)}
+.plan-pre .pp .nm{font-size:19px;font-weight:700;color:#111;letter-spacing:.08em;margin-top:8px}
+.plan-pre .pp .dv{width:34px;height:1px;background:var(--gold);margin:16px auto}
+.plan-pre .pp .cond{font-size:11.5px;color:#777;line-height:1.8}
+.plan-pre .pp .pr{margin-top:14px;color:#111}
+.plan-pre .pp .pr .l{display:block;font-size:12px;color:#777;margin-bottom:2px}
+.plan-pre .pp .pr .n{font-family:"Noto Serif JP",serif;font-size:clamp(30px,3.4vw,38px);font-weight:600;letter-spacing:.02em;line-height:1.2}
+.plan-pre .pp .pr .n small{font-size:.5em;font-weight:500}
+.plan-pre .pp .per{font-size:11px;color:#8a8a8a;margin-top:10px;line-height:1.8}
+.plan-pre .pp.feat{border:1.5px solid #bc5c30;box-shadow:0 20px 44px -24px rgba(188,92,48,.35)}
+.plan-pre .pp.feat .pr .n{color:#bc5c30}
+.plan-pre .pp .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:#bc5c30;color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:5px 16px;border-radius:999px;white-space:nowrap}
+.plan-note{max-width:960px;margin:16px auto 0;font-size:11.5px;color:var(--mute);text-align:center;line-height:2}
+@media(max-width:760px){.plan-pre{grid-template-columns:1fr;max-width:420px;gap:22px}}
 
 /* ===== voice (口コミ) ===== */
 .voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
@@ -1026,23 +1030,26 @@ setTimeout(hide,3500);
       <div class="pp">
         <div class="en">Day</div>
         <div class="nm">デイ会員</div>
+        <div class="dv"></div>
         <div class="cond">平日11:00〜16:00｜おトクに通える</div>
-        <div class="pr"><small>月2回</small> ¥10,800<small>〜</small></div>
+        <div class="pr"><span class="l">月2回</span><span class="n">¥10,800<small>〜</small></span></div>
         <div class="per">1回あたり ¥5,400〜｜税込</div>
       </div>
       <div class="pp feat">
         <div class="tag">OPEN記念 ¥1,000 OFF対象</div>
         <div class="en">Regular</div>
         <div class="nm">一般会員</div>
+        <div class="dv"></div>
         <div class="cond">11:00〜21:00｜仕事帰りにも</div>
-        <div class="pr"><small>月2回</small> ¥14,800<small>〜</small></div>
+        <div class="pr"><span class="l">月2回</span><span class="n">¥14,800<small>〜</small></span></div>
         <div class="per">1回あたり ¥7,400〜｜単発1回分の価格で月2回</div>
       </div>
       <div class="pp">
         <div class="en">VIP</div>
         <div class="nm">VIPルーム</div>
+        <div class="dv"></div>
         <div class="cond">完全個室貸切（2ベッド）・専属担当つき</div>
-        <div class="pr"><small>月2回</small> ¥49,800<small>〜</small></div>
+        <div class="pr"><span class="l">月2回</span><span class="n">¥49,800<small>〜</small></span></div>
         <div class="per">1回あたり ¥24,900〜｜同伴 ¥19,800/回</div>
       </div>
     </div>
