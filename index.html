@@ -183,7 +183,7 @@ header.solid{background:rgba(14,12,10,.92);backdrop-filter:blur(16px);border-bot
 .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(24px,6.4vw,60px);line-height:1.55;letter-spacing:.06em;margin-bottom:26px}
 .hero h1 .g{color:var(--gold)}
 .hero-sub{font-size:clamp(13px,2.2vw,15px);font-weight:400;line-height:2.2;color:var(--ink-soft);margin-bottom:30px;word-break:keep-all;overflow-wrap:anywhere}
-.hero-facts{display:flex;flex-wrap:wrap;margin-bottom:34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-facts{display:flex;flex-wrap:wrap;margin-top:clamp(48px,10vh,110px);margin-bottom:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .hero-facts span{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);padding:13px 22px;border-right:1px solid var(--line);display:flex;align-items:center;gap:6px}
 .hero-facts span:first-child{padding-left:2px}
 .hero-facts span:last-child{border-right:none}
@@ -498,7 +498,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
   .sbr{display:inline}
   .hero-tag{font-size:10px;letter-spacing:.2em;gap:8px 10px;margin-bottom:18px}
   /* モバイルは罫線なしのコンパクト表示 */
-  .hero-facts{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;border:none;margin-bottom:26px}
+  .hero-facts{display:flex;flex-wrap:wrap;align-items:center;gap:4px 0;border:none;margin-top:clamp(40px,9vh,80px);margin-bottom:0}
   .hero-facts span{border:none;padding:0;white-space:nowrap;font-size:12px;color:var(--ink-soft)}
   .hero-facts span:nth-child(-n+2)::after{content:"・";color:var(--mute);margin:0 9px}
   .hero-facts span:last-child{flex-basis:100%;font-size:14px;margin-top:10px;color:var(--ink)}
@@ -568,7 +568,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 @media(max-width:700px){.nay-list{grid-template-columns:1fr;max-width:460px}.nay-item{padding:14px 2px}}
 
 /* ===== hero brand ===== */
-.hero-brand{font-family:var(--ui);font-size:clamp(30px,6.4vw,64px);font-weight:600;letter-spacing:.16em;color:#fff;line-height:1.15;margin-bottom:14px;animation:riseIn 1s .05s ease both}
+.hero-brand{font-family:var(--ui);font-size:clamp(30px,6.4vw,64px);font-weight:400;letter-spacing:.2em;color:#fff;line-height:1.15;margin-bottom:14px;animation:riseIn 1s .05s ease both}
 @media(max-width:760px){.hero-brand{font-size:clamp(26px,8.5vw,34px);letter-spacing:.1em}}
 
 /* ===== top offer card (Rintosull replica) ===== */
@@ -722,12 +722,7 @@ setTimeout(hide,3500);
     <div class="hero-facts">
       <span>新橋駅 <b>徒歩3分</b></span>
       <span>男女利用可能</span>
-      <span>初回体験 90分 <b>¥3,000</b></span>
     </div>
-    <div class="cta-pair">
-      <a class="btn btn-line" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="hero_line">初回体験を予約する</a>
-    </div>
-    <p class="hero-note">※ 満足保証つき・合わなければ返金。</p>
   </div>
   <div class="scroll-i">SCROLL</div>
 </section>
@@ -1041,35 +1036,6 @@ setTimeout(hide,3500);
   </div>
 </section>
 
-<!-- 7. コンセプト -->
-<section class="sec lt">
-  <div class="wrap">
-    <div class="center mt-head rv">
-      <div class="kicker c"><span class="kw"><span class="ke">Concept</span><span class="kj">考え方</span></span></div>
-      <h2 class="lead">目指すのは、<br><em>「ずっと、調子がいい」</em>。</h2>
-      <p class="body-txt" style="max-width:600px;margin:26px auto 0;word-break:keep-all;overflow-wrap:anywhere">何度試しても続かなかった、あなたの<b>最後の場所に</b>。<br>深部から温めてゆるめ、HYPER EMSで動かす。<br><b>「整えてから、動かす」</b>を、寝ながら。</p>
-      <p class="rv" style="max-width:640px;margin:clamp(28px,4.5vw,40px) auto 0;font-family:var(--serif);font-size:clamp(17px,3.2vw,23px);font-weight:500;color:var(--ink);line-height:2;letter-spacing:.06em;word-break:keep-all;overflow-wrap:anywhere">ゴールは、“痩せる”の先。<br><span class="gold">がんばるほど、調子のいい私へ。</span></p>
-      <p style="max-width:640px;margin:12px auto 0;font-size:11px;color:var(--mute)">※効果・感じ方には個人差があります</p>
-    </div>
-    <figure class="rv" style="margin:clamp(30px,5vw,48px) auto 0;max-width:920px;border:1px solid var(--line)"><img loading="lazy" src="images/treatment-scene.jpg" alt="高周波×HYPER EMSの施術イメージ｜お腹を温めて筋肉にアプローチ｜VISUAL LABO 新橋店" style="filter:saturate(.85)"></figure>
-  </div>
-</section>
-
-<!-- DEVELOPER -->
-<section class="sec lt" style="padding-top:0;background:#ffffff">
-  <div class="wrap">
-    <div class="dev-grid" style="max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,4vw,48px);align-items:center">
-      <figure class="rv" style="margin:0;border:1px solid var(--line)"><img loading="lazy" src="images/mysticore-salon.jpg" alt="自社開発マシンMystiCore®｜VISUAL LABOサロン内" style="filter:saturate(.9)"></figure>
-      <div class="rv d1">
-        <div class="kicker"><span class="kw"><span class="ke">Developer</span><span class="kj">開発者</span></span></div>
-        <h2 class="lead" style="font-size:clamp(20px,3.6vw,30px)">機器から、<em>自分たちでつくった</em>。</h2>
-        <p class="body-txt" style="margin-top:18px;font-size:14px">VISUAL LABOの施術を支えるMystiCore®は、既製品ではなく、体型管理の現場のために自社で開発したマシンです。「温める」と「動かす」を1台で同時に行うために、周波数もモードも自分たちで設計しました。施術手順まで標準化しているから、どのスタッフでも同じ品質でお届けできます。</p>
-        <p style="margin-top:18px"><a class="btn btn-out" href="machine.html">開発ストーリーとMystiCore®を見る →</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- 8. 初回体験メニュー -->
 <section class="sec lt" id="price" style="background:var(--bg2)">
   <div class="wrap">
@@ -1140,6 +1106,35 @@ setTimeout(hide,3500);
     </div>
     <div class="center secta rv">
       <a class="btn btn-out" href="price.html">月額・単発・VIP・サウナなど、すべての料金を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. コンセプト -->
+<section class="sec lt">
+  <div class="wrap">
+    <div class="center mt-head rv">
+      <div class="kicker c"><span class="kw"><span class="ke">Concept</span><span class="kj">考え方</span></span></div>
+      <h2 class="lead">目指すのは、<br><em>「ずっと、調子がいい」</em>。</h2>
+      <p class="body-txt" style="max-width:600px;margin:26px auto 0;word-break:keep-all;overflow-wrap:anywhere">何度試しても続かなかった、あなたの<b>最後の場所に</b>。<br>深部から温めてゆるめ、HYPER EMSで動かす。<br><b>「整えてから、動かす」</b>を、寝ながら。</p>
+      <p class="rv" style="max-width:640px;margin:clamp(28px,4.5vw,40px) auto 0;font-family:var(--serif);font-size:clamp(17px,3.2vw,23px);font-weight:500;color:var(--ink);line-height:2;letter-spacing:.06em;word-break:keep-all;overflow-wrap:anywhere">ゴールは、“痩せる”の先。<br><span class="gold">がんばるほど、調子のいい私へ。</span></p>
+      <p style="max-width:640px;margin:12px auto 0;font-size:11px;color:var(--mute)">※効果・感じ方には個人差があります</p>
+    </div>
+    <figure class="rv" style="margin:clamp(30px,5vw,48px) auto 0;max-width:920px;border:1px solid var(--line)"><img loading="lazy" src="images/treatment-scene.jpg" alt="高周波×HYPER EMSの施術イメージ｜お腹を温めて筋肉にアプローチ｜VISUAL LABO 新橋店" style="filter:saturate(.85)"></figure>
+  </div>
+</section>
+
+<!-- DEVELOPER -->
+<section class="sec lt" style="padding-top:0;background:#ffffff">
+  <div class="wrap">
+    <div class="dev-grid" style="max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,4vw,48px);align-items:center">
+      <figure class="rv" style="margin:0;border:1px solid var(--line)"><img loading="lazy" src="images/mysticore-salon.jpg" alt="自社開発マシンMystiCore®｜VISUAL LABOサロン内" style="filter:saturate(.9)"></figure>
+      <div class="rv d1">
+        <div class="kicker"><span class="kw"><span class="ke">Developer</span><span class="kj">開発者</span></span></div>
+        <h2 class="lead" style="font-size:clamp(20px,3.6vw,30px)">機器から、<em>自分たちでつくった</em>。</h2>
+        <p class="body-txt" style="margin-top:18px;font-size:14px">VISUAL LABOの施術を支えるMystiCore®は、既製品ではなく、体型管理の現場のために自社で開発したマシンです。「温める」と「動かす」を1台で同時に行うために、周波数もモードも自分たちで設計しました。施術手順まで標準化しているから、どのスタッフでも同じ品質でお届けできます。</p>
+        <p style="margin-top:18px"><a class="btn btn-out" href="machine.html">開発ストーリーとMystiCore®を見る →</a></p>
+      </div>
     </div>
   </div>
 </section>
