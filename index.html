@@ -697,7 +697,7 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 @media(max-width:860px){.clegend span{font-size:12px;padding:8px 14px}}
 
 /* ===== trial includes ===== */
-.inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:clamp(26px,4vw,40px) auto 0}
+.inc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:960px;margin:clamp(26px,4vw,40px) auto 0}
 .inc{background:#f7f5f1;border-radius:16px;padding:24px 14px 20px;text-align:center}
 .inc svg{width:34px;height:34px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 12px;display:block}
 .inc .n{font-size:14px;font-weight:700;color:#111;letter-spacing:.04em;line-height:1.6}
@@ -710,10 +710,11 @@ footer{background:#0a0806;color:var(--mute);padding:clamp(60px,8vw,90px) 0 34px;
 .about-def{max-width:640px;margin:0 auto;text-align:center;font-size:clamp(15px,2.2vw,18px);line-height:2.4;color:#1a1a1a;font-weight:500}
 .about-def b{color:#bc5c30;font-weight:700}
 .feat3{display:flex;flex-direction:column;gap:14px;max-width:540px;margin:clamp(24px,4vw,36px) auto 0}
-.feat3 span{display:flex;align-items:center;gap:14px;background:#fff;border:1.5px solid #111;border-radius:999px;padding:15px 28px;font-size:clamp(16px,2.6vw,21px);font-weight:700;color:#111;letter-spacing:.04em}
+.feat3>span{display:flex;align-items:center;justify-content:center;gap:14px;background:#fff;border:1.5px solid #111;border-radius:999px;padding:15px 28px;font-size:clamp(16px,2.6vw,21px);font-weight:700;color:#111;letter-spacing:.04em}
+.feat3>span span{border:none;background:none;padding:0}
 .feat3 svg{width:24px;height:24px;flex:0 0 24px}
 .feat3 b{color:#bc5c30}
-@media(max-width:560px){.feat3 span{padding:13px 20px}}
+@media(max-width:560px){.feat3>span{padding:13px 20px}}
 
 /* ===== promise 5 ===== */
 .prom-slash{text-align:center;font-size:clamp(22px,3.6vw,32px);font-weight:700;color:#111;letter-spacing:.08em}
@@ -838,18 +839,9 @@ setTimeout(hide,3500);
   <div class="offer-head rv">
     <div class="kicker"><span class="kw"><span class="ke">Campaign</span><span class="kj">開催中のキャンペーン</span></span></div>
   </div>
-  <div class="offer-frame rv">
-    <div class="offer-card">
-      <div class="offer-slash">初回体験キャンペーン</div>
-      <div class="offer-mid">
-        <div class="offer-badge">初回<br>限定</div>
-        <div class="offer-price"><span class="lbl">90分</span><span class="num">3,000</span><span class="yen">円</span><span class="tax">（税込）</span></div>
-        <div class="offer-side">通常価格<br>19,800円のところ</div>
-      </div>
-      <a class="offer-cta2" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="offer_line">LINEで初回体験を予約する</a>
-      <p class="offer-note">※お一人さま1回まで　※機械60分＋EMS30分　※満足保証つき・合わなければ返金　※体験当日のご入会で入会金 ¥16,500 → ¥0</p>
-    </div>
-  </div>
+  <a class="rv" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="offer_line" style="display:block;max-width:760px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 28px 64px -30px rgba(0,0,0,.5);transition:.3s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+    <img src="images/campaign-banner.jpg" alt="新橋店NEW OPEN記念｜寝ながらDIETコース｜通常価格19,800円→初回限定3,000円（税込・84%OFF）｜満足保証つき・男女利用可能・新橋駅徒歩3分｜初回体験を予約する" style="width:100%;display:block">
+  </a>
   <nav class="jumpnav rv" aria-label="ページ内リンク">
     <a href="#records">変化の記録</a>
     <a href="#voice">お客様の声</a>
@@ -870,10 +862,8 @@ setTimeout(hide,3500);
     </div>
     <div class="inc-grid rv">
       <div class="inc"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M8.5 9.5h7M8.5 13h7M8.5 16.5h4.5"/></svg><div class="n">カウンセリング</div><div class="d">悩み・気になる部位を相談</div></div>
-      <div class="inc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 12l3.4-3.4M12 5.5V7M18.5 12H17M12 18.5V17M5.5 12H7"/></svg><div class="n">ビフォー測定</div><div class="d">施術前にウエスト計測</div></div>
       <div class="inc"><svg viewBox="0 0 24 24"><path d="M4 8.5c2-2.4 4-2.4 6 0s4 2.4 6 0M4 13c2-2.4 4-2.4 6 0s4 2.4 6 0M4 17.5c2-2.4 4-2.4 6 0s4 2.4 6 0"/><path d="M19.5 5.5l1.5 1.5-1.5 1.5"/></svg><div class="n">温活タイム 60分</div><div class="d">高周波で深部から温める＋手技</div></div>
       <div class="inc"><svg viewBox="0 0 24 24"><path d="M13 2.5L6 13h5l-1.5 8.5L17 11h-5l1-8.5z"/></svg><div class="n">筋トレタイム 30分</div><div class="d">HYPER EMSで寝ながら筋トレ</div></div>
-      <div class="inc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8 12.4l2.8 2.8 5.4-5.8"/></svg><div class="n">アフター測定</div><div class="d">変化をその場で確認</div></div>
       <div class="inc"><svg viewBox="0 0 24 24"><path d="M8.5 4L5 6.5l1.6 3 1.9-1v11h7v-11l1.9 1 1.6-3L15.5 4a3.5 3.5 0 0 1-7 0z"/></svg><div class="n">手ぶらでOK</div><div class="d">お着替え・アメニティ完備</div></div>
     </div>
     <p class="inc-close rv">仕事帰りに、手ぶらで90分。<br><b>初回は 通常¥19,800 → ¥3,000で、この全部。</b></p>
@@ -1134,16 +1124,9 @@ setTimeout(hide,3500);
 <!-- 6. 選ばれる理由 -->
 <section class="sec lt" id="reason" style="background:var(--bg2)">
   <div class="wrap">
-    <div class="center mt-head rv">
-      <div class="kicker c"><span class="kw"><span class="ke">Reason</span><span class="kj">選ばれる理由</span></span></div>
-      <h2 class="lead">VISUAL LABOが、<br><em>選ばれる理由</em>。</h2>
-    </div>
-    <div class="reason-grid rv">
-      <div class="reason-card"><svg viewBox="0 0 24 24"><path d="M12 1.8a7.4 7.4 0 0 0-7.4 7.4C4.6 14.6 12 22.2 12 22.2s7.4-7.6 7.4-13A7.4 7.4 0 0 0 12 1.8zm0 10.2a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6z"/></svg><h3>新橋駅 徒歩3分</h3><p>仕事帰りに寄れる立地。銀座・汐留・内幸町からもアクセス良好です。</p></div>
-      <div class="reason-card"><svg viewBox="0 0 24 24"><path d="M2 5.5a1 1 0 0 1 2 0V13h7V9.8c0-.7.6-1.3 1.3-1.3H19a3 3 0 0 1 3 3V18a1 1 0 0 1-2 0v-1.5H4V18a1 1 0 0 1-2 0V5.5z"/><circle cx="7.5" cy="10.6" r="2"/></svg><h3>寝ながら受けられる</h3><p>きつい運動なし。横になっているあいだに「温める×動かす」を同時に。</p></div>
-      <div class="reason-card"><svg viewBox="0 0 24 24"><path d="M12 1.6l2.5 1.9 3.1-.3 1.2 2.9 2.9 1.2-.3 3.1 1.9 2.5-1.9 2.5.3 3.1-2.9 1.2-1.2 2.9-3.1-.3-2.5 1.9-2.5-1.9-3.1.3-1.2-2.9-2.9-1.2.3-3.1L.7 12.9l1.9-2.5-.3-3.1 2.9-1.2 1.2-2.9 3.1.3L12 1.6z"/><path d="M7.9 12.4l2.7 2.7 5.3-5.5" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><h3>満足保証つき初回体験</h3><p>90分コースをまるごと体験。合わなければ返金します。</p></div>
-      <div class="reason-card"><svg viewBox="0 0 24 24"><path d="M3 7.5h18a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H3A1.5 1.5 0 0 1 1.5 19V9A1.5 1.5 0 0 1 3 7.5zm6.2 4.2h5.6v2h-5.6v-2z"/><path d="M9 7.5V6a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v1.5" fill="none" stroke="var(--ink)" stroke-width="2"/></svg><h3>持ち物不要・男女利用可能</h3><p>お着替えをご用意。手ぶらでOK、男性のご利用も歓迎です。</p></div>
-    </div>
+    <figure class="rv" style="margin:0 auto;max-width:1000px;border-radius:18px;overflow:hidden;box-shadow:0 28px 64px -32px rgba(0,0,0,.5)">
+      <img loading="lazy" src="images/reason3.jpg" alt="VISUAL LABOが選ばれる、3つの理由｜01 寝ながら、温めて動かす（高周波とHYPER EMSを組み合わせ、横になったまま体型管理）｜02 月2回、90分で続けやすい（毎週通う必要がなく、仕事帰りにも取り入れやすい）｜03 マシンから施術まで自社設計（自社開発マシンと標準化した施術で、担当者に左右されにくい品質）｜がんばらない体型管理習慣、VISUAL LABO" style="width:100%;display:block">
+    </figure>
 
     <div class="center rv" style="margin-top:clamp(56px,8vw,84px)">
       <div class="kicker c"><span class="kw"><span class="ke">Compare</span><span class="kj">他社との違い</span></span></div>
