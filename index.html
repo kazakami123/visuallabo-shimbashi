@@ -306,6 +306,19 @@ footer{background:#0c0c0c;color:#8f897f;padding:clamp(50px,7vw,70px) 0 30px;font
   .pr-row .pv{font-size:20px}
   .pr-row .nm{font-size:14px}
 }
+
+/* method 4 steps */
+.vm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1060px;margin:clamp(26px,4vw,40px) auto 0}
+.vm-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 32px -24px rgba(0,0,0,.14)}
+.vm-hd{padding:18px 18px 14px}
+.vm-hd .no{display:block;font-family:var(--futura);font-size:10.5px;letter-spacing:.3em;color:var(--greige);text-transform:uppercase}
+.vm-hd .en{display:block;font-family:var(--futura);font-size:22px;letter-spacing:.14em;color:var(--ink);margin-top:6px;line-height:1.2}
+.vm-hd .jp{display:inline-block;font-size:12px;font-weight:700;color:var(--gold-d);margin-top:6px}
+.vm-photo{width:100%;aspect-ratio:4/3;object-fit:cover}
+.vm-card p{font-size:12.5px;line-height:2;color:var(--ink-soft);padding:14px 18px 20px}
+.vm-close{text-align:center;margin:clamp(30px,5vw,44px) auto 0;font-size:clamp(16px,2.6vw,20px);font-weight:700;color:var(--ink);letter-spacing:.08em;line-height:2.1;word-break:keep-all}
+.vm-close em{font-style:normal;color:var(--gold-d)}
+@media(max-width:860px){.vm-grid{grid-template-columns:1fr 1fr;gap:12px}.vm-hd .en{font-size:18px}}
 </style>
 </head>
 <body>
@@ -442,27 +455,44 @@ var t0=Date.now();window.addEventListener('load',function(){setTimeout(hide,Math
       <div class="tw-txt">
         <div class="tw-kick">Treatment ｜ 施術の様子</div>
         <h3>あなたは、<br><em>寝ているだけでOK</em>。</h3>
-        <p>仕事帰りや、どれだけ疲れている日でも大丈夫。施術はすべて、寝ているあいだにベッドの上で完結。自社開発マシンMystiCore®の高周波で深部からじんわり温め、スタッフの手技でほぐし、HYPER EMSでそのまま筋トレまで行う——それが<span class="ftr">VISUAL LABO</span>独自のメソッドです。</p>
+        <p>仕事帰りや、どれだけ疲れている日でも大丈夫。カウンセリングから施術まで、すべて寝ているあいだにベッドの上で完結します。がんばるのは、マシンと私たちです。</p>
         <a class="tw-link" href="menu.html">施術内容を詳しく見る<span>→</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5. 90分の体験内容 -->
-<section class="sec" id="included" style="background:var(--wash)">
+<!-- 4.7 メソッド 4ステップ -->
+<section class="sec" id="method">
   <div class="wrap">
     <div class="center rv">
-      <div class="kicker c">Menu ｜ 90分の中身</div>
-      <h2 class="tt">いつもの90分は、<em>この4つ</em>。</h2>
-      <p class="lead-s"><span style="white-space:nowrap">初回体験もまったく同じ内容です。</span><br><span style="white-space:nowrap">体験だからと、短くしません。</span></p>
+      <div class="kicker c">Original Method ｜ 独自メソッド</div>
+      <h2 class="tt">温めて、動かして、休ませて、<em>維持する</em>。</h2>
+      <p class="lead-s">高周波×HYPER EMSを1台にした自社開発マシンMystiCore®だから、<br>この流れを90分ひと続きでできます。</p>
     </div>
-    <div class="inc-grid rv">
-      <div class="inc" style="background:#fff"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M8.5 9.5h7M8.5 13h7M8.5 16.5h4.5"/></svg><div class="n">カウンセリング</div><div class="d">悩み・気になる部位を相談</div></div>
-      <div class="inc" style="background:#fff"><svg viewBox="0 0 24 24"><path d="M4.5 9h12v6.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5V9z"/><path d="M16.5 10.5h1.6a2.6 2.6 0 0 1 0 5.2h-1.8"/><path d="M8 6.2c0-1 .8-1.2.8-2.2M12.5 6.2c0-1 .8-1.2.8-2.2"/></svg><div class="n">ホットティー</div><div class="d">温かいお茶で、内臓から温める</div></div>
-      <div class="inc" style="background:#fff"><svg viewBox="0 0 24 24"><path d="M4 8.5c2-2.4 4-2.4 6 0s4 2.4 6 0M4 13c2-2.4 4-2.4 6 0s4 2.4 6 0M4 17.5c2-2.4 4-2.4 6 0s4 2.4 6 0"/><path d="M19.5 5.5l1.5 1.5-1.5 1.5"/></svg><div class="n">温活タイム 60分</div><div class="d">高周波で深部から温める＋手技</div></div>
-      <div class="inc" style="background:#fff"><svg viewBox="0 0 24 24"><path d="M13 2.5L6 13h5l-1.5 8.5L17 11h-5l1-8.5z"/></svg><div class="n">筋トレタイム 30分</div><div class="d">HYPER EMSで寝ながら筋トレ</div></div>
+    <div class="vm-grid rv">
+      <div class="vm-card">
+        <div class="vm-hd"><span class="no">Step 01</span><span class="en">HEAT</span><span class="jp">温める</span></div>
+        <img class="vm-photo" loading="lazy" src="images/relax-treatment.jpg" alt="HEAT｜高周波で深部から温める">
+        <p>高周波で深部からじんわり温め、血流やリンパの流れを促進。代謝の土台を整えます。</p>
+      </div>
+      <div class="vm-card">
+        <div class="vm-hd"><span class="no">Step 02</span><span class="en">MOVE</span><span class="jp">動かす</span></div>
+        <img class="vm-photo" loading="lazy" src="images/woman-treat.jpg" alt="MOVE｜HYPER EMSで動かす">
+        <p>HYPER EMSの電気刺激で、自分では動かしにくい奥のインナーマッスルを効率よく動かします。</p>
+      </div>
+      <div class="vm-card">
+        <div class="vm-hd"><span class="no">Step 03</span><span class="en">SLEEP</span><span class="jp">休む</span></div>
+        <img class="vm-photo" loading="lazy" src="images/menu-ems-photo.jpg" alt="SLEEP｜横になって休ませる">
+        <p>力を抜いて体を休ませる時間。継続的に筋肉を優しく動かし、ゆっくり整えていきます。</p>
+      </div>
+      <div class="vm-card">
+        <div class="vm-hd"><span class="no">Step 04</span><span class="en">KEEP</span><span class="jp">維持する</span></div>
+        <img class="vm-photo" loading="lazy" src="images/method-keep.jpg" alt="KEEP｜整った状態を維持する">
+        <p>整った状態をキープするためのセルフケアや習慣づくりで、理想のコンディションを維持します。</p>
+      </div>
     </div>
+    <p class="vm-close rv"><em>“その日だけ”</em>で終わらない。<br>いい状態が続く日常を。</p>
   </div>
 </section>
 
