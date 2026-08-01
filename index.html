@@ -359,15 +359,6 @@ footer{background:#0c0c0c;color:#8f897f;padding:clamp(50px,7vw,70px) 0 30px;font
 }
 
 
-/* ===== 3 features dark cards (HTML) ===== */
-.ft3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:960px;margin:clamp(26px,4vw,40px) auto 0}
-.ftc{background:#141414;border:1px solid rgba(201,167,104,.4);border-radius:16px;padding:32px 22px 30px;text-align:center;color:#fff}
-.ftc .no{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-family:var(--futura);font-size:15px;letter-spacing:.05em}
-.ftc svg{width:44px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin:18px auto 16px;display:block}
-.ftc h3{font-size:17px;font-weight:700;color:#fff;line-height:1.8;letter-spacing:.05em}
-.ftc .dv{width:30px;height:1px;background:var(--gold);margin:14px auto}
-.ftc p{font-size:13px;line-height:2;color:rgba(255,255,255,.88);font-weight:500}
-@media(max-width:760px){.ft3-grid{grid-template-columns:1fr;max-width:420px;gap:14px}.ftc{padding:26px 20px 24px}}
 </style>
 </head>
 <body>
@@ -475,32 +466,9 @@ var t0=Date.now();window.addEventListener('load',function(){setTimeout(hide,Math
       <h2 class="tt"><span class="ftr">VISUAL LABO</span>は、<br>会員制の<em>体型管理サロン</em>です。</h2>
       <p class="lead-s">月2回・90分・<b style="color:var(--gold-d);font-size:1.2em;font-weight:700">¥14,800</b>で、<br>高周波×HYPER EMSの本格ケアを受けながら、<br>がんばりすぎずに体型管理を続けられます。</p>
     </div>
-    <div class="center rv" style="margin-top:clamp(36px,6vw,56px)">
-      <h2 class="tt"><span class="ftr">VISUAL LABO</span>、<em>3つの特徴</em>。</h2>
-    </div>
-    <div class="ft3-grid rv">
-      <div class="ftc">
-        <span class="no">01</span>
-        <svg viewBox="0 0 24 24"><path d="M2 17v-6M2 14h20v3M6.5 11.5A1.6 1.6 0 1 1 6.5 14.7"/><path d="M9 14v-1.6c3-1.4 8-1.4 11 0V14"/><path d="M9.5 4.5c0 1.4-.9 1.7-.9 3M13 4.5c0 1.4-.9 1.7-.9 3M16.5 4.5c0 1.4-.9 1.7-.9 3"/></svg>
-        <h3>寝ながら、温めて動かす</h3>
-        <div class="dv"></div>
-        <p>高周波×HYPER EMSを組み合わせ、横になったまま体型管理。</p>
-      </div>
-      <div class="ftc">
-        <span class="no">02</span>
-        <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M8 3v4M16 3v4M3.5 9.5h17"/><path d="M8.8 14.6l2.3 2.3 4.3-4.6"/></svg>
-        <h3>月2回、90分で続けやすい</h3>
-        <div class="dv"></div>
-        <p>毎週通う必要がなく、仕事帰りにも取り入れやすい。</p>
-      </div>
-      <div class="ftc">
-        <span class="no">03</span>
-        <svg viewBox="0 0 24 24"><path d="M4 9l8-4.5L20 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5V9z"/><rect x="8.5" y="8.5" width="7" height="4.5" rx="1"/><path d="M17 15.5h2.5v3H17z"/></svg>
-        <h3>マシンから施術まで自社設計</h3>
-        <div class="dv"></div>
-        <p>自社開発マシンと標準化した施術で、担当者に左右されにくい品質を目指します。</p>
-      </div>
-    </div>
+    <figure class="figcard rv" style="max-width:1000px;box-shadow:none;margin-top:clamp(30px,5vw,48px)">
+      <img loading="lazy" src="images/tokucho3.jpg" alt="VISUAL LABO、3つの特徴｜01 寝ながら、温めて動かす（高周波×HYPER EMSを組み合わせ、横になったまま体型管理）｜02 月2回、90分で続けやすい（毎週通う必要がなく、仕事帰りにも取り入れやすい）｜03 マシンから施術まで自社設計（自社開発マシンと標準化した施術で、担当者に左右されにくい品質を目指します）">
+    </figure>
     <p class="note center rv" style="margin-top:14px">※効果・感じ方には個人差があります。</p>
   </div>
 </section>
