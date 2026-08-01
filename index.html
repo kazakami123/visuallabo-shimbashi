@@ -318,53 +318,6 @@ footer{background:#0c0c0c;color:#8f897f;padding:clamp(50px,7vw,70px) 0 30px;font
 @media(max-width:430px){.vm-lock .lk-m{font-size:16px;letter-spacing:.14em}}
 @media(max-width:860px){.vm-grid{grid-template-columns:1fr 1fr;gap:12px}.vm-hd .en{font-size:18px}}
 
-/* ===== concern section (お悩み) ===== */
-.concern-section{--concern-black:#111111;--concern-gold:#b49355;--concern-gold-light:#d8c08b;--concern-text:#2b2926;--concern-muted:#777168;--concern-line:#e5e0d8;--concern-bg:#fbfaf7;background:var(--concern-bg);padding:clamp(72px,10vw,132px) 20px;overflow:hidden}
-.concern-container{width:min(1080px,100%);margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(52px,7vw,100px);align-items:center}
-.concern-intro{position:relative;min-width:0}
-.concern-kicker{display:flex;align-items:center;gap:16px;margin:0 0 34px;color:var(--concern-gold);font-size:13px;font-weight:500;letter-spacing:.28em}
-.concern-kicker i{display:block;width:1px;height:18px;background:var(--concern-gold-light)}
-.concern-title{margin:0;color:var(--concern-black);font-size:clamp(38px,5vw,64px);font-weight:500;line-height:1.55;letter-spacing:.04em;word-break:keep-all}
-.concern-lead{margin:30px 0 0;color:var(--concern-text);font-size:15px;line-height:2.2;letter-spacing:.04em}
-.concern-decoration{position:relative;width:190px;height:190px;margin-top:34px}
-.concern-decoration span{position:absolute;inset:8px;border-left:1px solid var(--concern-gold);border-bottom:1px solid var(--concern-gold);border-radius:50%;transform:rotate(22deg);opacity:.72}
-.concern-decoration i{position:absolute;left:50%;top:48%;width:6px;height:6px;border-radius:50%;background:var(--concern-gold);box-shadow:0 -22px 0 -2px var(--concern-gold-light)}
-.concern-list{border-left:1px solid var(--concern-line)}
-.concern-item{display:grid;grid-template-columns:76px 1px minmax(0,1fr);align-items:center;gap:26px;min-height:96px;padding:18px 0 18px 28px;border-bottom:1px solid var(--concern-line)}
-.concern-item:last-child{border-bottom:none}
-.concern-number{color:var(--concern-gold);font-family:Georgia,"Times New Roman",serif;font-size:42px;font-style:italic;line-height:1;letter-spacing:-.04em}
-.concern-divider{width:1px;height:46px;background:var(--concern-gold-light)}
-.concern-item p{margin:0;color:var(--concern-black);font-size:17px;font-weight:500;line-height:1.8;letter-spacing:.03em;word-break:keep-all;overflow-wrap:anywhere}
-.concern-solution{width:min(820px,100%);margin:clamp(54px,7vw,90px) auto 0;text-align:center}
-.concern-arrow{position:relative;display:block;width:26px;height:26px;margin:0 auto 24px;transform:rotate(45deg);border-right:2px solid var(--concern-gold);border-bottom:2px solid var(--concern-gold)}
-.concern-solution p{margin:0;color:var(--concern-black);font-size:clamp(20px,3vw,30px);font-weight:500;line-height:1.9;letter-spacing:.05em;word-break:keep-all}
-.concern-solution strong{color:var(--concern-gold);font-weight:600}
-@media (max-width:767px){
-.concern-section{padding:68px 20px 78px}
-.concern-container{grid-template-columns:1fr;gap:42px}
-.concern-intro{text-align:left}
-.concern-kicker{margin-bottom:24px;font-size:12px;gap:12px}
-.concern-kicker i{height:14px}
-.concern-title{font-size:clamp(28px,8vw,36px);line-height:1.55}
-.concern-lead{margin-top:22px;font-size:16px;line-height:2}
-.pc-only{display:none}
-.concern-decoration{display:none}
-.concern-list{border-left:none;border-top:1px solid var(--concern-line)}
-.concern-item{grid-template-columns:48px 1px minmax(0,1fr);min-height:auto;gap:16px;padding:20px 0}
-.concern-number{font-size:30px}
-.concern-divider{height:38px}
-.concern-item p{font-size:16px;line-height:1.7}
-.concern-solution{margin-top:52px}
-.concern-arrow{width:20px;height:20px;margin-bottom:20px}
-.concern-solution p{font-size:22px;line-height:1.75}
-}
-@media (max-width:390px){
-.concern-section{padding-left:16px;padding-right:16px}
-.concern-item{grid-template-columns:42px 1px minmax(0,1fr);gap:13px}
-.concern-number{font-size:27px}
-.concern-item p{font-size:15px}
-.concern-solution p{font-size:20px}
-}
 
 
 </style>
@@ -439,30 +392,6 @@ var t0=Date.now();window.addEventListener('load',function(){setTimeout(hide,Math
       <img src="images/campaign-banner.jpg" alt="新橋店NEW OPEN記念｜寝ながらDIETコース 90分｜通常価格19,800円→初回限定3,000円（税込・84%OFF）｜初回体験を予約する" loading="eager">
     </a>
     <p class="note offer-note rv">※お一人さま1回まで・税込。体験当日のご入会で入会金 ¥16,500 → ¥0。</p>
-  </div>
-</section>
-
-<!-- 3. お悩み・共感 -->
-<section class="concern-section" id="nayami">
-  <div class="concern-container">
-    <div class="concern-intro rv">
-      <p class="concern-kicker"><i></i>CHECK｜お悩み</p>
-      <h2 class="concern-title">がんばりたいのに、<br>続けられない。</h2>
-      <p class="concern-lead">忙しい毎日。変わりたい気持ちはあるのに、<br class="pc-only">なかなかうまくいかない。<br>そんなお悩み、ありませんか？</p>
-      <div class="concern-decoration pc-only" aria-hidden="true"><span></span><i></i></div>
-    </div>
-    <div class="concern-list rv">
-      <div class="concern-item"><span class="concern-number">01</span><span class="concern-divider"></span><p>食事制限が続かない</p></div>
-      <div class="concern-item"><span class="concern-number">02</span><span class="concern-divider"></span><p>仕事帰りは疲れて、ジムに行けない</p></div>
-      <div class="concern-item"><span class="concern-number">03</span><span class="concern-divider"></span><p>運動が苦手で、何度も挫折してきた</p></div>
-      <div class="concern-item"><span class="concern-number">04</span><span class="concern-divider"></span><p>下腹やお腹まわりが気になる</p></div>
-      <div class="concern-item"><span class="concern-number">05</span><span class="concern-divider"></span><p>昔より体型が戻りにくくなった</p></div>
-      <div class="concern-item"><span class="concern-number">06</span><span class="concern-divider"></span><p>自分だけでは、何をしても続かない</p></div>
-    </div>
-  </div>
-  <div class="concern-solution rv">
-    <span class="concern-arrow" aria-hidden="true"></span>
-    <p>そんな方のために、<br><strong>寝ながら受けられる</strong>体型管理があります。</p>
   </div>
 </section>
 
