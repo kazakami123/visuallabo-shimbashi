@@ -1,20 +1,21 @@
 {
  "store": "VISUAL LABO 新橋店",
  "format": "hotpepper_beauty_menu",
- "version": "2026-07-25",
+ "version": "2026-08-06",
  "source_of_truth": "skill:visuallabo-price-2026",
  "notes": [
   "所要目安時間はベッド占有時間（90分コース=120分枠/120分コース=150分枠/温活40=60分枠/セット60=75分枠）",
-  "月額プラン(No.11-13)は『要問い合わせとして表示する』にチェック・予約不可で掲載（広告用）",
+  "月額プラン(No.11-13,15)は『要問い合わせとして表示する』にチェック・予約不可で掲載（広告用）",
   "現在HPBに掲載中の代官山プレオープンメニューとは別セット。新橋OPEN時に差し替え",
-  "薬機法: 痩せる/脂肪が落ちる等の断定表現なしを確認済み"
+  "薬機法: 痩せる/脂肪が落ちる等の断定表現なしを確認済み",
+  "2026-08-06 最終価格へ全面改定（単発9800/14800/19800・月2回=単発と同額・温活全時間化）"
  ],
  "menus": [
   {
    "no": 1,
    "menu_name": "【初回限定90分】体験☆高周波×貼るだけEMSで体型管理デビュー",
-   "description": "お腹まわり中心の90分体験。高周波60分＋貼るだけEMS30分で深部から温めて整える。お一人さま1回・満足保証つき。男女可。",
-   "price": 3000,
+   "description": "お腹まわり中心の90分体験。高周波60分＋貼るだけEMS30分で深部から温めて整える。通常14800円。お一人さま1回・満足保証つき。",
+   "price": 4800,
    "duration_min": 120,
    "reservable": true,
    "inquiry_only": false,
@@ -23,7 +24,7 @@
    "price_tilde": false,
    "listed": true,
    "name_len": 32,
-   "desc_len": 62
+   "desc_len": 67
   },
   {
    "no": 2,
@@ -44,7 +45,7 @@
    "no": 3,
    "menu_name": "【男女可90分】お腹まわり徹底集中ボディメイクコース☆人気NO.1",
    "description": "下腹・横腹・腰まわりまで丁寧にケア。高周波×EMSで深部から温め、すっきり引き締まった印象へ整える90分。会員なら1回7400円。",
-   "price": 19800,
+   "price": 14800,
    "duration_min": 120,
    "reservable": true,
    "inquiry_only": false,
@@ -59,7 +60,7 @@
    "no": 4,
    "menu_name": "【男女可120分】本気のお腹集中ボディメイクコース☆1回で実感を",
    "description": "本気でお腹まわりを整えたい方へ。腹部全体を温めEMSで刺激し、すっきり引き締まった印象へ導く120分。会員なら1回9900円。",
-   "price": 24800,
+   "price": 19800,
    "duration_min": 150,
    "reservable": true,
    "inquiry_only": false,
@@ -102,9 +103,9 @@
   },
   {
    "no": 7,
-   "menu_name": "【平日限定】貼るだけHYPER EMS40☆仕事の合間に手ぶら温活",
-   "description": "パッドを貼って寝るだけ最大40分。お腹まわりを集中的に動かすEMSメニュー。平日11時〜17時限定・スキマ時間に。男女可。",
-   "price": 3980,
+   "menu_name": "貼るだけHYPER EMS40☆仕事の合間に手ぶら温活",
+   "description": "パッドを貼って寝るだけ最大40分。お腹まわりを集中的に動かすEMSメニュー。全時間帯ご予約OK・スキマ時間に。男女可。",
+   "price": 3800,
    "duration_min": 60,
    "reservable": true,
    "inquiry_only": false,
@@ -112,14 +113,14 @@
    "search_category": "エステ：痩身",
    "price_tilde": false,
    "listed": true,
-   "name_len": 33,
-   "desc_len": 61
+   "name_len": 27,
+   "desc_len": 59
   },
   {
    "no": 8,
-   "menu_name": "【平日限定】温活ドームサウナ40☆温まるだけの40分",
-   "description": "ドームサウナで深部から温める最大40分。冷えが気になる方の温活習慣に。平日11時〜17時限定。着替え・水分補給つき。",
-   "price": 3980,
+   "menu_name": "温活ドームサウナ40☆温まるだけの40分",
+   "description": "ドームサウナで深部から温める最大40分。冷えが気になる方の温活習慣に。全時間帯ご予約OK。着替え・水分補給つき。",
+   "price": 3800,
    "duration_min": 60,
    "reservable": true,
    "inquiry_only": false,
@@ -127,14 +128,14 @@
    "search_category": "エステ：痩身",
    "price_tilde": false,
    "listed": true,
-   "name_len": 26,
-   "desc_len": 58
+   "name_len": 20,
+   "desc_len": 56
   },
   {
    "no": 9,
-   "menu_name": "温活フルセット☆サウナ30分→EMS30分の60分コース",
-   "description": "温めてから動かす欲張り60分。ドームサウナで温めた後、貼るだけEMSでお腹まわりを刺激。全時間帯ご予約OK。男女可。",
-   "price": 4980,
+   "menu_name": "温活フルセット☆サウナ40分→EMS20分の60分コース",
+   "description": "温めてから動かす欲張り60分。サウナ40分＋貼るだけEMS20分でお腹まわりを刺激。月2回9800円のサブスクがお得。男女可。",
+   "price": 5800,
    "duration_min": 75,
    "reservable": true,
    "inquiry_only": false,
@@ -143,7 +144,7 @@
    "price_tilde": false,
    "listed": true,
    "name_len": 28,
-   "desc_len": 58
+   "desc_len": 63
   },
   {
    "no": 10,
@@ -162,8 +163,8 @@
   },
   {
    "no": 11,
-   "menu_name": "【月額会員】90分×月2回☆単発より5000円お得なサブスク",
-   "description": "月2回の体型管理習慣。単発1回19800円より5000円安い月額で月2回通える。いつでも解約OK。体験当日入会で入会金16500円無料。",
+   "menu_name": "【月額会員】90分×月2回☆単発1回分の月額で2回通える",
+   "description": "単発1回14800円と同じ月額で月2回（1回7400円）。いつでも解約OK。体験当日入会で入会金16500円無料（3ヶ月継続条件）。",
    "price": 14800,
    "duration_min": 120,
    "reservable": false,
@@ -172,8 +173,8 @@
    "search_category": "エステ：痩身",
    "price_tilde": false,
    "listed": true,
-   "name_len": 30,
-   "desc_len": 68
+   "name_len": 28,
+   "desc_len": 66
   },
   {
    "no": 12,
@@ -192,9 +193,9 @@
   },
   {
    "no": 13,
-   "menu_name": "【月額会員】貼るだけEMS☆週1温活習慣が月9800円",
-   "description": "貼るだけEMS40を月4回、1回あたり2450円の平日昼プラン。ドームサウナ版もあり。90分コースへの入口に。要問い合わせ。",
-   "price": 9800,
+   "menu_name": "【月額会員】貼るだけEMS☆週1温活習慣が月14800円",
+   "description": "貼るだけEMS40を月4回・1回あたり3700円。全時間帯予約OK。ドームサウナ版・月8回24800円もあり。要問い合わせ。",
+   "price": 14800,
    "duration_min": 60,
    "reservable": false,
    "inquiry_only": true,
@@ -202,8 +203,38 @@
    "search_category": "エステ：痩身",
    "price_tilde": false,
    "listed": true,
-   "name_len": 27,
+   "name_len": 28,
    "desc_len": 62
+  },
+  {
+   "no": 14,
+   "menu_name": "【男女可60分】お腹まわり集中ライトコース☆はじめての方に",
+   "description": "高周波30分＋貼るだけEMS30分の気軽な60分。お腹まわりを温めて動かし、すっきり整える。月1回サブスクなら4800円。",
+   "price": 9800,
+   "duration_min": 75,
+   "reservable": true,
+   "inquiry_only": false,
+   "category": "エステ ボディ",
+   "search_category": "エステ：痩身",
+   "price_tilde": false,
+   "listed": true,
+   "name_len": 29,
+   "desc_len": 61
+  },
+  {
+   "no": 15,
+   "menu_name": "【月額会員】60分×月1回☆月4800円で体型管理デビュー",
+   "description": "月1回・60分・4800円で体型を整える習慣を。単発9800円より5000円お得。福利厚生（法人契約）にも対応。いつでも解約OK。",
+   "price": 4800,
+   "duration_min": 75,
+   "reservable": false,
+   "inquiry_only": true,
+   "category": "エステ ボディ",
+   "search_category": "エステ：痩身",
+   "price_tilde": false,
+   "listed": true,
+   "name_len": 29,
+   "desc_len": 65
   }
  ]
 }
