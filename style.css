@@ -531,3 +531,6 @@ section[id]{scroll-margin-top:84px}
 .bbar .br em{font-style:normal;color:var(--gold);margin-left:2px}
 @media(max-width:760px){.bbar{bottom:0;width:100%;border-radius:0;border-left:none;border-right:none;border-bottom:none;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}.bbar a{font-size:13.5px}}
 body{padding-bottom:86px}
+
+/* モバイルは本文の<br>を無効化して自然に折り返す（2026-08-09） */
+@media(max-width:600px){.body-txt br{display:none}}
