@@ -114,16 +114,17 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .navlinks a:hover{color:var(--gold)}
 .nav-cta{font-size:12.5px;font-weight:600;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);white-space:nowrap;transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#111}
-.burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:.3s}
-@media(max-width:900px){.navlinks{display:none}.burger{display:block}}
+@media(max-width:900px){.navlinks{display:none}}
+/* mobile top tabs */
+.mtabs{display:none}
+@media(max-width:900px){
+  .mtabs{display:flex;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 12px 10px;background:transparent}
+  .mtabs::-webkit-scrollbar{display:none}
+  header.solid .mtabs{background:transparent}
+  .mtabs a{flex:0 0 auto;font-size:12.5px;font-weight:500;color:#f2efe9;letter-spacing:.04em;padding:7px 14px;border:1px solid rgba(255,255,255,.32);border-radius:999px;white-space:nowrap;background:rgba(17,17,17,.35);backdrop-filter:blur(6px)}
+  .mtabs a.hot{color:#111;background:var(--gold);border-color:var(--gold);font-weight:700}
+}
 
-/* drawer */
-.drawer{position:fixed;inset:0;background:rgba(17,17,17,.97);z-index:300;display:none;padding:80px 28px}
-.drawer.open{display:block}
-.drawer a{display:block;color:#f2efe9;font-size:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.drawer a.main{color:var(--gold);font-weight:700}
-.drawer-close{position:absolute;top:20px;right:20px;background:none;border:none;color:#fff;font-size:30px;cursor:pointer;padding:8px}
 
 /* loader */
 #loader{position:fixed;inset:0;z-index:3000;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .6s ease,visibility .6s ease}
@@ -253,18 +254,15 @@ footer{background:#0c0c0c;color:#8f897f;padding:clamp(50px,7vw,70px) 0 30px;font
 .copy{font-family:var(--futura);text-align:center;margin-top:34px;font-size:11px;color:#6b665e}
 
 /* fixed CTAs */
-.fcta{position:fixed;right:20px;bottom:20px;z-index:150;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:14px 18px 12px;text-align:center;box-shadow:0 18px 44px -18px rgba(0,0,0,.3);display:flex;flex-direction:column;gap:4px;opacity:0;transform:translateY(14px);pointer-events:none;transition:.4s}
-.fcta.on{opacity:1;transform:none;pointer-events:auto}
-.fcta:hover{transform:translateY(-3px)}
-.fcta .l1{font-size:11px;font-weight:600;color:var(--mute);letter-spacing:.1em}
-.fcta .p1{font-family:var(--sans);font-size:22px;font-weight:700;color:var(--ink);line-height:1.2}
-.fcta .p1 s{font-size:11px;color:var(--greige);font-family:var(--sans);margin-right:6px}
-.fcta .go{background:#06C755;color:#fff;font-size:12.5px;font-weight:700;border-radius:999px;padding:9px 18px;margin-top:3px}
-@media(max-width:760px){.fcta{display:none}}
-.mbar{position:fixed;left:0;bottom:0;width:100%;z-index:150;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,17,17,.95);backdrop-filter:blur(10px)}
-.mbar a{flex:1;text-align:center;font-size:14px;font-weight:700;padding:14px 6px;border-radius:999px;letter-spacing:.02em;min-height:48px;display:flex;align-items:center;justify-content:center}
-.mbar .b1{background:#06C755;color:#fff}
-@media(max-width:760px){.mbar{display:flex}}
+/* bottom bar (all devices) */
+.bbar{position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:150;display:flex;gap:10px;width:min(680px,calc(100% - 24px));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;padding:8px;box-shadow:0 18px 44px -18px rgba(0,0,0,.35)}
+.bbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;font-size:14.5px;font-weight:700;letter-spacing:.02em;text-align:center;line-height:1.3}
+.bbar .bl{color:#0aa64c;border:1.5px solid #06C755;background:#fff}
+.bbar .bl svg{width:20px;height:20px;fill:#06C755}
+.bbar .br{background:var(--ink);color:#fff}
+.bbar .br em{font-style:normal;color:var(--gold);margin-left:2px}
+@media(max-width:760px){.bbar{bottom:0;width:100%;border-radius:0;border-left:none;border-right:none;border-bottom:none;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}.bbar a{font-size:13.5px}}
+body{padding-bottom:86px}
 
 /* plan cards */
 .plan-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:clamp(22px,3.5vw,32px) auto 0}
@@ -345,23 +343,18 @@ var t0=Date.now();window.addEventListener('load',function(){setTimeout(hide,Math
         <a href="#faq">FAQ</a>
       </div>
       <a class="nav-cta" href="flow.html" data-cta="nav_line">初回体験のご予約</a>
-      <button class="burger" id="bg" aria-label="メニュー"><span></span><span></span><span></span></button>
     </div>
   </nav>
+  <nav class="mtabs" aria-label="メニュー">
+    <a class="hot" href="flow.html">初回体験</a>
+    <a href="menu.html">メニュー</a>
+    <a href="price.html">料金</a>
+    <a href="beforeafter.html">変化の記録</a>
+    <a href="machine.html">MystiCore®</a>
+    <a href="#access">アクセス</a>
+    <a href="#faq">FAQ</a>
+  </nav>
 </header>
-
-<div class="drawer" id="drawer">
-  <button class="drawer-close" id="dclose" aria-label="閉じる">×</button>
-  <a class="main" href="flow.html">初回体験を予約する →</a>
-  <a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener">ホットペッパーで予約する</a>
-  <a href="menu.html">メニュー</a>
-  <a href="price.html">料金</a>
-  <a href="beforeafter.html">変化の記録</a>
-  <a href="machine.html">自社開発マシン MystiCore®</a>
-  <a href="flow.html">初回体験の流れ</a>
-  <a href="#access">アクセス</a>
-  <a href="#faq">よくある質問</a>
-</div>
 
 <!-- 1. ファーストビュー -->
 <section class="hero">
@@ -692,26 +685,18 @@ var t0=Date.now();window.addEventListener('load',function(){setTimeout(hide,Math
   </div>
 </footer>
 
-<a class="fcta" id="fcta" href="flow.html" data-cta="float_line"><span class="l1">初回体験 90分</span><span class="p1"><s>¥14,800</s>¥4,800</span><span class="go">予約する →</span></a>
 
-<div class="mbar">
-  <a class="b1" href="flow.html" data-cta="mbar_line">初回体験を予約する｜90分 ¥4,800</a>
+
+<div class="bbar">
+  <a class="bl" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="bbar_line_contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.66 2 10.15c0 4.02 3.57 7.39 8.4 8.03.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.44 22 11.87 22 10.15 22 5.66 17.52 2 12 2z"/></svg>LINEお問い合わせ</a>
+  <a class="br" href="flow.html" data-cta="bbar_reserve">初回体験を予約する<em>¥4,800</em></a>
 </div>
 
 <script>
 (function(){
-  var hd=document.getElementById('hd'),fc=document.getElementById('fcta');
-  function onScroll(){
-    var y=window.scrollY||0;
-    hd.classList.toggle('solid',y>60);
-    if(fc)fc.classList.toggle('on',y>500);
-  }
+  var hd=document.getElementById('hd');
+  function onScroll(){hd.classList.toggle('solid',(window.scrollY||0)>60)}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-  var bg=document.getElementById('bg'),dw=document.getElementById('drawer'),dc=document.getElementById('dclose');
-  if(bg)bg.addEventListener('click',function(){dw.classList.add('open')});
-  if(dc)dc.addEventListener('click',function(){dw.classList.remove('open')});
-  dw.addEventListener('click',function(e){if(e.target.tagName==='A')dw.classList.remove('open')});
 
   var rvs=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window){
