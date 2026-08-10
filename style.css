@@ -534,3 +534,16 @@ body{padding-bottom:86px}
 
 /* モバイルは本文の<br>を無効化して自然に折り返す（2026-08-09） */
 @media(max-width:600px){.body-txt br{display:none}}
+
+/* ===== モバイル最適化ハードニング（2026-08-10） ===== */
+@media(max-width:600px){
+  html,body{overflow-x:hidden}
+  /* 本文の強制改行を無効化（見出しh1-h3とフッター住所は維持） */
+  p br,li br,dd br,.fa br,.a br{display:none}
+  footer p br{display:inline}
+  /* 折り返し禁止の価格・注記が幅を突き破るのを防ぐ（¥表記は語中で割れないので安全） */
+  [style*="white-space:nowrap"]{white-space:normal!important}
+  .lead em{white-space:normal}
+  table{font-size:12px}
+  img{max-width:100%;height:auto}
+}

@@ -332,6 +332,14 @@ body{padding-bottom:86px}
 
 
 
+
+/* ===== モバイル最適化ハードニング（2026-08-10） ===== */
+@media(max-width:600px){
+  p br,li br,dd br{display:none}
+  footer p br{display:inline}
+  [style*="white-space:nowrap"]{white-space:normal!important}
+  h2.tt{overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
