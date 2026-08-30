@@ -1,3 +1,5 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
+/* Hallmark · macrostructure: Compact Price Ledger · genre: salon editorial · tone: concise and assured · palette: warm neutral with muted gold */
 :root{
   --ink:#1a1a1a;--ink-soft:#333333;--ink-mute:#595959;--line:#e4e2dd;
   --paper:#ffffff;--paper-2:#F6F3ED;--paper-3:#EFEBE4;--beige:#F3F0EA;--gold:#b89b5e;--gold-d:#a6884a;--white:#fff;
@@ -5,8 +7,9 @@
   --orange:#ff8c3f;--orange-d:#e9742a;--orange-bg:#fff1e3;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-weight:400;-webkit-font-smoothing:antialiased;letter-spacing:.02em;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-weight:400;-webkit-font-smoothing:antialiased;letter-spacing:.02em;overflow-x:clip}
+h1,h2{min-width:0;overflow-wrap:anywhere}
 .en{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.18em}
 .serif{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif}
 img{display:block;width:100%;height:auto}
@@ -537,7 +540,7 @@ body{padding-bottom:86px}
 
 /* ===== モバイル最適化ハードニング（2026-08-10） ===== */
 @media(max-width:600px){
-  html,body{overflow-x:hidden}
+  html,body{overflow-x:clip}
   /* 本文の強制改行を無効化（見出しh1-h3とフッター住所は維持） */
   p br,li br,dd br,.fa br,.a br{display:none}
   footer p br{display:inline}
@@ -558,4 +561,76 @@ section[id]{scroll-margin-top:120px}
   .mtabs a{padding:6px 12px;font-size:11.5px}
   .mhero-inner{padding-top:calc(clamp(96px,12vw,128px) + 20px)}
   .wrap{padding:0 18px}
+}
+
+/* ===== PRICE PAGE · compact mobile ledger (2026-08-30) ===== */
+.trial-mobile{display:grid;grid-template-columns:minmax(0,1fr) minmax(84px,30%);min-height:220px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 16px 36px -28px rgba(17,17,17,.45);text-align:left}
+.trial-mobile__copy{display:flex;min-width:0;flex-direction:column;align-items:flex-start;justify-content:center;padding:16px 4px 16px 16px}
+.trial-mobile__eyebrow{font-size:9px;line-height:1.3;letter-spacing:.12em;color:var(--gold-d);white-space:nowrap}
+.trial-mobile strong{margin-top:7px;font-size:16px;line-height:1.35;letter-spacing:.02em}
+.trial-mobile__price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-top:7px;line-height:1}
+.trial-mobile__price s{font-size:10px;color:var(--ink-mute)}
+.trial-mobile__price b{font-size:28px;letter-spacing:-.02em}
+.trial-mobile__price small{font-size:9px;color:var(--ink-mute)}
+.trial-mobile__benefit{margin-top:9px;font-size:10.5px;line-height:1.55;color:var(--ink-soft)}
+.trial-mobile__cta{margin-top:10px;padding:8px 11px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:11px;font-weight:600;line-height:1;white-space:nowrap}
+.trial-mobile img{width:100%;height:100%;min-width:0;object-fit:cover;object-position:58% center}
+.trial-mobile:focus-visible,.price-support>summary:focus-visible,.price-fold>summary:focus-visible{outline:2px solid var(--gold-d);outline-offset:3px}
+.trial-mobile:active{opacity:.88}
+
+.price-support,.price-fold{max-width:640px;margin:14px auto 0}
+.price-support>summary,.price-fold>summary{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:10px 40px 10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--paper-2);color:var(--ink);cursor:pointer;list-style:none;line-height:1.3}
+.price-support>summary::-webkit-details-marker,.price-fold>summary::-webkit-details-marker{display:none}
+.price-support>summary::after,.price-fold>summary::after{content:"＋";position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--gold-d);font-size:17px;line-height:1}
+.price-support[open]>summary::after,.price-fold[open]>summary::after{content:"－"}
+.price-support>summary span,.price-fold>summary span{font-size:13px;font-weight:600;white-space:nowrap}
+.price-support>summary small,.price-fold>summary small{font-size:10px;color:var(--ink-mute);white-space:nowrap}
+.price-support__content,.price-fold__content{min-width:0}
+
+@media (max-width:40rem){
+  .price-page .mtabs{display:none}
+  .price-page header::after{display:none}
+  .price-page .mhero-inner{padding-top:76px;padding-bottom:24px}
+  .price-page .mhero .tag{margin-bottom:8px;font-size:10px;letter-spacing:.22em}
+  .price-page .mhero h1{margin-bottom:10px;font-size:26px;line-height:1.12}
+  .price-page .mhero h1 .jp{margin-top:6px;font-size:14px;line-height:1.4}
+  .price-page .mhero .sub{font-size:12.5px;line-height:1.65}
+  .price-page .sec{padding:30px 0}
+  .price-page .price-trial{padding:18px 0 20px}
+  .price-page .trial-art{display:none!important}
+  .price-page .trial-flow-link{margin-top:10px!important}
+  .price-page .trial-flow-link a{font-size:11.5px!important;white-space:nowrap}
+  .price-page .trial-note{margin-top:8px!important;font-size:10px!important;line-height:1.6}
+  .price-page .price-sheet{padding-top:26px}
+  .price-page .price-sheet>.wrap>.kicker{display:none}
+  .price-page .price-sheet>.wrap>div:nth-of-type(2){margin-bottom:0!important}
+  .price-page .price-sheet .lead{font-size:clamp(18px,5.6vw,21px)!important;line-height:1.35}
+  .price-page .price-sheet .psub{margin-top:20px!important;gap:2px;font-size:15px;line-height:1.35}
+  .price-page .price-sheet .psub .pm{margin-top:2px;font-size:10.5px;line-height:1.55}
+  .price-page .price-table-wrap{margin-top:9px!important;overflow-x:clip!important}
+  .price-page .price-table{table-layout:fixed;font-size:11.5px!important}
+  .price-page .price-table th,.price-page .price-table td{padding:8px 2px!important;line-height:1.35}
+  .price-page .price-table th:first-child,.price-page .price-table td:first-child{width:25%;padding-left:6px!important}
+  .price-page .price-table th:not(:first-child),.price-page .price-table td:not(:first-child){width:25%}
+  .price-page .price-table td[style*="font-size:15px"]{font-size:13px!important}
+  .price-page .price-support{margin-top:12px}
+  .price-page .price-support__content{padding-bottom:4px}
+  .price-page .psub[style*="margin-top:50px"]{margin-top:26px!important}
+  .price-page .plan3{gap:6px}
+  .price-page .plan3>div{padding:13px 3px 12px}
+  .price-page .pnote2{font-size:11px;line-height:1.65}
+  .price-page .price-fold{margin-top:9px}
+  .price-page .price-fold__content>.psub{display:none}
+  .price-page .price-fold__content>[style*="margin:18px auto 0"]{margin-top:10px!important}
+  .price-page .price-fold__content>[style*="padding:22px 26px"]{padding:16px!important}
+  .price-page .price-fold--rules{margin-top:14px}
+  .price-page .kaisu-box{margin-top:10px!important;padding:14px}
+  .price-page section[id]{scroll-margin-top:64px}
+}
+
+@media (min-width:40.0625rem){
+  .trial-mobile{display:none}
+  .price-support>summary,.price-fold>summary{display:none}
+  .price-support:not([open])>.price-support__content,.price-fold:not([open])>.price-fold__content{display:block!important}
+  .price-support,.price-fold{max-width:none;margin:0}
 }
