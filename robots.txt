@@ -2,4 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /tokushoho.html
 Disallow: /privacy.html
+Disallow: /kiyaku.html
+Disallow: /chapter1_viewer.html
+
 Sitemap: https://kazakami123.github.io/visuallabo-shimbashi/sitemap.xml
