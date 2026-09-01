@@ -18,7 +18,12 @@
 <style>
 html{overflow-x:hidden}
 img,table,figure{max-width:100%}
-.cp-lead{max-width:720px;margin:0 auto;text-align:center}
+.cp-lead{max-width:760px;margin:0 auto;text-align:center}
+.cp-lead h2{word-break:keep-all;overflow-wrap:anywhere}
+.cp-lead .cp-body{max-width:600px;margin:24px auto 0;text-align:left;text-wrap:pretty;overflow-wrap:normal;word-break:normal;line-break:strict}
+.cp-lead .cp-body p{margin:0}
+.cp-lead .cp-body p+p{margin-top:14px}
+.nexthead .body-txt{text-wrap:pretty}
 .cp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px;max-width:1020px;margin:clamp(24px,4vw,36px) auto 0}
 .cp-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,30px);position:relative}
 .cp-card.feat{border-color:var(--gold)}
@@ -43,7 +48,7 @@ img,table,figure{max-width:100%}
 .faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold);font-size:20px}
 .faqd details[open] summary::after{content:"\2013"}
 .faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
-@media(max-width:600px){.cp-lead .body-txt,.nexthead .body-txt,.cp-contact .body-txt{text-align:left}.cp-lead .body-txt br,.cp-contact .body-txt br{display:none}}
+@media(max-width:600px){.nexthead .body-txt,.cp-contact .body-txt{text-align:left}.cp-contact .body-txt br{display:none}}
 </style>
 <link rel="canonical" href="https://kazakami123.github.io/visuallabo-shimbashi/corporate.html">
 <meta property="og:url" content="https://kazakami123.github.io/visuallabo-shimbashi/corporate.html">
@@ -98,9 +103,12 @@ img,table,figure{max-width:100%}
 <section class="sec"><div class="wrap">
   <div class="cp-lead rv">
     <div class="kicker c" style="justify-content:center">For Companies ｜ 法人向け</div>
-    <h2 class="lead">がんばらなくても、<em>続けられる</em>から。</h2>
-    <p class="body-txt" style="margin-top:20px">デスクワークが続くと、体はこわばり、動かす機会も減っていきます。VISUAL LABOのケアは、横になったまま受けられて、着替えも手ぶらでOK。ジムのように「時間をつくって、がんばる」必要がないぶん、忙しい方でも続けやすいのが特長です。<br>新橋駅から徒歩3分。就業後や外出の合間に立ち寄れる立地で、チームのコンディション維持の選択肢としてご検討いただけます。</p>
-    <p class="note-s" style="margin-top:14px">※ 体型管理・コンディショニングを目的としたサロンです。医療行為ではなく、感じ方・変化には個人差があります。</p>
+    <h2 class="lead">がんばらなくても、<em>続けられる</em>。</h2>
+    <div class="cp-body body-txt">
+      <p>デスクワークが続くと、体はこわばり、動かす機会も減っていきます。VISUAL&nbsp;LABOのケアは、横になったまま受けられて、着替えも手ぶらでOK。ジムのように「時間をつくって、がんばる」必要がないぶん、忙しい方でも続けやすいのが特長です。</p>
+      <p>新橋駅から徒歩3分。就業後や外出の合間に立ち寄れる立地です。チームのコンディション維持の選択肢として、ご検討いただけます。</p>
+      <p class="note-s" style="margin-top:16px">※ 体型管理・コンディショニングを目的としたサロンです。医療行為ではなく、感じ方・変化には個人差があります。</p>
+    </div>
   </div>
 </div></section>
 
