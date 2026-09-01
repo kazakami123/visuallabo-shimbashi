@@ -24,7 +24,9 @@ img,table,figure{max-width:100%}
 .cp-lead .cp-body p{margin:0}
 .cp-lead .cp-body p+p{margin-top:14px}
 .nexthead .body-txt{text-wrap:pretty}
-.cp-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px;max-width:1020px;margin:clamp(24px,4vw,36px) auto 0}
+.cp-cards{display:grid;grid-template-columns:1fr;gap:14px;max-width:1020px;margin:clamp(24px,4vw,36px) auto 0}
+@media(min-width:940px){.cp-cards{grid-template-columns:repeat(3,1fr)}}
+.cp-card ul li{text-wrap:pretty}
 .cp-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,30px);position:relative}
 .cp-card.feat{border-color:var(--gold)}
 .cp-card .en{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.14em;font-size:13px;color:var(--gold)}
