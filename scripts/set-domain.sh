@@ -5,7 +5,7 @@
 set -euo pipefail
 
 if [ $# -ne 1 ]; then
-  echo "使い方: bash scripts/set-domain.sh <ドメイン名>   例) bash scripts/set-domain.sh visuallabo.jp"; exit 1
+  echo "使い方: bash scripts/set-domain.sh <ドメイン名>   例) bash scripts/set-domain.sh visuallabo.com"; exit 1
 fi
 
 DOMAIN="$1"
