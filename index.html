@@ -244,10 +244,10 @@ h2.tt em{font-style:normal;color:var(--gold-d)}
 /* header */
 header{position:fixed;top:0;left:0;width:100%;z-index:200;transition:.4s;background:linear-gradient(180deg,rgba(17,17,17,.7) 0%,transparent 100%)}
 header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 20px;max-width:1200px;margin:0 auto}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;height:68px;padding:0 20px;max-width:1320px;margin:0 auto}
 .brand img{height:40px;width:auto}
-.nav-r{display:flex;align-items:center;gap:18px}
-.navlinks{display:flex;gap:16px}
+.nav-r{display:flex;align-items:center;gap:14px;min-width:0}
+.navlinks{display:flex;gap:12px;min-width:0}
 .navlinks a{display:inline-grid;place-items:center;white-space:nowrap}
 .navlinks a .te{grid-area:1/1;transition:opacity .25s}
 .navlinks a .tj{grid-area:1/1;opacity:0;transition:opacity .25s;font-family:var(--sans);font-size:11.5px;letter-spacing:.04em}
@@ -257,6 +257,8 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .navlinks a:hover{color:var(--gold-d)}
 .nav-cta{font-size:12.5px;font-weight:600;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-d);white-space:nowrap;transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#111}
+@media(max-width:1340px){.navlinks>a:nth-child(8),.navlinks>a:nth-child(9){display:none}}
+@media(max-width:1180px){.navlinks>a:nth-child(3),.navlinks>a:nth-child(7){display:none}}
 @media(max-width:1120px){.navlinks{display:none}}
 /* mobile top tabs */
 .mtabs{display:none}
@@ -474,6 +476,14 @@ body{padding-bottom:86px}
   [style*="white-space:nowrap"]{white-space:normal!important}
   h2.tt{overflow-wrap:anywhere}
 }
+
+/* 目的から選ぶ（LP導線） */
+.pick-grid{display:grid;gap:12px;margin-top:clamp(26px,4vw,38px)}
+@media(min-width:720px){.pick-grid{grid-template-columns:1fr 1fr}}
+.pick{display:block;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:.25s}
+.pick:hover{border-color:var(--gold);transform:translateY(-2px)}
+.pick .pt{display:block;font-weight:700;font-size:16px;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
+.pick .pd{display:block;font-size:13.5px;line-height:1.85;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -798,6 +808,25 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <p class="note" style="margin-top:14px">※効果・感じ方には個人差があります。</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 11.8 目的から選ぶ -->
+<section class="sec" id="pick" style="background:var(--wash)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker c">For You ｜ 目的から選ぶ</div>
+      <h2 class="tt">気になっていることから、<em>読むページを選べます</em>。</h2>
+    </div>
+    <div class="pick-grid rv">
+      <a class="pick" href="lp-mens-onaka.html"><span class="pt">男性・お腹まわりが気になる</span><span class="pd">腹筋でも食事制限でもなく、深部を温めてからインナーマッスルへ。</span></a>
+      <a class="pick" href="lp-mens-work.html"><span class="pt">男性・ジムが続かなかった</span><span class="pd">新橋駅 徒歩3分、21時まで。手ぶらで寄って、横になるだけ。</span></a>
+      <a class="pick" href="lp-mens-ems.html"><span class="pt">高周波とHYPER EMSの仕組みを知りたい</span><span class="pd">RF 300／500／1000kHz。自社開発マシン MystiCore®の中身。</span></a>
+      <a class="pick" href="lp-ladies-kubire.html"><span class="pt">女性・お腹まわりとくびれ</span><span class="pd">もむだけでも動かすだけでもなく、温めてから動かす順番で。</span></a>
+      <a class="pick" href="lp-ladies-hie.html"><span class="pt">女性・冷えとめぐりが気になる</span><span class="pd">深部から温めて、流れをつくってから。ドームサウナもあります。</span></a>
+      <a class="pick" href="for-posture.html"><span class="pt">姿勢・猫背が気になる</span><span class="pd">支える筋肉が働いていない状態から、順番に整えます。</span></a>
+    </div>
+    <p class="note center" style="margin-top:18px">※効果・感じ方には個人差があります。</p>
   </div>
 </section>
 
