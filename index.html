@@ -486,6 +486,13 @@ body{padding-bottom:86px}
 .pick:hover{border-color:var(--gold);transform:translateY(-2px)}
 .pick .pt{display:block;font-weight:700;font-size:16px;color:var(--ink);margin-bottom:6px;letter-spacing:.02em}
 .pick .pd{display:block;font-size:13.5px;line-height:1.85;color:var(--ink-soft)}
+
+/* 5つの安心 */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0}
+.pcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 22px}
+.pcard .n{display:block;font-family:var(--futura);font-size:15px;letter-spacing:.14em;color:var(--gold-d);margin-bottom:10px}
+.pcard h3{font-size:18px;font-weight:700;color:var(--ink);margin:0 0 8px;line-height:1.5}
+.pcard p{font-size:14px;font-weight:500;line-height:1.9;color:var(--ink-soft);margin:0}
 </style>
 </head>
 <body>
@@ -704,13 +711,20 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   </div>
 </section>
 
-<!-- 8. 選ばれる理由（promise5.jpg は画像内に「男女利用可能」の文字が焼き込まれているため、
-     男性専用版を作り直すまで非表示にしています。差し替えたら hidden を外すこと） -->
-<section class="sec" id="reason" hidden>
+<!-- 8. 選ばれる理由（旧 promise5.jpg は画像内に「男女利用可能」の文字が入っていたため、HTMLで作り直し） -->
+<section class="sec" id="reason" style="background:var(--wash)">
   <div class="wrap">
-    <figure class="figcard rv" style="max-width:960px">
-      <img loading="lazy" src="images/promise5.jpg" alt="PROMISE 5つの安心｜安心して施術を受けていただくために｜01 男性専用（どなたでも安心してご利用いただけます）｜02 新橋駅徒歩3分（仕事帰りにも通いやすい好立地）｜03 寝ながら受けられる（きつい運動は不要・横になったまま90分）｜04 手ぶらでOK（お着替えをご用意・持ち物は必要ありません）｜05 無理な勧誘なし（ご納得いただいた上でご利用いただけます）｜VISUAL LABO" width="1402" height="1122">
-    </figure>
+    <div class="center rv">
+      <div class="kicker c">Promise ｜ 5つの安心</div>
+      <h2 class="tt">安心して受けていただくために、<em>お約束すること</em>。</h2>
+    </div>
+    <div class="pgrid rv">
+      <div class="pcard"><span class="n">01</span><h3>男性専用</h3><p>お客様は男性のみ。落ち着いた個室で、周りの目を気にせず受けていただけます。</p></div>
+      <div class="pcard"><span class="n">02</span><h3>新橋駅 徒歩3分</h3><p>JR新橋駅 日比谷口から徒歩3分。汐留・内幸町・虎ノ門からも歩けます。</p></div>
+      <div class="pcard"><span class="n">03</span><h3>寝ながら受けられる</h3><p>きつい運動は必要ありません。横になったまま、温めて動かすところまで完結します。</p></div>
+      <div class="pcard"><span class="n">04</span><h3>手ぶらでOK</h3><p>お着替えはご用意しています。スーツのまま、仕事帰りにそのままお越しください。</p></div>
+      <div class="pcard"><span class="n">05</span><h3>無理な勧誘なし</h3><p>その場でのご契約をお願いすることはありません。持ち帰ってご検討いただけます。</p></div>
+    </div>
   </div>
 </section>
 
