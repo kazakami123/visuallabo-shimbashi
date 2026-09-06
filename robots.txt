@@ -4,5 +4,6 @@ Disallow: /tokushoho.html
 Disallow: /privacy.html
 Disallow: /kiyaku.html
 Disallow: /chapter1_viewer.html
+Disallow: /_archive/
 
 Sitemap: https://kazakami123.github.io/visuallabo-shimbashi/sitemap.xml
