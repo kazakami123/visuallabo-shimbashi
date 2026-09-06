@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>新橋の体型管理・ボディメイクサロン｜寝ながら高周波×HYPER EMS｜VISUAL LABO 新橋店</title>
-<meta name="description" content="新橋駅 徒歩3分の会員制 体型管理サロン。高周波×HYPER EMSで、横になったままお腹まわりをケア。仕事帰りに手ぶらで通えて、男女どちらもご利用いただけます。初回体験 通常¥14,800→¥4,800（税込）。">
+<title>新橋の男性専用 体型管理・ボディメイクサロン｜高周波×HYPER EMS｜VISUAL LABO 新橋店</title>
+<meta name="description" content="新橋駅 徒歩3分の会員制 体型管理サロン。高周波×HYPER EMSで、横になったままお腹まわりをケア。仕事帰りに手ぶらで通える、男性専用サロンです。初回体験 通常¥14,800→¥4,800（税込）。">
 <!-- ============================================================
   ▼マスターデータ（価格・営業時間を変えるときは、この一覧と本文内を検索して更新）
   初回体験: 90分 ¥4,800（通常 ¥14,800）
@@ -15,8 +15,8 @@
   LINE: https://visuallabo-line.visuallabo.workers.dev/auth/line?
   予約導線: LINEのみ（HP予約枠は2026-08-09廃止）
 ============================================================ -->
-<meta property="og:title" content="新橋の体型管理・ボディメイクサロン｜VISUAL LABO 新橋店">
-<meta property="og:description" content="仕事帰りに、寝たまま。高周波×HYPER EMSでお腹まわりを整える、新橋の会員制サロン。初回体験 ¥4,800（税込）。">
+<meta property="og:title" content="新橋の男性専用 体型管理・ボディメイクサロン｜VISUAL LABO 新橋店">
+<meta property="og:description" content="仕事帰りに、寝たまま。高周波×HYPER EMSでお腹まわりを整える、新橋の男性専用サロン。初回体験 ¥4,800（税込）。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kazakami123.github.io/visuallabo-shimbashi/">
 <meta property="og:image" content="https://kazakami123.github.io/visuallabo-shimbashi/images/campaign-banner.jpg">
@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="images/hero-bg-poster.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="images/bm-movie-poster.jpg" fetchpriority="high">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -40,7 +40,7 @@
  "@id": "https://kazakami123.github.io/visuallabo-shimbashi/#salon",
  "name": "VISUAL LABO 新橋店",
  "alternateName": "ビジュアルラボ 新橋店",
- "description": "新橋駅 徒歩3分の会員制 体型管理サロン。高周波×HYPER EMSの自社開発マシンMystiCore®で、横になったままお腹まわりを中心にケア。男女どちらもご利用いただけます。",
+ "description": "新橋駅 徒歩3分の会員制 体型管理サロン。高周波×HYPER EMSの自社開発マシンMystiCore®で、横になったままお腹まわりを中心にケア。男性専用のサロンです。",
  "url": "https://kazakami123.github.io/visuallabo-shimbashi/",
  "image": [
   "https://kazakami123.github.io/visuallabo-shimbashi/images/treatment-scene.jpg",
@@ -335,7 +335,8 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 @media(max-width:640px){.ba-grid{grid-template-columns:1fr;max-width:440px}}
 
 /* 7. voice */
-.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,320px));gap:16px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0;justify-content:center}
+.vc[hidden]{display:none!important}
 .vc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;gap:10px;box-shadow:0 14px 32px -24px rgba(0,0,0,.15)}
 .vc .st{color:var(--gold-d);font-size:13px;letter-spacing:.28em}
 .vc h3{font-size:15px;font-weight:700;color:var(--ink);line-height:1.7}
@@ -536,9 +537,9 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
 <!-- 1. ファーストビュー -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="images/hero-bg-poster.jpg" alt="横になったまま受けられる体型管理｜VISUAL LABO 新橋店" fetchpriority="high" width="1080" height="1620">
+    <img src="images/bm-movie-poster.jpg" alt="横になったまま受けられる体型管理｜男性専用サロン VISUAL LABO 新橋店" fetchpriority="high" width="720" height="1280">
     <video id="heroVid" muted loop playsinline preload="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease;filter:saturate(.82) brightness(.9)">
-      <source data-src="images/hero-bg.mp4" type="video/mp4">
+      <source data-src="images/bm-movie.mp4" type="video/mp4">
     </video>
   </div>
   <div class="hero-shade"></div>
@@ -547,6 +548,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <p class="hero-pre" style="margin-top:clamp(26px,4.5vw,44px)">忙しい大人の新習慣。</p>
     <h1>寝ながらできる、<br><span class="g">体型管理</span>。</h1>
     <div class="hero-chips">
+      <span><b>男性専用</b></span>
       <span>初回90分 <b>¥4,800</b></span>
       <span>新橋駅 <b>徒歩3分</b></span>
     </div>
@@ -559,7 +561,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   <div class="wrap">
     <div class="kicker c rv">Campaign ｜ 開催中のキャンペーン</div>
     <a class="offer-banner rv" href="flow.html" data-cta="banner_offer" style="display:block;transition:.3s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
-      <img src="images/campaign-banner.jpg" alt="新橋店NEW OPEN記念｜寝ながらDIETコース 90分｜通常価格14,800円（税込）→初回限定4,800円（税込）・おトクな初回体験67%OFF｜男女利用可能・新橋駅 徒歩3分｜初回体験を予約する" loading="eager" width="1672" height="941">
+      <img src="images/campaign-banner.jpg" alt="新橋店NEW OPEN記念｜寝ながらDIETコース 90分｜通常価格14,800円（税込）→初回限定4,800円（税込）・おトクな初回体験67%OFF｜男性専用・新橋駅 徒歩3分｜初回体験を予約する" loading="eager" width="1672" height="941">
     </a>
     <p class="note offer-note rv">※LINE友だち追加のご予約で適用。お一人さま1回まで・税込。</p>
   </div>
@@ -615,12 +617,12 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <div class="vm-grid rv">
       <div class="vm-card">
         <div class="vm-hd"><span class="no">Step 01</span><span class="en">HEAT</span><span class="jp">温める</span></div>
-        <img class="vm-photo" loading="lazy" src="images/relax-treatment.jpg" alt="HEAT｜高周波で深部から温める" width="1122" height="1402">
+        <img class="vm-photo" loading="lazy" src="images/man-treat.jpg" alt="HEAT｜高周波で深部から温める" width="1448" height="1086">
         <p>高周波で深部からじんわり温め、冷えてこわばった体をゆるめます。すべての土台になる工程です。</p>
       </div>
       <div class="vm-card">
         <div class="vm-hd"><span class="no">Step 02</span><span class="en">FLOW</span><span class="jp">めぐらせる</span></div>
-        <img class="vm-photo" loading="lazy" src="images/woman-treat.jpg" alt="FLOW｜血流やリンパのめぐりを促進" width="1447" height="1087">
+        <img class="vm-photo" loading="lazy" src="images/menu-wd-photo.jpg" alt="FLOW｜血流やリンパのめぐりを促進" width="1200" height="900">
         <p>温まった体の血流やリンパのめぐりを促進。ためこみにくい、流れの良い状態へ導きます。</p>
       </div>
       <div class="vm-card">
@@ -654,13 +656,13 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   <div class="wrap">
     <div class="center rv">
       <div class="kicker c">Records ｜ 変化の記録</div>
-      <h2 class="tt">男性・女性の、<em>ビフォーアフター</em>。</h2>
+      <h2 class="tt">通われている方の、<em>ビフォーアフター</em>。</h2>
     </div>
     <div class="ba-grid rv">
       <figure><img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・60分施術" width="964" height="805"><figcaption>男性・側面｜1回・60分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-      <figure><img loading="lazy" src="images/ba2026-f1-side-90.jpg" alt="女性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>女性・側面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
+      <figure><img loading="lazy" src="images/ba2026-m3-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・側面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
       <figure><img loading="lazy" src="images/ba2026-m2-front-90.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・正面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-      <figure><img loading="lazy" src="images/ba2026-f3-back-90.jpg" alt="女性・背面のビフォーアフター｜5回・90分施術" width="956" height="805"><figcaption>女性・背面｜5回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
+      <figure><img loading="lazy" src="images/ba2026-m4-front-90.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・正面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
     </div>
     <p class="center rv" style="margin-top:clamp(24px,4vw,36px)"><a class="btn btn-out" href="beforeafter.html">変化の記録をもっと見る →</a></p>
   </div>
@@ -674,7 +676,8 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">通われている方の、<em>口コミ・感想</em>。</h2>
     </div>
     <div class="vgrid rv">
-      <div class="vc">
+      <!-- 男性専用サロンへの変更にともない非表示。男性のお客様の声が取れたら、この枠に差し替える -->
+      <div class="vc" hidden>
         <div class="st">★★★★★</div>
         <h3>ウエスト、実際に−2cmを体感</h3>
         <p>機械やダイエットについて丁寧に説明してくださり、ウエストも実際に−2センチを体感できて嬉しかったです。</p>
@@ -686,7 +689,10 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <p>仕事柄すごく冷えやすいのですが、体が芯から温まっているのを実感。EMSの周波も心地良くて大爆睡できました。</p>
         <div class="who">体験のお客様</div>
       </div>
-      <div class="vc">
+      <div class="vc" style="justify-content:center;text-align:center;border-style:dashed;background:transparent;box-shadow:none">
+        <p style="margin:0;font-size:14px;line-height:1.9;color:var(--mute)">男性のお客様の声は、<br>オープン後にこちらへ掲載します。</p>
+      </div>
+      <div class="vc" hidden>
         <div class="st">★★★★★</div>
         <h3>くびれが出て、姿勢まで変わった</h3>
         <p>ビフォーアフターの写真を見たら、くびれが出て姿勢も良くなっていて驚きました。何度も見返してしまいます。</p>
@@ -698,11 +704,12 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   </div>
 </section>
 
-<!-- 8. 選ばれる理由 -->
-<section class="sec" id="reason">
+<!-- 8. 選ばれる理由（promise5.jpg は画像内に「男女利用可能」の文字が焼き込まれているため、
+     男性専用版を作り直すまで非表示にしています。差し替えたら hidden を外すこと） -->
+<section class="sec" id="reason" hidden>
   <div class="wrap">
     <figure class="figcard rv" style="max-width:960px">
-      <img loading="lazy" src="images/promise5.jpg" alt="PROMISE 5つの安心｜安心して施術を受けていただくために｜01 男女利用可能（どなたでも安心してご利用いただけます）｜02 新橋駅徒歩3分（仕事帰りにも通いやすい好立地）｜03 寝ながら受けられる（きつい運動は不要・横になったまま90分）｜04 手ぶらでOK（お着替えをご用意・持ち物は必要ありません）｜05 無理な勧誘なし（ご納得いただいた上でご利用いただけます）｜VISUAL LABO" width="1402" height="1122">
+      <img loading="lazy" src="images/promise5.jpg" alt="PROMISE 5つの安心｜安心して施術を受けていただくために｜01 男性専用（どなたでも安心してご利用いただけます）｜02 新橋駅徒歩3分（仕事帰りにも通いやすい好立地）｜03 寝ながら受けられる（きつい運動は不要・横になったまま90分）｜04 手ぶらでOK（お着替えをご用意・持ち物は必要ありません）｜05 無理な勧誘なし（ご納得いただいた上でご利用いただけます）｜VISUAL LABO" width="1402" height="1122">
     </figure>
   </div>
 </section>
@@ -820,12 +827,11 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">気になっていることから、<em>読むページを選べます</em>。</h2>
     </div>
     <div class="pick-grid rv">
-      <a class="pick" href="lp-mens-onaka.html"><span class="pt">男性・お腹まわりが気になる</span><span class="pd">腹筋でも食事制限でもなく、深部を温めてからインナーマッスルへ。</span></a>
-      <a class="pick" href="lp-mens-work.html"><span class="pt">男性・ジムが続かなかった</span><span class="pd">新橋駅 徒歩3分、21時まで。手ぶらで寄って、横になるだけ。</span></a>
+      <a class="pick" href="lp-mens-onaka.html"><span class="pt">お腹まわりが気になる</span><span class="pd">腹筋でも食事制限でもなく、深部を温めてからインナーマッスルへ。</span></a>
+      <a class="pick" href="lp-mens-work.html"><span class="pt">ジムが続かなかった</span><span class="pd">新橋駅 徒歩3分、21時まで。手ぶらで寄って、横になるだけ。</span></a>
       <a class="pick" href="lp-mens-ems.html"><span class="pt">高周波とHYPER EMSの仕組みを知りたい</span><span class="pd">RF 300／500／1000kHz。自社開発マシン MystiCore®の中身。</span></a>
-      <a class="pick" href="lp-ladies-kubire.html"><span class="pt">女性・お腹まわりとくびれ</span><span class="pd">もむだけでも動かすだけでもなく、温めてから動かす順番で。</span></a>
-      <a class="pick" href="lp-ladies-hie.html"><span class="pt">女性・冷えとめぐりが気になる</span><span class="pd">深部から温めて、流れをつくってから。ドームサウナもあります。</span></a>
       <a class="pick" href="for-posture.html"><span class="pt">姿勢・猫背が気になる</span><span class="pd">支える筋肉が働いていない状態から、順番に整えます。</span></a>
+      <a class="pick" href="for-slim.html"><span class="pt">落としても戻ってしまう</span><span class="pd">続けられる形に変えるところから。リバウンドの理由も解説します。</span></a>
     </div>
     <p class="note center" style="margin-top:18px">※効果・感じ方には個人差があります。</p>
   </div>
@@ -839,7 +845,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">はじめての方の、<em>よくあるご質問</em>。</h2>
     </div>
     <div class="faq-list rv">
-      <details><summary>男性でも利用できますか？</summary><div class="a">はい。男女どちらもご利用いただけます。仕事帰りの男性のお客様も多くいらっしゃいます。</div></details>
+      <details><summary>男性でも利用できますか？</summary><div class="a">はい。男性専用のサロンです。仕事帰りの男性のお客様も多くいらっしゃいます。</div></details>
       <details><summary>無理な勧誘はありませんか？</summary><div class="a">ありません。体験後にプランのご案内はしますが、その場でのご入会を強く勧めることはありません。</div></details>
       <details><summary>運動や食事制限は必要ですか？</summary><div class="a">施術はベッドに横になったまま受けられます。厳しい食事制限の指導もありません。生活を大きく変えずに始められるのがVISUAL LABOの特長です。</div></details>
       <details><summary>どれくらいの頻度で通えばいいですか？</summary><div class="a">まずは月1回・60分から始められます。しっかりケアしたい方は月2回・90分がおすすめ。毎週通う必要はないので、忙しい方でも続けやすい設計です。</div></details>
@@ -857,7 +863,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <div class="chips rv">
       <span>初回体験 90分 ¥4,800（通常 ¥14,800）</span>
       <span>新橋駅 徒歩3分</span>
-      <span>男女利用可能</span>
+      <span>男性専用</span>
     </div>
     <div class="rv"><a class="btn btn-line" href="flow.html" data-cta="final_line">初回体験を予約する</a></div>
   </div>
