@@ -171,9 +171,9 @@ function render(){
  const goal=ans[0],area=ans[1],pace=ans[2],effort=ans[3];
  let track = goal==='slim' ? '痩身ケア' : goal==='care' ? '体のケア' : '体型管理・維持';
  let menu,guide=null;
- if(area==='lower'){menu='BODY MAINTENANCE MENU（下半身）';guide=['ふくらはぎのガイドを見る →','care-fukurahagi.html'];}
+ if(area==='lower'){menu='BODY MAINTENANCE MENU（下半身）';guide=['脚のケアのガイドを見る →','care-ashi.html'];}
  else if(area==='multi'){menu='BODY MAINTENANCE MENU 120（全身1〜3部位）';}
- else if(area==='upper'){menu='BODY MAINTENANCE MENU（上半身）';guide=['二の腕のガイドを見る →','care-ninoude.html'];}
+ else if(area==='upper'){menu='BODY MAINTENANCE MENU（上半身）';guide=['背中のガイドを見る →','care-senaka.html'];}
  else {
    if(goal==='slim' && pace==='easy'){menu='HYPER EMS MENU（60分・貼るだけ）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
    else {menu='BODY MAINTENANCE MENU（上半身）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}

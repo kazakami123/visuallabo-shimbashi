@@ -7,16 +7,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-fukurahagi.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-ashi.html</loc>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-hip.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-katakubi.html</loc>
@@ -25,25 +19,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-kubire.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-maemomo.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-nekoze.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-ninoude.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -68,24 +44,6 @@
   </url>
   <url>
     <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-soriko.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-sotomomo.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-uchimomo.html</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kazakami123.github.io/visuallabo-shimbashi/care-uramomo.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
