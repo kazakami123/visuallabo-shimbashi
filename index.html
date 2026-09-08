@@ -490,6 +490,12 @@ body{padding-bottom:86px}
 .pcard .n{display:block;font-family:var(--futura);font-size:15px;letter-spacing:.14em;color:var(--gold-d);margin-bottom:10px}
 .pcard h3{font-size:18px;font-weight:700;color:var(--ink);margin:0 0 8px;line-height:1.5}
 .pcard p{font-size:14px;font-weight:500;line-height:1.9;color:var(--ink-soft);margin:0}
+
+/* 口コミ：出典表示とスクリーンショット掲載 */
+.vc .src{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11.5px;color:var(--mute);line-height:1.7}
+.vshot{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 14px 32px -24px rgba(0,0,0,.15)}
+.vshot img{display:block;width:100%;border-radius:8px}
+.vshot .src{margin-top:10px;font-size:11.5px;color:var(--mute);line-height:1.7;text-align:center}
 </style>
 </head>
 <body>
@@ -693,6 +699,12 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
 <!-- 6. ビフォーアフター -->
 
 <!-- 7. お客様の声 -->
+<!-- ▼口コミの追加手順（引用として掲載します）
+     1) ホットペッパービューティー等の口コミ本文を、改変せずそのまま <p> に入れる
+     2) .who に投稿者の属性（例：50代・男性）、.src に出典を必ず書く
+     3) 効果に触れた口コミには、セクション末尾の個人差注記が必ず見えるようにする
+     4) スクリーンショットで載せる場合は images/review-*.jpg に置いて .vshot を使う
+     出典を書かない・本文を書き換える・こちらで文章を作る、はいずれも不可 -->
 <section class="sec" id="voice" style="background:var(--wash)">
   <div class="wrap">
     <div class="center rv">
@@ -700,13 +712,6 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">通われている方の、<em>口コミ・感想</em>。</h2>
     </div>
     <div class="vgrid rv">
-      <!-- 男性専用サロンへの変更にともない非表示。男性のお客様の声が取れたら、この枠に差し替える -->
-      <div class="vc" hidden>
-        <div class="st">★★★★★</div>
-        <h3>ウエスト、実際に−2cmを体感</h3>
-        <p>機械やダイエットについて丁寧に説明してくださり、ウエストも実際に−2センチを体感できて嬉しかったです。</p>
-        <div class="who">30代・女性・会社員</div>
-      </div>
       <div class="vc">
         <div class="st">★★★★★</div>
         <h3>芯から温まって、大爆睡</h3>
@@ -714,18 +719,14 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <div class="who">体験のお客様</div>
       </div>
       <div class="vc" style="justify-content:center;text-align:center;border-style:dashed;background:transparent;box-shadow:none">
-        <p style="margin:0;font-size:14px;line-height:1.9;color:var(--mute)">男性のお客様の声は、<br>オープン後にこちらへ掲載します。</p>
+        <p style="margin:0;font-size:14px;line-height:1.9;color:var(--mute)">男性のお客様の声を、<br>順次こちらへ掲載します。</p>
       </div>
-      <div class="vc" hidden>
-        <div class="st">★★★★★</div>
-        <h3>くびれが出て、姿勢まで変わった</h3>
-        <p>ビフォーアフターの写真を見たら、くびれが出て姿勢も良くなっていて驚きました。何度も見返してしまいます。</p>
-        <div class="who">体験のお客様</div>
-      </div>
+      <!-- 非表示：男性専用化以前の女性のお客様の声。復活させるときは hidden を外す
+      <div class="vc" hidden><div class="st">★★★★★</div><h3>ウエスト、実際に−2cmを体感</h3><p>機械やダイエットについて丁寧に説明してくださり、ウエストも実際に−2センチを体感できて嬉しかったです。</p><div class="who">30代・女性・会社員</div></div>
+      <div class="vc" hidden><div class="st">★★★★★</div><h3>くびれが出て、姿勢まで変わった</h3><p>ビフォーアフターの写真を見たら、くびれが出て姿勢も良くなっていて驚きました。何度も見返してしまいます。</p><div class="who">体験のお客様</div></div>
+      -->
     </div>
-    <p class="note center rv" style="margin-top:16px">※口コミ・体験の感想より抜粋。個人の感想であり、効果・感じ方には個人差があります。</p>
-    <!-- 掲載中の外部口コミは男性専用化以前のもののため、導線を一旦外しています。
-         Googleビジネスプロフィールのオーナー確認が済んだら、Googleの口コミへ差し替える -->
+    <p class="note center rv" style="margin-top:16px">※ 口コミ・体験の感想より抜粋。個人の感想であり、効果・感じ方には個人差があります。<br>※ 出典のあるものは各カードに記載しています。</p>
   </div>
 </section>
 
