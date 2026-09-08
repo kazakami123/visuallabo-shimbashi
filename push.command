@@ -21,7 +21,7 @@ git push origin main
 if [ $? -eq 0 ]; then
   echo ""
   echo "✔ push 完了。1〜2分でGitHub Pagesに反映されます。"
-  echo "  確認URL: https://kazakami123.github.io/visuallabo-shimbashi/?v=$(date +%s)"
+  echo "  確認URL: https://visuallabo.com/?v=$(date +%s)"
 else
   echo ""
   echo "✖ push に失敗しました。ネット接続やGitHubログインを確認してください。"

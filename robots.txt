@@ -1,9 +1,15 @@
 User-agent: *
 Allow: /
-Disallow: /tokushoho.html
-Disallow: /privacy.html
-Disallow: /kiyaku.html
-Disallow: /chapter1_viewer.html
 Disallow: /_archive/
 
-Sitemap: https://kazakami123.github.io/visuallabo-shimbashi/sitemap.xml
+# ChatGPT Searchで公開ページを発見・引用できるよう明示的に許可します。
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_archive/
+
+# ユーザー操作時のChatGPTブラウジングを許可します。
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_archive/
+
+Sitemap: https://visuallabo.com/sitemap.xml
