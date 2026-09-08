@@ -643,3 +643,6 @@ section[id]{scroll-margin-top:120px}
   .legal table{font-size:12.5px}
   .legal table th,.legal table td{padding:8px 6px}
 }
+
+/* hidden 属性を確実に効かせる（display 指定に負けないように・2026-09-08） */
+[hidden]{display:none!important}
