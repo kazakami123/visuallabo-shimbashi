@@ -635,3 +635,11 @@ section[id]{scroll-margin-top:120px}
   .price-support:not([open])>.price-support__content,.price-fold:not([open])>.price-fold__content{display:block!important}
   .price-support,.price-fold{max-width:none;margin:0}
 }
+
+/* 法務表示ページなどの表を、狭い画面でも収める（2026-09-06） */
+.legal table{width:100%;table-layout:fixed;border-collapse:collapse}
+.legal table th,.legal table td{word-break:break-word;overflow-wrap:anywhere}
+@media(max-width:600px){
+  .legal table{font-size:12.5px}
+  .legal table th,.legal table td{padding:8px 6px}
+}
