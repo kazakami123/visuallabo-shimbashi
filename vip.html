@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="vip-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VIPルーム｜男性専用の会員制体型管理サロン・完全個室｜VISUAL LABO 新橋店</title>
-<meta name="description" content="男性専用の会員制体型管理サロンVISUAL LABO 新橋店のVIPルーム。完全個室貸切・専属担当つきで、毎回120分。月2回¥49,800／月4回¥89,800、単発¥29,800（税込）。男性のお連れ様の同伴、仕事帰りのご利用にも。">
+<meta name="description" content="男性専用の会員制体型管理サロンVISUAL LABO 新橋店のVIPルーム。完全個室貸切・専属担当つきで、毎回120分。月2回¥49,800／月4回¥89,800、単発¥29,800（税込）。お一人専用・お連れ様の同伴不可。">
 <meta property="og:title" content="VIPルーム｜完全個室・専属担当｜VISUAL LABO 新橋店">
 <meta property="og:description" content="男性専用の会員制体型管理サロンVISUAL LABOのVIPルーム。完全個室貸切・専属担当つき。ソロ会員 月2回¥49,800〜。VIP体験120分¥19,800。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://visuallabo.com/images/vip-room.jpg">
+<meta property="og:image" content="https://visuallabo.com/images/lobby-vip-entrance.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -16,22 +16,10 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#faf9f6">
 <link rel="stylesheet" href="style.css">
-<style>
-html{overflow-x:hidden}
-img,table,figure{max-width:100%}
-.faqd{max-width:720px;margin:0 auto}
-.faqd details{background:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:10px;overflow:hidden}
-.faqd summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:500;color:var(--ink);font-size:15px;position:relative;padding-right:44px;line-height:1.5}
-.faqd summary::-webkit-details-marker{display:none}
-.faqd summary::after{content:"+";position:absolute;right:18px;top:14px;color:var(--gold-d);font-size:20px}
-.faqd details[open] summary::after{content:"\2013"}
-.faqd .a{padding:0 18px 18px;font-size:14px;line-height:1.95;color:var(--ink-soft)}
-.vtitle{padding-top:clamp(96px,12vw,128px);background:var(--paper-2);border-bottom:1px solid var(--line)}
-</style>
+<link rel="stylesheet" href="vip.css">
 <link rel="canonical" href="https://visuallabo.com/vip.html">
 <meta property="og:url" content="https://visuallabo.com/vip.html">
 <meta name="twitter:card" content="summary_large_image">
-<style>.dep-grid{grid-template-columns:1fr}@media(min-width:940px){.dep-grid{grid-template-columns:repeat(3,1fr)}}.dep-grid li{text-wrap:pretty}</style>
 </head>
 <body>
 
@@ -68,200 +56,119 @@ img,table,figure{max-width:100%}
   </nav>
 </header>
 
-<!-- TITLE（背景画像なしの軽いタイトル帯） -->
-<section class="sec vtitle">
-  <div class="wrap" style="text-align:center">
-    <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.18em;color:var(--gold-d);margin-bottom:14px">VIP ROOM</div>
-    <h1 style="font-size:clamp(28px,6vw,46px);font-weight:500;color:var(--ink);line-height:1.3;margin:0">VIPルーム。</h1>
-    <p class="body-txt" style="max-width:540px;margin:16px auto 0">完全個室を貸切、専属担当つき。<br>誰の目も気にせず、自分だけの時間を。</p>
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="sec">
-  <div class="wrap narrow">
-    <div class="section-num rv">About — VIP Room</div>
-    <p class="big rv">完全個室のVIPルームを、<b>まるごと貸切でご利用いただけます</b>。</p>
-    <p class="body-txt rv">VISUAL LABOは、男性専用の会員制体型管理サロンです。VIPルームは、MystiCore®を備えたプライベートな個室。ご利用のたびに専属担当がおつきし、施術120分（高周波施術90分＋HYPER EMS 30分）をお過ごしいただきます。男性のお連れ様の同伴（1名まで・事前予約制）にも対応。施術・サウナ・くつろぎの時間を、心ゆくまでお過ごしください。</p>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <figure><img loading="lazy" src="images/vip-room.jpg" alt="VIPルーム｜貸切でご利用いただけるプライベートな個室" style="border-radius:4px" width="1448" height="1086"></figure>
-      <figure><img loading="lazy" src="images/vip-room.jpg" alt="VIPルーム｜MystiCore®を備えた完全個室" style="border-radius:4px;height:100%;object-fit:cover" width="1448" height="1086"></figure>
+<main id="main-content" class="vp-main">
+  <section class="vp-hero vp-wrap" aria-labelledby="vip-title">
+    <div class="vp-hero-copy">
+      <p class="vp-eyebrow">VISUAL LABO / VIP ROOM</p>
+      <h1 id="vip-title">ひとりで、<br>ゆったり。<span>自分を整える120分。</span></h1>
+      <p class="vp-intro">完全個室を、お一人のために。<br>専属担当と、自分の体に向き合う時間を。</p>
+      <p class="vp-audience">男性専用の会員制体型管理サロン</p>
+      <a class="vp-button" href="#trial">VIP体験を見る <span aria-hidden="true">↗</span></a>
+      <a class="vp-text-link" href="#membership">料金・プランを見る <span aria-hidden="true">↓</span></a>
     </div>
-    <p class="pnote2 rv" style="margin-top:18px"><span>・男性のお連れ様の同伴（1名まで・事前予約制）に対応しています。</span><span>・VIPルームは会員のご予約を優先してご案内いたします。</span></p>
-  </div>
-</section>
+    <figure class="vp-hero-photo">
+      <img src="images/lobby-vip-entrance.jpg" alt="VISUAL LABOの待合ラウンジとVIPルーム入口" width="1600" height="844" fetchpriority="high">
+      <figcaption>待合ラウンジ・VIPルーム入口</figcaption>
+    </figure>
+    <div class="vp-use-notice"><span>ご利用について</span><p>VIPルームはお一人専用です。<strong>お連れ様の同伴・同時施術はできません。</strong></p></div>
+  </section>
 
-<!-- VIP MEMBERSHIP -->
-<section class="sec menu-alt" id="membership">
-  <div class="wrap">
-    <div class="kicker rv">01 — VIP Membership</div>
-    <div class="rv" style="margin-bottom:6px">
-      <div class="mname2">VIP SOLO MEMBER</div>
-      <div class="mjp2">完全個室・専属担当の、会員制。</div>
-      <p style="max-width:680px">VIPルームの月額会員です。ご利用はすべて<b style="color:var(--ink);font-weight:500">120分（高周波施術90分＋HYPER EMS 30分）</b>。個室料・指名料などの追加費用はなく、表示の月額のみでご利用いただけます。月2回・月4回とも初回最低利用期間は1か月。その後は1か月単位で自動更新します。</p>
-    </div>
-
-    <div class="vip-grid">
-      <div class="vip-card rv">
-        <div class="vname">VIP SOLO 月2回</div>
-        <div class="vprice">¥49,800<span style="font-size:13px;color:var(--ink-mute);font-weight:300">／月</span></div>
-        <div class="vunit">1回あたり ¥24,900 ／ 定員24名</div>
-        <ul>
-          <li>完全個室貸切</li>
-          <li>専属担当つき</li>
-          <li>120分（施術90分＋EMS30分）</li>
-          <li>温活ドームサウナ利用込み</li>
-          <li>お連れ様同伴 ¥19,800／回</li>
-        </ul>
+  <section class="vp-section vp-paper" aria-labelledby="care-title">
+    <div class="vp-wrap vp-split">
+      <div class="vp-heading">
+        <h2 id="care-title">温めて、動かす。<br>120分のボディケア。</h2>
+        <p>周囲を気にせず、ゆっくり施術を受けたい方へ。MystiCore®を備えた完全個室で、高周波とHYPER EMSを組み合わせたケアをご提供します。</p>
       </div>
-
-      <div class="vip-card feat rv">
-        <div class="vbadge">人気</div>
-        <div class="vname">VIP SOLO 月4回</div>
-        <div class="vprice">¥89,800<span style="font-size:13px;color:var(--ink-mute);font-weight:300">／月</span></div>
-        <div class="vunit">1回あたり ¥22,450 ／ 定員12名</div>
-        <ul>
-          <li>完全個室貸切</li>
-          <li>専属担当つき</li>
-          <li>120分（施術90分＋EMS30分）</li>
-          <li>温活ドームサウナ利用込み</li>
-          <li>お連れ様同伴 ¥19,800／回</li>
-        </ul>
-        <div class="vsave">週1ペースで、しっかり整えたい方に</div>
-      </div>
-
-      <div class="vip-card rv">
-        <div class="vname">VIP 単発 120分</div>
-        <div class="vprice">¥29,800</div>
-        <div class="vunit">1回 ／ 空き枠のみ受付</div>
-        <ul>
-          <li>完全個室貸切</li>
-          <li>120分（施術90分＋EMS30分）</li>
-          <li>温活ドームサウナ利用込み</li>
-          <li>月額契約は不要</li>
-        </ul>
-        <div class="vsave">まずは1回から</div>
+      <div class="vp-care">
+        <div class="vp-care-row"><div><span class="vp-small-label">高周波施術</span><h3>温めるケア</h3></div><p class="vp-duration">90<span>分</span></p></div>
+        <div class="vp-care-row"><div><span class="vp-small-label">HYPER EMS</span><h3>筋肉にアプローチ</h3></div><p class="vp-duration">30<span>分</span></p></div>
+        <p class="vp-care-note">VIP会員には専属担当がつき、毎回の施術とカルテを継続します。温活ドームサウナの利用も料金に含まれます。</p>
+        <a class="vp-text-link" href="treatment.html">施術内容・安全について <span aria-hidden="true">↗</span></a>
       </div>
     </div>
+  </section>
 
-    <p class="pnote2 rv" style="margin-top:30px">
-      <span>・VIP月2回・月4回とも初回最低利用期間は1か月です。最低利用期間中も法令上のクーリングオフ・中途解約を妨げません。</span>
-      <span>・月額会員は入会日を基準に1か月ごと自動更新（決済）。通常退会は利用期間の開始日から15日目までなら当該利用期間末、16日目以降なら次の利用期間末を基準とし、その日と最低利用期間満了日の遅い日に終了します。</span>
-      <span>・退会・プラン変更は店頭または公式LINEで受け付けます。VIP月2回から月4回へのアップグレードはいつでも申請でき、当該利用期間分の月会費差額全額のお支払い完了後、その日から適用します（差額の日割りなし）。ダウングレードは15日目までなら次回更新日、16日目以降なら次々回更新日を基準とし、その日と最低利用期間満了後の最初の更新日の遅い日から適用します。9月14日開始なら、9月28日までの受付は10月14日、9月29日以降の受付は11月14日が受付期限による適用日です。契約条件は<a href="important-matters.html" style="color:var(--gold-d);text-decoration:underline">ご契約前の重要事項</a>をご確認ください。</span>
-      <span>・各プランは定員制です。満員の際は増枠待ちリストにご案内します。</span>
-      <span>・お連れ様同伴は1名まで・事前予約制・会員ご本人のご来店時に限ります。男性専用のため、お連れ様も男性の方に限ります。</span>
-      <span>・表示価格はすべて税込です。</span>
-    </p>
-  </div>
-</section>
-
-<!-- VIP DEPOSIT -->
-<section class="sec" id="deposit">
-  <div class="wrap">
-    <div class="kicker rv">02 — VIP Deposit</div>
-    <div class="rv" style="margin-bottom:6px">
-      <div class="mname2">VIP DEPOSIT</div>
-      <div class="mjp2">まとめてチャージ、自由に使う。</div>
-      <p style="max-width:680px">月額契約ではなく、先にチャージしてご利用のたびに残高から充当するプリペイドプランです。チャージ額に応じたボーナスがつき、VIPルームの施術・お連れ様同伴・物販すべてにお使いいただけます。ご利用ペースが不定期な方、ご褒美としてまとめて確保したい方に。DEPOSIT 100は、ご家族・ご友人など、複数の方でお使いいただけるプランです。施術をご利用いただけるのは男性の方に限ります。</p>
+  <section class="vp-section vp-wrap" id="membership" aria-labelledby="membership-title">
+    <div class="vp-section-top">
+      <div class="vp-heading"><h2 id="membership-title">自分のペースで、<br>続けられるプラン。</h2></div>
+      <p class="vp-section-intro">完全個室・専属担当・毎回120分の施術。<br>個室料・指名料の追加はありません。<br><span class="vp-tax">表示価格はすべて税込です。</span></p>
     </div>
+    <div class="vp-plan-grid">
+      <article class="vp-plan">
+        <p class="vp-small-label">VIP SOLO</p><h3>月2回</h3>
+        <p class="vp-price"><span>¥</span>49,800<small>／月</small></p>
+        <p class="vp-unit">1回あたり ¥24,900</p>
+        <p class="vp-plan-desc">月に2回、ゆっくり整える時間を。</p>
+        <p class="vp-plan-spec">各120分・専属担当つき<br>温活ドームサウナ利用込み</p>
+      </article>
+      <article class="vp-plan">
+        <p class="vp-small-label">VIP SOLO</p><h3>月4回</h3>
+        <p class="vp-price"><span>¥</span>89,800<small>／月</small></p>
+        <p class="vp-unit">1回あたり ¥22,450</p>
+        <p class="vp-plan-desc">週1回を目安に、定期的なケアを。</p>
+        <p class="vp-plan-spec">各120分・専属担当つき<br>温活ドームサウナ利用込み</p>
+      </article>
+    </div>
+    <p class="vp-plan-terms">月2回・月4回とも初回最低利用期間は1か月。以後は入会日を基準に1か月ごとに自動更新・決済します。月2回は定員24名、月4回は定員12名です。</p>
+    <div class="vp-single">
+      <div><p class="vp-small-label">SINGLE VISIT</p><h3>VIP単発 120分</h3><p>月額契約不要・空き枠のみ受付<br>完全個室貸切・温活ドームサウナ利用込み</p></div>
+      <p class="vp-price vp-price-small"><span>¥</span>29,800<small>／回</small></p>
+    </div>
+    <details class="vp-disclosure"><summary>月額プランの契約・退会・変更について</summary><ul class="vp-notes"><li>VIP月2回・月4回とも初回最低利用期間は1か月です。最低利用期間中も法令上のクーリングオフ・中途解約を妨げません。</li>
+<li>月額会員は入会日を基準に1か月ごと自動更新（決済）。通常退会は利用期間の開始日から15日目までなら当該利用期間末、16日目以降なら次の利用期間末を基準とし、その日と最低利用期間満了日の遅い日に終了します。</li>
+<li>退会・プラン変更は店頭または公式LINEで受け付けます。VIP月2回から月4回へのアップグレードはいつでも申請でき、当該利用期間分の月会費差額全額のお支払い完了後、その日から適用します（差額の日割りなし）。ダウングレードは15日目までなら次回更新日、16日目以降なら次々回更新日を基準とし、その日と最低利用期間満了後の最初の更新日の遅い日から適用します。9月14日開始なら、9月28日までの受付は10月14日、9月29日以降の受付は11月14日が受付期限による適用日です。契約条件は<a href="important-matters.html">ご契約前の重要事項</a>をご確認ください。</li>
+<li>各プランは定員制です。満員の際は増枠待ちリストにご案内します。</li>
+<li>表示価格はすべて税込です。</li></ul></details>
+  </section>
 
-    <div class="rv dep-grid" style="display:grid;gap:14px;max-width:1020px;margin:24px auto 0">
-      <div style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,30px);text-align:center">
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;letter-spacing:.14em;font-size:13px;color:var(--gold-d)">DEPOSIT 30</div>
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:clamp(26px,5vw,32px);color:var(--ink);margin-top:10px">¥300,000</div>
-        <div style="margin-top:8px;font-size:14px;color:var(--ink)">→ <b style="color:var(--gold-d);font-weight:500">¥315,000</b>分としてチャージ<span style="display:block;font-size:11.5px;color:var(--ink-mute);margin-top:2px">5%ボーナス（+¥15,000）</span></div>
-        <ul style="list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);line-height:2;text-align:left">
-          <li>・有効期限 6ヶ月</li>
-          <li>・VIP施術／お連れ様同伴／物販に充当可</li>
-          <li>・ご本人さま専用</li>
-        </ul>
+  <section class="vp-section vp-paper" id="deposit" aria-labelledby="deposit-title">
+    <div class="vp-wrap">
+      <div class="vp-section-top">
+        <div class="vp-heading"><p class="vp-eyebrow">VIP DEPOSIT</p><h2 id="deposit-title">先にチャージして、<br>必要なときに使う。</h2></div>
+        <p class="vp-section-intro">月額契約ではないプリペイドプラン。ご利用のたびに、VIP施術・物販の代金を残高から充当します。チャージ額に応じたボーナスがつきます。</p>
       </div>
-      <div style="background:#fff;border:1px solid var(--gold);border-radius:10px;padding:clamp(22px,4vw,30px);text-align:center;position:relative">
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;letter-spacing:.14em;font-size:13px;color:var(--gold-d)">DEPOSIT 50</div>
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:clamp(26px,5vw,32px);color:var(--ink);margin-top:10px">¥500,000</div>
-        <div style="margin-top:8px;font-size:14px;color:var(--ink)">→ <b style="color:var(--gold-d);font-weight:500">¥550,000</b>分としてチャージ<span style="display:block;font-size:11.5px;color:var(--ink-mute);margin-top:2px">10%ボーナス（+¥50,000）</span></div>
-        <ul style="list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);line-height:2;text-align:left">
-          <li>・有効期限 6ヶ月</li>
-          <li>・VIP施術／お連れ様同伴／物販に充当可</li>
-          <li>・<b style="color:var(--ink);font-weight:500">ご登録者2名まで利用できます</b>（男性のご家族やパートナーと）</li>
-        </ul>
+      <div class="vp-deposits">
+        <article class="vp-deposit"><h3>DEPOSIT 30</h3><dl><div><dt>お支払い額</dt><dd>¥300,000</dd></div><div class="vp-credit"><dt>ご利用可能額</dt><dd>¥315,000<small>5%ボーナス / +¥15,000</small></dd></div><div><dt>有効期限・利用者</dt><dd class="vp-deposit-meta">6か月<small>ご本人さま専用</small></dd></div></dl></article>
+        <article class="vp-deposit"><h3>DEPOSIT 50</h3><dl><div><dt>お支払い額</dt><dd>¥500,000</dd></div><div class="vp-credit"><dt>ご利用可能額</dt><dd>¥550,000<small>10%ボーナス / +¥50,000</small></dd></div><div><dt>有効期限・利用者</dt><dd class="vp-deposit-meta">6か月<small>ご登録2名まで</small></dd></div></dl></article>
+        <article class="vp-deposit"><h3>DEPOSIT 100</h3><dl><div><dt>お支払い額</dt><dd>¥1,000,000</dd></div><div class="vp-credit"><dt>ご利用可能額</dt><dd>¥1,150,000<small>15%ボーナス / +¥150,000</small></dd></div><div><dt>有効期限・利用者</dt><dd class="vp-deposit-meta">12か月<small>ご登録30名まで</small></dd></div></dl></article>
       </div>
-      <div style="background:#fff;border:1px solid var(--gold);border-radius:10px;padding:clamp(22px,4vw,30px);text-align:center;position:relative">
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;letter-spacing:.14em;font-size:13px;color:var(--gold-d)">DEPOSIT 100</div>
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:clamp(26px,5vw,32px);color:var(--ink);margin-top:10px">¥1,000,000</div>
-        <div style="margin-top:8px;font-size:14px;color:var(--ink)">→ <b style="color:var(--gold-d);font-weight:500">¥1,150,000</b>分としてチャージ<span style="display:block;font-size:11.5px;color:var(--ink-mute);margin-top:2px">15%ボーナス（+¥150,000）</span></div>
-        <ul style="list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);line-height:2;text-align:left">
-          <li>・有効期限 12ヶ月</li>
-          <li>・VIP施術／お連れ様同伴／物販に充当可</li>
-          <li>・<b style="color:var(--ink);font-weight:500">ご登録30名まで</b>ご利用いただけます</li>
-          <li>・ご予約・ご来店時に<b style="color:var(--ink);font-weight:500">ご登録者さまのお名前</b>をお伝えください。名簿と照合のうえ、残高からご利用いただけます</li>
-        </ul>
+      <p class="vp-deposit-notice">残高を共有する場合も、<strong>VIPルームは各自お一人ずつでご利用ください。</strong>お連れ様の同伴・同時施術はできません。施術のご利用は男性の方に限ります。</p>
+      <details class="vp-disclosure"><summary>DEPOSIT 100の登録・ご利用方法</summary><p class="vp-detail-text">お申し込み時に、ご利用になる方のお名前を最大30名までご登録いただきます（登録者はいつでも変更・追加できます）。ご利用の際は、ご予約時と受付でご登録者さまのお名前をお伝えください。名簿と照合のうえ、チャージ残高からご利用いただけます。</p></details>
+      <details class="vp-disclosure"><summary>デポジットの契約・返金について</summary><ul class="vp-notes"><li>表示価格はすべて税込です。残高の譲渡・換金はできません（DEPOSIT 50のご登録2名、DEPOSIT 100のご登録30名までのご利用を除く）。</li>
+<li>本プランは特定商取引法上の特定継続的役務提供に該当します。ご契約前に概要書面を、ご契約時に契約書面をお渡しし、8日間のクーリング・オフにも対応します。</li>
+<li>中途解約はいつでも可能です。未利用残高は法令の基準に基づき返金します（ボーナス分を除く精算となります）。詳しくは契約書面をご確認ください。</li>
+<li>チャージ残高でのご予約も、会員同様に優先枠でご案内します。</li></ul></details>
+    </div>
+  </section>
+
+  <section class="vp-section vp-trial" id="trial" aria-labelledby="trial-title">
+    <div class="vp-wrap vp-split">
+      <div class="vp-heading"><h2 id="trial-title">まずは、<br>VIPの120分を。</h2><p>完全個室・専属担当・120分の施術を、ご入会前に体験いただけます。ご希望日と空き状況は、公式LINEでご相談ください。</p></div>
+      <div class="vp-trial-offer">
+        <h3>VIP体験 120分</h3>
+        <p class="vp-trial-breakdown">高周波施術90分 ＋ HYPER EMS 30分</p>
+        <p class="vp-price vp-trial-price"><span>¥</span>19,800<small>税込</small></p>
+        <p class="vp-trial-limit">お一人さま1回・空き枠でのご案内</p>
+        <a class="vp-button vp-button-light" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="vip_trial_line">VIP体験を相談する <span aria-hidden="true">↗</span></a>
+        <p class="vp-joining">体験当日の月額プラン入会で、入会金¥16,500が無料。体験後7日以内なら半額¥8,250です。</p>
       </div>
     </div>
+  </section>
 
-    <div class="rv" style="max-width:1020px;margin:18px auto 0;background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,3.4vw,24px)">
-      <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:12px;letter-spacing:.12em;color:var(--gold-d);margin-bottom:8px">DEPOSIT 100 ─ ご利用の流れ</div>
-      <p style="margin:0;font-size:14px;line-height:2;color:var(--ink-soft)">お申し込み時に、ご利用になる方のお名前を最大30名までご登録いただきます（登録者はいつでも変更・追加できます）。ご利用の際は、ご予約時と受付で<b style="color:var(--ink);font-weight:500">ご登録者さまのお名前</b>をお伝えください。名簿と照合できましたら、そのままチャージ残高からご利用いただけます。</p>
-    </div>
+  <section class="vp-section vp-wrap vp-faq-layout" aria-labelledby="faq-title">
+    <div class="vp-heading"><h2 id="faq-title">ご利用の前に。</h2></div>
+    <div class="vp-faq"><details class="vp-disclosure"><summary>お連れ様の同伴はできますか？</summary><p class="vp-detail-text">VIPルームはお一人でのご利用となり、お連れ様の同伴はできません。同時施術にも対応していません。</p></details>
+<details class="vp-disclosure"><summary>VIPルームの料金は？</summary><p class="vp-detail-text">VIPソロ会員が月2回 ¥49,800／月4回 ¥89,800、単発は120分 ¥29,800（空き枠のみ受付）です。個室料・指名料などの追加費用はありません。表示価格はすべて税込です。</p></details>
+<details class="vp-disclosure"><summary>VIPの体験はできますか？</summary><p class="vp-detail-text">VIP体験 120分 ¥19,800（お一人さま1回・空き枠でのご案内）をご用意しています。体験当日の月額プラン入会で入会金¥16,500が無料、体験後7日以内なら半額¥8,250になります。</p></details>
+<details class="vp-disclosure"><summary>専属担当はつきますか？</summary><p class="vp-detail-text">はい。VIP会員には専属担当がつき、毎回同じ担当が施術とカルテを継続します。</p></details>
+<details class="vp-disclosure"><summary>デポジットを複数人で使う場合も、一人ずつの利用ですか？</summary><p class="vp-detail-text">はい。DEPOSIT 50はご登録2名まで、DEPOSIT 100はご登録30名まで残高を利用できますが、VIPルームのご利用は各自お一人ずつです。お連れ様の同伴・同時施術はできません。施術をご利用いただけるのは男性の方に限ります。</p></details></div>
+  </section>
 
-    <p class="pnote2 rv" style="margin-top:26px">
-      <span>・表示価格はすべて税込です。残高の譲渡・換金はできません（DEPOSIT 50のご登録2名、DEPOSIT 100のご登録30名までのご利用を除く）。</span>
-      <span>・本プランは特定商取引法上の特定継続的役務提供に該当します。ご契約前に概要書面を、ご契約時に契約書面をお渡しし、8日間のクーリング・オフにも対応します。</span>
-      <span>・中途解約はいつでも可能です。未利用残高は法令の基準に基づき返金します（ボーナス分を除く精算となります）。詳しくは契約書面をご確認ください。</span>
-      <span>・チャージ残高でのご予約も、会員同様に優先枠でご案内します。</span>
-    </p>
-  </div>
-</section>
-
-<!-- VIP TRIAL -->
-<section class="sec" id="trial">
-  <div class="wrap narrow">
-    <div class="kicker rv">03 — VIP Trial</div>
-    <h2 class="lead rv" style="margin-bottom:22px">VIP体験は、<em>120分</em>。</h2>
-    <p class="body-txt rv">VIPルーム・専属担当・120分の施術を、そのままの内容でご体験いただけます（お一人さま1回・空き枠でのご案内）。</p>
-    <div class="rv" style="max-width:560px;background:#fff;border:1px solid var(--gold);border-radius:6px;padding:clamp(22px,4vw,30px);margin-top:24px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;flex-wrap:wrap">
-        <div><div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;letter-spacing:.12em;font-size:13px;color:var(--gold-d)">VIP TRIAL</div><div style="font-size:17px;font-weight:500;color:var(--ink);margin-top:4px">VIP体験 120分 <span style="font-size:13px;color:var(--ink-mute);font-weight:300">お一人さま1回</span></div></div>
-        <div style="font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:26px;font-weight:500;color:var(--ink)">¥19,800</div>
-      </div>
-      <div style="margin-top:14px;font-size:13.5px;color:var(--ink-soft);line-height:1.9">体験当日のご入会で、入会金<b style="color:var(--gold-d);font-weight:500">¥16,500が無料</b>になります（体験後7日以内なら半額¥8,250）。</div>
-    </div>
-    <p class="pnote2 rv"><span>・VIP体験はVIPルームの空き枠でのご案内となります。ご希望日はLINEにてご相談ください。</span><span>・表示はすべて税込です。</span></p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec menu-alt">
-  <div class="wrap">
-    <div class="nexthead rv">
-      <div class="kicker">FAQ</div>
-      <h2 class="lead">よくある、<em>ご質問</em>。</h2>
-    </div>
-    <div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
-      <details><summary>VIPルームの料金は？</summary><div class="a">VIPソロ会員が月2回 ¥49,800／月4回 ¥89,800、単発は120分 ¥29,800（空き枠のみ受付）です。個室料・指名料などの追加費用はありません。</div></details>
-      <details><summary>お連れ様の同伴はできますか？</summary><div class="a">男性のお連れ様1名まで、事前予約制で同伴いただけます。同伴利用は1回 ¥19,800です。</div></details>
-      <details><summary>VIPの体験はできますか？</summary><div class="a">VIP体験 120分 ¥19,800（お一人さま1回・空き枠でのご案内）をご用意しています。体験当日の月額プラン入会で入会金¥16,500が無料、体験後7日以内なら半額¥8,250になります。</div></details>
-      <details><summary>専属担当はつきますか？</summary><div class="a">はい。VIP会員には専属担当がつき、毎回同じ担当が施術とカルテを継続します。</div></details>
-    </div>
-  </div>
-</section>
-
-<section class="sec cta">
-  <div class="wrap">
-    <h2>VIPルームの<em>ご相談</em>は、LINEで。</h2>
-    <p>空き状況・ご利用イメージなど、お気軽にご相談ください。<br>新橋駅 徒歩3分</p>
-    <div class="btns">
-      <a class="btn btn-gold" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">LINEで相談する</a>
-      <a class="btn btn-ghost" href="price.html">メニュー・料金を見る</a>
-    </div>
-  </div>
-</section>
+  <section class="vp-contact vp-wrap" aria-labelledby="contact-title">
+    <div><h2 id="contact-title">空き状況やプランのご相談は、<br>公式LINEで。</h2><p>新橋駅（日比谷口）徒歩3分 / 12:00–21:00</p></div>
+    <a class="vp-text-link vp-contact-link" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">VIPについて相談する <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -305,22 +212,10 @@ img,table,figure{max-width:100%}
   </div>
 </footer>
 
-<script>
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"VIPルームの料金は？","acceptedAnswer":{"@type":"Answer","text":"VIPソロ会員が月2回 ¥49,800／月4回 ¥89,800、単発は120分 ¥29,800（空き枠のみ受付）です。個室料・指名料などの追加費用はありません。"}},
-{"@type":"Question","name":"お連れ様の同伴はできますか？","acceptedAnswer":{"@type":"Answer","text":"男性のお連れ様1名まで、事前予約制で同伴いただけます。同伴利用は1回 ¥19,800です。"}},
-{"@type":"Question","name":"VIPの体験はできますか？","acceptedAnswer":{"@type":"Answer","text":"VIP体験 120分 ¥19,800（お一人さま1回・空き枠でのご案内）をご用意しています。体験当日の月額プラン入会で入会金¥16,500が無料、体験後7日以内なら半額¥8,250になります。"}},
-{"@type":"Question","name":"専属担当はつきますか？","acceptedAnswer":{"@type":"Answer","text":"はい。VIP会員には専属担当がつき、毎回同じ担当が施術とカルテを継続します。"}}
-]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"お連れ様の同伴はできますか？","acceptedAnswer":{"@type":"Answer","text":"VIPルームはお一人でのご利用となり、お連れ様の同伴はできません。同時施術にも対応していません。"}},{"@type":"Question","name":"VIPルームの料金は？","acceptedAnswer":{"@type":"Answer","text":"VIPソロ会員が月2回 ¥49,800／月4回 ¥89,800、単発は120分 ¥29,800（空き枠のみ受付）です。個室料・指名料などの追加費用はありません。表示価格はすべて税込です。"}},{"@type":"Question","name":"VIPの体験はできますか？","acceptedAnswer":{"@type":"Answer","text":"VIP体験 120分 ¥19,800（お一人さま1回・空き枠でのご案内）をご用意しています。体験当日の月額プラン入会で入会金¥16,500が無料、体験後7日以内なら半額¥8,250になります。"}},{"@type":"Question","name":"専属担当はつきますか？","acceptedAnswer":{"@type":"Answer","text":"はい。VIP会員には専属担当がつき、毎回同じ担当が施術とカルテを継続します。"}},{"@type":"Question","name":"デポジットを複数人で使う場合も、一人ずつの利用ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。DEPOSIT 50はご登録2名まで、DEPOSIT 100はご登録30名まで残高を利用できますが、VIPルームのご利用は各自お一人ずつです。お連れ様の同伴・同時施術はできません。施術をご利用いただけるのは男性の方に限ります。"}}]}
 </script>
-<div class="bbar">
-  <a class="bl" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="bbar_line_contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 5.66 2 10.15c0 4.02 3.57 7.39 8.4 8.03.33.07.77.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.87-3.46 8.01-5.92C21.56 13.44 22 11.87 22 10.15 22 5.66 17.52 2 12 2z"/></svg>LINEお問い合わせ</a>
-  <a class="br" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="bbar_reserve">60分体験を予約する<em>公式LINE｜¥2,980</em></a>
-</div>
+<div class="vp-sticky"><a href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="vip_sticky_trial"><span>VIP体験を相談</span><span>120分 <b>¥19,800</b><small>税込</small></span><span aria-hidden="true">↗</span></a></div>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://visuallabo.com/"}, {"@type": "ListItem", "position": 2, "name": "VIPルーム", "item": "https://visuallabo.com/vip.html"}]}
 </script>

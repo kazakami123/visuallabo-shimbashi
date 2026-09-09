@@ -123,3 +123,116 @@ TOP（index.html、ダークテーマ）:
 「VISUAL LABOのTOPと同じダーク×ゴールドのエディトリアルトーンで、罫線グリッドのカードセクションを作って。見出しはShippori Mincho、英字ラベルはCormorant Garamondイタリック、絵文字なし、ゴールドはアクセントのみ」
 
 新規ページ作成後は必ずローカルサーバー＋スクリーンショットで表示確認すること（特にモバイル375〜430px、詳細は `CLAUDE.md`）。
+
+## Exports — VIP page (2026-09-10)
+
+VIPページ専用の追加定義。既存ページの色・書体・共通ナビ・フッターは変更しません。
+構成は Split Studio（個室紹介 → 120分の施術 → 月額・単発 → デポジット → VIP体験 → FAQ）。
+料金・契約条件は既存内容を維持し、お一人専用・同伴不可に統一。2ベッドの室内画像は掲載せず、既存の待合ラウンジ・入口画像を正確なキャプション付きで使用します。
+ブラウザで320 / 375 / 414 / 768 / 1024 / 1280 / 1920pxの横はみ出しがないことを確認済み。本文103要素のコントラストは最低4.86:1。リンクとネイティブdetails以外の非同期操作はありません。
+
+### CSS (source of truth: tokens.css)
+
+```css
+/* VIP page tokens. Existing pages keep their shared style.css palette. */
+html.vip-page {
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f3ed;
+  --color-ink: #1a1a1a;
+  --color-ink-2: #333333;
+  --color-muted: #595959;
+  --color-rule: #e4e2dd;
+  --color-accent: #806731;
+  --color-accent-light: #c9a768;
+  --color-accent-ink: #ffffff;
+  --color-focus: #806731;
+  --color-dark: #211d18;
+  --color-on-dark: #f4efe6;
+  --color-on-dark-muted: #cfc7b9;
+  --color-dark-rule: #595149;
+  --font-display: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --font-body: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --font-outlier: 'Outfit', 'Futura', sans-serif;
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 2.7vw, 2.5rem);
+  --text-display: clamp(2.75rem, 4.6vw, 4.5rem);
+  --space-3xs: .25rem;
+  --space-2xs: .5rem;
+  --space-xs: .75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-section: clamp(3.5rem, 7vw, 6rem);
+  --rule-fine: 1px;
+  --radius-card: 0;
+  --vp-gutter: clamp(1.25rem, 4vw, 3rem);
+  --vp-sticky-height: 5rem;
+}
+```
+
+### Tailwind v4 (portable core mapping; not loaded by this static site)
+
+```css
+@theme {
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f3ed;
+  --color-ink: #1a1a1a;
+  --color-muted: #595959;
+  --color-rule: #e4e2dd;
+  --color-accent: #806731;
+  --font-display: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --font-body: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --radius-card: 0;
+}
+```
+
+### DTCG (portable core mapping)
+
+```json
+{
+  "color": {
+    "paper": { "$type": "color", "$value": "#ffffff" },
+    "paper-2": { "$type": "color", "$value": "#f6f3ed" },
+    "ink": { "$type": "color", "$value": "#1a1a1a" },
+    "muted": { "$type": "color", "$value": "#595959" },
+    "rule": { "$type": "color", "$value": "#e4e2dd" },
+    "accent": { "$type": "color", "$value": "#806731" }
+  },
+  "font": {
+    "body": { "$type": "fontFamily", "$value": ["Futura", "Century Gothic", "Outfit", "Noto Sans JP", "sans-serif"] }
+  },
+  "space": {
+    "sm": { "$type": "dimension", "$value": { "value": 1, "unit": "rem" } },
+    "md": { "$type": "dimension", "$value": { "value": 1.5, "unit": "rem" } },
+    "lg": { "$type": "dimension", "$value": { "value": 2, "unit": "rem" } }
+  }
+}
+```
+
+### shadcn/ui (OKLCH triples; use with oklch(var(--token)))
+
+```css
+:root {
+  --background: 100% 0 0;
+  --foreground: 21.779% 0 0;
+  --card: 96.481% 0.00860 84.573;
+  --card-foreground: 21.779% 0 0;
+  --primary: 52.673% 0.07881 84.598;
+  --primary-foreground: 100% 0 0;
+  --muted: 96.481% 0.00860 84.573;
+  --muted-foreground: 46.400% 0 0;
+  --border: 91.295% 0.00707 88.646;
+  --ring: 52.673% 0.07881 84.598;
+  --radius: 0;
+}
+```

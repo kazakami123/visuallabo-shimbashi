@@ -1,0 +1,41 @@
+/* VIP page tokens. Existing pages keep their shared style.css palette. */
+html.vip-page {
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f3ed;
+  --color-ink: #1a1a1a;
+  --color-ink-2: #333333;
+  --color-muted: #595959;
+  --color-rule: #e4e2dd;
+  --color-accent: #806731;
+  --color-accent-light: #c9a768;
+  --color-accent-ink: #ffffff;
+  --color-focus: #806731;
+  --color-dark: #211d18;
+  --color-on-dark: #f4efe6;
+  --color-on-dark-muted: #cfc7b9;
+  --color-dark-rule: #595149;
+  --font-display: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --font-body: 'Futura', 'Century Gothic', 'Outfit', 'Noto Sans JP', sans-serif;
+  --font-outlier: 'Outfit', 'Futura', sans-serif;
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 2.7vw, 2.5rem);
+  --text-display: clamp(2.75rem, 4.6vw, 4.5rem);
+  --space-3xs: .25rem;
+  --space-2xs: .5rem;
+  --space-xs: .75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-section: clamp(3.5rem, 7vw, 6rem);
+  --rule-fine: 1px;
+  --radius-card: 0;
+  --vp-gutter: clamp(1.25rem, 4vw, 3rem);
+  --vp-sticky-height: 5rem;
+}
