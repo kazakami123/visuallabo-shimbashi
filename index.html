@@ -223,16 +223,27 @@
 <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","XXXXXXXXXX");</script>
 -->
 <style>
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V4 */
 :root{
   --ink:#111111; --ink-soft:#333333; --mute:#767066;
   --gold:#c9a768; --gold-d:#806731; --greige:#726c60; --line:#e8e5df;
   --paper:#ffffff; --wash:#f7f5f1;
   --sans:"Noto Sans JP",sans-serif;
   --futura:"Futura","Century Gothic","Noto Sans JP",sans-serif;
+  --trial-night:oklch(17% .012 68); --trial-ink:oklch(95% .012 78);
+  --trial-muted:oklch(76% .018 78); --trial-rule:oklch(50% .045 78);
+  --trial-accent:oklch(73% .09 78); --trial-accent-ink:var(--trial-night); --trial-focus:oklch(78% .12 78);
+  --trial-error:oklch(67% .16 28); --trial-success:oklch(72% .12 150);
+  --trial-shadow:oklch(17% .012 68 / .2);
+  --trial-space-3xs:2px; --trial-space-2xs:4px; --trial-space-xs:8px;
+  --trial-space-sm:12px; --trial-space-md:16px; --trial-space-lg:24px;
+  --trial-radius:18px;
+  --ease-out:cubic-bezier(.16,1,.3,1); --ease-in:cubic-bezier(.7,0,.84,0);
+  --dur-micro:100ms; --dur-short:220ms;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink-soft);background:var(--paper);line-height:2;font-weight:500;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:16px}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink-soft);background:var(--paper);line-height:2;font-weight:500;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:clip;font-size:16px}
 img{display:block;width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
@@ -336,6 +347,47 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .offer-cta-wrap{text-align:center;margin-top:24px}
 .offer-cta-wrap .btn-line{width:100%;max-width:460px}
 .offer-note{text-align:center;margin-top:14px}
+
+/* Hallmark · component: mobile trial card · genre: editorial · theme: VISUAL LABO locked system
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * contrast: pass (46–50) · mobile: pass (36, 59, 61–69)
+ */
+.trial-offer{display:grid;max-width:420px;margin-inline:auto;overflow:clip;border:1px solid var(--trial-rule);border-radius:var(--trial-radius);background:var(--trial-night);color:var(--trial-ink);box-shadow:0 20px 48px var(--trial-shadow)}
+.trial-offer__media{position:relative;aspect-ratio:3/2;overflow:clip;background:var(--trial-night)}
+.trial-offer__media::after{content:"";position:absolute;inset:38% 0 0;background:linear-gradient(180deg,transparent,var(--trial-night));pointer-events:none}
+.trial-offer__media img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.82) contrast(1.03)}
+.trial-offer__badge,.trial-offer__caption{position:absolute;z-index:1;font-family:var(--futura);line-height:1;white-space:nowrap}
+.trial-offer__badge{inset-block-start:var(--trial-space-md);inset-inline-start:var(--trial-space-md);padding:var(--trial-space-xs) var(--trial-space-sm);border:1px solid var(--trial-accent);color:var(--trial-ink);background:var(--trial-night);font-size:10px;letter-spacing:.16em}
+.trial-offer__caption{inset-inline-end:var(--trial-space-md);inset-block-end:var(--trial-space-xs);color:var(--trial-muted);font-size:10px;letter-spacing:.1em}
+.trial-offer__body{display:grid;gap:var(--trial-space-md);padding:var(--trial-space-xs) var(--trial-space-lg) var(--trial-space-lg);min-width:0}
+.trial-offer__title{margin:0;color:var(--trial-ink);font-size:clamp(22px,7.2vw,30px);font-weight:700;line-height:1.35;letter-spacing:.05em;overflow-wrap:anywhere;min-width:0}
+.trial-offer__course{display:grid;gap:var(--trial-space-3xs);color:var(--trial-muted);font-size:13px;line-height:1.65;letter-spacing:.02em}
+.trial-offer__course span{color:var(--trial-accent);font-family:var(--futura);font-size:10px;letter-spacing:.14em}
+.trial-offer__course b{font-weight:500}
+.trial-offer__price{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--trial-space-md);padding-block:var(--trial-space-md);border-block:1px solid var(--trial-rule);font-variant-numeric:tabular-nums}
+.trial-offer__usual{display:grid;gap:var(--trial-space-3xs);color:var(--trial-muted);font-size:10px;line-height:1.5;white-space:nowrap}
+.trial-offer__usual s{font-size:15px;color:var(--trial-ink)}
+.trial-offer__now{display:flex;align-items:flex-end;gap:var(--trial-space-xs);margin-inline-start:auto;line-height:.9;white-space:nowrap}
+.trial-offer__now strong{color:var(--trial-accent);font-family:var(--futura);font-size:clamp(43px,14vw,58px);font-weight:700;letter-spacing:-.035em}
+.trial-offer__now small{padding-block-end:var(--trial-space-2xs);color:var(--trial-muted);font-size:11px;line-height:1}
+.trial-offer__facts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--trial-space-xs) var(--trial-space-md);margin:0;padding:0;list-style:none;color:var(--trial-ink);font-size:14px;line-height:1.5}
+.trial-offer__facts li{display:flex;align-items:center;gap:var(--trial-space-xs);min-width:0}
+.trial-offer__facts li::before{content:"";flex:0 0 auto;width:4px;height:4px;background:var(--trial-accent);transform:rotate(45deg)}
+.trial-offer__cta{display:flex;align-items:center;justify-content:space-between;gap:var(--trial-space-md);min-height:52px;padding:var(--trial-space-sm) var(--trial-space-md);border:1px solid var(--trial-accent);color:var(--trial-ink);background:var(--trial-night);font-size:14px;font-weight:700;line-height:1.25;letter-spacing:.06em;white-space:nowrap;transition:background-color var(--dur-short) var(--ease-out),color var(--dur-short) var(--ease-out),transform var(--dur-micro) var(--ease-out)}
+.trial-offer__cta svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.trial-offer__cta:focus-visible{outline:3px solid var(--trial-focus);outline-offset:3px}
+.trial-offer__cta:active{transform:translateY(1px)}
+.trial-offer__cta[aria-disabled="true"]{opacity:.5;cursor:not-allowed;pointer-events:none}
+.trial-offer__cta[data-state="loading"]{cursor:wait}
+.trial-offer__cta[data-state="loading"] svg{opacity:.35}
+.trial-offer__cta[data-state="error"]{border-color:var(--trial-error)}
+.trial-offer__cta[data-state="success"]{border-color:var(--trial-success)}
+@media(hover:hover) and (pointer:fine){.trial-offer__cta:hover{background:var(--trial-accent);color:var(--trial-accent-ink);transform:translateY(-1px)}.trial-offer__cta:focus-visible:hover{background:var(--trial-night);color:var(--trial-ink);transform:none}}
+@media(min-width:48rem){.trial-offer{display:none}}
+@media(max-width:23.5rem){.trial-offer__body{padding-inline:var(--trial-space-md)}.trial-offer__price{gap:var(--trial-space-xs)}.trial-offer__now strong{font-size:42px}.trial-offer__facts{grid-template-columns:minmax(0,1fr)}.trial-offer__cta{font-size:13px;padding-inline:var(--trial-space-sm)}}
+@media(prefers-reduced-motion:reduce){.trial-offer__cta{transition-duration:var(--dur-micro)}.trial-offer__cta:hover,.trial-offer__cta:active{transform:none}}
+
+@media(max-width:47.999rem){.offer-banner{display:none!important}}
 
 
 /* 4. strengths image */
@@ -600,6 +652,29 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <img src="images/trial-card-v2.png" alt="TRIAL 初回体験。60分 BODY MAINTENANCEコース、高周波30分＋HYPER EMS30分、通常価格9,800円（税込）のところ2,980円（税込）。男性専用・新橋駅 徒歩3分。" loading="eager" width="1122" height="1402">
       </picture>
     </a>
+    <article class="trial-offer rv" aria-labelledby="trial-offer-title">
+      <div class="trial-offer__media">
+        <img src="images/trial-treatment-mobile-v1.jpg" alt="男性のお客様が高周波施術を受けているイメージ" loading="lazy" decoding="async" width="1536" height="1024">
+        <span class="trial-offer__badge">MEN ONLY ／ 男性専用</span>
+        <span class="trial-offer__caption">施術イメージ</span>
+      </div>
+      <div class="trial-offer__body">
+        <h2 class="trial-offer__title" id="trial-offer-title">仕事帰りに、寝たまま。</h2>
+        <p class="trial-offer__course"><span>FIRST TRIAL ／ 60 MINUTES</span><b>高周波30分 ＋ HYPER EMS30分</b></p>
+        <div class="trial-offer__price" aria-label="通常価格9,800円のところ、初回価格2,980円、税込">
+          <span class="trial-offer__usual">通常価格 <s>¥9,800</s></span>
+          <span class="trial-offer__now"><strong>¥2,980</strong><small>税込</small></span>
+        </div>
+        <ul class="trial-offer__facts" aria-label="初回体験の特徴">
+          <li>手ぶらでOK</li>
+          <li>新橋駅 徒歩3分</li>
+        </ul>
+        <a class="trial-offer__cta" href="flow.html" data-cta="banner_offer_mobile">
+          <span>初回体験を詳しく見る</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
     <p class="note offer-note rv">※LINE友だち追加のご予約で適用。お一人さま1回まで・税込。</p>
   </div>
 </section>
