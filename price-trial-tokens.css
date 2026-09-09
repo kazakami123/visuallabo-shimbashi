@@ -1,0 +1,23 @@
+/* VISUAL LABO · scoped trial tokens · reuses DESIGN.md and style.css */
+:root {
+  --pt-paper: var(--paper-2);
+  --pt-ink: var(--ink);
+  --pt-muted: var(--ink-mute);
+  --pt-hover: var(--ink-soft);
+  --pt-accent: var(--gold-d);
+  --pt-rule: var(--line);
+  --pt-font: "Futura", "Century Gothic", "Outfit", "Noto Sans JP", sans-serif;
+  --pt-number: "Outfit", "Futura", "Century Gothic", sans-serif;
+  --pt-space-xs: 8px;
+  --pt-space-sm: 12px;
+  --pt-space-md: 16px;
+  --pt-space-lg: 24px;
+  --pt-space-xl: 32px;
+  --pt-space-2xl: 48px;
+  --pt-space-3xl: 64px;
+  --pt-text-note: 14px;
+  --pt-text-body: 16px;
+  --pt-text-title: clamp(28px, 3.4vw, 40px);
+  --pt-text-price: clamp(64px, 7vw, 80px);
+  --pt-radius: 4px;
+}

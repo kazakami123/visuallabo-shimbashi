@@ -1,0 +1,64 @@
+/* Hallmark · component: first-trial invitation · genre: editorial · theme: existing DESIGN.md
+ * states: default · hover · focus · active · disabled · loading · error · success
+ * pre-emit critique: P5 H5 E4 S4 R5 V4 · contrast: pass (46–50)
+ * Motion: none. Async styles are preview-only; production links remain native navigation.
+ */
+@import url("price-trial-tokens.css?v=20260910a");
+
+.price-page .price-trial {
+  background: var(--pt-paper);
+  color: var(--pt-ink);
+  padding-block: var(--pt-space-2xl);
+  font-family: var(--pt-font);
+}
+.pt-wrap { max-width: 1000px; }
+.pt-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--pt-space-xl); }
+.pt-intro, .pt-offer { min-width: 0; }
+.pt-intro h2 { font-size: var(--pt-text-title); font-weight: 500; line-height: 1.55; letter-spacing: .03em; overflow-wrap: anywhere; }
+.pt-lede { margin-top: var(--pt-space-sm); font-size: var(--pt-text-body); }
+.pt-course { margin-top: var(--pt-space-lg); }
+.pt-course h3 { font-size: var(--pt-text-note); font-weight: 500; letter-spacing: .06em; }
+.pt-course p { margin-top: var(--pt-space-xs); font-size: var(--pt-text-body); line-height: 1.8; }
+.pt-course p br { display: inline; }
+.pt-offer { border-top: 1px solid var(--pt-accent); padding-top: var(--pt-space-lg); }
+.pt-price-label { display: flex; align-items: baseline; gap: var(--pt-space-sm); font-size: var(--pt-text-note); }
+.pt-price-label span { color: var(--pt-muted); }
+.pt-price { display: flex; align-items: baseline; gap: var(--pt-space-xs); line-height: 1.15; margin-block: var(--pt-space-xs); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pt-price strong { font-family: var(--pt-number); font-size: var(--pt-text-price); font-weight: 400; letter-spacing: -.04em; }
+.pt-yen { font-family: var(--pt-number); font-size: 30px; }
+.pt-tax { font-size: var(--pt-text-note); }
+.pt-regular { color: var(--pt-muted); font-size: var(--pt-text-note); }
+.pt-regular s { margin-left: var(--pt-space-xs); }
+.pt-action {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--pt-space-md);
+  min-height: 56px; width: 100%; padding: var(--pt-space-md) var(--pt-space-lg);
+  margin-top: var(--pt-space-lg); border: 1px solid var(--pt-ink); border-radius: var(--pt-radius);
+  background: var(--pt-ink); color: var(--pt-paper); font-family: var(--pt-font);
+  font-size: var(--pt-text-note); font-weight: 500; letter-spacing: .02em; line-height: 1.5;
+  white-space: nowrap; cursor: pointer; transition: none;
+}
+.pt-flow { display: inline-flex; align-items: center; gap: var(--pt-space-sm); min-height: 44px; margin-top: var(--pt-space-xs); color: var(--pt-ink); font-size: var(--pt-text-note); white-space: nowrap; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--pt-accent); }
+@media (hover: hover) {
+  .pt-action:hover { background: var(--pt-hover); color: var(--pt-paper); }
+  .pt-flow:hover { text-decoration-thickness: 2px; }
+}
+.pt-action.is-hover { background: var(--pt-hover); color: var(--pt-paper); }
+.pt-action:focus-visible, .pt-action.is-focus, .pt-flow:focus-visible { outline: 2px solid var(--pt-accent); outline-offset: 4px; }
+.pt-action:focus-visible, .pt-action.is-focus { background: var(--pt-ink); color: var(--pt-paper); }
+.pt-action:active, .pt-action.is-active { transform: translateY(1px); }
+.pt-action:disabled, .pt-action[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
+.pt-action[data-state="loading"] { border-style: dashed; cursor: progress; }
+.pt-action[data-state="error"] { background: var(--pt-paper); color: var(--pt-ink); border-style: dashed; }
+.pt-action[data-state="success"] { background: var(--pt-paper); color: var(--pt-ink); border-color: var(--pt-accent); }
+.pt-details { display: grid; gap: var(--pt-space-xs); margin-top: var(--pt-space-xl); padding-top: var(--pt-space-lg); border-top: 1px solid var(--pt-rule); color: var(--pt-muted); font-size: var(--pt-text-note); line-height: 1.85; }
+.pt-details .pt-membership { color: var(--pt-ink); }
+.pt-membership span { white-space: nowrap; }
+@media (min-width: 48rem) {
+  .price-page .price-trial { padding-block: var(--pt-space-3xl); }
+  .pt-layout { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--pt-space-3xl); }
+  .pt-offer { border-top: 0; border-left: 1px solid var(--pt-accent); padding-top: 0; padding-left: var(--pt-space-2xl); }
+  .pt-details { margin-top: var(--pt-space-2xl); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pt-action:active, .pt-action.is-active { transform: none; }
+}
