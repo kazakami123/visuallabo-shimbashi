@@ -408,6 +408,12 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .ba-grid figcaption{font-size:12px;color:var(--ink-soft);padding:12px 14px;line-height:1.8;background:#fff;border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px}
 @media(max-width:640px){.ba-grid{grid-template-columns:1fr;max-width:440px}}
 
+#records{padding:clamp(28px,4vw,48px) 0;scroll-margin-top:130px}
+.records-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:760px;margin:0 auto}
+.records-gallery figure{margin:0}
+.records-gallery img{display:block;width:100%;height:auto}
+@media(max-width:560px){.records-gallery{grid-template-columns:minmax(0,1fr);max-width:320px;gap:18px}}
+
 /* 7. voice */
 .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,320px));gap:16px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0;justify-content:center}
 .vc[hidden]{display:none!important}
@@ -598,7 +604,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <div class="navlinks">
         <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
         <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
-        <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">変化の記録</span></a>
+        <a href="#records"><span class="te">BEFORE&amp;AFTER</span><span class="tj">変化の記録</span></a>
         <a href="rf.html"><span class="te">RF</span><span class="tj">高周波とは</span></a>
         <a href="ems.html"><span class="te">EMS</span><span class="tj">EMSとは</span></a>
         <a href="sauna.html"><span class="te">SAUNA</span><span class="tj">サウナ</span></a>
@@ -614,7 +620,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <a class="hot" href="flow.html"><span class="te">FIRST TRIAL</span><span class="tj">初回体験</span></a>
     <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
     <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
-    <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">変化の記録</span></a>
+    <a href="#records"><span class="te">BEFORE&amp;AFTER</span><span class="tj">変化の記録</span></a>
     <a href="rf.html"><span class="te">RF</span><span class="tj">高周波とは</span></a>
     <a href="ems.html"><span class="te">EMS</span><span class="tj">EMSとは</span></a>
     <a href="sauna.html"><span class="te">SAUNA</span><span class="tj">サウナ</span></a>
@@ -719,21 +725,15 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   </div>
 </section>
 
-<!-- 4.7 メソッド 4ステップ -->
-<section class="sec" id="records">
+<!-- 4.7 ビフォーアフター写真 -->
+<section class="sec" id="records" aria-label="男性のお客様のビフォーアフター">
   <div class="wrap">
-    <div class="center rv">
-      <div class="kicker c">Records ｜ 変化の記録</div>
-      <h2 class="tt">通われている方の、<em>ビフォーアフター</em>。</h2>
-      <p class="lead-s" style="margin-top:14px">男性のお客様の施術前後を、4組ご紹介します。</p>
+    <div class="records-gallery">
+      <figure><img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・60分施術" width="964" height="805"></figure>
+      <figure><img loading="lazy" src="images/ba2026-m4-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"></figure>
+      <figure><img loading="lazy" src="images/ba2026-m5-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"></figure>
+      <figure><img loading="lazy" src="images/ba2026-m6-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"></figure>
     </div>
-    <div class="ba-grid rv">
-      <figure><img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・60分施術" width="964" height="805"><figcaption>男性・側面｜1回・60分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-      <figure><img loading="lazy" src="images/ba2026-m4-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・側面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-      <figure><img loading="lazy" src="images/ba2026-m5-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・側面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-      <figure><img loading="lazy" src="images/ba2026-m6-side-90.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="956" height="805"><figcaption>男性・側面｜1回・90分施術<br>※効果・感じ方には個人差があります</figcaption></figure>
-    </div>
-    <p class="center rv" style="margin-top:clamp(24px,4vw,36px)"><a class="btn btn-out" href="beforeafter.html">ビフォーアフターの詳細を見る →</a></p>
   </div>
 </section>
 
@@ -1026,7 +1026,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <div class="ft-links">
         <a href="menu.html">メニュー</a>
         <a href="price.html">料金</a>
-        <a href="beforeafter.html">変化の記録</a>
+        <a href="#records">変化の記録</a>
         <a href="machine.html">MystiCore®</a>
         <a href="flow.html">初回体験の流れ</a>
         <a href="faq.html">よくある質問</a>
