@@ -142,8 +142,9 @@ const QS=[
    ['太りにくい体を維持したい・習慣にしたい','maintain']]},
  {q:'Q2. いちばん気になる部位は？',opts:[
    ['お腹・下腹','onaka'],
-   ['二の腕・背中・肩まわり','upper'],
-   ['脚・ふくらはぎ・足首','lower'],
+   ['首・肩・肩甲骨・背中','upper'],
+   ['腰まわり','koshi'],
+   ['ふくらはぎ・足首','lower'],
    ['全身・複数の部位','multi']]},
  {q:'Q3. 通い方の希望は？',opts:[
    ['まずは気軽に・短時間で','easy'],
@@ -170,9 +171,10 @@ function render(){
  const goal=ans[0],area=ans[1],pace=ans[2],effort=ans[3];
  let track = goal==='slim' ? '痩身ケア' : goal==='care' ? '体のケア' : '体型管理・維持';
  let menu,guide=null;
- if(area==='lower'){menu='BODY MAINTENANCE MENU（下半身）';guide=['脚のケアのガイドを見る →','care-ashi.html'];}
+ if(area==='lower'){menu='BODY MAINTENANCE MENU（ふくらはぎ・足首）';guide=['ふくらはぎ・足首のケアのガイドを見る →','care-ashi.html'];}
+ else if(area==='koshi'){menu='BODY MAINTENANCE MENU（腰まわり）';guide=['腰まわりのケアのガイドを見る →','care-koshi.html'];}
  else if(area==='multi'){menu='BODY MAINTENANCE MENU 120（全身1〜3部位）';}
- else if(area==='upper'){menu='BODY MAINTENANCE MENU（上半身）';guide=['背中のガイドを見る →','care-senaka.html'];}
+ else if(area==='upper'){menu='BODY MAINTENANCE MENU（上半身）';guide=['首・肩・背中のガイドを見る →','care-katakubi.html'];}
  else {
    if(goal==='slim' && pace==='easy'){menu='HYPER EMS MENU（60分・貼るだけ）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
    else {menu='BODY MAINTENANCE MENU（上半身）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
@@ -189,7 +191,7 @@ function render(){
   +(guide?'<a class="guide" href="'+guide[1]+'">'+guide[0]+'</a>':'')+'</div>'
   +'<p class="why">'+why+'</p>'
   +'<div class="ctas"><a class="btn btn-gold" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">初回体験 60分 ¥2,980</a><a class="btn btn-ghost" href="menu.html">メニューを詳しく見る</a></div>'
-  +'<div class="note">※ 本診断は目安です。当日のカウンセリングで、お悩みや体の状態に合わせて最適なメニューをご提案します。効果・感じ方には個人差があります。</div>'
+  +'<div class="note">※ 本診断は目安です。当日のカウンセリングで、お悩みや体の状態に合わせてメニューをご提案します。効果・感じ方には個人差があります。<br>※ ペースメーカー等の医療機器をご使用の方、施術部位に金属インプラントのある方などはご利用いただけません。</div>'
   +'<button class="back">← もう一度診断する</button></div>';
  box.innerHTML=html;
  box.querySelector('.back').onclick=()=>{step=0;ans=[];render();};
