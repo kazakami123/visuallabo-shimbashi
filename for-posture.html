@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,9 @@
 <link rel="canonical" href="https://visuallabo.com/for-posture.html">
 <meta property="og:url" content="https://visuallabo.com/for-posture.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 <header>
@@ -70,6 +73,13 @@
     <p class="sub">整えてから、動かす。寝ながら、軽く・まっすぐへ。</p>
   </div>
 </section>
+<div data-tabs="page" class="page-tabs-content">
+<nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+  <a class="choice-tab" data-tab href="#page-overview">特徴</a>
+  <a class="choice-tab" data-tab href="#page-treatment">施術・メニュー</a>
+  <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+</nav>
+<div id="page-overview" data-tab-panel>
 
 <section class="sec"><div class="wrap"><p class="body-txt rv" style="max-width:620px;margin:0 auto;text-align:center;font-size:clamp(15px,2.8vw,18px);font-weight:500;color:var(--ink);line-height:1.9">ピラティスも整体も続かなかった——そんなあなたも、大丈夫。<br>VISUAL LABOは、寝ているだけで「整える」を続けられる男性専用の会員制体型管理サロンです。</p></div></section>
 
@@ -92,10 +102,14 @@
 
 <section class="sec" style="background:var(--ink);color:#fff"><div class="wrap"><div style="max-width:640px;margin:0 auto;text-align:center"><div style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:11px;letter-spacing:.12em;color:var(--gold-d);margin-bottom:12px">DON'T WORRY</div><p style="font-size:clamp(18px,3.4vw,24px);font-weight:500;line-height:1.7;margin:0 0 12px">「続かない」を、責めなくていい。</p><p style="font-size:14px;line-height:2;color:rgba(255,255,255,.82);margin:0">姿勢のクセは、毎日の積み重ね。だからこそ、続けられる方法が大切です。横になるだけで整えられる場所で、無理なく。※コンディショニングを目的とし、医療行為ではありません。気になる症状は医療機関へ。</p></div></div></section>
 
+</div>
+<div id="page-treatment" data-tab-panel>
 <section class="sec" id="price"><div class="wrap"><div class="nexthead rv"><div class="kicker">First Visit</div><h2 class="lead">まずは、<em>初回体験から</em>。</h2><p class="body-txt" style="max-width:520px;margin:14px auto 0;font-size:14.5px">初回体験は、60分 BODY MAINTENANCEコース（高周波30分＋HYPER EMS30分）¥2,980。<br>高周波で温め、EMSで動かす本格ケアです。</p></div>
     <div class="rv" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:560px;margin:clamp(20px,4vw,30px) auto 0"><a class="btn btn-gold" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" style="flex:1 1 220px">初回体験 60分 ¥2,980</a><a class="btn btn-out" href="care-shindan.html" style="flex:1 1 200px">お悩み診断をする</a></div>
     <div class="rv" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:clamp(20px,4vw,28px) auto 0"><a href="learn-posture.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">反り腰・姿勢のこと →</a><a href="care-katakubi.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">肩・首・肩甲骨 →</a><a href="care-ashi.html" style="font-size:13px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:7px 15px;text-decoration:none">脚の疲れ・重さ →</a></div></div></section>
 
+</div>
+<div id="page-faq" data-tab-panel>
 <section class="sec" style="background:var(--paper-2)"><div class="wrap"><div class="nexthead rv"><div class="kicker">FAQ</div><h2 class="lead">よくある、<em>ご質問</em>。</h2></div><div class="faqd rv" style="margin-top:clamp(22px,4vw,34px)">
       <details><summary>姿勢は変わりますか？</summary><div class="a">温めて動かすことは、姿勢の意識づくりの一助になるといわれます。※変化・感じ方には個人差があり、医療行為ではありません。</div></details>
       <details><summary>ピラティスや整体と何が違う？</summary><div class="a">自分で動くピラティスや、ほぐす整体と違い、寝たままEMSで筋肉を動かします。続けやすいのが特長です。</div></details>
@@ -105,6 +119,8 @@
       <details><summary>しつこく勧誘されませんか？</summary><div class="a">その場でのご契約を無理にお願いすることはありません。料金・契約期間・退会条件は、ご契約の前にすべてご確認いただけます。</div></details>
       <details><summary>男性専用ですか？</summary><div class="a">はい。VISUAL LABOは男性専用の会員制体型管理サロンです。女性のお客様のご利用はお受けしていません。</div></details>
 </div></div></section>
+</div>
+</div>
 
 <section class="sec"><div class="wrap"><div style="max-width:640px;margin:0 auto;text-align:center"><p style="font-size:clamp(16px,3vw,20px);font-weight:500;color:var(--ink);line-height:1.7;margin:0 0 16px">痩せたい方も。姿勢が気になる方も。<br><span style="color:var(--gold-d)">どちらも、温める→動かすの同じケアで。</span></p><a class="btn btn-out" href="for-slim.html">痩せたい方へ →</a></div></div></section>
 

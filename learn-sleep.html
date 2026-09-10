@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,9 @@
 <link rel="canonical" href="https://visuallabo.com/learn-sleep.html">
 <meta property="og:url" content="https://visuallabo.com/learn-sleep.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 <header>
@@ -86,9 +89,17 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">リラックス</a>
+    <a class="choice-tab" data-tab href="#page-treatment">高周波・EMS</a>
+    <a class="choice-tab" data-tab href="#page-message">サロンから</a>
+    <a class="choice-tab" data-tab href="#page-faq">よくある質問</a>
+  </nav>
 <section class="sec">
   <div class="wrap">
     <article class="art">
+<div id="page-overview" data-tab-panel>
       <p>「施術中に寝てしまって、すみません」——そんなお声をよくいただきます。でも実は、<b>眠ってしまうのは、むしろ歓迎</b>。体がリラックスしている状態は、温める・動かす施術にとって有利に働く可能性があるといわれています。その理由を5つ、解説します。</p>
 <nav class="toc"><div class="tt">CONTENTS</div><ol><li><a href="#r1">力みが、抜ける</a></li><li><a href="#r2">副交感神経が、優位になる</a></li><li><a href="#r3">高周波の熱が、届きやすい</a></li><li><a href="#r4">呼吸が、深くなる</a></li><li><a href="#r5">EMSが、効率よく届く</a></li><li><a href="#vl">VISUAL LABOから</a></li></ol></nav>
 
@@ -96,22 +107,30 @@
 
 <div class="blk" id="r2"><h2>理由② 副交感神経が、優位になる</h2><p>眠っているとき、体は<b>副交感神経が優位</b>な状態になります。血管がひらいて巡りがよくなり、リンパの流れも促され、筋肉の緊張がとれる——温めて整える施術には、うってつけのコンディションといわれています。</p><div class="keypoint"><div class="kl">KEY POINT</div><p>リラックス＝「休むスイッチ」が入った状態。巡り・ゆるみ・整えの土台になるとされています。</p></div></div>
 
+</div>
+<div id="page-treatment" data-tab-panel>
 <div class="blk" id="r3"><h2>理由③ 高周波の熱が、届きやすい</h2><p>MystiCoreのような高周波は、組織の電気抵抗によって<b>体の内側で熱を生む</b>しくみです。筋肉がガチガチに緊張しているときより、リラックスして循環がよい状態のほうが、<b>熱が均一に広がりやすい</b>といわれています。</p></div>
 
 <div class="blk" id="r4"><h2>理由④ 呼吸が、深くなる</h2><p>眠ると呼吸は自然と深くなります。深い呼吸では<b>横隔膜が大きく動き</b>、リンパや静脈の流れが促され、腹圧もゆるやかに変化します。お腹まわりの巡りにとって、プラスにはたらくとされています。</p></div>
 
 <div class="blk" id="r5"><h2>理由⑤ EMSが、効率よく届く</h2><p>EMSは、外から筋肉を動かす技術です。自分で力んでいると刺激が入りにくいことがありますが、眠って脱力していると、<b>機械による筋肉の収縮が効率よく起こりやすい</b>といわれています。がんばらないほうが、うまくいく——VISUAL LABOの「がんばらない体型管理」そのものです。</p></div>
 
+</div>
+<div id="page-message" data-tab-panel>
 <div class="blk" id="vl"><h2>VISUAL LABOから</h2><p>眠ってしまうくらいリラックスされている方のほうが、お身体の力みが抜けて巡りもよくなるため、施術後のラインの変化を感じられる方が多くいらっしゃいます。<b>寝てしまってもまったく問題ありません。安心してお休みください。</b></p><p style="font-size:12px;color:var(--ink-mute)">※ 一般的な体のしくみの解説です。「眠ると必ず結果が良くなる」というものではなく、医療行為でもありません。効果・感じ方には個人差があります。</p></div>
 
+</div>
+<div id="page-faq" data-tab-panel>
 <div class="blk" id="faq"><h2>よくあるご質問</h2><div class="faqd">
       <details><summary>施術中に寝てしまってもいいですか？</summary><div class="a">はい、むしろ歓迎です。力みが抜けてリラックスした状態は、温める・動かす施術に有利に働く可能性があるといわれています。安心してお休みください。</div></details>
       <details><summary>眠れなくても意味はありますか？</summary><div class="a">もちろんです。横になって力を抜いていただくだけで十分です。眠りは「リラックスの結果」であって、目的ではありません。</div></details>
       <details><summary>終わったら起こしてもらえますか？</summary><div class="a">はい。施術終了時にスタッフがやさしくお声がけしますので、そのままお休みいただいて大丈夫です。</div></details>
 </div></div>
+</div>
     </article>
   </div>
 </section>
+</div>
 
 <section class="sec" style="background:var(--paper-2)">
   <div class="wrap">

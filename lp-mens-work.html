@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,9 @@
 <meta name="theme-color" content="#faf9f6">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="assets/lp.css">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 <header>
@@ -67,6 +70,14 @@
     </div>
   </div>
 </section>
+<div data-tabs="page" class="page-tabs-content">
+<nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+  <a class="choice-tab" data-tab href="#page-overview">特徴</a>
+  <a class="choice-tab" data-tab href="#page-treatment">施術・実例</a>
+  <a class="choice-tab" data-tab href="#page-price">料金・アクセス</a>
+  <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+</nav>
+<div id="page-overview" data-tab-panel>
 
 <section class="sec"><div class="wrap"><div class="lp-lead rv">
   <p>続かなかったのは、根性ではなく段取りのせいです。<span class="s">仕事のあとに着替えて、運動して、汗を流して、帰る。この段取りが週2回あると、たいてい先に予定の方が負けます。VISUAL LABOは、寄って、横になって、帰るだけ。<br>※効果・感じ方には個人差があります。</span></p>
@@ -83,6 +94,8 @@
   <p class="lp-note rv">※ ペースメーカー等の医療機器をご使用の方、金属インプラントのある方、心疾患・高血圧・悪性腫瘍の既往がある方など、ご利用いただけない場合があります。ご不安な点はご予約前にご相談ください。詳しくは<a href="treatment.html#safety">安全にご利用いただくために</a>をご確認ください。</p>
 </div></section>
 
+</div>
+<div id="page-treatment" data-tab-panel>
 <section class="sec" style="background:var(--paper-2)"><div class="wrap">
   <div class="nexthead rv"><div class="kicker">METHOD</div><h2 class="lead">60分／90分の中で、この順番に進みます。</h2></div>
   <div class="lp-flow"><div class="lp-step rv"><div class="st">STEP 01 ／ HEAT</div><h3>温める</h3><p>高周波で深部からじんわり温め、冷えてこわばった体をゆるめます。すべての土台になる工程です。</p></div><div class="lp-step rv"><div class="st">STEP 02 ／ FLOW</div><h3>めぐらせる</h3><p>温まった体の血流やリンパのめぐりを促進。ためこみにくい、流れの良い状態へ導きます。</p></div><div class="lp-step rv"><div class="st">STEP 03 ／ MOVE</div><h3>動かす</h3><p>HYPER EMSの電気刺激で、自分では動かしにくい奥のインナーマッスルを効率よく動かします。</p></div><div class="lp-step rv"><div class="st">STEP 04 ／ KEEP</div><h3>維持する</h3><p>月1回から続けられる設計。がんばる日をつくらず、整えた状態を習慣で保ちます。</p></div></div>
@@ -102,6 +115,8 @@
   <div class="lp-links rv"><a href="beforeafter.html">変化の記録を全部見る →</a></div>
 </div></section>
 
+</div>
+<div id="page-price" data-tab-panel>
 <section class="sec" id="price" style="background:var(--paper-2)"><div class="wrap">
   <div class="nexthead rv"><div class="kicker">PRICE</div><h2 class="lead">料金は、初回体験 ¥2,980から。</h2></div>
   <div class="lp-price rv">
@@ -134,10 +149,14 @@
   <div class="lp-links rv"><a href="index.html#access">アクセス・道順 →</a><a href="flow.html">当日の流れ →</a><a href="price.html">料金をすべて見る →</a></div>
 </div></section>
 
+</div>
+<div id="page-faq" data-tab-panel>
 <section class="sec" style="background:var(--paper-2)"><div class="wrap">
   <div class="nexthead rv"><div class="kicker">FAQ</div><h2 class="lead">はじめての方の、よくあるご質問。</h2></div>
   <div class="lp-faq rv"><details><summary>他のお客様と顔を合わせますか？</summary><div class="a">VISUAL LABOは男性専用の会員制体型管理サロンです。カウンセリングから施術まで、すべて完全個室で行います。</div></details><details><summary>しつこく勧誘されませんか？</summary><div class="a">その場でのご契約を無理にお願いすることはありません。料金・契約期間・退会条件は、ご契約の前にすべてご確認いただけます。</div></details><details><summary>何時まで受けられますか？</summary><div class="a">営業は12:00 — 21:00です。お仕事帰りの時間帯もご予約いただけます。空き状況はLINEでご確認ください。</div></details><details><summary>予約の変更やキャンセルは？</summary><div class="a">LINEからご連絡いただけます。直前のご変更もまずはご相談ください。</div></details><details><summary>シャワーは必要ですか？</summary><div class="a">必須ではありません。施術は横になったまま進み、汗だくになる内容ではないので、そのままお帰りいただけます。</div></details><details><summary>持ち物はありますか？</summary><div class="a">ありません。お着替えをご用意しています。</div></details><details><summary>月に1回でも意味はありますか？</summary><div class="a">まずは続くペースから始めるのがおすすめです。月1回・60分のプランをご用意しています。※変化・感じ方には個人差があります。</div></details></div>
 </div></section>
+</div>
+</div>
 
 <section class="sec cta"><div class="wrap">
   <h2>まずは、<em>初回体験</em>から。</h2>

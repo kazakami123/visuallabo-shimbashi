@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,9 @@
 <link rel="canonical" href="https://visuallabo.com/treatment.html">
 <meta property="og:url" content="https://visuallabo.com/treatment.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script defer src="assets/choice-tabs.js?v=20260910d"></script>
 </head>
 <body>
 
@@ -74,7 +77,16 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">施術の特徴</a>
+    <a class="choice-tab" data-tab href="#page-care">お腹のケア</a>
+    <a class="choice-tab" data-tab href="#page-flow">施術の流れ</a>
+  </nav>
+
+
 <!-- INTRO -->
+<div id="page-overview" data-tab-panel>
 <section class="sec intro">
   <div class="wrap narrow">
     <div class="section-num rv">About — Treatment</div>
@@ -113,8 +125,10 @@
     <div class="closer rv">深部までしっかり温めて、筋肉がやわらかく、電気が伝わりやすくなった状態でHYPER EMS。<br>だから、お腹まわりに<b>効率よくアプローチ</b>できます。</div>
   </div>
 </section>
+</div>
 
 <!-- WHY THE MACHINE -->
+<div id="page-care" data-tab-panel>
 <section class="sec reason">
   <div class="wrap">
     <div class="rv">
@@ -133,8 +147,10 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- METHOD (2 STEP) -->
+<div id="page-flow" data-tab-panel>
 <section class="sec steps">
   <div class="wrap">
     <div class="steps-head rv">
@@ -200,6 +216,8 @@
     </div>
   </div>
 </section>
+</div>
+</div>
 
 <!-- SAFETY -->
 <section class="sec" id="safety">

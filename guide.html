@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,9 @@
 <link rel="canonical" href="https://visuallabo.com/guide.html">
 <meta property="og:url" content="https://visuallabo.com/guide.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script defer src="assets/choice-tabs.js?v=20260910d"></script>
 </head>
 <body>
 
@@ -83,7 +86,17 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">入会・プラン</a>
+    <a class="choice-tab" data-tab href="#page-changes">変更・退会</a>
+    <a class="choice-tab" data-tab href="#page-use">利用案内</a>
+    <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+  </nav>
+
+
 <!-- INTRO -->
+<div id="page-overview" data-tab-panel>
 <section class="sec intro">
   <div class="wrap narrow">
     <div class="section-num rv">Guide — Membership</div>
@@ -110,6 +123,13 @@
       <span class="gp">プラン一覧は <a href="price.html" style="color:var(--gold-d)">料金・プランページ</a> へ</span>
     </div>
 
+  </div>
+</section>
+</div>
+
+<div id="page-changes" data-tab-panel>
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
     <div class="gd-item rv">
       <div class="gn">03 — CHANGE ／ プラン変更</div>
       <h3>次回更新に間に合う期限は、会員ごとの利用期間の15日目。</h3>
@@ -122,6 +142,13 @@
       <p>しばらく通えない時期は、<b style="color:var(--ink);font-weight:500">月¥1,100の休会（最長1年）</b>で会員資格を維持できます。休会からの復帰に再入会金はかかりません。退会の申し出はいつでも可能です。通常退会は、<b style="color:var(--ink);font-weight:500">各利用期間の開始日から15日目までなら当該利用期間末、16日目以降なら次の利用期間末</b>を受付期限による終了日とし、その日と最低利用期間満了日のうち遅い日に終了します。店頭・公式LINEで受け付けます。</p>
     </div>
 
+  </div>
+</section>
+</div>
+
+<div id="page-use" data-tab-panel>
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
     <div class="gd-item rv">
       <div class="gn">05 — PAYMENT ／ お支払い方法</div>
       <h3>クレジットカード・電子マネー・現金。</h3>
@@ -142,8 +169,10 @@
 
   </div>
 </section>
+</div>
 
 <!-- CTA -->
+<div id="page-faq" data-tab-panel>
 <section class="sec">
   <div class="wrap">
     <div class="nexthead rv">
@@ -158,6 +187,8 @@
     </div>
   </div>
 </section>
+</div>
+</div>
 
 <section class="sec cta">
   <div class="wrap">

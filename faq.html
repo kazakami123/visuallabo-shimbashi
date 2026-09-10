@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -516,6 +516,9 @@
 <link rel="canonical" href="https://visuallabo.com/faq.html">
 <meta property="og:url" content="https://visuallabo.com/faq.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 
@@ -565,7 +568,14 @@
 <!-- FAQ -->
 <section class="sec">
   <div class="wrap">
-    <div class="faq-list">
+    <div class="faq-list page-tabs-content" data-tabs="page">
+<nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+  <a class="choice-tab" data-tab href="#page-first">はじめて</a>
+  <a class="choice-tab" data-tab href="#page-price">料金・予約</a>
+  <a class="choice-tab" data-tab href="#page-use">利用案内</a>
+  <a class="choice-tab" data-tab href="#page-tech">技術・効果</a>
+</nav>
+<div id="page-first" data-tab-panel>
 
       <div class="faq-cat">はじめての方へ</div>
       <div class="fitem"><button class="fq">初回体験には何を持っていけばいいですか？</button><div class="fa"><p>特別なご準備は不要です。お着替えはサロンでご用意していますので、お出かけや用事のついでにも、手ぶらでお越しいただけます。</p></div></div>
@@ -588,6 +598,8 @@
 
       <div class="fitem"><button class="fq">シャワーはありますか？</button><div class="fa"><p>申し訳ございませんが、当サロンにシャワー設備はございません。施術やドームサウナで汗をかいたあとは、温かいおしぼり等でお拭き取りいただけます。</p></div></div>
 
+</div>
+<div id="page-price" data-tab-panel>
       <div class="faq-cat">料金・プランについて</div>
       <div class="fitem"><button class="fq">初回体験はいくらですか？</button><div class="fa"><p>初回体験は、<b>60分 BODY MAINTENANCEコース（高周波30分＋EMS30分）¥2,980</b>（税込）です。お一人さま1回、公式LINEからご予約いただけます。体験当日のご入会で入会金¥0、7日以内なら¥8,250（通常¥16,500）です。</p></div></div>
       <div class="fitem"><button class="fq">60分・90分・120分は、何が違いますか？</button><div class="fa"><p>高周波をあてる部位の数が違います。高周波は1部位あたり30分で、仕上げのHYPER EMS 30分はどのコースにも共通です。60分はお腹まわり、90分はお腹まわり＋もう1部位、120分はお腹まわり＋2部位まで。お腹まわりはどのコースにも含まれます。追加する部位は、その日の状態を伺いながらスタッフと一緒に決められます。</p></div></div>
@@ -599,6 +611,8 @@
       <div class="fitem"><button class="fq">支払い方法は何が使えますか？</button><div class="fa"><p>月額会費はクレジットカードでのお支払いです。体験・都度利用・物販は、クレジットカード・各種電子マネー・現金をご利用いただけます。</p></div></div>
       <div class="fitem"><button class="fq">予約のキャンセルや変更はできますか？</button><div class="fa"><p>月額会員の変更・キャンセルは公式LINEへの相談のみで受け付けます。予約日前日23:59までは自由に変更・キャンセル可能で、回数消化はありません。当日キャンセル・別日への変更・無断キャンセルは1回分を消化します。当日の時間変更は空き枠があり、サロンが変更を確定した場合に限り変更手数料1,000円（税込）で可能です。空き枠がない場合は1回分消化となります。初回体験の変更・キャンセルは公式LINEへの相談のみで受け付けます。前日23:59までは自由に変更・キャンセル可能で、回数消化はありません。当日キャンセル・無断キャンセルは初回体験1回分を消化します。当日の時間変更は空き枠があり、サロンが変更を確定した場合に限り変更手数料1,000円（税込）で可能です。空き枠がない場合は1回分消化となります。都度利用は前日23:59まで無料、当日の連絡ありキャンセルは50％、無断キャンセルは100％です。</p></div></div>
 
+</div>
+<div id="page-use" data-tab-panel>
       <div class="faq-cat">安全・その他</div>
       <div class="fitem"><button class="fq">施術を受けられない場合はありますか？</button><div class="fa"><p>はい。ペースメーカーなど体内電子機器をご使用の方、心疾患・悪性腫瘍の治療中の方などはご利用いただけません。体内に金属が入っている方、皮膚疾患のある方、通院中の方は事前にご相談ください。詳しくは<a href="treatment.html#safety" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">安全にご利用いただくために</a>をご覧ください。</p></div></div>
       <div class="fitem"><button class="fq">これは医療行為ですか？効果は保証されますか？</button><div class="fa"><p>VISUAL LABOの施術は、体型管理・コンディショニングを目的としたもので、医療行為や疾病の治療を目的とするものではありません。体の変化には個人差があり、効果を保証するものではありません。</p></div></div>
@@ -632,6 +646,8 @@
       <div class="fitem"><button class="fq">高血圧・糖尿病ですが大丈夫ですか？</button><div class="fa"><p>治療中・通院中の方は、事前にかかりつけ医にご相談のうえ、カウンセリングでお知らせください。体の状態に合わせてご案内します。</p></div></div>
       <div class="fitem"><button class="fq">タトゥー（刺青）があっても受けられますか？</button><div class="fa"><p>施術部位に大きなタトゥーがある場合は、その部位を避けてご案内することがあります。気になる際は事前にご相談ください。</p></div></div>
 
+</div>
+<div id="page-tech" data-tab-panel>
       <div class="faq-cat">機械・技術について</div>
       <div class="fitem"><button class="fq">どんな機械を使いますか？他のエステと違いますか？</button><div class="fa"><p>VISUAL LABOが自社開発した高周波×HYPER EMSの複合マシン「MystiCore」を使用します。体の奥から温める高周波（RF）と、筋肉にはたらきかけるHYPER EMSを1台に統合し、「温めて・ゆるめて・動かす」を1回で行えるのが特長です。詳しくは<a href="machine.html" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">MystiCoreとは</a>のページをご覧ください。</p></div></div>
       <div class="fitem"><button class="fq">インディバ（INDIBA）との違いは何ですか？</button><div class="fa"><p>INDIBA®は448kHz単一周波数の深部加温に特化した機械です。MystiCoreは300・500・1000kHzと周波数を切り替えられ、表層から深部まで状態に合わせてアプローチでき、さらにHYPER EMSを同時に行えるのが設計の違いです。どちらが優れているということではなく「特化」と「応用」という設計思想の違いです（※INDIBA®は他社の登録商標です）。詳しくは<a href="machine.html" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">MystiCoreとは</a>のページへ。</p></div></div>
@@ -646,6 +662,7 @@
       <div class="fitem"><button class="fq">いつもリバウンドしてしまいます。なぜですか？</button><div class="fa"><p>リバウンドの主な理由は3つ。①きつい食事制限や運動は「続けられない」ため、やめた反動で戻りやすいこと、②食事だけで急に落とすと筋肉も減って基礎代謝が下がり、前より太りやすくなるといわれること、③GLP-1などのお薬や短期集中は、やめると食欲・体重が戻りやすいと報告されていること、です。VISUAL LABOは、極端な制限も薬も使わず、温める習慣を無理なく続けるスタイル。「がんばらないから続く」ことが、戻りにくさにつながると考えています。※リバウンドしないことを保証するものではありません。</p></div></div>
       <div class="fitem"><button class="fq">お腹が冷えていると太りやすいって本当ですか？</button><div class="fa"><p>体が冷えていると、エネルギーを使いにくく、ためこみやすい状態になりやすいといわれています。お腹は自分では気づきにくいうちに冷えてかたくなりがちな部位。VISUAL LABOが「まずお腹の深部加温30分」から始めるのは、この"冷え"にアプローチして、続けやすい体型管理の土台をつくるためです。詳しくは<a href="index.html#method" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">コンセプト</a>をご覧ください。※感じ方・変化には個人差があります。</p></div></div>
 
+    </div>
     </div>
 
     <p style="text-align:center;margin-top:50px;font-size:14px;color:var(--ink-soft);font-weight:300" class="rv">解決しないご質問は、LINEまたはお電話（03-6205-4900）でお気軽にお問い合わせください。</p>
@@ -711,11 +728,18 @@
 <script>
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-document.querySelectorAll('.fq').forEach(b=>{
+document.querySelectorAll('.fq').forEach((b, index)=>{
+  const it=b.parentElement, fa=b.nextElementSibling;
+  b.type='button';
+  if(!fa.id) fa.id='faq-answer-'+(index+1);
+  b.setAttribute('aria-controls',fa.id);
+  b.setAttribute('aria-expanded','false');
+  fa.hidden=true;
   b.addEventListener('click',()=>{
-    const it=b.parentElement, fa=b.nextElementSibling, open=it.classList.contains('open');
-    if(open){it.classList.remove('open');fa.style.maxHeight=null}
-    else{it.classList.add('open');fa.style.maxHeight=fa.scrollHeight+'px'}
+    const open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));
+    it.classList.toggle('open',!open);
+    fa.hidden=open;
   });
 });
 </script>

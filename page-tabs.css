@@ -1,0 +1,56 @@
+/* Hallmark · component: page tabs · editorial · existing VISUAL LABO system.
+ * Component-scope: no macrostructure change. Existing images and copy retained.
+ * Pre-emit critique: P4 H5 E4 S4 R5 V4. Reuses choice-tabs.css state tokens. */
+html.page-tabs-page { overflow-x: clip; scroll-padding-top: calc(var(--choice-header-height, 104px) + var(--choice-bar-height, 56px) + 16px); }
+.page-tabs-page body { overflow-x: clip; }
+.page-tabs-page {
+  --page-tabs-sm: .5rem;
+  --page-tabs-md: 1rem;
+  --page-tabs-lg: 1.5rem;
+  --page-tabs-xl: 2.5rem;
+}
+.page-tabs-page .mhero-inner {
+  padding-top: calc(var(--choice-header-height, 104px) + var(--page-tabs-lg));
+  padding-bottom: var(--page-tabs-lg);
+}
+.page-tabs-page .mhero h1 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: var(--page-tabs-sm); overflow-wrap: anywhere; min-width: 0; }
+.page-tabs-page .mhero h1 .jp { margin-top: var(--page-tabs-sm); }
+.page-tabs-page .mhero .tag { margin-bottom: var(--page-tabs-sm); }
+.page-tabs-page .mhero .sub { font-size: .875rem; line-height: 1.7; }
+.page-tabs-content > .choice-tabs,
+.page-tabs-page [data-page-links] {
+  width: min(100% - 2rem, 860px);
+  margin-inline: auto;
+}
+.choice-tabs:has(> :nth-child(3)):not(:has(> :nth-child(4))) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.page-tabs-content > [data-tab-panel] > .sec { padding-block: var(--page-tabs-xl); }
+.page-tabs-content > [data-tab-panel] > .sec + .sec { padding-top: var(--page-tabs-xl); }
+.page-tabs-page .art .choice-tabs,
+.page-tabs-page .faq-list .choice-tabs { margin-bottom: var(--page-tabs-xl); }
+.page-tabs-page .art [data-tab-panel] > .blk:first-child { margin-top: var(--page-tabs-lg); }
+.page-tabs-page .legal [data-page-links] { width: 100%; margin-block: var(--page-tabs-lg) var(--page-tabs-xl); }
+.choice-tab[aria-current] { color: var(--choice-paper); background: var(--choice-ink); }
+.choice-tab[aria-current]:focus-visible { outline-color: var(--choice-paper); }
+.page-tabs-page .page-links-target { scroll-margin-top: var(--page-tabs-md); }
+.page-tabs-page .faq-list > [data-tab-panel] { padding-top: var(--page-tabs-xl); }
+.page-tabs-page .faq-list > [data-tab-panel] > .faq-cat:first-child { margin-top: 0; }
+.page-tabs-page .fa { max-height: none; overflow: visible; transition: none; }
+.page-tabs-page .fa[hidden] { display: none; }
+.page-tabs-page .fq:focus-visible { outline: 2px solid var(--gold-d); outline-offset: -2px; }
+.page-tabs-page .fq { overflow-wrap: anywhere; }
+.page-tabs-home [data-page-links] { margin-block: var(--page-tabs-lg); }
+.page-tabs-diagnosis [data-page-links] { width: 100%; top: 0; }
+.page-tabs-diagnosis .screen { min-height: calc(100dvh - var(--choice-bar-height, 56px)); }
+.page-tabs-diagnosis .quiz-top { top: var(--choice-bar-height, 56px); }
+@media (max-width: 480px) {
+  .page-tabs-page .mhero .sub { font-size: .8125rem; }
+  .page-tabs-page .choice-tab { letter-spacing: 0; }
+  .page-tabs-home .nav { gap: 8px; padding-inline: 12px; }
+  .page-tabs-home .nav > .brand { min-width: 0; flex-shrink: 1; }
+  .page-tabs-home .nav > .brand img { max-width: 100%; object-fit: contain; }
+  .page-tabs-home .nav .nav-cta { padding-inline: 12px; font-size: 11px; flex-shrink: 0; }
+}
+@media print {
+  .page-tabs-page [data-page-links] { display: none; }
+  .page-tabs-page .fa[hidden] { display: block; }
+}

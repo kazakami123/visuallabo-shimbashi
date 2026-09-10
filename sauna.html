@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,9 @@
 <link rel="canonical" href="https://visuallabo.com/sauna.html">
 <meta property="og:url" content="https://visuallabo.com/sauna.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script defer src="assets/choice-tabs.js?v=20260910d"></script>
 </head>
 <body>
 
@@ -74,7 +77,16 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">特徴</a>
+    <a class="choice-tab" data-tab href="#page-use">使い方・料金</a>
+    <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+  </nav>
+
+
 <!-- INTRO -->
+<div id="page-overview" data-tab-panel>
 <section class="sec intro">
   <div class="wrap narrow">
     <div class="section-num rv">About — Dome Sauna</div>
@@ -103,8 +115,10 @@
     <p class="disc rv">※ 温活・リラックスを目的としたメニューです。医療行為ではなく、感じ方には個人差があります。</p>
   </div>
 </section>
+</div>
 
 <!-- HOW TO / PRICE -->
+<div id="page-use" data-tab-panel>
 <section class="sec menu-alt">
   <div class="wrap narrow">
     <div class="section-num rv">02 — How to use</div>
@@ -122,8 +136,10 @@
     <p class="pnote2 rv"><span>・当店にシャワールームはございません。あらかじめご了承ください。</span><span>・表示は税込です。施術メニューと組み合わせてご利用いただけます。</span><span>・ご利用方法はスタッフまたはLINEでお気軽にお問い合わせください。</span><span>・心疾患のある方など、体調や持病によってはご利用いただけない場合があります。詳しくは<a href="treatment.html#safety" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">ご利用にあたって</a>をご確認ください。</span></p>
   </div>
 </section>
+</div>
 
 <!-- CTA -->
+<div id="page-faq" data-tab-panel>
 <section class="sec">
   <div class="wrap">
     <div class="nexthead rv">
@@ -138,6 +154,8 @@
     </div>
   </div>
 </section>
+</div>
+</div>
 
 <section class="sec cta">
   <div class="wrap">

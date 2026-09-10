@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,9 @@
 <meta property="og:url" content="https://visuallabo.com/important-matters.html">
 <meta property="og:image" content="https://visuallabo.com/images/mysticore-salon.jpg">
 <meta property="og:type" content="website">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/page-links.js?v=20260910d" defer></script>
 </head>
 <body>
 <header>
@@ -49,7 +52,13 @@
     <p>月額プランは自動更新を伴う有料契約です。お申し込み前に、以下と<a href="terms.html">会員規約</a>をご確認ください。契約時には、選択したプランに応じた開始日・終了日・支払総額等を記載した申込内容確認書を個別にお渡しします。</p>
     <p class="note"><b>重要：</b>このページはWeb上の事前案内です。特定商取引法上の特定継続的役務提供に該当する契約では、別途、契約前の概要書面と契約時の契約書面を交付します。このページだけで法定書面の交付に代えるものではありません。</p>
 
-    <h2>1. 契約するサービス</h2>
+<nav class="choice-tabs" data-page-links aria-label="このページの内容">
+  <a class="choice-tab" href="#page-service">サービス</a>
+  <a class="choice-tab" href="#page-pricing">料金・期間</a>
+  <a class="choice-tab" href="#page-cancellation">退会・変更</a>
+  <a class="choice-tab" href="#page-cooling-off">解約・安全</a>
+</nav>
+    <h2 id="page-service">1. 契約するサービス</h2>
     <p>VISUAL LABOは、男性専用の会員制体型管理サロンです。高周波、EMS、ドームサウナ等を使用した体型管理・コンディショニングサービスを提供します。医療行為ではなく、特定の効果を保証するものではありません。</p>
 
     <h2>2. 入会金</h2>
@@ -63,7 +72,7 @@
     </table>
     <p>体験当日の入会金無料特典を利用した場合、退会時に入会金を遡って請求しません。</p>
 
-    <h2>3. 月額料金・最低利用期間</h2>
+    <h2 id="page-pricing">3. 月額料金・最低利用期間</h2>
     <h3>BODY MAINTENANCE</h3>
     <table>
       <thead><tr><th>プラン</th><th>60分</th><th>90分</th><th>120分</th><th>初回最低利用期間</th></tr></thead>
@@ -108,7 +117,7 @@
       <li>原則として未利用回数の次の利用期間への繰越、換金、譲渡、日割り返金はありません。当サロン都合で提供できなかった場合を除きます。</li>
     </ul>
 
-    <h2>5. 退会・休会・プラン変更</h2>
+    <h2 id="page-cancellation">5. 退会・休会・プラン変更</h2>
     <table>
       <tbody>
         <tr><th>退会</th><td>店頭または公式LINEで受付。通常退会の受付期限による終了日は、各利用期間の開始日から15日目までの受付完了なら当該利用期間末（次回更新日前日）、16日目以降なら次の利用期間末（次々回更新日前日）です。実際の契約終了日は、この日と最低利用期間満了日のうち遅い日です。</td></tr>
@@ -123,7 +132,7 @@
     <h2>6. 最低利用期間中の中途解約</h2>
     <p>最低利用期間中も中途解約の申し出を受け付けます。特定継続的役務提供に該当する場合、サービス開始前は法定上限2万円まで、開始後は提供済みサービスの対価に、2万円または契約残額の10％のいずれか低い額を加えた額までを上限に精算します。法令の適用対象外となる契約でも、解約料は当サロンに生ずる平均的な損害を超えないものとします。</p>
 
-    <h2>7. クーリングオフ</h2>
+    <h2 id="page-cooling-off">7. クーリングオフ</h2>
     <p>特定継続的役務提供に該当する場合、法定契約書面を受領した日から8日以内は、書面、電子メールその他記録が残る電磁的方法により、理由を示さず契約を解除できます。通知を発した時に効力が生じ、違約金や既に提供したサービスの対価は発生せず、受領済み金員を返金します。当サロンは、法令の対象外となる月額契約にも、原則として同等の8日間取消制度を適用します。</p>
 
     <h2>8. 予約キャンセル</h2>

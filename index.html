@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page page-tabs-home">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -408,12 +408,6 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .ba-grid figcaption{font-size:12px;color:var(--ink-soft);padding:12px 14px;line-height:1.8;background:#fff;border:1px solid var(--line);border-top:none;border-radius:0 0 14px 14px}
 @media(max-width:640px){.ba-grid{grid-template-columns:1fr;max-width:440px}}
 
-#records{padding:clamp(28px,4vw,48px) 0;scroll-margin-top:130px}
-.records-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:760px;margin:0 auto}
-.records-gallery figure{margin:0}
-.records-gallery img{display:block;width:100%;height:auto}
-@media(max-width:560px){.records-gallery{grid-template-columns:minmax(0,1fr);max-width:320px;gap:18px}}
-
 /* 7. voice */
 .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,320px));gap:16px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0;justify-content:center}
 .vc[hidden]{display:none!important}
@@ -503,14 +497,14 @@ body{padding-bottom:86px}
 @media(min-width:761px){.bbar{display:none}body{padding-bottom:0}}
 
 /* plan cards */
-.plan-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:clamp(22px,3.5vw,32px) auto 0}
+.plan-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:620px;margin:clamp(22px,3.5vw,32px) auto 0}
 .pcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 20px 24px;text-align:center;box-shadow:0 14px 32px -24px rgba(0,0,0,.14)}
 .pcard .nm{font-size:16.5px;font-weight:700;color:var(--ink);letter-spacing:.05em}
 .pcard .pill{display:inline-block;background:var(--wash);color:var(--gold-d);font-size:11.5px;font-weight:600;border-radius:999px;padding:5px 14px;margin-top:10px;letter-spacing:.04em}
 .pcard .pv{font-family:var(--sans);font-size:clamp(22px,3.2vw,27px);font-weight:700;color:var(--ink);margin-top:14px;line-height:1.3}
 .pcard .pv small{font-size:12px;font-family:var(--sans);color:var(--mute);font-weight:400}
 .pcard .dd{font-size:11.5px;color:var(--mute);margin-top:6px;line-height:1.8}
-@media(max-width:760px){.plan-cards{grid-template-columns:1fr;max-width:420px}}
+@media(max-width:760px){.plan-cards{grid-template-columns:minmax(0,1fr);max-width:420px}}
 
 /* treatment cinema panel */
 .tw-sec{background:#111;padding:clamp(70px,10vw,120px) 0;overflow:hidden}
@@ -589,6 +583,11 @@ body{padding-bottom:86px}
 .pnote2{font-size:13px;color:var(--ink-mute);line-height:1.95;margin-top:22px;font-weight:400}
 .pnote2 span{display:block}
 </style>
+<link rel="stylesheet" href="home-records-tokens.css?v=20260910">
+<link rel="stylesheet" href="home-records.css?v=20260910">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/page-links.js?v=20260910d" defer></script>
 </head>
 <body>
 
@@ -656,6 +655,13 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   </div>
   <div class="scr" aria-hidden="true"><i>SCROLL</i><u></u></div>
 </section>
+
+<nav class="choice-tabs" data-page-links aria-label="このページの内容">
+  <a class="choice-tab" href="#strength">特徴・施術</a>
+  <a class="choice-tab" href="#records">施術例</a>
+  <a class="choice-tab" href="#price">料金</a>
+  <a class="choice-tab" href="#access">アクセス</a>
+</nav>
 
 <!-- 2. 初回体験CTA -->
 <section class="sec" id="cta-top" style="padding-top:clamp(50px,8vw,90px)">
@@ -727,18 +733,36 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
 
 <!-- 4.7 ビフォーアフター写真 -->
 <section class="sec" id="records" aria-labelledby="records-title">
-  <div class="wrap">
-    <div class="center" style="margin-bottom:24px">
-      <h2 class="tt" id="records-title">ビフォーアフター</h2>
+  <div class="wrap records-wrap">
+    <div class="records-heading">
+      <h2 id="records-title"><span class="records-title-en" lang="en">Before <span>&amp;</span> After</span><span class="records-title-ja">ビフォーアフター</span></h2>
+      <p>お腹まわりの施術例</p>
     </div>
     <div class="records-gallery">
-      <figure><img loading="lazy" src="images/ba-case1-side.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="1080" height="1350"></figure>
-      <figure><img loading="lazy" src="images/ba-case3-front.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="1080" height="1350"></figure>
-      <figure><img loading="lazy" src="images/ba2026-m4-front-90.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="956" height="805"></figure>
-      <figure><img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・60分施術" width="964" height="805"></figure>
+      <figure>
+        <img loading="lazy" src="images/ba-case1-side.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・90分施術" width="1080" height="1350">
+        <figcaption><span>お腹まわり・側面</span><span>1回 <span class="records-caption-sep">／</span> 90分</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="images/ba-case3-front.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="1080" height="1350">
+        <figcaption><span>お腹まわり・正面</span><span>1回 <span class="records-caption-sep">／</span> 90分</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="images/ba2026-m4-front-90.jpg" alt="男性・お腹まわり正面のビフォーアフター｜1回・90分施術" width="956" height="805">
+        <figcaption><span>お腹まわり・正面</span><span>1回 <span class="records-caption-sep">／</span> 90分</span></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="images/ba2026-m1-side-60.jpg" alt="男性・お腹まわり側面のビフォーアフター｜1回・60分施術" width="964" height="805">
+        <figcaption><span>お腹まわり・側面</span><span>1回 <span class="records-caption-sep">／</span> 60分</span></figcaption>
+      </figure>
     </div>
-    <p class="center pnote2" style="margin-top:18px">※効果には個人差があります。<br>※写真内に旧メニュー名「WAIST DESIGN 90」の表記があります。現在のメニュー名は「BODY MAINTENANCE」です。</p>
-    <p class="center" style="margin-top:28px"><a class="btn btn-out" href="beforeafter.html">すべてのビフォーアフターを見る →</a></p>
+    <div class="records-footer">
+      <div class="records-notes">
+        <p>※効果には個人差があります。</p>
+        <p>※写真内に旧メニュー名「WAIST DESIGN 90」の表記があります。現在のメニュー名は「BODY MAINTENANCE」です。</p>
+      </div>
+      <a class="records-link" href="beforeafter.html" aria-label="すべてのビフォーアフターを見る">すべての施術例を見る <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>
 
@@ -755,7 +779,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <div class="pgrid rv" style="margin-top:clamp(22px,3.5vw,32px)">
       <div class="pcard"><span class="n">01</span><h3>高周波で、お腹まわりを温める</h3><p>男性の脂肪は内臓のまわりにつきやすいといわれています。表面をもむケアではなく、深部まで届く高周波を選んだのは、そのためです。</p></div>
       <div class="pcard"><span class="n">02</span><h3>料金が、先に分かる</h3><p>初回体験・都度利用・月額プランの料金を、すべてサイトに掲載しています。ご自身のペースに合う通い方を、料金や利用条件を確認してからお選びいただけます。</p></div>
-      <div class="pcard"><span class="n">03</span><h3>お腹まわりを中心とした体型管理</h3><p>美肌も脱毛もやりません。やるのは体型管理だけです。どのコースもお腹まわりが土台で、時間を延ばせば首・肩・背中・腰も一緒に選べます。</p></div>
+      <div class="pcard"><span class="n">03</span><h3>お腹まわりを中心とした体型管理</h3><p>お腹まわりを基本に、コースの時間に合わせて首・肩・背中・腰のケアもお選びいただけます。</p></div>
     </div>
     <p class="note center rv" style="margin-top:16px">※ 一般的な体のしくみの説明です。効果・感じ方には個人差があります。</p>
   </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,6 +54,9 @@
 <link rel="canonical" href="https://visuallabo.com/method-science.html">
 <meta property="og:url" content="https://visuallabo.com/method-science.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script defer src="assets/choice-tabs.js?v=20260910d"></script>
 </head>
 <body>
 
@@ -99,7 +102,16 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">全体像</a>
+    <a class="choice-tab" data-tab href="#page-steps">5つの工程</a>
+    <a class="choice-tab" data-tab href="#page-order">順番の理由</a>
+  </nav>
+
+
 <!-- 背骨 -->
+<div id="page-overview" data-tab-panel>
 <section class="sec" style="background:var(--paper)">
   <div class="wrap">
     <div class="ms-spine rv">
@@ -121,8 +133,10 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- 各ステップ詳細 -->
+<div id="page-steps" data-tab-panel>
 <section class="sec" style="background:var(--paper-2)">
   <div class="wrap">
     <div class="center mt-head rv">
@@ -154,8 +168,10 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- なぜこの順番 -->
+<div id="page-order" data-tab-panel>
 <section class="sec" style="background:var(--paper)">
   <div class="wrap">
     <div class="center mt-head rv">
@@ -170,6 +186,8 @@
     <p class="ms-why concl rv">だから <b>温める → めぐらせる → 動かす → 続ける</b> の順番に意味がある。<br>一工程ずつが、次の工程の“前提”になっています。</p>
   </div>
 </section>
+</div>
+</div>
 
 <!-- 注記 -->
 <section class="sec" style="padding-top:0">

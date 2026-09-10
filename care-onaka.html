@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +35,9 @@
 <link rel="canonical" href="https://visuallabo.com/care-onaka.html">
 <meta property="og:url" content="https://visuallabo.com/care-onaka.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 
@@ -79,6 +82,13 @@
     <p class="sub">腹筋でも食事制限でもなく。温めて、動かす。</p>
   </div>
 </section>
+<div data-tabs="page" class="page-tabs-content">
+<nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+  <a class="choice-tab" data-tab href="#page-overview">特徴</a>
+  <a class="choice-tab" data-tab href="#page-treatment">施術・メニュー</a>
+  <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+</nav>
+<div id="page-overview" data-tab-panel>
 
 <section class="sec">
   <div class="wrap">
@@ -126,6 +136,8 @@
   </div>
 </section>
 
+</div>
+<div id="page-treatment" data-tab-panel>
 <section class="sec steps">
   <div class="wrap">
     <div class="steps-head rv">
@@ -176,6 +188,8 @@
   </div>
 </section>
 
+</div>
+<div id="page-faq" data-tab-panel>
 <section class="sec">
   <div class="wrap">
     <div class="center mt-head rv">
@@ -191,6 +205,8 @@
     </div>
   </div>
 </section>
+</div>
+</div>
 
 <section class="sec" style="padding-top:0">
   <div class="wrap">

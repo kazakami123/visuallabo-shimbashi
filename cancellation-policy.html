@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,9 @@
 <meta property="og:url" content="https://visuallabo.com/cancellation-policy.html">
 <meta property="og:image" content="https://visuallabo.com/images/mysticore-salon.jpg">
 <meta property="og:type" content="website">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/page-links.js?v=20260910d" defer></script>
 </head>
 <body>
 <header>
@@ -26,6 +29,19 @@
     <div class="navlinks"><a href="menu.html">MENU</a><a href="price.html">PRICE</a><a href="guide.html">GUIDE</a><a href="faq.html">FAQ</a><a class="nav-cta" href="flow.html">初回体験 60分 ¥2,980</a></div>
     <a class="back" href="index.html">← BACK</a>
   </nav>
+  <nav class="mtabs" aria-label="メニュー">
+    <a class="hot" href="flow.html"><span class="te">FIRST TRIAL</span><span class="tj">初回体験</span></a>
+    <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
+    <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
+    <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">変化の記録</span></a>
+    <a href="rf.html"><span class="te">RF</span><span class="tj">高周波とは</span></a>
+    <a href="ems.html"><span class="te">EMS</span><span class="tj">EMSとは</span></a>
+    <a href="sauna.html"><span class="te">SAUNA</span><span class="tj">サウナ</span></a>
+    <a href="machine.html"><span class="te">MYSTICORE</span><span class="tj">自社開発マシン</span></a>
+    <a href="guide.html"><span class="te">GUIDE</span><span class="tj">会員制度ガイド</span></a>
+    <a href="index.html#access"><span class="te">ACCESS</span><span class="tj">アクセス</span></a>
+    <a href="faq.html"><span class="te">FAQ</span><span class="tj">よくある質問</span></a>
+  </nav>
 </header>
 
 <section class="sec legal">
@@ -33,7 +49,13 @@
     <div class="head"><div class="en2">CANCELLATION POLICY</div><h1>予約・退会・キャンセル規程</h1></div>
     <p>「施術予約のキャンセル」と「月額会員契約の退会」は別の手続です。予約をキャンセルしただけでは月額契約は終了しません。</p>
 
-    <h2>1. 施術予約の変更・キャンセル</h2>
+<nav class="choice-tabs" data-page-links aria-label="このページの内容">
+  <a class="choice-tab" href="#page-reservation">予約変更</a>
+  <a class="choice-tab" href="#page-cancellation">退会・期間</a>
+  <a class="choice-tab" href="#page-pause">休会・変更</a>
+  <a class="choice-tab" href="#page-refund">返金・窓口</a>
+</nav>
+    <h2 id="page-reservation">1. 施術予約の変更・キャンセル</h2>
     <h3>初回体験（公式LINE相談のみ）</h3>
     <ul>
       <li>変更・キャンセルは公式LINEへの相談のみで受け付けます。予約日前日23:59までは自由に変更・キャンセル可能で、回数消化はありません。</li>
@@ -63,7 +85,7 @@
     <h2>3. 当サロン都合の変更・中止</h2>
     <p>当サロンの都合により予約済みサービスを提供できない場合、キャンセル料や回数消化は発生しません。代替日時への振替、利用期限の延長または未提供分相当額の返金をご案内します。</p>
 
-    <h2>4. 月額会員の通常退会</h2>
+    <h2 id="page-cancellation">4. 月額会員の通常退会</h2>
     <ol>
       <li>店頭または公式LINEで退会の申し出を受け付けます。電話で相談しただけ、施術予約を取り消しただけ、決済カードを停止しただけでは退会手続は完了しません。</li>
       <li>通常退会の受付期限による終了日は、各利用期間の開始日を1日目として15日目の23時59分までに、店頭で受付を記録し、または公式LINEが申請メッセージを受信した場合は当該利用期間の末日（次回更新日前日）、16日目以降の場合は次の利用期間の末日（次々回更新日前日）とします。</li>
@@ -83,7 +105,7 @@
     <h2>6. クーリングオフ</h2>
     <p>特定継続的役務提供に該当する場合は、法定契約書面を受領した日から8日以内、書面または電子メールその他記録が残る電磁的方法で通知できます。通常退会における利用期間の15日目までという受付期限とは別の制度です。当サロンは法令の対象外となる月額契約にも、原則として同等の8日間取消制度を適用します。</p>
 
-    <h2>7. 休会</h2>
+    <h2 id="page-pause">7. 休会</h2>
     <ol>
       <li>休会費は月額1,100円、期間は最長1年です。</li>
       <li>休会の受付期限・最低利用期間は通常退会と同じです。受付後、休会開始日、通常会費の最終請求日、休会費の請求日を個別に通知します。</li>
@@ -96,7 +118,7 @@
     <p>ダウングレードの受付期限による適用日は、各利用期間の開始日を1日目として15日目の23時59分までに店頭で受付を記録し、または公式LINEが申請メッセージを受信した場合は次回更新日、16日目以降は次々回更新日です。実際の適用日は、この日と最低利用期間満了後の最初の更新日のうち遅い日とし、最低利用期間中はダウングレードを適用しません。</p>
     <p class="note">例：9月14日から始まる利用期間では9月28日が15日目です。9月28日までの受付なら10月14日、9月29日以降の受付なら11月14日がダウングレードの受付期限による適用日です。実際の適用日は、その日と最低利用期間満了後の最初の更新日のうち遅い日です。</p>
 
-    <h2>9. 返金</h2>
+    <h2 id="page-refund">9. 返金</h2>
     <p>通常退会では、すでに開始している利用期間の月会費を日割り返金しません。ただし、クーリングオフ、法令上の中途解約、当サロン都合の未提供分、二重決済・誤請求その他法令または契約上返金が必要な場合を除きます。</p>
 
     <h2>10. 連絡先</h2>

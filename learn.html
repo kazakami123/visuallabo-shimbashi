@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,9 @@
 <link rel="canonical" href="https://visuallabo.com/learn.html">
 <meta property="og:url" content="https://visuallabo.com/learn.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 
@@ -77,9 +80,16 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-categories">カテゴリー</a>
+    <a class="choice-tab" data-tab href="#page-mechanism">巡り・代謝</a>
+    <a class="choice-tab" data-tab href="#page-parts">部位別ガイド</a>
+  </nav>
 <section class="sec">
   <div class="wrap">
     <div class="lib">
+<div id="page-categories" data-tab-panel>
       <p class="body-txt rv" style="max-width:680px;margin:0 auto;text-align:center">むくみ・冷え・代謝・セルライト、そして部位ごとの悩み。「なぜ起きるのか」を専門的にひも解き、「どうケアするのか」までをまとめています。記事は順次追加していきます。</p>
 
       <div class="lib-h rv">カテゴリーで探す</div>
@@ -95,7 +105,9 @@
         <span style="font-size:13.5px;color:var(--ink-mute);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:9px 18px">内臓脂肪（準備中）</span>
       </div>
 
-      <div class="lib-h rv">巡り・代謝のしくみ</div>
+      </div>
+<div id="page-mechanism" data-tab-panel>
+<div class="lib-h rv">巡り・代謝のしくみ</div>
       <div class="lib-grid">
         <a class="lib-card rv" href="learn-lymph.html"><div class="ct">MECHANISM</div><h3>リンパとは？流れ・役割・むくみ</h3><p>リンパは自力で流れない。だから温めて動かす。巡りの基礎。</p><span class="go">読む →</span></a>
         <a class="lib-card rv" href="rf.html"><div class="ct">TECHNOLOGY</div><h3>高周波（RF）とは</h3><p>体の内側から温める仕組み。深部加温と周波数の話。</p><span class="go">読む →</span></a>
@@ -112,7 +124,9 @@
         <a class="lib-card rv" href="learn-rebound.html"><div class="ct">MECHANISM</div><h3>なぜリバウンドするのか</h3><p>戻る理由と、戻りにくい体づくり。</p><span class="go">読む →</span></a>
       </div>
 
-      <div class="lib-h rv">部位別ガイド</div>
+      </div>
+<div id="page-parts" data-tab-panel>
+<div class="lib-h rv">部位別ガイド</div>
       <div class="lib-grid">
         <a class="lib-card rv" href="care-onaka.html"><div class="ct">UPPER BODY</div><h3>お腹・浮き輪肉</h3><p>ベルトの上に乗る肉のしくみとケア。</p><span class="go">読む →</span></a>
         <a class="lib-card rv" href="care-ashi.html"><div class="ct">LOWER BODY</div><h3>脚の疲れ・重さ</h3><p>ふくらはぎ・足首に、疲れが溜まるしくみ。</p><span class="go">読む →</span></a>
@@ -122,10 +136,12 @@
         <a class="lib-card rv" href="care-soriko.html"><div class="ct">BODY CARE</div><h3>反り腰・姿勢と体型</h3><p>骨盤前傾・下腹ぽっこりと整え方。</p><span class="go">読む →</span></a>
         <a class="lib-card rv" href="care-koshi.html"><div class="ct">BODY CARE</div><h3>腰まわりの張り・重さ</h3><p>座りっぱなしで固まる腰のこと。</p><span class="go">読む →</span></a>
         <a class="lib-card rv" href="care-nekoze.html"><div class="ct">BODY CARE</div><h3>猫背・巻き肩へのアプローチ</h3><p>丸い背中・前に入った肩のしくみ。</p><span class="go">読む →</span></a>
-      </div>
+      </div></div>
+
     </div>
   </div>
 </section>
+</div>
 
 <section class="sec cta">
   <div class="wrap">

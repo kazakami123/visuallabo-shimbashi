@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,9 @@
 <link rel="canonical" href="https://visuallabo.com/ems.html">
 <meta property="og:url" content="https://visuallabo.com/ems.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script defer src="assets/choice-tabs.js?v=20260910d"></script>
 </head>
 <body>
 
@@ -74,7 +77,17 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">仕組み</a>
+    <a class="choice-tab" data-tab href="#page-modes">モード</a>
+    <a class="choice-tab" data-tab href="#page-combination">組み合わせ</a>
+    <a class="choice-tab" data-tab href="#page-faq">FAQ</a>
+  </nav>
+
+
 <!-- HYPER EMS MECHANISM -->
+<div id="page-overview" data-tab-panel>
 <section class="sec emsmech">
   <div class="wrap">
     <div class="grid">
@@ -96,8 +109,10 @@
     <figure class="rv" style="margin:54px auto 0;max-width:980px"><img loading="lazy" src="images/ems-mechanism.jpg" alt="HYPER EMSの仕組み｜電気刺激で筋肉が収縮するイメージ" style="border-radius:4px" width="1500" height="938"></figure>
   </div>
 </section>
+</div>
 
 <!-- HIGH OUTPUT + MODES -->
+<div id="page-modes" data-tab-panel>
 <section class="sec ems">
   <div class="wrap">
     <div class="rv">
@@ -148,8 +163,10 @@
     <p class="ems-note rv">高周波で<b>深部までしっかり温めてから</b>これらのモードを使い分けることで、脂肪が厚いお腹まわりでも電気が奥まで伝わりやすくなり、深部の筋肉まで効率よくアプローチ。「温める」と「動かす」を1台で完結させます。</p>
   </div>
 </section>
+</div>
 
 <!-- WHY WARM FIRST -->
+<div id="page-combination" data-tab-panel>
 <section class="sec why">
   <div class="wrap">
     <div class="why-head rv">
@@ -179,8 +196,10 @@
     </div>
   </div>
 </section>
+</div>
 
 <!-- CTA -->
+<div id="page-faq" data-tab-panel>
 <section class="sec">
   <div class="wrap">
     <div class="nexthead rv">
@@ -198,6 +217,8 @@
 </section>
 
 <section class="sec"><div class="wrap"><div class="rv" style="max-width:680px;margin:0 auto;background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,30px);text-align:center"><div style="font-family:'Outfit','Noto Sans JP',sans-serif;font-size:11px;letter-spacing:.1em;color:var(--gold-d);margin-bottom:8px">FOR PROFESSIONALS & CURIOUS</div><h3 style="margin:0 0 10px;font-size:clamp(17px,3.2vw,21px);font-weight:500;color:var(--ink)">HYPER EMSのモードを、もっと詳しく。</h3><p class="body-txt" style="margin:0 0 16px;font-size:14px">ドレナージュ・Slim・REHAB・RECOVERYなど、モードごとの役割と、お腹・脚・肩首など部位別の使い分けを解説しています。神経に働きかけるHi-TENSは別ページでご紹介しています。</p><a class="btn btn-out" href="learn-ems-modes.html">HYPER EMSのモード徹底ガイドを見る →</a></div></div></section>
+</div>
+</div>
 
 <section class="sec cta">
   <div class="wrap">

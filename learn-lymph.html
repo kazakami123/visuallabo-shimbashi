@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="page-tabs-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,6 +42,9 @@
 <link rel="canonical" href="https://visuallabo.com/learn-lymph.html">
 <meta property="og:url" content="https://visuallabo.com/learn-lymph.html">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910d">
+<link rel="stylesheet" href="page-tabs.css?v=20260910a">
+<script src="assets/choice-tabs.js?v=20260910d" defer></script>
 </head>
 <body>
 
@@ -87,9 +90,17 @@
   </div>
 </section>
 
+<div data-tabs="page" class="page-tabs-content">
+  <nav class="choice-tabs" data-tab-list aria-label="このページの内容">
+    <a class="choice-tab" data-tab href="#page-overview">リンパの役割</a>
+    <a class="choice-tab" data-tab href="#page-cause">滞るしくみ</a>
+    <a class="choice-tab" data-tab href="#page-care">流れを助ける</a>
+    <a class="choice-tab" data-tab href="#page-faq">よくある質問</a>
+  </nav>
 <section class="sec">
   <div class="wrap">
     <article class="art">
+<div id="page-overview" data-tab-panel>
       <p>「リンパを流す」とよく言いますが、そもそもリンパとは何で、なぜ滞るとむくむのでしょうか。ここでは、リンパの役割や血液との違い、<b>リンパが自力では流れない理由</b>、そして流れを取り戻すためにできることを、できるだけわかりやすくまとめました。</p>
 
       <nav class="toc">
@@ -117,7 +128,9 @@
         <p>リンパ管は静脈に沿うように走り、一方通行。逆流を防ぐ弁がついていて、最後は鎖骨の下あたりで静脈に合流し、血液とともに心臓へ戻ります。つまりリンパは、体の<b>「排水・回収」</b>の役割を持つ巡りなのです。</p>
       </div>
 
-      <div class="blk" id="pump">
+      </div>
+<div id="page-cause" data-tab-panel>
+<div class="blk" id="pump">
         <h2>リンパは「自力で流れない」</h2>
         <p>ここが、いちばん大切なポイントです。血液には心臓というポンプがありますが、<b>リンパ管には心臓のようなポンプがありません</b>。では、何が流しているのか——それは、<b>筋肉の収縮（伸び縮み）・呼吸・外からの圧</b>です。</p>
         <div class="keypoint">
@@ -137,7 +150,9 @@
         </div>
       </div>
 
-      <div class="blk" id="fix">
+      </div>
+<div id="page-care" data-tab-panel>
+<div class="blk" id="fix">
         <h2>流れを助ける、4つのこと</h2>
         <p>リンパの流れは、「流す」というより<b>「自然に流れる体にする」</b>ことが大切だといわれています。日常でできることは、おもに次の4つです。</p>
         <h3>① 筋肉を動かす</h3>
@@ -162,7 +177,9 @@
         </div>
       </div>
 
-      <div class="blk" id="faq">
+      </div>
+<div id="page-faq" data-tab-panel>
+<div class="blk" id="faq">
         <h2>よくあるご質問</h2>
         <div class="faqd">
           <details><summary>リンパと血液は何が違うのですか？</summary><div class="a">血液は心臓のポンプで全身を循環し、酸素や栄養を「行き」で届けます。リンパは、毛細血管からしみ出した水分を回収し、老廃物や余分な水分を運ぶ「帰り」を担当するといわれています。リンパ管には心臓のようなポンプがなく、筋肉の動きなどで流れます。</div></details>
@@ -172,9 +189,11 @@
           <details><summary>むくみが続くときは、どうすればいい？</summary><div class="a">片脚だけ急にむくむ・強い痛みや熱感・押した跡が戻らない・息切れを伴う場合は、病気が隠れていることもあるといわれます。まず医療機関にご相談ください。VISUAL LABOは医療機関ではありません。</div></details>
         </div>
       </div>
+</div>
     </article>
   </div>
 </section>
+</div>
 
 <section class="sec" style="background:var(--paper-2)">
   <div class="wrap">
