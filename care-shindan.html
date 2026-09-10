@@ -173,23 +173,26 @@ function render(){
  let menu,guide=null;
  if(area==='lower'){menu='BODY MAINTENANCE MENU（ふくらはぎ・足首）';guide=['ふくらはぎ・足首のケアのガイドを見る →','care-ashi.html'];}
  else if(area==='koshi'){menu='BODY MAINTENANCE MENU（腰まわり）';guide=['腰まわりのケアのガイドを見る →','care-koshi.html'];}
- else if(area==='multi'){menu='BODY MAINTENANCE MENU 120（全身1〜3部位）';}
+ else if(area==='multi'){menu='BODY MAINTENANCE 120分（お腹まわり＋2部位まで＋HYPER EMS 30分）';}
  else if(area==='upper'){menu='BODY MAINTENANCE MENU（上半身）';guide=['首・肩・背中のガイドを見る →','care-katakubi.html'];}
  else {
    if(goal==='slim' && pace==='easy'){menu='HYPER EMS MENU（60分・貼るだけ）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
    else {menu='BODY MAINTENANCE MENU（上半身）';guide=['お腹・下腹のガイドを見る →','care-onaka.html'];}
  }
+ const isEms=menu.indexOf('HYPER EMS MENU')===0;
  let why;
- if(track==='痩身ケア'){why='サイズダウン・引き締めを目指したいあなたへ。気になる部位を、高周波で温めてからEMSで動かし、効率よくアプローチします。';}
+ if(isEms){why='引き締めを目指したいあなたへ。パッドを貼って横になり、HYPER EMSで筋肉にアプローチするメニューです。';}
+ else if(track==='痩身ケア'){why='サイズダウン・引き締めを目指したいあなたへ。気になる部位を、高周波で温めてからEMSで動かし、効率よくアプローチします。';}
  else if(track==='体のケア'){why='むくみ・だるさ・巡りを整えたいあなたへ。高周波で温めて巡りをサポートし、EMSで動かします。'+(area!=='lower'?'温活ドームサウナの追加もおすすめです。':'温活ドームサウナとの組み合わせもおすすめです。');}
  else {why='太りにくい体を、習慣で維持したいあなたへ。続けやすい月額プラン（月4回【人気】）での習慣化がおすすめです。';}
- if(effort==='no' && menu.indexOf('HYPER EMS')<0){why+=' 厳しい運動や食事制限に頼らず、寝ながら続けられます。';}
+ if(effort==='no' && !isEms){why+=' 厳しい運動や食事制限に頼らず、寝ながら続けられます。';}
  let html='<div class="res">'
   +'<div class="tk">YOUR RESULT</div>'
   +'<h3>あなたにおすすめは<br>「'+track+'」。</h3>'
-  +'<div class="card"><div class="lb">RECOMMENDED MENU</div><div class="mn">'+menu+'</div><div class="pr">初回体験 60分 BODY MAINTENANCE（¥2,980）</div>'
+  +'<div class="card"><div class="lb">RECOMMENDED MENU</div><div class="mn">'+menu+'</div>'
   +(guide?'<a class="guide" href="'+guide[1]+'">'+guide[0]+'</a>':'')+'</div>'
   +'<p class="why">'+why+'</p>'
+  +'<div class="card"><div class="lb">FIRST TRIAL ／ 初回体験のご案内</div><div class="mn">60分 BODY MAINTENANCE</div><div class="pr">¥2,980（税込）</div><p class="note">初回体験は、お腹まわりの高周波30分＋HYPER EMS 30分です。上記のおすすめメニューとは別のご案内です。EMS単体や、お腹以外の部位の体験料金ではありません。</p></div>'
   +'<div class="ctas"><a class="btn btn-gold" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener">初回体験 60分 ¥2,980</a><a class="btn btn-ghost" href="menu.html">メニューを詳しく見る</a></div>'
   +'<div class="note">※ 本診断は目安です。当日のカウンセリングで、お悩みや体の状態に合わせてメニューをご提案します。効果・感じ方には個人差があります。<br>※ ペースメーカー等の医療機器をご使用の方、施術部位に金属インプラントのある方などはご利用いただけません。</div>'
   +'<button class="back">← もう一度診断する</button></div>';

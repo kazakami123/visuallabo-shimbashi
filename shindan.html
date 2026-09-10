@@ -1112,16 +1112,25 @@ function showResult() {
 /* ────────────────────────────────────────
    SHARE
 ──────────────────────────────────────── */
-function onShare() {
+async function onShare() {
   const t = TYPES[lastCode] || {};
   const text = `生活習慣チェックの結果は「${t.name || ''}」でした。\n${t.short || ''}\n\nVISUAL LABO CORE生活習慣チェック\n#VISUALLABO #生活習慣チェック #新橋`;
-  if (navigator.share) {
-    navigator.share({ title: 'CORE生活習慣チェック | VISUAL LABO', text });
-  } else {
-    navigator.clipboard.writeText(text)
-      .then(() => alert('コピーしました！SNSに貼り付けてシェアしてください。'))
-      .catch(() => alert(text));
+  if (typeof navigator.share === 'function') {
+    try {
+      await navigator.share({ title: 'CORE生活習慣チェック | VISUAL LABO', text });
+      return;
+    } catch (error) {
+      if (error && error.name === 'AbortError') return;
+    }
   }
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    try {
+      await navigator.clipboard.writeText(text);
+      alert('コピーしました！SNSに貼り付けてシェアしてください。');
+      return;
+    } catch (_) { /* Display the result when copying is unavailable or denied. */ }
+  }
+  alert('自動で共有・コピーできないため、結果を表示します。\n\n' + text);
 }
 
 /* ────────────────────────────────────────
