@@ -585,6 +585,9 @@ body{padding-bottom:86px}
 .vshot{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 14px 32px -24px rgba(0,0,0,.15)}
 .vshot img{display:block;width:100%;border-radius:8px}
 .vshot .src{margin-top:10px;font-size:11.5px;color:var(--mute);line-height:1.7;text-align:center}
+/* 注記（style.css と同じ定義。index.html は style.css を読み込まないため） */
+.pnote2{font-size:13px;color:var(--ink-mute);line-height:1.95;margin-top:22px;font-weight:400}
+.pnote2 span{display:block}
 </style>
 </head>
 <body>
@@ -1021,6 +1024,13 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     </div>
     <div class="rv" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center"><a class="btn btn-line" href="https://visuallabo-line.visuallabo.workers.dev/auth/line?" target="_blank" rel="noopener" data-cta="final_line">LINEで予約する</a><a class="btn btn-out" href="tel:0362054900" data-cta="final_tel" style="border-color:rgba(255,255,255,.7);color:#fff">電話で予約する 03-6205-4900</a></div>
     <p class="note center rv" style="margin-top:16px;color:rgba(240,237,230,.7)">受付：12:00 — 21:00</p>
+  </div>
+</section>
+
+<!-- 共通注記 -->
+<section class="sec" style="padding-top:0;padding-bottom:clamp(28px,5vw,44px)">
+  <div class="wrap">
+    <p class="pnote2 rv" style="max-width:760px;margin:0 auto"><span>・体型管理・コンディショニングを目的とした施術です。医療行為ではなく、疾病の治療を目的とするものではありません。効果・感じ方には個人差があります。</span><span>・ペースメーカー等の医療機器をご使用の方、施術部位に金属インプラントのある方などはご利用いただけません。詳しくは<a href="treatment.html#safety" style="color:var(--gold-d);border-bottom:1px solid var(--gold)">安全にご利用いただくために</a>をご確認ください。</span></p>
   </div>
 </section>
 
