@@ -1077,9 +1077,19 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     rvs.forEach(function(el){el.classList.add('on')});
   }
 
+  /* ヒーロー動画。動きを減らす設定・通信量節約設定のときはポスター画像のまま */
+  function heroVideoAllowed(){
+    try{
+      if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return false;
+      var c=navigator.connection;
+      if(c&&(c.saveData||/^(slow-)?2g$/.test(c.effectiveType||'')))return false;
+    }catch(e){}
+    return true;
+  }
   window.addEventListener('load',function(){
     var hv=document.getElementById('heroVid');
     if(!hv)return;
+    if(!heroVideoAllowed())return;
     var sc=hv.querySelector('source');
     if(sc&&!sc.src){sc.src=sc.getAttribute('data-src');hv.load()}
     hv.play().then(function(){hv.style.opacity='1'}).catch(function(){});
@@ -1087,7 +1097,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   });
 
   var v=document.getElementById('twMovie');
-  if(v){var vio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(v&&heroVideoAllowed()){var vio=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){var sc=v.querySelector('source');if(sc&&!sc.src){sc.src=sc.getAttribute('data-src');v.load()}v.play().catch(function(){})}
     else{v.pause()}
   })},{threshold:.25});vio.observe(v)}
