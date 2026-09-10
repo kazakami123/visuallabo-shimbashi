@@ -1,25 +1,11 @@
-/* Hallmark · component-scope: TOP records · design-system: DESIGN.md
- * Existing gold and type stacks are retained; tokens do not affect other sections. */
+/* Hallmark · component: static image gallery · genre: modern-minimal · tone: quiet
+ * palette: existing VISUAL LABO paper · structural fingerprint: image-only responsive grid
+ * states: static content only · contrast: not applicable
+ * Pre-emit critique: P5 H5 E5 S5 R5 V4 */
 #records {
-  --records-color-paper: var(--ink);
-  --records-color-ink: oklch(94% .012 80);
-  --records-color-muted: oklch(78% .018 80);
-  --records-color-accent: var(--gold);
-  --records-color-accent-ink: var(--ink);
-  --records-color-rule: oklch(35% .025 80);
+  --records-color-paper: var(--paper);
   --records-color-photo: var(--paper);
-  --records-font-display: var(--futura);
-  --records-font-body: var(--sans);
-  --records-space-xs: .5rem;
-  --records-space-sm: 1rem;
-  --records-space-md: 1.5rem;
-  --records-space-lg: 2rem;
-  --records-space-xl: 3rem;
-  --records-space-section: clamp(3rem, 6vw, 5rem);
-  --records-text-display: clamp(2.1rem, 5.4vw, 4.5rem);
-  --records-text-title: clamp(1.125rem, 2vw, 1.375rem);
-  --records-text-body: 1rem;
-  --records-text-caption: .875rem;
-  --records-rule: 1px;
+  --records-space-grid: clamp(1rem, 3vw, 2rem);
+  --records-space-section: clamp(1.5rem, 4vw, 3rem);
   --records-radius: 2px;
 }

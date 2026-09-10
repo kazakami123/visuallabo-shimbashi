@@ -1,52 +1,18 @@
-/* Hallmark · macrostructure: photographic gallery · genre: editorial · component-scope
- * design-system: DESIGN.md · tone: understated luxury · anchor hue: existing gold
- * Preserve all four original photos, uncropped. No reveal or image effects.
- * Pre-emit critique: P5 H4 E5 S5 R4 V4 · contrast: pass (minimum 8.28:1)
- * Shared brand palette retained; native link has no disabled/async state. */
+/* Hallmark · component: static image gallery · genre: modern-minimal · tone: quiet
+ * palette: existing VISUAL LABO paper · structural fingerprint: image-only responsive grid
+ * states: static content only · contrast: not applicable
+ * Preserve all four original photos, in order and uncropped.
+ * Pre-emit critique: P5 H5 E5 S5 R5 V4 · slop: pass */
 #records {
   background: var(--records-color-paper);
-  color: var(--records-color-ink);
   padding-block: var(--records-space-section);
   scroll-margin-top: 112px;
-  border-top: var(--records-rule) solid var(--records-color-rule);
 }
 #records .records-wrap { max-width: 1080px; }
-#records .records-heading {
-  display: flex;
-  flex-direction: column;
-  gap: var(--records-space-sm);
-  padding-bottom: var(--records-space-lg);
-  border-bottom: var(--records-rule) solid var(--records-color-rule);
-  margin-bottom: var(--records-space-lg);
-}
-#records .records-heading h2 { min-width: 0; font-weight: 400; }
-#records .records-title-en {
-  display: block;
-  font-family: var(--records-font-display);
-  font-size: var(--records-text-display);
-  line-height: 1.15;
-  letter-spacing: -.035em;
-  overflow-wrap: anywhere;
-}
-#records .records-title-en > span { color: var(--records-color-accent); }
-#records .records-title-ja {
-  display: block;
-  margin-top: var(--records-space-sm);
-  font-family: var(--records-font-body);
-  font-size: var(--records-text-title);
-  letter-spacing: .08em;
-  line-height: 1.6;
-  font-weight: 500;
-}
-#records .records-heading p {
-  font-size: var(--records-text-body);
-  font-weight: 400;
-  color: var(--records-color-muted);
-}
 #records .records-gallery {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: var(--records-space-xl);
+  gap: var(--records-space-grid);
 }
 #records .records-gallery figure { margin: 0; min-width: 0; }
 #records .records-gallery img {
@@ -56,69 +22,6 @@
   border-radius: var(--records-radius);
   background: var(--records-color-photo);
 }
-#records .records-gallery figcaption {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: var(--records-space-xs) var(--records-space-sm);
-  padding-block: var(--records-space-sm);
-  border-bottom: var(--records-rule) solid var(--records-color-rule);
-  color: var(--records-color-ink);
-  font-family: var(--records-font-body);
-  font-size: var(--records-text-caption);
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: .02em;
-  font-variant-numeric: tabular-nums;
-}
-#records .records-gallery figcaption > span { white-space: nowrap; }
-#records .records-caption-sep { color: var(--records-color-accent); }
-#records .records-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--records-space-lg);
-  margin-top: var(--records-space-xl);
-}
-#records .records-notes {
-  max-width: 38rem;
-  display: grid;
-  gap: var(--records-space-xs);
-  font-size: var(--records-text-caption);
-  line-height: 1.85;
-  color: var(--records-color-muted);
-  font-weight: 400;
-  overflow-wrap: anywhere;
-}
-#records .records-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--records-space-lg);
-  min-height: 56px;
-  max-width: 100%;
-  padding: var(--records-space-sm) var(--records-space-md);
-  border: var(--records-rule) solid var(--records-color-accent);
-  color: var(--records-color-ink);
-  border-radius: var(--records-radius);
-  font-size: var(--records-text-caption);
-  font-weight: 500;
-  white-space: nowrap;
-  line-height: 1.5;
-}
-#records .records-link > span { color: var(--records-color-accent); }
-#records .records-link:hover,
-#records .records-link:active { background: var(--records-color-accent); color: var(--records-color-accent-ink); }
-#records .records-link:hover > span,
-#records .records-link:active > span { color: inherit; }
-#records .records-link:focus-visible { outline: 2px solid var(--records-color-accent); outline-offset: 5px; }
 @media (min-width: 40rem) {
-  #records .records-heading { flex-direction: row; justify-content: space-between; align-items: flex-end; }
-  #records .records-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--records-space-xl) var(--records-space-lg); }
-}
-@media (min-width: 60rem) {
-  #records .records-heading { margin-bottom: var(--records-space-xl); }
-  #records .records-footer { flex-direction: row; justify-content: space-between; align-items: center; }
-  #records .records-link { flex-shrink: 0; }
+  #records .records-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
