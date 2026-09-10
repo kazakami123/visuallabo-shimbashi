@@ -134,7 +134,7 @@ CNAME    www  kazakami123.github.io
 ```
 VISUAL LABO 新橋店は、JR新橋駅から徒歩3分の男性専用・会員制ボディメイクサロンです。
 
-自社開発マシン MystiCore® の高周波で体を深部からじんわり温め、めぐりを促してから、
+自社開発マシン MystiCore の高周波で体を深部からじんわり温め、めぐりを促してから、
 HYPER EMSで自分では動かしにくいインナーマッスルにアプローチ。
 「温める → めぐらせる → 動かす → 維持する」の順番で、横になったまま受けていただけます。
 
@@ -155,7 +155,7 @@ VISUAL LABOは男性専用のサロンです。完全個室のVIPルーム、遠
 | BODY MAINTENANCE | 高周波で温め、手技でほぐし、HYPER EMSで仕上げる集中ケア |
 | HYPER EMS | パッドを貼って横になるだけ。最大60分 |
 | DOME SAUNA | 横になって入る遠赤外線のドームサウナ |
-| VIPルーム | 完全個室・2ベッド貸切・専属担当つき |
+| VIPルーム | 完全個室をお一人で利用・専属担当つき。同伴・同時施術不可 |
 
 **属性（チェックできるものは全部入れる）**
 - 予約が必要 / 女性経営 / バリアフリー（該当すれば）
@@ -167,7 +167,7 @@ VISUAL LABOは男性専用のサロンです。完全個室のVIPルーム、遠
 - 外観（できれば撮影を。ビル入口が分かるもの）
 - 待合ラウンジ 2枚（`images/lobby-vip-entrance.jpg` `images/lobby-lounge.jpg`）
 - 施術ルーム（`images/treatment-room.jpg` `images/treatment-scene.jpg`）
-- VIPルーム（`images/vip-room.jpg` `images/vip-couple-treat.jpg`）
+- VIPルーム（実際のお一人利用の設備と一致する写真のみ。2ベッド・同伴・同時施術を連想させる写真は使用しない）
 - マシン（`images/mysticore-salon.jpg`）
 - サウナ（`images/mens-sauna.jpg`）
 - ロゴ（`images/logo.png`）

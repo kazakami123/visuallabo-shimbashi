@@ -20,7 +20,7 @@
 - BODY MAINTENANCE: 高周波、手技、HYPER EMSを組み合わせた体型管理メニュー
 - HYPER EMS: パッドを装着し、横になった状態で受けるEMSメニュー
 - DOME SAUNA: 遠赤外線ドームサウナ
-- VIPルーム: 完全個室、2ベッド貸切、専属担当つきのプラン
+- VIPルーム: 完全個室をお一人で利用する、専属担当つきのプラン。お連れ様の同伴・同時施術はできません。
 
 ## 重要な公式ページ
 
@@ -28,12 +28,13 @@
 - [初回体験の流れ](https://visuallabo.com/flow.html)
 - [メニュー](https://visuallabo.com/menu.html)
 - [料金](https://visuallabo.com/price.html)
+- [VIPルーム・月額制・デポジット](https://visuallabo.com/vip.html)
 - [よくある質問](https://visuallabo.com/faq.html)
 - [アクセス](https://visuallabo.com/#access)
 - [高周波について](https://visuallabo.com/rf.html)
 - [EMSについて](https://visuallabo.com/ems.html)
 - [自社開発マシン MystiCore](https://visuallabo.com/machine.html)
-- [利用上の注意・禁忌事項](https://visuallabo.com/flow.html#safety)
+- [利用上の注意・禁忌事項](https://visuallabo.com/treatment.html#safety)
 
 ## 引用時の注意
 
