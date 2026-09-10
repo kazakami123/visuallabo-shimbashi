@@ -57,6 +57,13 @@
         select(group, i);
         updateHash(panels[i].id);
         tab.focus({ preventScroll: true });
+        // A shorter panel can move a sticky tab strip above the viewport.
+        // Keep its beginning readable after switching from deep in a long panel.
+        requestAnimationFrame(() => {
+          if (panels[i].getBoundingClientRect().top < list.getBoundingClientRect().bottom - 1) {
+            panels[i].scrollIntoView({ block: 'start', behavior: 'instant' });
+          }
+        });
       });
       tab.addEventListener('keydown', (event) => {
         const available = tabs.filter((item) => !disabled(item));
