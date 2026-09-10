@@ -41,6 +41,12 @@
 .m2sel figure img{width:100%;height:auto;display:block}
 .m2sel .m2badge{top:12px;left:14px;z-index:2}
 .m2sel .m2small .m2badge{left:auto;right:14px}
+/* 通い方の3点（index.html の 5つの安心と同じ定義） */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;max-width:1000px;margin:clamp(26px,4vw,40px) auto 0}
+.pcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 22px}
+.pcard .n{display:block;font-family:var(--futura);font-size:15px;letter-spacing:.14em;color:var(--gold-d);margin-bottom:10px}
+.pcard h3{font-size:18px;font-weight:700;color:var(--ink);margin:0 0 8px;line-height:1.5}
+.pcard p{font-size:14px;font-weight:500;line-height:1.9;color:var(--ink-soft);margin:0}
 </style>
 <link rel="stylesheet" href="menu-tabs.css?v=20260910b">
 </head>
@@ -85,7 +91,7 @@
   <div class="wrap mhero-inner">
     <div class="tag">MENU ／ VISUAL LABO</div>
     <h1>メニュー<span class="jp">あなたに合わせて、選べる。</span></h1>
-    <p class="sub">BODY MAINTENANCE ／ HYPER EMS ／ DOME SAUNA ／ VIP</p>
+    <p class="sub">BODY MAINTENANCE ／ HYPER EMS ／ DOME SAUNA ／ VIP<br>新橋・男性専用。すべて完全個室です。</p>
   </div>
 </section>
 
@@ -263,7 +269,12 @@
     <div class="rv" style="position:relative;background:#fff;border:1px solid var(--gold);border-radius:3px;padding:clamp(26px,4.5vw,38px);margin:26px auto 0;max-width:880px">
       <div style="position:absolute;inset:6px;border:1px solid rgba(184,155,94,.25);pointer-events:none;border-radius:2px"></div>
       <div style="font-size:clamp(17px,3vw,22px);font-weight:600;letter-spacing:.02em;line-height:1.6;margin-bottom:14px;color:var(--ink)">温めることは、いちばんの<span style="color:var(--gold-d)">ダイエット習慣</span>。</div>
-      <p style="font-size:14px;line-height:2;color:var(--ink-soft);margin:0">体が冷えていると、エネルギーを使いにくく、ためこみやすい。だからVISUAL LABOは、自分では届かない深部から、しっかり温める。体温が上がると基礎代謝も上がるといわれています。続けるほど、<b style="color:var(--ink);font-weight:600">太りにくい体づくりをサポート</b>します。</p>
+      <p style="font-size:14px;line-height:2;color:var(--ink-soft);margin:0">体が冷えていると、エネルギーを使いにくく、ためこみやすい。だからVISUAL LABOは、自分では届かない深部から、しっかり温める。体温が上がると基礎代謝も上がるといわれています。続けるほど、<b style="color:var(--ink);font-weight:600">太りにくい体づくりをサポート</b>します。<br><span style="font-size:12.5px;color:var(--ink-mute)">※効果・感じ方には個人差があります。</span></p>
+    </div>
+    <div class="pgrid rv" style="margin-top:clamp(28px,5vw,42px)">
+      <div class="pcard"><span class="n">01</span><h3>男性専用・完全個室</h3><p>お客様は男性のみ。カウンセリングから施術まで個室なので、他のお客様と顔を合わせることはありません。</p></div>
+      <div class="pcard"><span class="n">02</span><h3>手ぶらで、仕事帰りに</h3><p>お着替えとアメニティはご用意しています。新橋駅から徒歩3分、夜は21時まで。スーツのままお越しください。</p></div>
+      <div class="pcard"><span class="n">03</span><h3>無理な勧誘は、しません</h3><p>その場でのご契約を無理にお願いすることはありません。料金・契約期間・退会条件は、ご契約の前にすべてご確認いただけます。</p></div>
     </div>
 
   </div>
