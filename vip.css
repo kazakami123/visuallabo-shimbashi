@@ -19,8 +19,16 @@ html.vip-page { overflow-x: clip; scroll-padding-top: 148px; }
 .vp-main p { overflow-wrap: anywhere; }
 .vp-eyebrow { font-family: var(--font-outlier); font-size: var(--text-xs); font-weight: 500; letter-spacing: .16em; line-height: 1.6; color: var(--color-accent); margin-bottom: var(--space-md); }
 .vp-hero { padding-top: clamp(48px, 5.5vw, 80px); padding-bottom: clamp(64px, 7.2vw, 104px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: var(--space-xl); align-items: center; }
-.vp-hero h1 { font-size: var(--text-display); line-height: 1.33; }
-.vp-hero h1 span { display: block; font-size: clamp(1.25rem, 2vw, 1.75rem); margin-top: var(--space-md); letter-spacing: .01em; }
+.vp-hero h2 { font-size: var(--text-display); line-height: 1.33; }
+.vp-hero h2 span { display: block; font-size: clamp(1.25rem, 2vw, 1.75rem); margin-top: var(--space-md); letter-spacing: .01em; }
+.vp-plan-intro { padding-block: var(--space-lg) var(--space-md); }
+.vp-plan-intro h1 { font-size: var(--text-2xl); line-height: 1.4; }
+.vp-plan-intro p { margin-top: var(--space-2xs); color: var(--color-muted); font-size: var(--text-sm); }
+.vp-plan-tabs > .vp-wrap:first-child { position: sticky; top: var(--choice-header-height, 104px); z-index: 90; background: var(--color-paper); }
+.vp-plan-tabs > [data-tab-panel] { padding-block: var(--space-lg) var(--space-xl); }
+.vp-plan-tabs .vp-section-top { margin-bottom: var(--space-lg); }
+.vp-plan-tabs .vp-heading h2 { font-size: var(--text-xl); }
+.vp-plan-tabs .vp-section-intro { font-size: var(--text-sm); }
 .vp-intro { margin-top: var(--space-md); color: var(--color-ink-2); }
 .vp-audience { font-size: var(--text-xs); color: var(--color-muted); margin-block: var(--space-sm) var(--space-lg); }
 .vp-button { display: inline-flex; justify-content: space-between; align-items: center; gap: var(--space-lg); min-height: 52px; padding: var(--space-xs) var(--space-md); border: var(--rule-fine) solid var(--color-ink); background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); font-weight: 500; white-space: nowrap; }

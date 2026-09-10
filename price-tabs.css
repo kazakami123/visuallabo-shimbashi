@@ -1,0 +1,81 @@
+.price-page .mhero-inner {
+  padding-top: calc(var(--choice-header-height, 80px) + 24px);
+  padding-bottom: 22px;
+}
+
+.price-page .mhero h1 {
+  font-size: clamp(26px, 4vw, 38px);
+}
+
+.price-page .price-choice {
+  padding-top: 18px;
+  padding-bottom: 28px;
+}
+
+.price-choice > .wrap {
+  max-width: 860px;
+}
+
+.price-choice-panel {
+  min-width: 0;
+  padding-top: 28px;
+}
+
+.price-choice-panel > .kicker {
+  display: none;
+}
+
+.price-page .price-choice-panel > .psub:first-child,
+.price-page .price-category .price-fold__content > .psub {
+  margin-top: 0 !important;
+}
+
+.price-category-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  max-width: 640px;
+  margin: 0 auto 14px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.price-category-label small {
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.price-vip-link {
+  max-width: 640px;
+  margin: 28px auto 0;
+}
+
+.price-page .price-common {
+  padding-top: 18px;
+}
+
+@media (min-width: 40.0625rem) {
+  .price-category-label {
+    display: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  .price-page .mhero-inner {
+    padding-top: calc(var(--choice-header-height, 56px) + 20px);
+    padding-bottom: 18px;
+  }
+
+  .price-page .price-choice {
+    padding-top: 12px;
+    padding-bottom: 22px;
+  }
+
+  .price-choice-panel {
+    padding-top: 20px;
+  }
+}

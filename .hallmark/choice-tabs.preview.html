@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Menu selector state preview</title><link rel="stylesheet" href="../choice-tabs.css"><style>body{max-width:860px;margin:32px auto;padding:16px;font:16px/1.6 sans-serif}section{margin-block:24px}.choice-tabs{position:static}h1{font-size:24px}</style></head><body>
+<h1>Menu selector — component QA</h1>
+<p>Default, hover, keyboard focus, pressed, disabled. Selection is synchronous; status examples below are test fixtures only.</p>
+<section data-tabs="demo"><nav class="choice-tabs" data-tab-list aria-label="状態プレビュー"><a class="choice-tab" data-tab href="#monthly">月額制</a><a class="choice-tab" data-tab href="#deposit">デポジット</a><a class="choice-tab" data-tab href="#disabled" aria-disabled="true">利用不可</a></nav><div id="monthly" data-tab-panel>月額制の選択状態。</div><div id="deposit" data-tab-panel>デポジットの選択状態。</div><div id="disabled" data-tab-panel>Disabled fixture.</div></section>
+<section><p class="choice-state-message" data-state="loading" role="status">Loading example — 実ページでは表示しません。</p><p class="choice-state-message" data-state="error" role="alert">Error example — 実ページでは表示しません。</p><p class="choice-state-message" data-state="success" role="status">Success example — 実ページでは選択済みタブの表示のみ。</p></section>
+<script src="../assets/choice-tabs.js" defer></script></body></html>

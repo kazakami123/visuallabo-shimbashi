@@ -16,7 +16,8 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#faf9f6">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="vip.css">
+<link rel="stylesheet" href="vip.css?v=20260910b">
+<link rel="stylesheet" href="choice-tabs.css?v=20260910b">
 <link rel="canonical" href="https://visuallabo.com/vip.html">
 <meta property="og:url" content="https://visuallabo.com/vip.html">
 <meta name="twitter:card" content="summary_large_image">
@@ -57,38 +58,18 @@
 </header>
 
 <main id="main-content" class="vp-main">
-  <section class="vp-hero vp-wrap" aria-labelledby="vip-title">
-    <div class="vp-hero-copy">
-      <p class="vp-eyebrow">VISUAL LABO / VIP ROOM</p>
-      <h1 id="vip-title">ひとりで、<br>ゆったり。<span>自分を整える120分。</span></h1>
-      <p class="vp-intro">完全個室を、お一人のために。<br>専属担当と、自分の体に向き合う時間を。</p>
-      <p class="vp-audience">男性専用の会員制体型管理サロン</p>
-      <a class="vp-button" href="#trial">VIP体験を見る <span aria-hidden="true">↗</span></a>
-      <a class="vp-text-link" href="#membership">料金・プランを見る <span aria-hidden="true">↓</span></a>
+  <div class="vp-plan-intro vp-wrap">
+    <h1 id="vip-title">VIPルーム</h1>
+    <p>完全個室・専属担当。お一人で過ごす120分。</p>
+  </div>
+  <div class="vp-plan-tabs" data-tabs="vip">
+    <div class="vp-wrap">
+      <nav class="choice-tabs" data-tab-list aria-label="VIPのご利用プラン">
+        <a class="choice-tab" data-tab href="#membership">月額制</a>
+        <a class="choice-tab" data-tab href="#deposit">デポジット</a>
+      </nav>
     </div>
-    <figure class="vp-hero-photo">
-      <img src="images/lobby-vip-entrance.jpg" alt="VISUAL LABOの待合ラウンジとVIPルーム入口" width="1600" height="844" fetchpriority="high">
-      <figcaption>待合ラウンジ・VIPルーム入口</figcaption>
-    </figure>
-    <div class="vp-use-notice"><span>ご利用について</span><p>VIPルームはお一人専用です。<strong>お連れ様の同伴・同時施術はできません。</strong></p></div>
-  </section>
-
-  <section class="vp-section vp-paper" aria-labelledby="care-title">
-    <div class="vp-wrap vp-split">
-      <div class="vp-heading">
-        <h2 id="care-title">温めて、動かす。<br>120分のボディケア。</h2>
-        <p>周囲を気にせず、ゆっくり施術を受けたい方へ。MystiCore®を備えた完全個室で、高周波とHYPER EMSを組み合わせたケアをご提供します。</p>
-      </div>
-      <div class="vp-care">
-        <div class="vp-care-row"><div><span class="vp-small-label">高周波施術</span><h3>温めるケア</h3></div><p class="vp-duration">90<span>分</span></p></div>
-        <div class="vp-care-row"><div><span class="vp-small-label">HYPER EMS</span><h3>筋肉にアプローチ</h3></div><p class="vp-duration">30<span>分</span></p></div>
-        <p class="vp-care-note">VIP会員には専属担当がつき、毎回の施術とカルテを継続します。温活ドームサウナの利用も料金に含まれます。</p>
-        <a class="vp-text-link" href="treatment.html">施術内容・安全について <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="vp-section vp-wrap" id="membership" aria-labelledby="membership-title">
+  <section class="vp-section vp-wrap" id="membership" data-tab-panel aria-labelledby="membership-title">
     <div class="vp-section-top">
       <div class="vp-heading"><h2 id="membership-title">自分のペースで、<br>続けられるプラン。</h2></div>
       <p class="vp-section-intro">完全個室・専属担当・毎回120分の施術。<br>個室料・指名料の追加はありません。<br><span class="vp-tax">表示価格はすべて税込です。</span></p>
@@ -121,7 +102,7 @@
 <li>表示価格はすべて税込です。</li></ul></details>
   </section>
 
-  <section class="vp-section vp-paper" id="deposit" aria-labelledby="deposit-title">
+  <section class="vp-section vp-paper" id="deposit" data-tab-panel aria-labelledby="deposit-title">
     <div class="vp-wrap">
       <div class="vp-section-top">
         <div class="vp-heading"><p class="vp-eyebrow">VIP DEPOSIT</p><h2 id="deposit-title">先にチャージして、<br>必要なときに使う。</h2></div>
@@ -138,6 +119,39 @@
 <li>本プランは特定商取引法上の特定継続的役務提供に該当します。ご契約前に概要書面を、ご契約時に契約書面をお渡しし、8日間のクーリング・オフにも対応します。</li>
 <li>中途解約はいつでも可能です。未利用残高は法令の基準に基づき返金します（ボーナス分を除く精算となります）。詳しくは契約書面をご確認ください。</li>
 <li>チャージ残高でのご予約も、会員同様に優先枠でご案内します。</li></ul></details>
+    </div>
+  </section>
+
+  </div>
+
+  <section class="vp-hero vp-wrap" aria-labelledby="vip-room-title">
+    <div class="vp-hero-copy">
+      <p class="vp-eyebrow">VISUAL LABO / VIP ROOM</p>
+      <h2 id="vip-room-title">ひとりで、<br>ゆったり。<span>自分を整える120分。</span></h2>
+      <p class="vp-intro">完全個室を、お一人のために。<br>専属担当と、自分の体に向き合う時間を。</p>
+      <p class="vp-audience">男性専用の会員制体型管理サロン</p>
+      <a class="vp-button" href="#trial">VIP体験を見る <span aria-hidden="true">↗</span></a>
+      <a class="vp-text-link" href="#membership">料金・プランを見る <span aria-hidden="true">↓</span></a>
+    </div>
+    <figure class="vp-hero-photo">
+      <img src="images/lobby-vip-entrance.jpg" alt="VISUAL LABOの待合ラウンジとVIPルーム入口" width="1600" height="844" loading="lazy">
+      <figcaption>待合ラウンジ・VIPルーム入口</figcaption>
+    </figure>
+    <div class="vp-use-notice"><span>ご利用について</span><p>VIPルームはお一人専用です。<strong>お連れ様の同伴・同時施術はできません。</strong></p></div>
+  </section>
+
+  <section class="vp-section vp-paper" aria-labelledby="care-title">
+    <div class="vp-wrap vp-split">
+      <div class="vp-heading">
+        <h2 id="care-title">温めて、動かす。<br>120分のボディケア。</h2>
+        <p>周囲を気にせず、ゆっくり施術を受けたい方へ。MystiCore®を備えた完全個室で、高周波とHYPER EMSを組み合わせたケアをご提供します。</p>
+      </div>
+      <div class="vp-care">
+        <div class="vp-care-row"><div><span class="vp-small-label">高周波施術</span><h3>温めるケア</h3></div><p class="vp-duration">90<span>分</span></p></div>
+        <div class="vp-care-row"><div><span class="vp-small-label">HYPER EMS</span><h3>筋肉にアプローチ</h3></div><p class="vp-duration">30<span>分</span></p></div>
+        <p class="vp-care-note">VIP会員には専属担当がつき、毎回の施術とカルテを継続します。温活ドームサウナの利用も料金に含まれます。</p>
+        <a class="vp-text-link" href="treatment.html">施術内容・安全について <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 
@@ -219,6 +233,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://visuallabo.com/"}, {"@type": "ListItem", "position": 2, "name": "VIPルーム", "item": "https://visuallabo.com/vip.html"}]}
 </script>
+<script src="assets/choice-tabs.js?v=20260910b" defer></script>
 <script src="assets/analytics.js" defer></script>
 </body>
 </html>

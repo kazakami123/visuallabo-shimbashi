@@ -1,0 +1,117 @@
+/* Hallmark · component scope: menu tabs · existing VISUAL LABO warm-paper system.
+   Existing page chrome, typography, imagery, and copy retained. */
+.menu-page {
+  --menu-gap-sm: .5rem;
+  --menu-gap-md: 1rem;
+  --menu-gap-lg: 1.5rem;
+  --menu-gap-xl: 2.5rem;
+}
+
+.menu-page .mhero-inner {
+  padding-top: calc(var(--choice-header-height, 104px) + var(--menu-gap-lg));
+  padding-bottom: var(--menu-gap-lg);
+}
+.menu-page .mhero .tag {
+  margin-bottom: var(--menu-gap-sm);
+}
+.menu-page .mhero h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin-bottom: var(--menu-gap-sm);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.menu-page .mhero h1 .jp {
+  margin-top: var(--menu-gap-sm);
+}
+.menu-page .mhero .sub {
+  font-size: .875rem;
+  line-height: 1.65;
+}
+.menu-page [data-tabs="menu"] > .choice-tabs {
+  width: min(100% - 2rem, 860px);
+  margin-inline: auto;
+}
+.menu-page .menu-choice-card {
+  padding-block: var(--menu-gap-lg) 0;
+}
+.menu-page .menu-choice-card .m2sel {
+  margin-top: 0;
+}
+.menu-page .m2big,
+.menu-page .m2small {
+  grid-template-columns: minmax(0, 1fr);
+}
+.menu-page .mtop > * {
+  min-width: 0;
+}
+.menu-page .menu-choice-card .m2pr {
+  flex-wrap: wrap;
+  font-variant-numeric: tabular-nums;
+}
+.menu-page .menu-choice-card p {
+  font-size: .875rem;
+  word-break: normal;
+}
+.menu-page [data-tab-panel] > .sec {
+  padding-top: var(--menu-gap-xl);
+}
+.menu-page .menu-choice-summary {
+  padding-block: var(--menu-gap-xl);
+}
+.menu-page .menu-choice-summary .wrap {
+  max-width: 860px;
+  display: grid;
+  justify-items: start;
+  gap: var(--menu-gap-lg);
+}
+.menu-page .menu-choice-summary h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+.menu-page .menu-choice-summary p {
+  max-width: 42rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.menu-page .menu-choice-summary .btn {
+  white-space: nowrap;
+  min-height: 44px;
+  transition: none;
+  color: var(--ink);
+}
+.menu-page .menu-choice-summary .btn:hover {
+  background: var(--gold);
+  color: var(--ink);
+  transform: none;
+}
+.menu-page .menu-choice-summary .btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.menu-page .menu-choice-summary .btn:active {
+  background: var(--ink);
+  color: var(--paper);
+}
+.menu-page .menu-choice-summary .btn[aria-disabled="true"] {
+  opacity: .55;
+  cursor: not-allowed;
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu-page .menu-choice-summary .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+}
+.menu-page .menu-common-intro {
+  padding-block: var(--menu-gap-xl);
+}
+@media (max-width: 480px) {
+  .menu-page .bbar a { min-width: 0; font-size: 12px; white-space: nowrap; gap: 4px; }
+  .menu-page .bbar .bl svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .menu-page .bbar .br { flex-direction: column; gap: 1px; }
+  .menu-page .bbar .br em { font-size: 11px; margin-left: 0; }
+}
