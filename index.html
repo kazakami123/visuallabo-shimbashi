@@ -507,7 +507,13 @@ footer{background:#0c0c0c;color:#8f897f;padding:clamp(50px,7vw,70px) 0 30px;font
 .ft img{height:36px;width:auto}
 .ft-links{display:flex;flex-wrap:wrap;gap:8px 22px}
 .ft-links a:hover{color:var(--gold-d)}
-.copy{font-family:var(--futura);text-align:center;margin-top:34px;font-size:11px;color:#6b665e}
+.copy{font-family:var(--futura);text-align:center;margin-top:34px;font-size:11px;color:#8a8275}
+
+/* ===== アクセシビリティ：キーボードフォーカスの可視化・スキップリンク（2026-09-12） ===== */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold-d);outline-offset:3px}
+footer a:focus-visible{outline-color:#e0c48d}
+.skip-link{position:fixed;top:-64px;left:16px;z-index:500;background:#211d18;color:#f4efe6;padding:12px 22px;font-size:14px;letter-spacing:.06em;border-radius:0 0 8px 8px;transition:top .2s}
+.skip-link:focus{top:0;outline:2px solid #e0c48d;outline-offset:-4px}
 
 /* fixed CTAs */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
@@ -620,6 +626,7 @@ body{padding-bottom:86px}
 <script src="assets/page-links.js?v=20260910d" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 
 <div id="loader" aria-hidden="true"><img src="images/logo.png" alt="VISUAL LABO 新橋店" width="1088" height="200"><div class="lt">LOADING</div></div>
 <script>
@@ -662,6 +669,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <a href="#faq"><span class="te">FAQ</span><span class="tj">よくある質問</span></a>
   </nav>
 </header>
+<div id="main-content" tabindex="-1"></div>
 
 <!-- 1. ファーストビュー -->
 <section class="hero">

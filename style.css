@@ -647,3 +647,11 @@ section[id]{scroll-margin-top:120px}
 
 /* hidden 属性を確実に効かせる（display 指定に負けないように・2026-09-08） */
 [hidden]{display:none!important}
+
+/* ===== アクセシビリティ：キーボードフォーカスの可視化・スキップリンク（2026-09-12） ===== */
+/* フォーカスリング。明色背景は濃ゴールド（4.5:1以上）、ダーク背景のフッターは明ゴールド */
+a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid #806731;outline-offset:3px}
+footer a:focus-visible{outline-color:#e0c48d}
+/* 繰り返しナビを飛ばすスキップリンク。Tabキーでフォーカスした時だけ画面上部に現れる */
+.skip-link{position:fixed;top:-64px;left:16px;z-index:500;background:#211d18;color:#f4efe6;padding:12px 22px;font-size:14px;letter-spacing:.06em;border-radius:0 0 8px 8px;transition:top .2s}
+.skip-link:focus{top:0;outline:2px solid #e0c48d;outline-offset:-4px}
