@@ -117,6 +117,35 @@
  ],
  "publicAccess": true,
  "isAccessibleForFree": false,
+ "slogan": "がんばらない、体型管理習慣。",
+ "knowsLanguage": ["ja"],
+ "smokingAllowed": false,
+ "audience": {
+  "@type": "PeopleAudience",
+  "suggestedGender": "male",
+  "suggestedMinAge": 16
+ },
+ "amenityFeature": [
+  {"@type": "LocationFeatureSpecification", "name": "完全個室", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "男性専用", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "手ぶらOK（ウェア・アメニティ完備）", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "ドリンクBAR", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "完全予約制", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "ドームサウナ", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "VIPルーム", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "駐車場", "value": false}
+ ],
+ "potentialAction": {
+  "@type": "ReserveAction",
+  "name": "初回体験を予約する",
+  "target": {
+   "@type": "EntryPoint",
+   "urlTemplate": "https://lin.ee/VAjIUgc",
+   "inLanguage": "ja",
+   "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform", "http://schema.org/IOSPlatform", "http://schema.org/AndroidPlatform"]
+  },
+  "result": {"@type": "Reservation", "name": "初回体験 60分 BODY MAINTENANCE"}
+ },
  "openingHoursSpecification": [
   {
    "@type": "OpeningHoursSpecification",
@@ -130,7 +159,8 @@
     "Sunday"
    ],
    "opens": "12:00",
-   "closes": "21:00"
+   "closes": "21:00",
+   "description": "定休日：第2・第4日曜日、年末年始、大型連休"
   }
  ],
  "makesOffer": [
@@ -805,6 +835,10 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       </div>
     </div>
     <p class="vm-close rv"><em>“その日だけ”</em>で終わらない。<br>いい状態が続く日常を、<span class="ftr" style="letter-spacing:.14em">VISUAL&nbsp;LABO&nbsp;METHOD</span>でつくります。</p>
+    <div class="center rv" style="margin-top:clamp(18px,3vw,26px);display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+      <a href="method-science.html" style="font-size:13.5px;color:var(--ink-soft);border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;text-decoration:none">なぜ、この順番なのか →</a>
+      <a href="shindan.html" style="font-size:13.5px;color:var(--ink-soft);border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 18px;text-decoration:none">お腹が変わりにくい理由を診断する →</a>
+    </div>
     <div class="center rv" id="facilities" style="margin-top:clamp(28px,5vw,44px);scroll-margin-top:130px">
       <h2 class="tt">サロンの<em>設備・サービス</em></h2>
       <p class="lead-s">施術に使う設備と、<br>施術前後にご利用いただけるサービスをご紹介します。</p>

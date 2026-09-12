@@ -2,13 +2,65 @@ User-agent: *
 Allow: /
 Disallow: /_archive/
 
-# ChatGPT Searchで公開ページを発見・引用できるよう明示的に許可します。
+# ── AI検索・LLMからの発見と引用を明示的に許可 ──
+# ChatGPT Search
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /_archive/
 
-# ユーザー操作時のChatGPTブラウジングを許可します。
+# ChatGPTのブラウジング（ユーザー操作時）
 User-agent: ChatGPT-User
+Allow: /
+Disallow: /_archive/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_archive/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /_archive/
+
+# Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_archive/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /_archive/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /_archive/
+
+# Google Gemini / Vertex AI
+User-agent: Google-Extended
+Allow: /
+Disallow: /_archive/
+
+# Microsoft Copilot
+User-agent: Bingbot
+Allow: /
+Disallow: /_archive/
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+Disallow: /_archive/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /_archive/
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+Disallow: /_archive/
+
+# Common Crawl（多くのLLMの学習元）
+User-agent: CCBot
 Allow: /
 Disallow: /_archive/
 
