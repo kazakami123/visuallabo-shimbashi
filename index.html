@@ -515,6 +515,24 @@ footer a:focus-visible{outline-color:#e0c48d}
 .skip-link{position:fixed;top:-64px;left:16px;z-index:500;background:#211d18;color:#f4efe6;padding:12px 22px;font-size:14px;letter-spacing:.06em;border-radius:0 0 8px 8px;transition:top .2s}
 .skip-link:focus{top:0;outline:2px solid #e0c48d;outline-offset:-4px}
 
+/* ===== オープニングキャンペーン帯（9/14〜9/30・10/1に自動非表示） ===== */
+.camp-band{position:sticky;top:0;left:0;z-index:400;display:block;height:38px;background:var(--gold,#c9a768);color:#171310;overflow:hidden;border-bottom:1px solid rgba(23,19,16,.18)}
+.camp-band:hover,.camp-band:focus-visible{color:#171310}
+.camp-track{display:flex;width:max-content;height:38px;align-items:center;animation:camp-scroll 26s linear infinite;will-change:transform}
+.camp-band:hover .camp-track,.camp-band:focus-visible .camp-track{animation-play-state:paused}
+.camp-grp{display:flex}
+.camp-seg{display:block;white-space:nowrap;font-family:var(--futura);font-size:12.5px;font-weight:700;letter-spacing:.08em;padding-right:64px}
+.camp-static{display:none}
+@keyframes camp-scroll{to{transform:translateX(-50%)}}
+body.has-camp header{top:38px}
+@media (prefers-reduced-motion: reduce){
+  .camp-track{display:none}
+  .camp-static{display:flex;align-items:center;justify-content:center;height:38px;white-space:nowrap;overflow:hidden;padding:0 12px;font-family:var(--futura);font-size:12px;font-weight:700;letter-spacing:.06em}
+}
+/* 帯があるあいだ、ヘッダー高さ前提のスティッキー要素とアンカー位置を38pxぶん下げる */
+body.has-camp .choice-tabs,body.has-camp .choice-tabs-shell{top:calc(var(--choice-header-height, 104px) + 38px)}
+html.choice-tabs-page:has(body.has-camp),html.page-tabs-page:has(body.has-camp){scroll-padding-top:calc(var(--choice-header-height, 104px) + var(--choice-bar-height, 64px) + 54px)}
+
 /* fixed CTAs */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
 /* Hallmark · component: mobile fixed CTA · genre: editorial · theme: VISUAL LABO */
@@ -625,8 +643,9 @@ body{padding-bottom:86px}
 <link rel="stylesheet" href="page-tabs.css?v=20260910a">
 <script src="assets/page-links.js?v=20260910d" defer></script>
 </head>
-<body>
+<body class="has-camp">
 <a class="skip-link" href="#main-content">本文へ移動</a>
+<a class="camp-band" id="campBand" href="https://lin.ee/VAjIUgc" target="_blank" rel="noopener" data-cta="camp_band" aria-label="オープニングキャンペーン 9月14日から9月30日まで。初回体験60分が2,980円のところ980円。お一人さま1回。ご予約は公式LINEから"><span class="camp-track" aria-hidden="true"><span class="camp-grp"><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span></span><span class="camp-grp"><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span><span class="camp-seg">オープニングキャンペーン 9/14（月）〜9/30（水）｜初回体験60分 ¥2,980 → ¥980｜お一人さま1回・ご予約は公式LINEから</span></span></span><span class="camp-static" aria-hidden="true">オープニングキャンペーン 9/14〜9/30｜初回体験60分 ¥2,980 → ¥980</span></a><script>(function(){if(Date.now()>new Date('2026-10-01T00:00:00+09:00').getTime()){var b=document.getElementById('campBand');if(b)b.parentNode.removeChild(b);document.body.classList.remove('has-camp');}})();</script>
 
 <div id="loader" aria-hidden="true"><img src="images/logo.png" alt="VISUAL LABO 新橋店" width="1088" height="200"><div class="lt">LOADING</div></div>
 <script>
