@@ -1174,20 +1174,14 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     rvs.forEach(function(el){el.classList.add('on')});
   }
 
-  /* ヒーロー動画。通信量節約設定・低速回線のときだけポスター画像のままにする。
-     「動きを減らす」設定では止めない。iOSでオンの人が多く、
-     ブランドの顔である動画が見られなくなるため（2026-09-15 判断） */
-  function heroVideoAllowed(){
-    try{
-      var c=navigator.connection;
-      if(c&&(c.saveData||/^(slow-)?2g$/.test(c.effectiveType||'')))return false;
-    }catch(e){}
-    return true;
-  }
+  /* ヒーロー動画。ここは必ず再生を試みる。
+     「動きを減らす」設定でも、通信量節約設定でも、回線が遅いと判定されても止めない。
+     いずれも端末側で常時オンにしている人が多く、ブランドの顔である動画が
+     出ないほうの損失が大きいため（2026-09-15 判断）。
+     ポスター画像が先に出るので、再生できない環境でも見た目は崩れない */
   window.addEventListener('load',function(){
     var hv=document.getElementById('heroVid');
     if(!hv)return;
-    if(!heroVideoAllowed())return;
     var sc=hv.querySelector('source');
     if(sc&&!sc.src){sc.src=sc.getAttribute('data-src');hv.load()}
 
@@ -1210,7 +1204,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   });
 
   var v=document.getElementById('twMovie');
-  if(v&&heroVideoAllowed()){var vio=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(v){var vio=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){var sc=v.querySelector('source');if(sc&&!sc.src){sc.src=sc.getAttribute('data-src');v.load()}v.play().catch(function(){})}
     else{v.pause()}
   })},{threshold:.25});vio.observe(v)}
