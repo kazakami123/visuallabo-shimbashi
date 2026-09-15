@@ -1190,8 +1190,23 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     if(!heroVideoAllowed())return;
     var sc=hv.querySelector('source');
     if(sc&&!sc.src){sc.src=sc.getAttribute('data-src');hv.load()}
-    hv.play().then(function(){hv.style.opacity='1'}).catch(function(){});
-    hv.addEventListener('playing',function(){hv.style.opacity='1'});
+
+    function show(){hv.style.opacity='1'}
+    /* 再生開始・デコード可能・最初のフレーム描画、どれでも表示に切り替える。
+       iOSの低電力モードなど自動再生がブロックされる環境でも、
+       映像が出せる状態になったら必ず見えるようにする（2026-09-15） */
+    ['playing','canplay','loadeddata','timeupdate'].forEach(function(n){
+      hv.addEventListener(n, show, {once:true});
+    });
+    hv.play().then(show).catch(function(){
+      /* 自動再生が止められた場合。画面に触れたら再生を試す */
+      var retry=function(){hv.play().then(show).catch(function(){}); };
+      ['touchstart','click','scroll'].forEach(function(n){
+        document.addEventListener(n, retry, {once:true, passive:true});
+      });
+      /* 再生できなくても、1コマ目が読めていれば静止画として見せる */
+      if(hv.readyState>=2) show();
+    });
   });
 
   var v=document.getElementById('twMovie');
