@@ -3,7 +3,7 @@
    例: var GA4_ID = 'G-ABCD123XYZ';
    空のままなら何も読み込まれません（サイトの表示には影響しません）。 */
 (function () {
-  var GA4_ID = '';            // ← GA4の測定IDを入れる
+  var GA4_ID = 'G-G17GN7QY0N';  // ← GA4の測定ID
   var CLARITY_ID = '';        // ← Microsoft Clarity を使う場合のプロジェクトID（任意）
 
   if (GA4_ID) {
