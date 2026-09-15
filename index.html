@@ -636,6 +636,12 @@ body{padding-bottom:86px}
 /* 注記（style.css と同じ定義。index.html は style.css を読み込まないため） */
 .pnote2{font-size:13px;color:var(--ink-mute);line-height:1.95;margin-top:22px;font-weight:400}
 .pnote2 span{display:block}
+/* スタッフ・設備（TOP末尾） */
+.fac-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:900px;margin:clamp(24px,4vw,34px) auto 0}
+.fac-grid figure{margin:0}
+.fac-grid img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.fac-grid figcaption{margin-top:8px;font-size:12.5px;color:var(--ink-mute);text-align:center;letter-spacing:.02em}
+@media(max-width:479px){.fac-grid{grid-template-columns:1fr 1fr;gap:10px}.fac-grid figcaption{font-size:11.5px}}
 </style>
 <link rel="stylesheet" href="home-records-tokens.css?v=20260910b">
 <link rel="stylesheet" href="home-records.css?v=20260910b">
@@ -1076,6 +1082,31 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <details><summary>持ち物は必要ですか？</summary><div class="a">手ぶらでお越しください。お着替え・アメニティはすべてご用意しています。</div></details>
     </div>
     <p class="center rv" style="margin-top:20px"><a class="btn btn-out" href="faq.html">その他の質問を見る →</a></p>
+  </div>
+</section>
+
+<!-- 12.5 スタッフ・設備 -->
+<section class="sec" id="welcome" style="background:var(--wash)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker c">Staff ｜ お待ちしています</div>
+      <h2 class="tt">新橋の店舗で、<em>お待ちしています</em>。</h2>
+      <p class="lead-s">施術スタッフは女性です。<br>はじめての方にも、その日の状態を伺いながら進めます。</p>
+    </div>
+    <figure class="rv" style="margin:clamp(26px,4vw,38px) auto 0;max-width:620px">
+      <img loading="lazy" decoding="async" src="images/staff-team.webp" alt="VISUAL LABO 新橋店の施術スタッフ" style="display:block;width:100%;height:auto;border-radius:14px" width="1122" height="1402">
+    </figure>
+
+    <div class="center rv" style="margin-top:clamp(40px,6vw,60px)">
+      <h2 class="tt">設備・<em>アメニティ</em>。</h2>
+      <p class="lead-s">お手洗いとパウダースペースも、<br>気持ちよくお使いいただけるように。</p>
+    </div>
+    <div class="fac-grid rv">
+      <figure><img loading="lazy" decoding="async" src="images/facility-amenity.webp" alt="施術前後にお使いいただくタオル・アメニティ・スリッパ" width="1086" height="1448"><figcaption>ウェア・タオル・アメニティ</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="images/facility-washbasin.webp" alt="パウダースペースの洗面台" width="1086" height="1448"><figcaption>パウダースペース</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="images/facility-restroom-doors.webp" alt="男女別に分かれたお手洗いの入口" width="1086" height="1448"><figcaption>お手洗い（男女別）</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="images/facility-toilet.webp" alt="温水洗浄便座つきのお手洗い" width="1086" height="1448"><figcaption>温水洗浄便座つき</figcaption></figure>
+    </div>
   </div>
 </section>
 
