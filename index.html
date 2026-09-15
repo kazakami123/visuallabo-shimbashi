@@ -1147,10 +1147,11 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     rvs.forEach(function(el){el.classList.add('on')});
   }
 
-  /* ヒーロー動画。動きを減らす設定・通信量節約設定のときはポスター画像のまま */
+  /* ヒーロー動画。通信量節約設定・低速回線のときだけポスター画像のままにする。
+     「動きを減らす」設定では止めない。iOSでオンの人が多く、
+     ブランドの顔である動画が見られなくなるため（2026-09-15 判断） */
   function heroVideoAllowed(){
     try{
-      if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return false;
       var c=navigator.connection;
       if(c&&(c.saveData||/^(slow-)?2g$/.test(c.effectiveType||'')))return false;
     }catch(e){}
