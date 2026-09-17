@@ -541,13 +541,18 @@ section[id]{scroll-margin-top:84px}
 .bbar .bl svg{width:20px;height:20px;fill:#06C755}
 .bbar .br{background:var(--ink);color:#fff}
 .bbar .br em{font-style:normal;color:var(--gold);margin-left:2px}
+.bbar .bh{gap:0;color:var(--ink);border:1.5px solid rgba(26,26,26,.3);background:#fff}
+.bbar .bh i{font-style:normal}
+@media(max-width:760px){.bbar .bh i{display:none}.bbar.b3 a{font-size:12px;gap:5px;padding:0 4px}.bbar.b3 .bl svg{width:17px;height:17px}}
 @media(max-width:760px){.bbar{bottom:0;width:100%;border-radius:0;border-left:none;border-right:none;border-bottom:none;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}.bbar a{font-size:13.5px}}
 body{padding-bottom:86px}
 
+/* price page: 予約ボタンのラベルが長いので、PCでは幅を多めに配分する */
+@media(min-width:761px){.price-page .bbar{width:min(780px,calc(100% - 24px))}.price-page .bbar .br{flex:2.3 1 0}}
 /* price page: mobile CTA is one clear, comfortably sized LINE reservation action */
 @media(max-width:760px){
   .price-page .bbar{gap:0;padding:7px 10px calc(7px + env(safe-area-inset-bottom))}
-  .price-page .bbar .bl{display:none}
+  .price-page .bbar .bl,.price-page .bbar .bh{display:none}
   .price-page .bbar .br{width:100%;min-height:54px;flex:1 1 100%;flex-direction:column;gap:1px;padding:5px 14px;line-height:1.2}
   .price-page .bbar .br span{font-size:14px;white-space:nowrap}
   .price-page .bbar .br em{margin-left:0;font-size:11px;font-weight:600;letter-spacing:.04em;white-space:nowrap}

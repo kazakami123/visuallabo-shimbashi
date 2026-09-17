@@ -41,11 +41,37 @@ https://visuallabo-line.visuallabo.workers.dev/auth/line?
 （Cloudflare Workers の中継URL。役割が残っている場合は
   オーナーに確認してから扱う）
 
+## ホットペッパービューティーのURL
+
+```
+http://b.hpr.jp/kr/hp/H000797603
+```
+
+2026-09-17 オーナー確認。**LINEに次ぐ第2の予約導線。**
+
+パソコンでLINEを使っていない人、LINEの友だち追加に抵抗がある人が
+そのまま予約できるように置いている。LINEの代わりではなく、並べて出す。
+
+### 書き方
+
+```html
+<a class="btn btn-out" href="http://b.hpr.jp/kr/hp/H000797603"
+   target="_blank" rel="noopener" data-cta="任意のID">ホットペッパーで予約する</a>
+```
+
+- LINEより控えめな見た目にする（アウトライン系）。主導線はあくまでLINE
+- 追従バーでは `.bh` クラスを使う
+
 ## CTAの構成
 
 - 各ページ末尾に `<section class="sec cta">` を置く
-- 画面下の追従バー `<div class="bbar">` に、LINE相談と初回体験予約の2本
-  （chapter1_viewer は社内資料のため対象外。vip / shindan は現状なし）
+- 画面下の追従バー `<div class="bbar b3">` に3本
+  （LINE相談 `.bl` ／ ホットペッパー `.bh` ／ 初回体験予約 `.br`）
+  - `b3` はモバイルで3本が収まるように文字を詰めるクラス。付け忘れると溢れる
+  - chapter1_viewer は社内資料のため対象外。vip / shindan は現状なし
+  - corporate.html は法人向けで予約導線ではないため、ホットペッパーは置かない
+  - price.html はモバイルだけ `.bl` `.bh` を隠し、予約1本に絞っている
+- フッターの連絡先行にも、電話番号と並べてホットペッパーのリンクを置く（全ページ）
 
 ## 価格の表記
 
