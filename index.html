@@ -608,6 +608,8 @@ body{padding-bottom:86px}
 @media(max-width:600px){
   p br,li br,dd br{display:none}
   footer p br{display:inline}
+  /* 住所と最寄り駅は、改行を消すと語が続いてしまうので残す（2026-09-20） */
+  .ac-tbl dd br{display:inline}
   [style*="white-space:nowrap"]{white-space:normal!important}
   h2.tt{overflow-wrap:anywhere}
 }
@@ -1023,7 +1025,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <dt>Station</dt><dd>JR「新橋駅」日比谷口 徒歩3分・地下鉄 徒歩3分<br>銀座・汐留・内幸町からもアクセス良好</dd>
       </dl>
       <div>
-        <div class="ac-map"><img loading="lazy" src="images/access-map.webp" alt="VISUAL LABO 新橋店の地図｜JR新橋駅 日比谷口より徒歩3分・東京都港区新橋1丁目14-8 VORT新橋一丁目ビル3F" width="936" height="900"></div>
+        <div class="ac-map"><img loading="lazy" src="images/access-map.webp" alt="VISUAL LABO 新橋店の地図｜男性専用サロン。JR新橋駅 日比谷口より徒歩3分・東京都港区新橋1丁目14-8 VORT新橋一丁目 3F。第一ホテル東京、ローソン、新橋SL広場の近く" width="1448" height="1086"></div>
         <p class="center" style="margin-top:16px"><a class="btn btn-out" href="https://www.google.com/maps/place/VISUAL+LABO+%E6%96%B0%E6%A9%8B%E5%BA%97/@35.6682815,139.7572852,731m/data=!3m1!1e3!4m15!1m8!3m7!1s0x60188baf3a858c75:0xb83aac4062dbce44!2zVklTVUFMIExBQk8g5paw5qmL5bqX!8m2!3d35.6682815!4d139.7572852!10e1!16s%2Fg%2F11zfj_snb8!3m5!1s0x60188baf3a858c75:0xb83aac4062dbce44!8m2!3d35.6682815!4d139.7572852!16s%2Fg%2F11zfj_snb8" target="_blank" rel="noopener">Googleマップで開く →</a></p>
       </div>
     </div>
