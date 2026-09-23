@@ -35,7 +35,7 @@ header{position:fixed;top:0;left:0;width:100%;z-index:100;transition:.4s;backgro
 .brand b{color:var(--gold-d);font-weight:600}
 .logo-img{height:46px;width:auto;display:block}
 .brand-fallback{display:none}
-.navlinks{display:flex;gap:11px;align-items:center;min-width:0}
+.navlinks{display:flex;gap:9px;align-items:center;min-width:0}
 .navlinks a{display:inline-grid;place-items:center;white-space:nowrap}
 .navlinks a .te{grid-area:1/1;transition:opacity .25s}
 .navlinks a .tj{grid-area:1/1;opacity:0;transition:opacity .25s;font-family:"Noto Sans JP",sans-serif;font-size:11.5px;letter-spacing:.04em}
@@ -44,10 +44,17 @@ header{position:fixed;top:0;left:0;width:100%;z-index:100;transition:.4s;backgro
 @media(max-width:1120px){.navlinks{display:none}}
 .navlinks a{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11.5px;letter-spacing:.1em;color:var(--ink-soft);transition:.3s}
 /* 画面幅に応じてナビ項目を間引き、ヘッダーの折り返し・BACKの見切れを防ぐ */
-@media(max-width:1520px){.navlinks>a:nth-child(6),.navlinks>a:nth-child(8){display:none}}
-@media(max-width:1300px){.navlinks>a:nth-child(4),.navlinks>a:nth-child(5),.navlinks>a:nth-child(7){display:none}}
-@media(max-width:1180px){.navlinks>a:nth-child(3),.navlinks>a:nth-child(9){display:none}}
 .navlinks a:hover{color:var(--gold-d)}
+/* ナビは項目を隠さず、入りきらないときは横スクロールさせる（2026-09-23 オーナー指示）。
+   以前は画面幅に応じて nth-child で項目を消していたため、ノートPCでは
+   MENU・PRICE・BEFORE&AFTER・ACCESS・FAQ の5つしか出ていなかった */
+.navlinks{flex:0 1 auto;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;
+  overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks>a{scroll-snap-align:start}
+/* 続きがあることが分かるように、はみ出しているときだけ右端をぼかす */
+.navlinks.is-scrollable{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 26px),transparent);
+  mask-image:linear-gradient(to right,#000 calc(100% - 26px),transparent)}
 .nav-cta{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11.5px;font-weight:500;letter-spacing:.08em;padding:8px 14px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);white-space:nowrap}
 .nav-cta:hover{background:var(--gold);border-color:var(--gold-d);color:#fff}
 .back{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:12px;letter-spacing:.1em;color:var(--ink-mute);display:inline-flex;align-items:center;min-height:44px;padding:0 4px}

@@ -23,6 +23,20 @@
     }, true);
   }
 
+  /* ヘッダーのナビが入りきらないときだけ、右端をぼかして続きがあることを示す。
+     項目を隠すのをやめて横スクロールにしたため（2026-09-23）。
+     全ページがこのファイルを読み込んでいるので、ここに置いている */
+  (function () {
+    var nav = document.querySelector('.navlinks');
+    if (!nav) return;
+    var sync = function () {
+      nav.classList.toggle('is-scrollable', nav.scrollWidth > nav.clientWidth + 1);
+    };
+    sync();
+    window.addEventListener('resize', sync, { passive: true });
+    window.addEventListener('load', sync);
+  })();
+
   if (CLARITY_ID) {
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
