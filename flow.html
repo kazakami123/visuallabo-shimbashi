@@ -119,6 +119,7 @@ img,table,figure{max-width:100%}
     <div class="ic"><div class="lb">PRICE</div><div class="vl">¥2,980</div><small>税込・公式LINEの友だち追加で初回体験価格に</small></div>
     <div class="ic"><div class="lb">持ち物</div><div class="vl">なし</div><small>ウェアはご用意</small></div>
     <div class="ic"><div class="lb">RESERVE</div><div class="vl">当日のご予約もOK</div><small>空き状況によります。公式LINEでお問い合わせください</small></div>
+    <div class="ic" id="flow-oct"><div class="lb">10月のキャンペーン</div><div class="vl">ドームサウナ体験 ¥500</div><small>初回体験時にもご利用いただけます（10/31まで・税込）。<a href="price.html#oct-campaign" style="border-bottom:1px solid currentColor">くわしく</a></small></div>
     <div class="ic"><div class="lb">PAYMENT</div><div class="vl">カード・電子マネーOK</div><small>クレジットカード・各種電子マネー・現金がご利用いただけます</small></div>
   </div>
 </div></section>
@@ -224,6 +225,8 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://visuallabo.com/"}, {"@type": "ListItem", "position": 2, "name": "初回体験の流れ", "item": "https://visuallabo.com/flow.html"}]}
 </script>
+<script>(function(){/* 11/1になったら10月のキャンペーンの枠を自動で消す */
+if(Date.now()>new Date('2026-11-01T00:00:00+09:00').getTime()){var c=document.getElementById('flow-oct');if(c)c.parentNode.removeChild(c);}})();</script>
 <script src="assets/analytics.js" defer></script>
 </body>
 </html>
