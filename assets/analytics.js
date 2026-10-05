@@ -16,10 +16,29 @@
     gtag('js', new Date());
     gtag('config', GA4_ID);
 
-    /* 予約・問い合わせボタンのクリックを計測（data-cta属性つきのリンク） */
+    /* 予約・問い合わせボタンのクリックを計測（data-cta属性つきのリンク）
+       GA4では cta（ボタンの場所）と channel（導線の種類）で分けて見られる。
+       channel は遷移先から自動で判定するので、HTML側の追加は要らない。
+       ここで取れるのは「予約ボタンを押した」までで、予約完了ではない点に注意。
+       予約はLINE／ホットペッパー／電話という外部で完了するため、
+       完了数は各サービス側の数字と突き合わせる（2026-10-05） */
+    var channelOf = function (href, cta) {
+      if (!href) return 'other';
+      if (href.indexOf('tel:') === 0) return 'tel';
+      if (href.indexOf('lin.ee') > -1 || href.indexOf('line.me') > -1) return 'line';
+      if (href.indexOf('b.hpr.jp') > -1 || href.indexOf('beauty.hotpepper.jp') > -1) return 'hpb';
+      if (/^https?:/.test(href) && href.indexOf(location.hostname) === -1) return 'external';
+      return 'internal';
+    };
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[data-cta]');
-      if (a) gtag('event', 'cta_click', { cta: a.getAttribute('data-cta'), page: location.pathname });
+      if (!a) return;
+      var cta = a.getAttribute('data-cta') || '';
+      gtag('event', 'cta_click', {
+        cta: cta,
+        channel: channelOf(a.getAttribute('href'), cta),
+        page: location.pathname
+      });
     }, true);
   }
 

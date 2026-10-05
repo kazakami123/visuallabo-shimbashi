@@ -29,6 +29,10 @@
 .pt-tax { font-size: var(--pt-text-note); }
 .pt-regular { color: var(--pt-muted); font-size: var(--pt-text-note); }
 .pt-regular s { margin-left: var(--pt-space-xs); }
+/* 期間限定のキャンペーン価格（11/1に表示ごと消える・2026-10-05） */
+.pt-camp { margin-top: var(--pt-space-sm); padding: 10px 14px; border: 1px solid var(--pt-accent); border-radius: 4px; font-size: var(--pt-text-note); line-height: 1.7; color: var(--pt-accent); }
+.pt-camp b { font-weight: 600; }
+.pt-camp span { display: block; color: var(--pt-muted); font-size: 12.5px; }
 .pt-action {
   display: flex; align-items: center; justify-content: space-between; gap: var(--pt-space-md);
   min-height: 56px; width: 100%; padding: var(--pt-space-md) var(--pt-space-lg);
