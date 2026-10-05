@@ -313,6 +313,9 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:60px 0 36px}
 .nextsec .kicker{justify-content:center}
 .nexthead{text-align:center;margin-bottom:44px}
 .nextnav{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:0 auto}
+/* 関連リンクを3枚並べるとき（2026-10-05） */
+.nextnav.n3{grid-template-columns:repeat(3,1fr);max-width:1000px}
+@media(max-width:900px){.nextnav.n3{grid-template-columns:1fr 1fr}}
 .nextnav a{border:1px solid var(--line);padding:30px 32px;background:var(--white);transition:.3s;display:flex;flex-direction:column;gap:10px}
 .nextnav a:hover{border-color:var(--gold-d);transform:translateY(-3px)}
 .nextnav .nl{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11px;letter-spacing:.16em;color:var(--gold-d)}
@@ -425,6 +428,7 @@ footer{background:#111;color:rgba(255,255,255,.7);padding:60px 0 36px}
   .vgrid{grid-template-columns:1fr}
   .warm-grid{grid-template-columns:1fr}
   .nextnav{grid-template-columns:1fr}
+  .nextnav.n3{grid-template-columns:1fr}
   .ba-grid{grid-template-columns:1fr}
   .spectbl td:first-child{width:120px}
   .chips{margin-top:36px}
