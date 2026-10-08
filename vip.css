@@ -73,10 +73,13 @@ html.vip-page { overflow-x: clip; scroll-padding-top: 148px; }
 .vp-unit { color: var(--color-muted); font-size: var(--text-sm); margin-top: var(--space-2xs); }
 .vp-plan-desc { margin-top: var(--space-md); }
 .vp-plan-spec { color: var(--color-muted); font-size: var(--text-sm); margin-top: var(--space-xs); }
+.vp-plan-spec br { display: inline; }
 .vp-plan-terms { padding-block: var(--space-md); border-top: var(--rule-fine) solid var(--color-rule); color: var(--color-muted); font-size: var(--text-sm); }
 .vp-single { background: var(--color-paper-2); padding: var(--space-lg); margin-block: var(--space-md) var(--space-lg); display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
 .vp-single h3 { margin-block: var(--space-2xs); }
 .vp-single p:not(.vp-price) { font-size: var(--text-sm); color: var(--color-muted); }
+/* モバイルで本文の<br>を無効化する共通ルールの例外。「空き枠のみ受付」と「完全個室貸切」が続けて読まれてしまうため（2026-10-08） */
+.vp-single p br { display: inline; }
 .vp-price-small { font-size: clamp(2rem, 4vw, 3rem); margin: 0; }
 .vp-disclosure { border-top: var(--rule-fine) solid var(--color-rule); }
 .vp-disclosure:last-child { border-bottom: var(--rule-fine) solid var(--color-rule); }
