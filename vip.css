@@ -114,6 +114,8 @@ html.vip-page { overflow-x: clip; scroll-padding-top: 148px; }
 .vp-fit > div { border-top: var(--rule-fine) solid var(--color-rule); padding-top: var(--space-sm); }
 .vp-fit dt { font-size: var(--text-xs); color: var(--color-muted); margin-bottom: var(--space-3xs); }
 .vp-fit dd { font-family: var(--font-outlier); font-size: var(--text-lg); }
+/* DEPOSIT 100 の「人数の上限なし」注記（2026-10-08） */
+.vp-fit dd small { display: block; font-family: var(--font-body); font-size: var(--text-xs); color: var(--color-muted); letter-spacing: 0; margin-top: var(--space-3xs); }
 .vp-trial { background: var(--color-dark); color: var(--color-on-dark); }
 .vp-trial .vp-eyebrow { color: var(--color-accent-light); }
 .vp-trial .vp-heading p:not(.vp-eyebrow) { color: var(--color-on-dark-muted); }
