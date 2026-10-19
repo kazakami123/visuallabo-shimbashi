@@ -1,0 +1,68 @@
+name: コラムの下書きをHTMLにする
+
+# drafts/ に原稿を置いて push すると、封印語チェック → HTML生成 →
+# sitemap更新 → Pull Request作成 まで自動でやる。公開はマージしてから。
+on:
+  push:
+    branches-ignore: [main]
+    paths: ['drafts/**.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 封印語・絵文字チェック
+        run: python3 tools/check-compliance.py --all
+
+      - name: HTMLに変換
+        run: python3 tools/column.py --all
+
+      - name: sitemapを更新
+        run: python3 tools/update-sitemap.py
+
+      - name: 構造化データの妥当性を確認
+        run: |
+          python3 - <<'PY'
+          import io, json, re, glob, sys
+          bad = 0
+          for p in sorted(glob.glob('*.html')):
+              for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>',
+                                  io.open(p, encoding='utf-8').read(), re.S):
+                  try:
+                      json.loads(x)
+                  except Exception as e:
+                      bad += 1
+                      print('NG', p, e)
+          print('JSON-LD の不正ブロック:', bad)
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Pull Requestを作る
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: column/${{ github.ref_name }}
+          base: main
+          title: "コラムの下書きを追加しました"
+          body: |
+            `drafts/` の原稿から自動生成しました。
+
+            **マージする前に必ず確認してください。**
+
+            - [ ] 価格・条件が `.claude/rules/pricing.md` と合っているか
+            - [ ] 医学的な断定をしていないか（「治る」「必ず」「改善する」）
+            - [ ] 効果に触れた箇所の近くに個人差の注記があるか
+            - [ ] 機械に触れる記事なら、禁忌の案内があるか
+            - [ ] 既存コラムと内容が重複していないか
+
+            封印語チェックと構造化データの検証は通過しています。
+          commit-message: "コラムの下書きをHTMLに変換"
+          delete-branch: false
