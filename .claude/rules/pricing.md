@@ -190,6 +190,26 @@ NGが出るとワークフローが失敗して通知が飛ぶ。
 **価格やキャンペーンを変えたら、`tools/site-check.py` 冒頭の定数も必ず直す。**
 ここが古いと、点検が通っても実際はズレている状態になる。
 
+## 公式アカウント（2026-10-22 確定）
+
+`index.html` の `HealthAndBeautyBusiness` の `sameAs` と `llms.txt` の両方に記載。
+**どちらか片方だけ直さない。**
+
+| | URL |
+|---|---|
+| 公式サイト | https://visuallabo.com/ |
+| Instagram | https://www.instagram.com/visuallabo_official/ |
+| note | https://note.com/visuallabo_diet |
+| ホットペッパービューティー | http://b.hpr.jp/kr/hp/H000797603 |
+| 公式LINE | https://lin.ee/VAjIUgc |
+| PR TIMES | https://prtimes.jp/main/html/rd/p/000000003.000174536.html |
+
+`sameAs` は「この事業者＝これらのアカウント」を検索エンジンとAIに伝える項目。
+**noteに記事を出すなら、ここに入っていないとnoteの評価がサイトに結びつかない。**
+
+PR TIMESは個別リリースのURLを入れている。企業ページのURLが分かれば差し替えてよい。
+Googleビジネスプロフィールの公開URLも、取得できたら追加する。
+
 ## 予約変更・キャンセル
 
 `.claude/rules/cancellation.md` が正典。変更手数料は ¥1,100（当日の時間変更）と
