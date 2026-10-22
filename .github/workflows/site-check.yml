@@ -1,0 +1,19 @@
+name: 古い価格・キャンペーン・営業時間の点検
+
+# 毎週月曜の朝に走らせる。期限切れのキャンペーンや日付のズレを見つけたら
+# 失敗して通知が飛ぶ。手でも Actions タブから走らせられる。
+on:
+  schedule:
+    - cron: '0 23 * * 0'   # 日曜23:00 UTC = 月曜8:00 JST
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['*.html', '.claude/rules/pricing.md']
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 点検
+        run: python3 tools/site-check.py

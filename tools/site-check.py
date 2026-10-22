@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""古くなった価格・キャンペーン・営業時間を機械で見つける。
+
+    python3 tools/site-check.py
+
+正典は .claude/rules/pricing.md。ここにハードコードした値と食い違ったら、
+まずルールファイルを確認すること（価格を変えたらこのファイルも直す）。
+"""
+import io, os, re, sys, glob, datetime
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(ROOT)
+TODAY = datetime.date.today()
+
+# ---- 正典（.claude/rules/pricing.md と必ずそろえる） ----
+HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
+CAMP_END = datetime.date(2026, 11, 30)      # ¥980キャンペーンの最終日
+CAMP_REVERT = '2026-12-01T00:00:00+09:00'   # 自動復帰の日付
+OCT_END = datetime.date(2026, 10, 31)       # 10月キャンペーン（紹介特典・サウナ¥500）
+OCT_REVERT = '2026-11-01T00:00:00+09:00'
+CAMP_MARK = ('campBand', '.bbar .br', 'pt-camp')
+OCT_MARK = ('flow-oct', 'oct-campaign')
+# サイトに出ていてはいけない旧価格
+DEAD = ['¥4,980', '¥9,980', '¥34,800', '¥3,980', 'STANDARD会員', 'デイ会員',
+        'お連れ様同伴 ¥24,800', 'ご利用可能額 ¥315,000', '満足保証']
+
+pages = [p for p in sorted(glob.glob('*.html')) if p != 'chapter1_viewer.html']
+errs, warns = [], []
+
+
+def read(p):
+    return io.open(p, encoding='utf-8').read()
+
+
+# 1) 営業時間の表記ゆれ
+for p in pages:
+    s = read(p)
+    if '12:00' in s and HOURS not in s and '12:00 — 21:00' in s:
+        if '土日祝 10:00 — 18:00' not in s:
+            errs.append('%s 営業時間が平日だけになっています' % p)
+
+# 2) キャンペーンの日付ゆれ
+want_seg = 'ご好評につき追加延長！%d/%d（%s）まで' % (
+    CAMP_END.month, CAMP_END.day, '月火水木金土日'[CAMP_END.weekday()])
+band = [p for p in pages if 'camp-seg' in read(p)]
+for p in band:
+    s = read(p)
+    if want_seg not in s:
+        errs.append('%s キャンペーン帯の日付が「%s」になっていません' % (p, want_seg))
+
+# 3) 自動復帰の日付が、¥980側と10月側で入れ替わっていないか
+for p in pages:
+    s = read(p)
+    for m in re.finditer(r'2026-\d\d-\d\dT00:00:00\+09:00', s):
+        ctx = s[max(0, m.start() - 420):m.end() + 420]
+        side = ('camp' if any(k in ctx for k in CAMP_MARK)
+                else 'oct' if any(k in ctx for k in OCT_MARK) else None)
+        if side == 'camp' and m.group(0) != CAMP_REVERT:
+            errs.append('%s ¥980キャンペーンの自動復帰日が %s（正しくは %s）'
+                        % (p, m.group(0)[:10], CAMP_REVERT[:10]))
+        if side == 'oct' and m.group(0) != OCT_REVERT:
+            errs.append('%s 10月キャンペーンの自動復帰日が %s（正しくは %s）'
+                        % (p, m.group(0)[:10], OCT_REVERT[:10]))
+        if side is None:
+            warns.append('%s 用途が判別できない自動復帰スクリプトがあります' % p)
+
+# 4) 期限切れの残骸
+if TODAY > CAMP_END:
+    left = [p for p in pages if 'camp-seg' in read(p)]
+    if left:
+        errs.append('¥980キャンペーンは%sで終了しています。帯が%dページに残っています'
+                    % (CAMP_END, len(left)))
+if TODAY > OCT_END:
+    left = [p for p in pages if 'oct-campaign' in read(p) or 'flow-oct' in read(p)]
+    if left:
+        warns.append('10月キャンペーンは%sで終了しています。%sを確認してください'
+                     % (OCT_END, '・'.join(left)))
+
+# 5) 旧価格・旧表記
+for p in pages:
+    s = read(p)
+    for d in DEAD:
+        if d in s:
+            errs.append('%s 旧表記「%s」が残っています' % (p, d))
+
+# 6) 本文に¥980（帯・CTA以外）が出ていないか
+for p in pages:
+    s = read(p)
+    for m in re.finditer(r'(?<![0-9,])¥980', s):
+        ctx = s[max(0, m.start() - 260):m.end() + 160]
+        if not any(k in ctx for k in ('camp-', 'bbar_', 'br-full', 'br-mini',
+                                      'setAttribute', 'campBand', 'pt-camp')):
+            errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
+
+for w in sorted(set(warns)):
+    print('WARN  ' + w)
+for e in sorted(set(errs)):
+    print('NG    ' + e)
+print('\n%s 時点：%dページを確認。NG %d件／WARN %d件'
+      % (TODAY, len(pages), len(set(errs)), len(set(warns))))
+sys.exit(1 if errs else 0)
