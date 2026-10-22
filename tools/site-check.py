@@ -15,8 +15,8 @@ TODAY = datetime.date.today()
 
 # ---- 正典（.claude/rules/pricing.md と必ずそろえる） ----
 HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
-CAMP_END = datetime.date(2026, 11, 30)      # ¥980キャンペーンの最終日
-CAMP_REVERT = '2026-12-01T00:00:00+09:00'   # 自動復帰の日付
+CAMP_END = datetime.date(2026, 10, 31)      # ¥980キャンペーンの最終日
+CAMP_REVERT = '2026-11-01T00:00:00+09:00'   # 自動復帰の日付
 OCT_END = datetime.date(2026, 10, 31)       # 10月キャンペーン（紹介特典・サウナ¥500）
 OCT_REVERT = '2026-11-01T00:00:00+09:00'
 CAMP_MARK = ('campBand', '.bbar .br', 'pt-camp')
@@ -45,7 +45,7 @@ for p in pages:
             errs.append('%s 営業時間が平日だけになっています' % p)
 
 # 2) キャンペーンの日付ゆれ
-want_seg = 'ご好評につき追加延長！%d/%d（%s）まで' % (
+want_seg = '好評につき延長決定！%d/%d（%s）まで' % (
     CAMP_END.month, CAMP_END.day, '月火水木金土日'[CAMP_END.weekday()])
 band = [p for p in pages if 'camp-seg' in read(p)]
 for p in band:
@@ -80,6 +80,25 @@ if TODAY > OCT_END:
     if left:
         warns.append('10月キャンペーンは%sで終了しています。%sを確認してください'
                      % (OCT_END, '・'.join(left)))
+
+# 4b) canonical が自分自身を指しているか（生成ページで事故が起きやすい）
+CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html': '',
+            'care-fukurahagi.html': 'care-ashi.html', 'care-hip.html': 'care-soriko.html',
+            'care-kubire.html': 'care-onaka.html', 'care-maemomo.html': 'care-ashi.html',
+            'care-ninoude.html': 'care-onaka.html', 'care-sotomomo.html': 'care-ashi.html',
+            'care-uchimomo.html': 'care-ashi.html', 'care-uramomo.html': 'care-ashi.html',
+            'kiyaku.html': 'terms.html'}
+for p in pages:
+    if not p.endswith('.html') or p.startswith('tools/'):
+        continue
+    m = re.search(r'<link rel="canonical" href="https://visuallabo\.com/([^"]*)"', read(p))
+    if not m:
+        warns.append('%s canonical がありません' % p)
+        continue
+    want = CANON_OK.get(p, p)
+    if m.group(1) != want:
+        errs.append('%s canonical が %s を指しています（正しくは %s）'
+                    % (p, m.group(1) or 'ルート', want or 'ルート'))
 
 # 5) 旧価格・旧表記
 for p in pages:
