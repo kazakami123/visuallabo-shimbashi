@@ -24,8 +24,14 @@ def words():
     return out
 
 
+# 封印語を含むが、サイト全体で使っている正規の言い回し（禁忌の案内）は通す
+ALLOW = ('治療中の方', '治療中・服薬中', '通院・治療中', '治療歴のある方')
+
+
 def check(path, banned):
     text = io.open(path, encoding='utf-8').read()
+    for ok in ALLOW:
+        text = text.replace(ok, '〓' * len(ok))
     lines = text.split('\n')
     errs, warns = [], []
     for i, ln in enumerate(lines, 1):

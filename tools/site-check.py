@@ -26,6 +26,10 @@ DEAD = ['¥4,980', '¥9,980', '¥34,800', '¥3,980', 'STANDARD会員', 'デイ�
         'お連れ様同伴 ¥24,800', 'ご利用可能額 ¥315,000', '満足保証']
 
 pages = [p for p in sorted(glob.glob('*.html')) if p != 'chapter1_viewer.html']
+# コラム生成テンプレートも見る。ここが古いと、新しいコラムに古い日付が入る
+TPL = 'tools/column-template.html'
+if os.path.exists(TPL):
+    pages.append(TPL)
 errs, warns = [], []
 
 
