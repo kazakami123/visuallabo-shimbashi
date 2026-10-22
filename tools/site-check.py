@@ -87,7 +87,11 @@ CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html':
             'care-kubire.html': 'care-onaka.html', 'care-maemomo.html': 'care-ashi.html',
             'care-ninoude.html': 'care-onaka.html', 'care-sotomomo.html': 'care-ashi.html',
             'care-uchimomo.html': 'care-ashi.html', 'care-uramomo.html': 'care-ashi.html',
-            'kiyaku.html': 'terms.html'}
+            'kiyaku.html': 'terms.html',
+            'learn-cold.html': 'learn-onkatsu.html',
+            'learn-mukumi.html': 'learn-lymph.html',
+            'learn-circulation.html': 'learn-lymph.html',
+            'learn-posture.html': 'care-soriko.html'}
 for p in pages:
     if not p.endswith('.html') or p.startswith('tools/'):
         continue

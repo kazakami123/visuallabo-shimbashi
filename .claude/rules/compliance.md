@@ -92,6 +92,24 @@ paths:
 
 掲載先は `learn-onaka-40s.html` と `learn-metabolism.html`。**内容を変えるときは両方そろえる。**
 
+## 統合したページ（2026-10-22）
+
+Search Consoleで「検出 - インデックス未登録」だった薄いページを、内容が重なる
+ページへ統合した。**元ファイルは `_archive/*.bak` に保管してある。復活させない。**
+
+| 旧URL | 統合先 | 理由 |
+|---|---|---|
+| `learn-cold.html` | `learn-onkatsu.html` | 冷えと温活で内容が重なる |
+| `learn-mukumi.html` | `learn-lymph.html` | むくみの仕組みはリンパ側が扱っている |
+| `learn-circulation.html` | `learn-lymph.html` | 血のめぐりとリンパで内容が重なる |
+| `learn-posture.html` | `care-soriko.html` | 反り腰のしくみがほぼ同一だった |
+
+- 旧URLは `noindex,follow` ＋ canonical を統合先に向けたスタブにしてある
+  （既存の `care-ninoude.html` と同じ作り）。**消さないこと。** 消すと404になる
+- 内部リンクはすべて統合先に張り替え済み。sitemap からも外した（48URL）
+- `tools/site-check.py` の `CANON_OK` にスタブを登録してある。
+  **新しく統合したら、ここにも必ず追加する**
+
 ## このリポジトリ固有の注意
 - 価格・メニュー・旧データの禁止事項（¥3,980系3コース、STANDARD/PREMIUM等）は表現コンプラとは別カテゴリ。
   CLAUDE.md「価格・メニュー」セクションと compliance.yaml の deprecated_data_note を参照。
