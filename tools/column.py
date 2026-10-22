@@ -141,7 +141,7 @@ def build(path):
         raise SystemExit('front matter に %s がありません' % '・'.join(miss))
 
     slug = meta['slug']
-    out_name = 'learn-%s.html' % slug
+    out_name = meta.get('out') or ('learn-%s.html' % slug)
     heads = []
     panels = split_panels(body)
 
@@ -207,7 +207,9 @@ def build(path):
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "ホーム", "item": SITE},
-            {"@type": "ListItem", "position": 2, "name": "学び（BODY LABO）", "item": SITE + "learn.html"},
+            {"@type": "ListItem", "position": 2,
+             "name": meta.get('crumb_name') or "学び（BODY LABO）",
+             "item": SITE + (meta.get('crumb_url') or "learn.html")},
             {"@type": "ListItem", "position": 3, "name": plain_title, "item": SITE + out_name},
         ],
     }, ensure_ascii=False, indent=1)
@@ -223,6 +225,9 @@ def build(path):
         'HERO_IMG': esc(hero), 'HERO_POS': esc(hpos),
         'HERO_ALT': esc(meta.get('hero_alt') or (plain_title + '｜VISUAL LABO 新橋店')),
         'H1': h1, 'SUB': esc(meta.get('sub') or ''),
+        'TAG': esc(meta.get('tag') or 'BODY LABO ／ 学び'),
+        'BACK_HREF': esc(meta.get('back_href') or 'learn.html'),
+        'BACK_LABEL': esc(meta.get('back_label') or '学びへ'),
         'TABS': '\n' + '\n'.join(tabs) + '\n  ',
         'BODY': '\n' + '\n'.join(body_parts) + '\n    ',
         'RELATED': '\n' + '\n'.join(rel),
