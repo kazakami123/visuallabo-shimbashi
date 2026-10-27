@@ -138,7 +138,9 @@ paths:
   `price.html` の OfferCatalog。最低利用期間の一覧は
   `cancellation-policy.html`・`guide.html`・`index.html`・`price.html`・`terms.html`・`tokushoho.html`
 
-**¥49,800 は BODY 90分 月8回 と VIP 月2回 で同額。** 受付で混同しないこと。
+**¥49,800 は BODY 90分 月8回 と VIP 月2回 で同額。**
+2026-10-27 オーナー確認で**このままで問題なし**。価格を動かす必要はない。
+ただし受付では混同しないこと（別メニュー・別のお部屋）。
 
 ## 温活メニュー（税込）
 
