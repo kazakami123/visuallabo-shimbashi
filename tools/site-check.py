@@ -15,12 +15,9 @@ TODAY = datetime.date.today()
 
 # ---- 正典（.claude/rules/pricing.md と必ずそろえる） ----
 HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
-CAMP_END = datetime.date(2026, 10, 31)      # ¥980キャンペーンの最終日
-CAMP_REVERT = '2026-11-01T00:00:00+09:00'   # 自動復帰の日付
-OCT_END = datetime.date(2026, 10, 31)       # 10月キャンペーン（紹介特典・サウナ¥500）
-OCT_REVERT = '2026-11-01T00:00:00+09:00'
-CAMP_MARK = ('campBand', '.bbar .br', 'pt-camp')
-OCT_MARK = ('flow-oct', 'oct-campaign')
+NOV_END = datetime.date(2026, 11, 30)       # 11月限定・初回体験特典の最終日
+NOV_REVERT = '2026-12-01T00:00:00+09:00'   # 自動非表示の日付
+NOV_MARK = ('campBand', '.bbar .br', 'pt-camp', 'flow-nov', 'nov-campaign')
 # サイトに出ていてはいけない旧価格
 DEAD = ['¥4,980', '¥9,980', '¥34,800', '¥3,980', 'STANDARD会員', 'デイ会員',
         'お連れ様同伴 ¥24,800', 'ご利用可能額 ¥315,000', '満足保証']
@@ -44,42 +41,32 @@ for p in pages:
         if '土日祝 10:00 — 18:00' not in s:
             errs.append('%s 営業時間が平日だけになっています' % p)
 
-# 2) キャンペーンの日付ゆれ
-want_seg = '好評につき延長決定！%d/%d（%s）まで' % (
-    CAMP_END.month, CAMP_END.day, '月火水木金土日'[CAMP_END.weekday()])
+# 2) キャンペーン表記の統一
+want_seg = '11月限定｜初回体験の方へ フェイシャルまたは脚メニュー どちらか1つ無料｜お一人さま1回'
 band = [p for p in pages if 'camp-seg' in read(p)]
 for p in band:
     s = read(p)
     if want_seg not in s:
-        errs.append('%s キャンペーン帯の日付が「%s」になっていません' % (p, want_seg))
+        errs.append('%s 11月限定特典の帯が統一文言になっていません' % p)
 
 # 3) 自動復帰の日付が、¥980側と10月側で入れ替わっていないか
 for p in pages:
     s = read(p)
     for m in re.finditer(r'2026-\d\d-\d\dT00:00:00\+09:00', s):
         ctx = s[max(0, m.start() - 420):m.end() + 420]
-        side = ('camp' if any(k in ctx for k in CAMP_MARK)
-                else 'oct' if any(k in ctx for k in OCT_MARK) else None)
-        if side == 'camp' and m.group(0) != CAMP_REVERT:
-            errs.append('%s ¥980キャンペーンの自動復帰日が %s（正しくは %s）'
-                        % (p, m.group(0)[:10], CAMP_REVERT[:10]))
-        if side == 'oct' and m.group(0) != OCT_REVERT:
-            errs.append('%s 10月キャンペーンの自動復帰日が %s（正しくは %s）'
-                        % (p, m.group(0)[:10], OCT_REVERT[:10]))
+        side = 'nov' if any(k in ctx for k in NOV_MARK) else None
+        if side == 'nov' and m.group(0) != NOV_REVERT:
+            errs.append('%s 11月限定特典の自動非表示日が %s（正しくは %s）'
+                        % (p, m.group(0)[:10], NOV_REVERT[:10]))
         if side is None:
             warns.append('%s 用途が判別できない自動復帰スクリプトがあります' % p)
 
 # 4) 期限切れの残骸
-if TODAY > CAMP_END:
+if TODAY > NOV_END:
     left = [p for p in pages if 'camp-seg' in read(p)]
     if left:
-        errs.append('¥980キャンペーンは%sで終了しています。帯が%dページに残っています'
-                    % (CAMP_END, len(left)))
-if TODAY > OCT_END:
-    left = [p for p in pages if 'oct-campaign' in read(p) or 'flow-oct' in read(p)]
-    if left:
-        warns.append('10月キャンペーンは%sで終了しています。%sを確認してください'
-                     % (OCT_END, '・'.join(left)))
+        errs.append('11月限定特典は%sで終了しています。帯が%dページに残っています'
+                    % (NOV_END, len(left)))
 
 # 4b) canonical が自分自身を指しているか（生成ページで事故が起きやすい）
 CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html': '',
@@ -111,14 +98,12 @@ for p in pages:
         if d in s:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
 
-# 6) 本文に¥980（帯・CTA以外）が出ていないか
+# 6) 終了した¥980キャンペーンが残っていないか
 for p in pages:
     s = read(p)
     for m in re.finditer(r'(?<![0-9,])¥980', s):
         ctx = s[max(0, m.start() - 260):m.end() + 160]
-        if not any(k in ctx for k in ('camp-', 'bbar_', 'br-full', 'br-mini',
-                                      'setAttribute', 'campBand', 'pt-camp')):
-            errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
+        errs.append('%s 終了した初回体験¥980の表記が残っています' % p)
 
 for w in sorted(set(warns)):
     print('WARN  ' + w)
