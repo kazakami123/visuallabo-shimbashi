@@ -43,7 +43,7 @@ for p in pages:
 
 # 2) キャンペーン表記の統一
 want_seg = '11月来店限定｜初回体験90分セット ¥2,980｜BODY 60分＋選べる30分（フェイシャル or 脚）'
-band = [p for p in pages if 'camp-seg' in read(p)]
+band = [p for p in pages if '<span class="camp-seg">' in read(p)]
 for p in band:
     s = read(p)
     if want_seg not in s:
