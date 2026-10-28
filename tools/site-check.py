@@ -17,7 +17,7 @@ TODAY = datetime.date.today()
 HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
 NOV_END = datetime.date(2026, 11, 30)       # 11月限定・初回体験特典の最終日
 NOV_REVERT = '2026-12-01T00:00:00+09:00'   # 自動非表示の日付
-NOV_MARK = ('campBand', '.bbar .br', 'pt-camp', 'flow-nov', 'nov-campaign')
+NOV_MARK = ('campBand', '.bbar .br', 'campaign-reset', 'pt-camp', 'flow-nov', 'nov-campaign')
 # サイトに出ていてはいけない旧価格
 DEAD = ['¥4,980', '¥9,980', '¥34,800', '¥3,980', 'STANDARD会員', 'デイ会員',
         'お連れ様同伴 ¥24,800', 'ご利用可能額 ¥315,000', '満足保証']
@@ -42,7 +42,7 @@ for p in pages:
             errs.append('%s 営業時間が平日だけになっています' % p)
 
 # 2) キャンペーン表記の統一
-want_seg = '11月限定｜初回体験の方へ フェイシャルまたは脚メニュー どちらか1つ無料｜お一人さま1回'
+want_seg = '11月限定｜初回体験90分セット ¥2,980｜BODY 60分＋選べる30分（フェイシャル or 脚）'
 band = [p for p in pages if 'camp-seg' in read(p)]
 for p in band:
     s = read(p)
