@@ -42,7 +42,7 @@ for p in pages:
             errs.append('%s 営業時間が平日だけになっています' % p)
 
 # 2) キャンペーン表記の統一
-want_seg = '11月限定｜初回体験90分セット ¥2,980｜BODY 60分＋選べる30分（フェイシャル or 脚）'
+want_seg = '11月来店限定｜初回体験90分セット ¥2,980｜BODY 60分＋選べる30分（フェイシャル or 脚）'
 band = [p for p in pages if 'camp-seg' in read(p)]
 for p in band:
     s = read(p)
