@@ -42,6 +42,11 @@ header{position:fixed;top:0;left:0;width:100%;z-index:100;transition:.4s;backgro
 .navlinks a:hover .te,.navlinks a:focus-visible .te{opacity:0}
 .navlinks a:hover .tj,.navlinks a:focus-visible .tj{opacity:1}
 @media(max-width:1120px){.navlinks{display:none}}
+/* ナビのCTAはスクロール枠（.navlinks）の外に出してある。常に見えるようにするため。
+   1120px以下では、旧来どおり .navlinks と一緒に隠す */
+.nav > .nav-cta{flex:0 0 auto;margin-left:4px}
+@media(max-width:1120px){.nav > .nav-cta{display:none}}
+
 .navlinks a{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:11.5px;letter-spacing:.1em;color:var(--ink-soft);transition:.3s}
 /* 画面幅に応じてナビ項目を間引き、ヘッダーの折り返し・BACKの見切れを防ぐ */
 .navlinks a:hover{color:var(--gold-d)}
