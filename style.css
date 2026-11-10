@@ -690,7 +690,8 @@ footer a:focus-visible{outline-color:#e0c48d}
 .skip-link{position:fixed;top:-64px;left:16px;z-index:500;background:#211d18;color:#f4efe6;padding:12px 22px;font-size:14px;letter-spacing:.06em;border-radius:0 0 8px 8px;transition:top .2s}
 .skip-link:focus{top:0;outline:2px solid #e0c48d;outline-offset:-4px}
 
-/* ===== オープニングキャンペーン帯（9/14〜9/30・10/1に自動非表示） ===== */
+/* ===== キャンペーン帯のCSS（2026-11-10 現在、帯のマークアップは撤去済みで未使用）
+   次のキャンペーンを出すときに .camp-band の帯を戻せば、このまま使えます ===== */
 .camp-band{position:sticky;top:0;left:0;z-index:400;display:block;height:38px;background:var(--gold,#b89b5e);color:#171310;overflow:hidden;border-bottom:1px solid rgba(23,19,16,.18)}
 .camp-band:hover,.camp-band:focus-visible{color:#171310}
 .camp-track{display:flex;width:max-content;height:38px;align-items:center;animation:camp-scroll 26s linear infinite;will-change:transform}

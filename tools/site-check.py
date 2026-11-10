@@ -15,6 +15,9 @@ TODAY = datetime.date.today()
 
 # ---- 正典（.claude/rules/pricing.md と必ずそろえる） ----
 HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
+# いまキャンペーンを出しているか。2026-11-10 にオーナー確定で終了し、帯は全ページから撤去した。
+# 次のキャンペーンを出すときは True にして CAMP_END / CAMP_REVERT を入れ直す。
+CAMP_RUNNING = False
 CAMP_END = datetime.date(2026, 10, 31)      # ¥980キャンペーンの最終日
 CAMP_REVERT = '2026-11-01T00:00:00+09:00'   # 自動復帰の日付
 OCT_END = datetime.date(2026, 10, 31)       # 10月キャンペーン（紹介特典・サウナ¥500）
@@ -47,11 +50,15 @@ for p in pages:
 # 2) キャンペーンの日付ゆれ
 want_seg = '好評につき延長決定！%d/%d（%s）まで' % (
     CAMP_END.month, CAMP_END.day, '月火水木金土日'[CAMP_END.weekday()])
-band = [p for p in pages if 'camp-seg' in read(p)]
-for p in band:
-    s = read(p)
-    if want_seg not in s:
-        errs.append('%s キャンペーン帯の日付が「%s」になっていません' % (p, want_seg))
+band = [p for p in pages if 'id="campBand"' in read(p)]
+if CAMP_RUNNING:
+    for p in band:
+        s = read(p)
+        if want_seg not in s:
+            errs.append('%s キャンペーン帯の日付が「%s」になっていません' % (p, want_seg))
+elif band:
+    errs.append('キャンペーンは出していないのに、帯が%dページに残っています（%s）'
+                % (len(band), '・'.join(band[:5])))
 
 # 3) 自動復帰の日付が、¥980側と10月側で入れ替わっていないか
 for p in pages:
@@ -70,16 +77,14 @@ for p in pages:
             warns.append('%s 用途が判別できない自動復帰スクリプトがあります' % p)
 
 # 4) 期限切れの残骸
-if TODAY > CAMP_END:
-    left = [p for p in pages if 'camp-seg' in read(p)]
+if CAMP_RUNNING and TODAY > CAMP_END:
+    left = [p for p in pages if 'id="campBand"' in read(p)]
     if left:
         errs.append('¥980キャンペーンは%sで終了しています。帯が%dページに残っています'
                     % (CAMP_END, len(left)))
-if TODAY > OCT_END:
-    left = [p for p in pages if 'oct-campaign' in read(p) or 'flow-oct' in read(p)]
-    if left:
-        warns.append('10月キャンペーンは%sで終了しています。%sを確認してください'
-                     % (OCT_END, '・'.join(left)))
+left = [p for p in pages if 'id="oct-campaign"' in read(p) or 'id="flow-oct"' in read(p)]
+if left:
+    errs.append('終了した10月キャンペーンが%sに残っています' % '・'.join(left))
 
 # 4b) canonical が自分自身を指しているか（生成ページで事故が起きやすい）
 CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html': '',
