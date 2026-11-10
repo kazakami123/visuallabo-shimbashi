@@ -17,9 +17,9 @@ TODAY = datetime.date.today()
 HOURS = '平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00'
 # いまキャンペーンを出しているか。2026-11-10 にオーナー確定で終了し、帯は全ページから撤去した。
 # 次のキャンペーンを出すときは True にして CAMP_END / CAMP_REVERT を入れ直す。
-CAMP_RUNNING = False
-CAMP_END = datetime.date(2026, 10, 31)      # ¥980キャンペーンの最終日
-CAMP_REVERT = '2026-11-01T00:00:00+09:00'   # 自動復帰の日付
+CAMP_RUNNING = True
+CAMP_END = datetime.date(2026, 11, 30)      # 11月の90分セットキャンペーンの最終日
+CAMP_REVERT = '2026-12-01T00:00:00+09:00'   # 自動復帰の日付
 OCT_END = datetime.date(2026, 10, 31)       # 10月キャンペーン（紹介特典・サウナ¥500）
 OCT_REVERT = '2026-11-01T00:00:00+09:00'
 CAMP_MARK = ('campBand', '.bbar .br', 'pt-camp')
@@ -48,7 +48,7 @@ for p in pages:
             errs.append('%s 営業時間が平日だけになっています' % p)
 
 # 2) キャンペーンの日付ゆれ
-want_seg = '好評につき延長決定！%d/%d（%s）まで' % (
+want_seg = '%d/%d（%s）まで 初回体験が90分セットに' % (
     CAMP_END.month, CAMP_END.day, '月火水木金土日'[CAMP_END.weekday()])
 band = [p for p in pages if 'id="campBand"' in read(p)]
 if CAMP_RUNNING:
