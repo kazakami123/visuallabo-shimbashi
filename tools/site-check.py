@@ -120,6 +120,33 @@ for p in pages:
                                       'setAttribute', 'campBand', 'pt-camp')):
             errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
 
+# 7) 営業区分（MEN'S DAY / LADIES DAY / ALL GENDER DAY）と矛盾する表記
+#    正典は .claude/rules/operating-days.md
+#    「男性のみ」「女性のお客様と一緒に」を無条件に書くと、男性客への約束違反になる
+DAY_SCOPE = ('男性専用DAY', '男性専用ＤＡＹ')
+for p in pages:
+    s = read(p)
+    for m in re.finditer(r'お客様は男性(のみ|だけ)', s):
+        ctx = s[max(0, m.start() - 90):m.start()]
+        if not any(k in ctx for k in DAY_SCOPE):
+            errs.append('%s 「お客様は男性のみ」に曜日の限定がありません' % p)
+    for m in re.finditer(r'女性のお客様と一緒になること', s):
+        ctx = s[max(0, m.start() - 160):m.start()]
+        if not any(k in ctx for k in DAY_SCOPE):
+            errs.append('%s 「女性のお客様と一緒になりません」に曜日の限定がありません' % p)
+    for d in ('完全男性専用', '男性以外利用不可', '毎週日曜日営業',
+              '女性のお客様のご利用はお受けしていません。</p>'):
+        if d in s:
+            errs.append('%s 営業区分と矛盾する「%s」があります' % (p, d))
+
+# 8) 営業区分の案内が、要のページから消えていないか
+for p, mark in (('index.html', 'news-days'), ('flow.html', 'flow-days')):
+    if os.path.exists(p) and mark not in read(p):
+        errs.append('%s 営業区分の案内（#%s）がありません' % (p, mark))
+for p in ('faq.html', 'llms.txt', 'terms.html', 'guide.html'):
+    if os.path.exists(p) and '女性専用DAY' not in read(p):
+        errs.append('%s 女性専用DAYの記載がありません' % p)
+
 for w in sorted(set(warns)):
     print('WARN  ' + w)
 for e in sorted(set(errs)):
