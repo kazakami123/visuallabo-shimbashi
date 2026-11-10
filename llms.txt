@@ -56,6 +56,8 @@ BODY MAINTENANCEは月1回・月2回・月4回・月8回・月15回まで通い�
 - [初回体験の流れ](https://visuallabo.com/flow.html)
 - [メニュー](https://visuallabo.com/menu.html)
 - [料金](https://visuallabo.com/price.html)
+- [女性のお客様へ](https://visuallabo.com/ladies.html)
+- [お知らせ](https://visuallabo.com/news.html)
 - [VIPルーム・月額制・デポジット](https://visuallabo.com/vip.html)
 - [よくある質問](https://visuallabo.com/faq.html)
 - [アクセス](https://visuallabo.com/#access)

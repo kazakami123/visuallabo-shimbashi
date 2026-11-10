@@ -117,14 +117,20 @@ for p in pages:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
 
 # 6) 本文に¥980（帯・CTA以外）が出ていないか
+#    ladies.html は女性の初回体験が通年¥980なので、ページごと対象外にする
 for p in pages:
+    if p == 'ladies.html':
+        continue
     s = read(p)
     for m in re.finditer(r'(?<![0-9,])¥980', s):
         ctx = s[max(0, m.start() - 260):m.end() + 160]
         if not any(k in ctx for k in ('camp-', 'bbar_', 'br-full', 'br-mini',
                                       'setAttribute', 'campBand', 'pt-camp',
                                       # 女性の初回体験¥980は通年価格。キャンペーンではないので対象外
-                                      '痩身体験', '女性のお客様の初回体験', '初回体験（女性）')):
+                                      '痩身体験', '女性のお客様の初回体験', '初回体験（女性）',
+                                      '女性のお客様', 'ladies',
+                                      # お知らせページで「終了しました」と書いている分も対象外
+                                      '終了しました', '終了いたしました')):
             errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
 
 # 7) 営業区分（MEN'S DAY / LADIES DAY / ALL GENDER DAY）と矛盾する表記
