@@ -59,6 +59,8 @@
 | `terms.html` | 第4条（利用資格）の曜日ごとの定め |
 | `important-matters.html` | サービスの内容 |
 | `treatment.html` / `corporate.html` / `menu.html` | 利用条件の記述 |
+| `ladies.html` | 女性のお客様向けページ（営業区分・初回体験¥980・部位・料金・FAQ）。CTAは公式LINEのみ |
+| `news.html` | お知らせページ。営業体制の変更はここにも記事として残す |
 | `llms.txt` | 営業区分・予約・店舗の特徴 |
 | 各ページのFAQ（14ページ） | 「男性専用ですか？」の答え（画面＋JSON-LD） |
 
