@@ -345,6 +345,11 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .nav-cta{font-size:12.5px;font-weight:600;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-d);white-space:nowrap;transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#111}
 @media(max-width:1120px){.navlinks{display:none}}
+/* ナビのCTAはスクロール枠（.navlinks）の外に出してある。常に見えるようにするため。
+   1120px以下では、旧来どおり .navlinks と一緒に隠す */
+.nav > .nav-cta{flex:0 0 auto;margin-left:4px}
+@media(max-width:1120px){.nav > .nav-cta{display:none}}
+
 /* mobile top tabs */
 .mtabs{display:none}
 @media(max-width:1120px){
@@ -698,6 +703,8 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <a class="brand" href="index.html"><img src="images/logo-dark.png" alt="VISUAL LABO 新橋店" width="795" height="200"></a>
     <div class="nav-r">
       <div class="navlinks">
+        <a href="news.html"><span class="te">NEWS</span><span class="tj">お知らせ</span></a>
+        <a href="ladies.html"><span class="te">LADIES</span><span class="tj">女性のお客様へ</span></a>
         <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
         <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
         <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">ビフォーアフター</span></a>
@@ -710,12 +717,14 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <a href="#faq"><span class="te">FAQ</span><span class="tj">よくある質問</span></a>
       </div>
       <!-- 2026-10-05: 計測名を nav_line → nav_reserve に変更（リンク先がLINEではなくflow.htmlのため） -->
-      <a class="nav-cta" href="flow.html" data-cta="nav_reserve">初回体験のご予約</a>
     </div>
+    <a class="nav-cta" href="flow.html" data-cta="nav_reserve">初回体験のご予約</a>
   </nav>
   <nav class="mtabs" aria-label="メニュー">
     <a class="hot" href="flow.html"><span class="te">FIRST TRIAL</span><span class="tj">初回体験</span></a>
-    <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
+    
+    <a href="news.html"><span class="te">NEWS</span><span class="tj">お知らせ</span></a>
+        <a href="ladies.html"><span class="te">LADIES</span><span class="tj">女性のお客様へ</span></a><a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
     <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
     <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">ビフォーアフター</span></a>
     <a href="rf.html"><span class="te">RF</span><span class="tj">高周波とは</span></a>
