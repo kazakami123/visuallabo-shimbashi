@@ -117,7 +117,9 @@ for p in pages:
     for m in re.finditer(r'(?<![0-9,])¥980', s):
         ctx = s[max(0, m.start() - 260):m.end() + 160]
         if not any(k in ctx for k in ('camp-', 'bbar_', 'br-full', 'br-mini',
-                                      'setAttribute', 'campBand', 'pt-camp')):
+                                      'setAttribute', 'campBand', 'pt-camp',
+                                      # 女性の初回体験¥980は通年価格。キャンペーンではないので対象外
+                                      '痩身体験', '女性のお客様の初回体験', '初回体験（女性）')):
             errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
 
 # 7) 営業区分（MEN'S DAY / LADIES DAY / ALL GENDER DAY）と矛盾する表記
@@ -146,6 +148,12 @@ for p, mark in (('index.html', 'news-days'), ('flow.html', 'flow-days')):
 for p in ('faq.html', 'llms.txt', 'terms.html', 'guide.html'):
     if os.path.exists(p) and '女性専用DAY' not in read(p):
         errs.append('%s 女性専用DAYの記載がありません' % p)
+
+# 9) 女性の初回体験（通年¥980）に、個人差の注記が添えてあるか
+for p in pages:
+    s = read(p)
+    if '痩身体験' in s and '個人差' not in s:
+        errs.append('%s 痩身体験の近くに個人差の注記がありません' % p)
 
 for w in sorted(set(warns)):
     print('WARN  ' + w)
