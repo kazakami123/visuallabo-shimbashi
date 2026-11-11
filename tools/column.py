@@ -237,6 +237,14 @@ def build(path):
         'RELATED': '\n' + '\n'.join(rel),
         'JSONLD_ARTICLE': ld_article, 'JSONLD_FAQ': ld_faq, 'JSONLD_CRUMB': ld_crumb,
     }
+    # 女性向けのコラム。front matter に ladies: true と書くと、
+    # ナビCTA・末尾のCTA・追従バー・フッターの紹介文が女性向けに切り替わる。
+    # （女性のご予約は公式LINEのみ。ホットペッパーの導線を出さない）
+    ladies = str(meta.get('ladies', 'false')).strip().lower() in ('true', 'yes', '1')
+    keep, drop = ('LADIES', 'MEN') if ladies else ('MEN', 'LADIES')
+    tpl = re.sub(r'<!--%s-->.*?<!--/%s-->' % (drop, drop), '', tpl, flags=re.S)
+    tpl = tpl.replace('<!--%s-->' % keep, '').replace('<!--/%s-->' % keep, '')
+
     # キャンペーン帯。front matter に camp: false と書くと出さない
     # （女性向けのコラムは、男性向けキャンペーンの帯を出さない）。
     camp = str(meta.get('camp', 'true')).strip().lower() not in ('false', 'no', '0')

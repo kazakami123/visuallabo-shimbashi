@@ -72,6 +72,10 @@ http://b.hpr.jp/kr/hp/H000797603
   - 対象外は2種類だけ。リダイレクト用のスタブ11本（care-ninoude 等・即転送するため）と、
     社内資料の chapter1_viewer
   - corporate.html は法人向けなので3本目は「導入について相談する」。ホットペッパーは置かない
+  - **ladies.html と女性向けコラム（`learn-ladies-*.html`）は公式LINEのみの2本**（`.bbar`）。
+    女性のご予約は公式LINEのみなので、ホットペッパーの導線を置かない。
+    コラムは `drafts/*.md` の front matter に `ladies: true` と書くと切り替わる
+    （ナビCTA・末尾のCTA・追従バー・フッターの紹介文の4か所）
   - price.html はモバイルだけ `.bl` `.bh` を隠し、予約1本に絞っている
   - style.css を読み込まない index.html / shindan.html は、同じCSSを各ファイル内に持つ。
     バーの見た目を直すときは3箇所すべて直す

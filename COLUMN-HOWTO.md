@@ -84,6 +84,27 @@ Googleは2024年から、検索順位を狙った大量生成コンテンツを�
 
 ---
 
+## 女性向けのコラム
+
+front matter に **`ladies: true`** と書くと、次の4か所が女性向けに切り替わります。
+
+- ナビのCTA → 「女性の初回体験 ¥980」（公式LINEへ）
+- 末尾のCTA → 「公式LINEで初回体験を予約する」＋個人差の注記
+- 画面下の追従バー → LINE相談とLINE予約の2本（**ホットペッパーを出さない**）
+- フッターの紹介文 → 「男性専用」を外した文面
+
+あわせて `camp: false` と `back_href: ladies.html` も指定してください。
+
+```
+camp: false
+ladies: true
+back_href: ladies.html
+back_label: 女性のお客様へ
+tag: LADIES ／ 読みもの
+crumb_name: 女性のお客様へ
+crumb_url: ladies.html
+```
+
 ## キャンペーン帯
 
 キャンペーン帯（`.camp-band#campBand`）はテンプレートに入っていて、**既定で付きます。**

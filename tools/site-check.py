@@ -117,9 +117,11 @@ for p in pages:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
 
 # 6) 本文に¥980（帯・CTA以外）が出ていないか
-#    ladies.html は女性の初回体験が通年¥980なので、ページごと対象外にする
+#    ladies.html と女性向けコラムは、女性の初回体験が通年¥980なのでページごと対象外。
+#    コラムのテンプレートも、女性向けのCTA（¥980）を持っているので対象外にする
+LADIES_PAGES = ('ladies.html', 'tools/column-template.html')
 for p in pages:
-    if p == 'ladies.html':
+    if p in LADIES_PAGES or p.startswith('learn-ladies-'):
         continue
     s = read(p)
     for m in re.finditer(r'(?<![0-9,])¥980', s):

@@ -8,6 +8,12 @@ og_title: 夕方、脚が重い。下半身とどう向き合うか
 og_description: 女性に多い下半身の重さ。背景と、部位ごとにできることを整理しました。
 published: 2026-11-11
 camp: false
+ladies: true
+back_href: ladies.html
+back_label: 女性のお客様へ
+tag: LADIES ／ 読みもの
+crumb_name: 女性のお客様へ
+crumb_url: ladies.html
 related:
   learn-lymph.html|LEARN|リンパとは|流れのしくみを、もう少し詳しく。
   ladies.html|LADIES|女性のお客様へ|ご利用いただける日と、初回体験のご案内。
