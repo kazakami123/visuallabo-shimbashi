@@ -17,7 +17,7 @@ crumb_url: ladies.html
 related:
   learn-lymph.html|LEARN|リンパとは|流れのしくみを、もう少し詳しく。
   ladies.html|LADIES|女性のお客様へ|ご利用いただける日と、初回体験のご案内。
-  learn-ladies-hajimete.html|LADIES|初めての方へ|来店前に知っておきたいこと。
+  learn-ladies-ninoude.html|LADIES|腕は使っているのに|二の腕が使われにくい理由。
 ---
 
 @はじめに

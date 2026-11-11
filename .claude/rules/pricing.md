@@ -232,6 +232,7 @@ paths:
 |---|---|
 | `learn-ladies-hajimete.html` | 初めての方へ。営業区分・施術の中身・初回体験¥980・予約方法 |
 | `learn-ladies-kahanshin.html` | 夕方の脚の重さ。部位別のケアと、医療機関に相談する目安 |
+| `learn-ladies-ninoude.html` | 二の腕。日常で「伸ばす」を使わないこと、自分で動かす難しさ |
 
 `tools/site-check.py` の「本文に¥980」点検からも、`learn-ladies-*` は除外してある。
 
