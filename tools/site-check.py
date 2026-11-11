@@ -135,10 +135,10 @@ for p in pages:
                                       '終了しました', '終了いたしました')):
             errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
 
-# 7) 営業区分（MEN'S DAY / LADIES DAY / ALL GENDER DAY）と矛盾する表記
+# 7) 営業区分（MEN'S DAY / LADIES DAY / UNISEX DAY）と矛盾する表記
 #    正典は .claude/rules/operating-days.md
 #    「男性のみ」「女性のお客様と一緒に」を無条件に書くと、男性客への約束違反になる
-DAY_SCOPE = ('男性専用DAY', '男性専用ＤＡＹ')
+DAY_SCOPE = ("MEN'S DAY", 'MEN&#39;S DAY', 'MEN’S DAY', '男性専用DAY', '男性専用ＤＡＹ')
 for p in pages:
     s = read(p)
     for m in re.finditer(r'お客様は男性(のみ|だけ)', s):
@@ -159,8 +159,8 @@ for p, mark in (('index.html', 'news-days'), ('flow.html', 'flow-days')):
     if os.path.exists(p) and mark not in read(p):
         errs.append('%s 営業区分の案内（#%s）がありません' % (p, mark))
 for p in ('faq.html', 'llms.txt', 'terms.html', 'guide.html'):
-    if os.path.exists(p) and '女性専用DAY' not in read(p):
-        errs.append('%s 女性専用DAYの記載がありません' % p)
+    if os.path.exists(p) and 'LADIES DAY' not in read(p):
+        errs.append('%s LADIES DAY（女性専用）の記載がありません' % p)
 
 # 9) 女性の初回体験（通年¥980）に、個人差の注記が添えてあるか
 for p in pages:
