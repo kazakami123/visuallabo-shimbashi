@@ -345,6 +345,31 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .nav-cta{font-size:12.5px;font-weight:600;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-d);white-space:nowrap;transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#111}
 @media(max-width:1120px){.navlinks{display:none}}
+/* 営業区分の週表（#news-days） */
+.wk-row{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.wk-d{border-radius:10px;padding:14px 4px;text-align:center;border:1px solid var(--line);background:var(--paper)}
+.wk-day{display:block;font-size:clamp(13px,2.6vw,17px);font-weight:700;letter-spacing:.02em;line-height:1.3}
+.wk-lb{display:block;font-size:clamp(10px,1.9vw,12px);margin-top:6px;letter-spacing:.02em}
+.wk-men{background:var(--paper);color:var(--ink)}
+.wk-men .wk-lb{color:var(--ink-mute)}
+.wk-lad{background:#f3ece4;border-color:var(--gold);color:var(--gold-d)}
+.wk-lad .wk-lb{color:var(--gold-d)}
+.wk-uni{background:#1f1b16;border-color:#1f1b16;color:#f4efe6}
+.wk-uni .wk-lb{color:#d8cdb8}
+.wk-leg{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:12.5px;color:var(--ink-soft);line-height:1.9}
+.wk-leg span{display:inline-flex;align-items:center;gap:7px}
+.wk-leg b{font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:11.5px;letter-spacing:.1em;color:var(--ink);margin-right:4px}
+.wk-sw{width:13px;height:13px;border-radius:4px;border:1px solid var(--line);flex:0 0 auto}
+.wk-next{margin:16px 0 0;font-size:clamp(13.5px,2.6vw,16px);line-height:1.95;color:var(--ink-soft);
+  background:var(--paper);border:1px solid var(--gold);border-radius:10px;padding:14px 16px}
+.wk-next b{color:var(--ink)}
+.wk-note{margin:12px 0 0;font-size:12px;line-height:1.95;color:var(--ink-mute)}
+@media(max-width:430px){
+  .wk-row{gap:4px}
+  .wk-d{padding:11px 2px;border-radius:8px}
+  .wk-leg{font-size:12px;gap:6px 14px}
+}
+
 /* ナビのCTAはスクロール枠（.navlinks）の外に出してある。常に見えるようにするため。
    1120px以下では、旧来どおり .navlinks と一緒に隠す */
 .nav > .nav-cta{flex:0 0 auto;margin-left:4px}
@@ -772,22 +797,23 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0">男性のお客様は、引き続き木曜日以外の営業日にご利用いただけます。</p>
     </div>
 
-    <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px">
-      <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px">
-        <div style="font-family:var(--futura);font-size:12px;letter-spacing:.12em;color:var(--gold-d)">MEN'S DAY</div>
-        <div style="font-size:13.5px;font-weight:600;color:var(--ink);margin-top:6px">男性専用</div>
-        <div style="font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.9">月・火・水・金・土</div>
+        <div class="rv wk" style="margin-top:clamp(18px,3vw,26px)">
+      <div class="wk-row">
+        <div class="wk-d wk-men"><span class="wk-day">月</span><span class="wk-lb">男性</span></div>
+        <div class="wk-d wk-men"><span class="wk-day">火</span><span class="wk-lb">男性</span></div>
+        <div class="wk-d wk-men"><span class="wk-day">水</span><span class="wk-lb">男性</span></div>
+        <div class="wk-d wk-lad"><span class="wk-day">木</span><span class="wk-lb">女性</span></div>
+        <div class="wk-d wk-men"><span class="wk-day">金</span><span class="wk-lb">男性</span></div>
+        <div class="wk-d wk-men"><span class="wk-day">土</span><span class="wk-lb">男性</span></div>
+        <div class="wk-d wk-uni"><span class="wk-day">日・祝</span><span class="wk-lb">男女</span></div>
       </div>
-      <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px">
-        <div style="font-family:var(--futura);font-size:12px;letter-spacing:.12em;color:var(--gold-d)">LADIES DAY</div>
-        <div style="font-size:13.5px;font-weight:600;color:var(--ink);margin-top:6px">女性専用</div>
-        <div style="font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.9">毎週木曜日（2026年12月3日開始）</div>
+      <div class="wk-leg">
+        <span><i class="wk-sw wk-men"></i><b>MEN'S DAY</b>男性専用／月・火・水・金・土</span>
+        <span><i class="wk-sw wk-lad"></i><b>LADIES DAY</b>女性専用／毎週木曜日・2026年12月3日開始</span>
+        <span><i class="wk-sw wk-uni"></i><b>UNISEX DAY</b>男女共通／日曜日・祝日</span>
       </div>
-      <div style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px 20px">
-        <div style="font-family:var(--futura);font-size:12px;letter-spacing:.12em;color:var(--gold-d)">ALL GENDER DAY</div>
-        <div style="font-size:13.5px;font-weight:600;color:var(--ink);margin-top:6px">男女共通</div>
-        <div style="font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.9">日曜日・祝日（11月は15日・22日・23日（祝）・29日、12月以降は毎週日曜日と祝日。第2・第4日曜の定休日を除く）</div>
-      </div>
+      <p class="wk-next"><b>11月の UNISEX DAY は 15日・22日・23日（祝）・29日</b>　どなたでもご利用いただけます</p>
+      <p class="wk-note">※ 祝日は曜日を問わず UNISEX DAY です（木曜日が祝日の場合も男女共通になります）。毎月第2・第4日曜日は定休日です。11月22日は定休日にあたりますが臨時営業します。女性専用DAYは2026年12月3日（木）から始まります。</p>
     </div>
 
     <div class="rv" style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3.4vw,26px);margin-top:14px">
