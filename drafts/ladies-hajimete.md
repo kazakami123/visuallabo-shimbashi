@@ -11,7 +11,7 @@ camp: false
 related:
   ladies.html|LADIES|女性のお客様へ|営業区分・初回体験・料金のご案内。
   flow.html|FLOW|初回体験の流れ|当日の流れを順番に。
-  rf.html|TECHNOLOGY|高周波（RF）とは|体の内側から温める仕組み。
+  learn-ladies-kahanshin.html|LADIES|夕方、脚が重い|下半身との向き合い方。
 ---
 
 @はじめに
