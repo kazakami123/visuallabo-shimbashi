@@ -30,6 +30,11 @@ def main():
         url = SITE + name
         if url in have:
             continue
+        # 統合済みのリダイレクトスタブ（noindex）は載せない。
+        # 消すと404になるのでファイルは残してあるが、sitemapには入れない。
+        head = io.open(p, encoding='utf-8').read(4000)
+        if 'noindex' in head:
+            continue
         entry = ('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n'
                  '    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n'
                  % (url, lastmod(name)))
