@@ -17,7 +17,11 @@ DISCLAIMER = ('※ VISUAL LABOは医療機関ではなく、施術は医療行�
 
 
 def esc(t):
-    return html.escape(t, quote=True)
+    # アポストロフィは &#x27; にしない。サイトの他のページは「MEN'S DAY」と
+    # 素のまま書いており、ここだけ実体参照になると表記がそろわず、
+    # 画面テキストとJSON-LDの突き合わせでも差分になる。
+    # 属性はすべて二重引用符なので、素のアポストロフィで問題ない。
+    return html.escape(t, quote=True).replace('&#x27;', "'")
 
 
 def inline(t):
@@ -233,6 +237,15 @@ def build(path):
         'RELATED': '\n' + '\n'.join(rel),
         'JSONLD_ARTICLE': ld_article, 'JSONLD_FAQ': ld_faq, 'JSONLD_CRUMB': ld_crumb,
     }
+    # キャンペーン帯。front matter に camp: false と書くと出さない
+    # （女性向けのコラムは、男性向けキャンペーンの帯を出さない）。
+    camp = str(meta.get('camp', 'true')).strip().lower() not in ('false', 'no', '0')
+    if camp:
+        tpl = tpl.replace('<!--CAMP-->', '').replace('<!--/CAMP-->', '')
+        vals['BODY_CLASS'] = ' class="has-camp"'
+    else:
+        tpl = re.sub(r'<!--CAMP-->.*?<!--/CAMP-->\n?', '', tpl, flags=re.S)
+        vals['BODY_CLASS'] = ''
     for k, v in vals.items():
         tpl = tpl.replace('{{%s}}' % k, v)
     left = re.findall(r'\{\{[A-Z_]+\}\}', tpl)

@@ -7,6 +7,7 @@ description: VISUAL LABO 新橋店に初めてお越しになる女性の方へ�
 og_title: 女性のお客様へ｜初めてのご利用で知っておきたいこと
 og_description: ご利用いただける曜日、初回体験の中身、所要時間、ご予約方法。来店前に知っておきたいことをまとめました。
 published: 2026-11-11
+camp: false
 related:
   ladies.html|LADIES|女性のお客様へ|営業区分・初回体験・料金のご案内。
   flow.html|FLOW|初回体験の流れ|当日の流れを順番に。
