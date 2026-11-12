@@ -278,7 +278,8 @@ NGが出るとワークフローが失敗して通知が飛ぶ。
 | Instagram | https://www.instagram.com/visuallabo_official/ |
 | note | https://note.com/visuallabo_diet |
 | ホットペッパービューティー | http://b.hpr.jp/kr/hp/H000797603 |
-| 公式LINE | https://lin.ee/VAjIUgc |
+| 公式LINE（男性） | https://lin.ee/VAjIUgc |
+| 公式LINE（女性） | https://lin.ee/8YFMCSD |
 | PR TIMES | https://prtimes.jp/main/html/rd/p/000000003.000174536.html |
 
 `sameAs` は「この事業者＝これらのアカウント」を検索エンジンとAIに伝える項目。
@@ -318,7 +319,7 @@ DEPOSIT 100のボーナス15%・¥150,000（→20%・¥200,000）／DEPOSIT 100�
 - お支払い：体験・都度利用・物販は、クレジットカード・各種電子マネー・現金。
   月額会費はクレジットカードのみ。**ご契約時にカードのご登録が必要**（2026-09-19 オーナー確認）。
   契約条件なので、料金・会員ガイド・FAQ・特商法・重要事項のすべてに書いておく
-- 予約導線は公式LINE（`https://lin.ee/VAjIUgc`）と
+- 予約導線は公式LINE（男性 `https://lin.ee/VAjIUgc`／女性 `https://lin.ee/8YFMCSD`）と
   ホットペッパービューティー（`http://b.hpr.jp/kr/hp/H000797603`）の2本。
   2026-09-17 オーナー指示で追加。主導線はLINE、ホットペッパーは副導線。
   （以前は「b.hpr.jp のリンクは書かない」としていたが、この指示で解除）

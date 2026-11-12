@@ -164,6 +164,21 @@ for p in ('faq.html', 'llms.txt', 'terms.html', 'guide.html'):
     if os.path.exists(p) and 'LADIES DAY' not in read(p):
         errs.append('%s LADIES DAY（女性専用）の記載がありません' % p)
 
+# 8b) 女性向けページのLINEが、男性用アカウントに繋がっていないか
+#     男性 https://lin.ee/VAjIUgc ／ 女性 https://lin.ee/8YFMCSD
+#     正典は .claude/rules/cta-line.md
+LINE_MEN = 'lin.ee/VAjIUgc'
+LINE_LADIES = 'lin.ee/8YFMCSD'
+for p in pages:
+    if p != 'ladies.html' and not p.startswith('learn-ladies-'):
+        continue
+    s = read(p)
+    n = s.count(LINE_MEN)
+    if n:
+        errs.append('%s 女性向けページに男性用LINEが%d件あります' % (p, n))
+    if LINE_LADIES not in s:
+        errs.append('%s 女性用LINEの導線がありません' % p)
+
 # 9) 女性の初回体験（通年¥980）に、個人差の注記が添えてあるか
 for p in pages:
     s = read(p)

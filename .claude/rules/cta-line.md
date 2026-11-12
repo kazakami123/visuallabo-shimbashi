@@ -10,14 +10,30 @@ paths:
 
 2026-09-12 オーナー確認。
 
-## 公式LINEのURL
+## 公式LINEのURL（男女で別アカウント）
 
-```
-https://lin.ee/VAjIUgc
-```
+| | URL |
+|---|---|
+| **男性のお客様** | `https://lin.ee/VAjIUgc` |
+| **女性のお客様** | `https://lin.ee/8YFMCSD` |
 
-**予約・相談のCTAは、すべてこのURLに繋ぐ。** 新しくCTAを作るときも、
-既存のCTAを直すときも、必ずこれを使う。
+**男性向けページのCTAは男性用に、女性向けページのCTAは女性用に繋ぐ。**
+新しくCTAを作るときも、既存のCTAを直すときも、どちらのページかを必ず確認する。
+
+### 女性用に繋ぐ範囲（2026-11-12 オーナー指摘で修正）
+
+- `ladies.html` のすべてのLINEリンク（ナビCTA・追従バー2本・末尾CTA・
+  フッターの連絡先とRESERVE列・本文）
+- 女性向けコラム `learn-ladies-*.html` のすべてのLINEリンク（同上）
+- `index.html` の `#news-days` にある「女性のご予約（公式LINE）」ボタン
+  （`data-cta="news_days_line_ladies"`）
+
+コラムは `tools/column-template.html` の `<!--LADIES-->` ブロックが持っている。
+front matter の `ladies: true` で切り替わる。**男性向けページのLINEは変えない。**
+
+**flow / guide / faq / news / area-ginza / price にある
+「女性のお客様のご予約は公式LINEのみで承ります」は、いまリンクのない文章。**
+リンクを張るなら女性用URLにする。
 
 ### 書き方
 
