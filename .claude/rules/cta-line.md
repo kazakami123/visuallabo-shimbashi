@@ -31,9 +31,15 @@ paths:
 コラムは `tools/column-template.html` の `<!--LADIES-->` ブロックが持っている。
 front matter の `ladies: true` で切り替わる。**男性向けページのLINEは変えない。**
 
-**flow / guide / faq / news / area-ginza / price にある
-「女性のお客様のご予約は公式LINEのみで承ります」は、いまリンクのない文章。**
-リンクを張るなら女性用URLにする。
+### 共通ページの文章内リンク（2026-11-12 追加）
+
+`faq.html` / `flow.html` / `guide.html` / `price.html` / `news.html` / `area-ginza.html` の
+「女性のお客様のご予約は公式LINEのみで承ります」の**「公式LINE」を女性用URLのリンク**にしてある。
+`data-cta` は `faq_ladies_line` / `flow_ladies_line` / `guide_ladies_line` /
+`price_ladies_line` / `news_ladies_line`（area-ginza は原稿 `drafts/area-ginza.md` 側）。
+
+**FAQPage構造化データ側にはリンクを入れない。** 構造化データはプレーンテキストで持つ。
+画面テキストとの突き合わせはタグを外して比較するので、画面だけリンクにしてもずれない。
 
 ### 書き方
 
