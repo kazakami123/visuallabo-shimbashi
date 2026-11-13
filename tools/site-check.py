@@ -110,8 +110,14 @@ for p in pages:
                     % (p, m.group(1) or 'ルート', want or 'ルート'))
 
 # 5) 旧価格・旧表記
+#    corporate.html の「1回あたり ¥4,980」だけは別物。法人福利厚生プラン
+#    （ライト ¥49,800 ÷ 10回）の単価で、旧い初回体験価格とは関係がない。
+#    この書き方のときだけ見逃す。ほかの場所の ¥4,980 はこれまでどおりNG。
+DEAD_OK = {'corporate.html': ['1回あたり ¥4,980']}
 for p in pages:
     s = read(p)
+    for ok in DEAD_OK.get(p, []):
+        s = s.replace(ok, '')
     for d in DEAD:
         if d in s:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
