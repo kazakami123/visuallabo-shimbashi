@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>法人向け福利厚生プランのご案内｜VISUAL LABO 新橋店</title>
+<style>
+:root{
+  --ink:#1a1a1a; --ink-soft:#333; --ink-mute:#5f5f5f;
+  --gold:#b89b5e; --gold-d:#806731; --gold-pale:#f2ece0;
+  --line:#e0ddd6; --paper:#fff; --paper-2:#faf8f4; --black:#141414;
+}
+@page{ size:A4; margin:0; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#eceae6}
+body{
+  font-family:"Futura","Century Gothic","Outfit","Noto Sans JP","Hiragino Kaku Gothic ProN","IPAGothic",sans-serif;
+  color:var(--ink); line-height:1.68; letter-spacing:.02em; -webkit-font-smoothing:antialiased;
+}
+.sheet{
+  width:210mm; height:297mm; background:var(--paper); margin:0 auto;
+  padding:10mm 13mm 8mm; display:flex; flex-direction:column; position:relative; overflow:hidden;
+}
+.en{letter-spacing:.2em}
+
+/* ヘッダー */
+.head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--ink);padding-bottom:3.5mm}
+.logo{font-size:15pt;font-weight:600;letter-spacing:.2em}
+.logo b{font-weight:400}
+.head-r{text-align:right;font-size:7.3pt;letter-spacing:.22em;color:var(--gold-d);line-height:1.6}
+
+/* ヒーロー */
+.hero{margin-top:4.5mm}
+.kicker{font-size:7.4pt;letter-spacing:.3em;color:var(--gold-d);margin-bottom:2mm}
+.lead{font-size:20pt;font-weight:600;line-height:1.38;letter-spacing:.005em}
+.lead em{font-style:normal;color:var(--gold-d);border-bottom:2.5px solid var(--gold);padding-bottom:1px}
+.lead-sub{margin-top:2.5mm;font-size:8.4pt;color:var(--ink-soft);line-height:1.75}
+
+/* 共通仕様の帯 */
+.spec{margin-top:4.5mm;background:var(--black);color:#fff;padding:3.2mm 5mm;display:flex;align-items:center;gap:6mm}
+.spec-l{font-size:7pt;letter-spacing:.26em;color:var(--gold);white-space:nowrap}
+.spec-t{font-size:9pt;font-weight:500;line-height:1.55}
+.spec-t span{color:#cfc7b9;font-weight:400;font-size:7.8pt}
+
+/* プラン比較 */
+.sec-t{display:flex;align-items:baseline;gap:4mm;margin:5mm 0 3mm}
+.sec-t h2{font-size:11.5pt;font-weight:600;letter-spacing:.04em}
+.sec-t .n{font-size:7pt;letter-spacing:.26em;color:var(--gold-d)}
+.sec-t .rule{flex:1;height:1px;background:var(--line)}
+
+.plans{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm}
+.plan{border:1px solid var(--line);background:var(--paper-2);padding:4mm 3.5mm 3.5mm;text-align:center;position:relative}
+.plan.feat{border:1.6px solid var(--gold);background:#fff;box-shadow:0 2px 10px rgba(184,155,94,.14)}
+.badge{position:absolute;top:-2.6mm;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:6.6pt;letter-spacing:.18em;padding:1mm 3.5mm;white-space:nowrap}
+.plan-n{font-size:7.4pt;letter-spacing:.22em;color:var(--gold-d);margin-bottom:1.5mm}
+.plan-jp{font-size:8.2pt;color:var(--ink-mute);margin-bottom:2mm}
+.plan-p{font-size:16.5pt;font-weight:600;line-height:1.1;white-space:nowrap}
+.plan-p small{font-size:8.5pt;font-weight:400;color:var(--ink-mute);margin-left:.5mm}
+.plan-tax{font-size:7pt;color:var(--ink-mute);margin-top:1mm}
+.plan-c{margin-top:2.8mm;padding-top:2.8mm;border-top:1px solid var(--line)}
+.plan-c .num{font-size:13.5pt;font-weight:600;color:var(--gold-d);line-height:1.1}
+.plan-c .num small{font-size:8.5pt;font-weight:400;color:var(--ink);margin-left:.5mm}
+.plan-c .per{font-size:7.6pt;color:var(--ink-mute);margin-top:1.5mm}
+
+/* 仕組み */
+.how{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;margin-top:1mm}
+.how div{border-left:2px solid var(--gold);padding:1mm 0 1mm 3.5mm}
+.how h3{font-size:8.8pt;font-weight:600;margin-bottom:1mm}
+.how p{font-size:7.4pt;color:var(--ink-mute);line-height:1.65}
+
+/* 1部署から */
+.start{margin-top:4.5mm;background:var(--gold-pale);border:1px solid #e6dcc5;padding:3.4mm 5mm;display:flex;align-items:center;gap:5mm}
+.start b{font-size:11pt;font-weight:600;white-space:nowrap}
+.start p{font-size:7.8pt;color:var(--ink-soft);line-height:1.65}
+
+/* 曜日 */
+.days{margin-top:4mm;display:flex;gap:3mm;align-items:stretch}
+.days-t{font-size:7.4pt;letter-spacing:.2em;color:var(--gold-d);writing-mode:vertical-rl;text-orientation:upright;border-right:1px solid var(--line);padding-right:2.5mm;white-space:nowrap}
+.days-g{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm}
+.day{border:1px solid var(--line);padding:2mm 2.5mm}
+.day .d{font-size:8.4pt;font-weight:600}
+.day .w{font-size:7.4pt;color:var(--ink-mute);margin-top:.5mm}
+
+/* 追記予定 */
+.pending{margin-top:3mm;border:1px dashed #c9c4b8;padding:2.4mm 3.5mm;font-size:7pt;color:var(--ink-mute);line-height:1.7}
+.pending b{color:var(--ink);font-weight:600}
+
+/* フッター */
+.foot{margin-top:auto;padding-top:4mm;border-top:1px solid var(--ink)}
+.cta{font-size:12pt;font-weight:600;letter-spacing:.02em;margin-bottom:2mm}
+.cta span{color:var(--gold-d)}
+.foot-row{display:flex;justify-content:space-between;align-items:flex-end;gap:6mm}
+.contact{font-size:7.8pt;line-height:1.75;color:var(--ink-soft)}
+.contact b{font-size:11pt;color:var(--ink);letter-spacing:.04em}
+.note{font-size:6.6pt;color:var(--ink-mute);line-height:1.6;max-width:92mm;text-align:right}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="head">
+    <div class="logo">VISUAL <b>LABO</b></div>
+    <div class="head-r">CORPORATE WELFARE PLAN<br>法人向け福利厚生プラン</div>
+  </div>
+
+  <div class="hero">
+    <div class="kicker en">法人向け福利厚生プランができました</div>
+    <h1 class="lead">月<em>5万円未満</em>で、<br>社員10名が1回ずつ利用できる。</h1>
+    <p class="lead-sub">
+      新橋駅 徒歩3分。横になったまま受けられるボディケアを、福利厚生として。<br>
+      ジムのように時間をつくる必要がないぶん、忙しい方でも使いやすい制度です。
+    </p>
+  </div>
+
+  <div class="spec">
+    <div class="spec-l en">ALL PLANS</div>
+    <div class="spec-t">全プラン共通　高周波 × HYPER EMS の 90分ボディケア<br>
+      <span>自社開発マシン MystiCore でお腹まわりを中心に温め、仕上げに HYPER EMS。すべて完全個室です。</span></div>
+  </div>
+
+  <div class="sec-t"><span class="n en">PLAN</span><h2>料金と利用回数</h2><span class="rule"></span></div>
+
+  <div class="plans">
+    <div class="plan feat">
+      <div class="badge">まずはここから</div>
+      <div class="plan-n en">LIGHT</div>
+      <div class="plan-jp">ライト</div>
+      <div class="plan-p">¥49,800<small>／月</small></div>
+      <div class="plan-tax">税込</div>
+      <div class="plan-c">
+        <div class="num">10<small>回／月</small></div>
+        <div class="per">1回あたり ¥4,980</div>
+      </div>
+    </div>
+    <div class="plan">
+      <div class="plan-n en">STANDARD</div>
+      <div class="plan-jp">スタンダード</div>
+      <div class="plan-p">¥100,000<small>／月</small></div>
+      <div class="plan-tax">税込</div>
+      <div class="plan-c">
+        <div class="num">21<small>回／月</small></div>
+        <div class="per">1回あたり 約¥4,762</div>
+      </div>
+    </div>
+    <div class="plan">
+      <div class="plan-n en">PREMIUM</div>
+      <div class="plan-jp">プレミアム</div>
+      <div class="plan-p">¥150,000<small>／月</small></div>
+      <div class="plan-tax">税込</div>
+      <div class="plan-c">
+        <div class="num">33<small>回／月</small></div>
+        <div class="per">1回あたり 約¥4,545</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-t"><span class="n en">HOW IT WORKS</span><h2>使い方は、シンプルです</h2><span class="rule"></span></div>
+
+  <div class="how">
+    <div>
+      <h3>会社が、まとめて払う</h3>
+      <p>月額は会社から一括でお支払いいただきます。社員一人ひとりの契約や手続きはありません。</p>
+    </div>
+    <div>
+      <h3>利用枠を、共有する</h3>
+      <p>回数はプラン全体の枠です。使う人・使う回数を社内で自由に割り振っていただけます。</p>
+    </div>
+    <div>
+      <h3>予約は、本人から</h3>
+      <p>ご予約は従業員ご本人が直接。プラン内のご利用なら、当日のお支払いはありません。</p>
+    </div>
+  </div>
+
+  <div class="start">
+    <b>まずは、1部署から。</b>
+    <p>全社で始める必要はありません。ライトプランなら月10回、10名が1回ずつ試せます。使われ方を見てから広げるご相談も承ります。</p>
+  </div>
+
+  <div class="days">
+    <div class="days-t en">ご利用日</div>
+    <div class="days-g">
+      <div class="day"><div class="d">月・火・水・金・土</div><div class="w">MEN'S DAY ／ 男性の方</div></div>
+      <div class="day"><div class="d">木曜日</div><div class="w">LADIES DAY ／ 女性の方（2026年12月3日開始）</div></div>
+      <div class="day"><div class="d">日曜日・祝日</div><div class="w">UNISEX DAY ／ 男女どちらも</div></div>
+    </div>
+  </div>
+
+  <div class="pending">
+    <b>このあとご案内する項目</b>　受付曜日の詳細／未使用分の繰り越しの可否／キャンセル条件。
+    内容が確定しだい、あらためてご案内します。現時点でお決まりのご要望があれば、ご相談の際にお知らせください。
+  </div>
+
+  <div class="foot">
+    <div class="cta">VISUAL LABO 新橋店へ、<span>導入のご相談を。</span></div>
+    <div class="foot-row">
+      <div class="contact">
+        <b>03-6205-4900</b>　／　visuallabo.com<br>
+        東京都港区新橋１丁目１４−８ VORT新橋1丁目 3F<br>JR新橋駅 日比谷口 徒歩3分<br>
+        受付時間　平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00<br>定休日　第2・第4日曜、年末年始、大型連休
+      </div>
+      <div class="note">
+        ※ 表示はすべて税込です。※ 体型管理・コンディショニングを目的としたサロンです。医療行為ではなく、感じ方・変化には個人差があります。※ ご予約は空き状況によります。ご利用回数を保証するものではありません。※ ご相談内容にかかわらず、その場でご契約をお願いすることはありません。
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
