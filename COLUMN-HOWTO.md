@@ -116,6 +116,15 @@ front matter に `camp: false` と書いてください。
 `tools/column-template.html` の帯も直してください（手順は `.claude/rules/pricing.md`）。
 ここを直し忘れると、次に作るコラムだけ古い帯になります。
 
+## drafts/ にはコラムの原稿だけを置いてください
+
+`drafts/*.md` は **front matter（`---` で囲んだ先頭ブロック）が必須**です。
+front matter のないファイルを置くと、`column.py --all` が
+「front matter がありません」で止まり、**GitHub Actions が失敗します。**
+
+メモ・手順書・他のエージェントに渡すプロンプトなどは、`drafts/` ではなく
+リポジトリ直下に置いてください（`HOTPEPPER-FIX.md` などと同じ場所）。
+
 ## 原稿と公開HTMLは、ずれないようにしてください
 
 `drafts/**.md` を1本でもpushすると、GitHub Actionsが **`column.py --all`** を走らせます。
