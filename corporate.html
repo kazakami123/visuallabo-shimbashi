@@ -38,6 +38,33 @@ img,table,figure{max-width:100%}
 .cp-card .pd{margin-top:8px;font-size:14px;color:var(--ink)}
 .cp-card ul{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:13px;color:var(--ink-soft);line-height:2}
 .cp-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1f1a12;font-size:11px;letter-spacing:.08em;padding:3px 12px;border-radius:999px;white-space:nowrap}
+.cw-spec{max-width:1020px;margin:clamp(22px,4vw,30px) auto 0;background:#141414;color:#f0eae0;border-radius:10px;padding:clamp(18px,3.2vw,24px) clamp(20px,4vw,30px)}
+.cw-spec .l{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.24em;font-size:11px;color:var(--gold);margin-bottom:8px}
+.cw-spec .t{font-size:clamp(15px,2.6vw,18px);font-weight:500;line-height:1.7}
+.cw-spec .s{display:block;margin-top:6px;font-size:13px;color:#cfc7b9;font-weight:400;line-height:1.85}
+.cw-plans{display:grid;grid-template-columns:1fr;gap:14px;max-width:1020px;margin:clamp(20px,3.6vw,28px) auto 0}
+@media(min-width:860px){.cw-plans{grid-template-columns:repeat(3,1fr)}}
+.cw-plan{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:clamp(22px,4vw,28px) clamp(16px,3vw,22px);text-align:center;position:relative}
+.cw-plan.feat{border:2px solid var(--gold);box-shadow:0 2px 14px rgba(184,155,94,.16)}
+.cw-plan .en{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;letter-spacing:.2em;font-size:12px;color:var(--gold-d)}
+.cw-plan .jp{font-size:13px;color:var(--ink-mute);margin-top:4px}
+.cw-plan .pr{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(26px,5vw,32px);font-weight:600;color:var(--ink);margin-top:12px;white-space:nowrap;line-height:1.2}
+.cw-plan .pr small{font-size:14px;font-weight:400;color:var(--ink-mute);margin-left:2px}
+.cw-plan .tax{font-size:11.5px;color:var(--ink-mute);margin-top:2px}
+.cw-plan .cnt{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.cw-plan .cnt b{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:clamp(22px,4vw,26px);font-weight:600;color:var(--gold-d);line-height:1.2}
+.cw-plan .cnt b small{font-size:14px;font-weight:400;color:var(--ink);margin-left:2px}
+.cw-plan .cnt .per{font-size:12.5px;color:var(--ink-mute);margin-top:6px}
+.cw-how{display:grid;grid-template-columns:1fr;gap:14px;max-width:1020px;margin:clamp(22px,4vw,30px) auto 0}
+@media(min-width:860px){.cw-how{grid-template-columns:repeat(3,1fr)}}
+.cw-how div{border-left:2px solid var(--gold);padding:4px 0 4px 16px}
+.cw-how h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.cw-how p{font-size:13.5px;color:var(--ink-mute);line-height:1.9}
+.cw-start{max-width:1020px;margin:clamp(22px,4vw,30px) auto 0;background:#f2ece0;border:1px solid #e6dcc5;border-radius:10px;padding:clamp(18px,3.2vw,24px) clamp(20px,4vw,30px)}
+.cw-start b{display:block;font-size:clamp(17px,3vw,20px);font-weight:600;margin-bottom:6px}
+.cw-start p{font-size:13.5px;color:var(--ink-soft);line-height:1.95}
+.cw-pending{max-width:1020px;margin:16px auto 0;border:1px dashed #c9c4b8;border-radius:10px;padding:16px 20px;font-size:12.5px;color:var(--ink-mute);line-height:1.9}
+.cw-pending b{color:var(--ink);font-weight:600}
 .cp-steps{max-width:760px;margin:clamp(24px,4vw,36px) auto 0}
 .cp-step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:12px}
 .cp-step .no{font-family:"Futura","Century Gothic","Outfit","Noto Sans JP",sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;color:#1f1a12;background:var(--gold);min-width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
@@ -141,8 +168,55 @@ img,table,figure{max-width:100%}
 <div id="page-plans" data-tab-panel>
 <section class="sec" style="background:var(--paper-2)"><div class="wrap">
   <div class="nexthead rv" style="text-align:center"><div class="kicker c" style="justify-content:center">Plan</div><h2 class="lead">導入の、<em>かたち</em>。</h2>
-    <p class="body-txt" style="max-width:620px;margin:18px auto 0">人数・ご予算・使い方に合わせてご提案します。まずは1つ、試しやすいところから。</p>
+    <p class="body-txt" style="max-width:660px;margin:18px auto 0"><b>月5万円未満で、社員10名が1回ずつご利用いただけます。</b><br>会社が月額をまとめてお支払いいただき、従業員のみなさまで利用枠を共有する形です。</p>
   </div>
+  <div class="cw-spec rv">
+    <div class="l">ALL PLANS</div>
+    <div class="t">全プラン共通　高周波 × HYPER EMS の 90分ボディケア
+      <span class="s">自社開発マシン MystiCore でお腹まわりを中心に温め、仕上げに HYPER EMS を30分。カウンセリングから施術まで、すべて完全個室です。</span></div>
+  </div>
+
+  <div class="cw-plans rv">
+    <div class="cw-plan feat">
+      <div class="cp-badge">まずはここから</div>
+      <div class="en">LIGHT</div>
+      <div class="jp">ライト</div>
+      <div class="pr">¥49,800<small>／月</small></div>
+      <div class="tax">税込</div>
+      <div class="cnt"><b>10<small>回／月</small></b><div class="per">1回あたり ¥4,980</div></div>
+    </div>
+    <div class="cw-plan">
+      <div class="en">STANDARD</div>
+      <div class="jp">スタンダード</div>
+      <div class="pr">¥100,000<small>／月</small></div>
+      <div class="tax">税込</div>
+      <div class="cnt"><b>21<small>回／月</small></b><div class="per">1回あたり 約¥4,762</div></div>
+    </div>
+    <div class="cw-plan">
+      <div class="en">PREMIUM</div>
+      <div class="jp">プレミアム</div>
+      <div class="pr">¥150,000<small>／月</small></div>
+      <div class="tax">税込</div>
+      <div class="cnt"><b>33<small>回／月</small></b><div class="per">1回あたり 約¥4,545</div></div>
+    </div>
+  </div>
+
+  <div class="cw-how rv">
+    <div><h3>会社が、まとめて払う</h3><p>月額は会社から一括でお支払いいただきます。社員一人ひとりのご契約や手続きはありません。</p></div>
+    <div><h3>利用枠を、共有する</h3><p>回数はプラン全体の枠です。使う方・使う回数は、社内で自由に割り振っていただけます。</p></div>
+    <div><h3>予約は、本人から</h3><p>ご予約は従業員ご本人が直接お取りください。プラン内のご利用なら、当日のお支払いはありません。</p></div>
+  </div>
+
+  <div class="cw-start rv">
+    <b>まずは、1部署から。</b>
+    <p>全社で始める必要はありません。ライトプランなら月10回、10名の方が1回ずつお試しいただけます。使われ方を見てから広げるご相談も承ります。</p>
+  </div>
+
+  <div class="cw-pending rv">
+    <b>このあとご案内する項目</b>　受付曜日の詳細／未使用分の繰り越しの可否／キャンセル条件。内容が確定しだい、あらためてご案内します。現時点でお決まりのご要望があれば、ご相談の際にお知らせください。
+  </div>
+
+  <div class="nexthead rv" style="text-align:center;margin-top:clamp(48px,7vw,72px)"><h2 class="lead" style="font-size:clamp(20px,3.4vw,26px)">そのほかの、<em>導入のかたち</em>。</h2></div>
   <div class="cp-cards rv">
     <div class="cp-card feat">
       <div class="cp-badge">おすすめ</div>
@@ -177,7 +251,7 @@ img,table,figure{max-width:100%}
       </ul>
     </div>
   </div>
-  <p class="note-s rv" style="margin-top:18px;text-align:center">※ 表示価格はすべて税込です。法人プランの内容・お見積りは、ご相談のうえ個別にご案内します。</p>
+  <p class="note-s rv" style="margin-top:18px;text-align:center">※ 表示価格はすべて税込です。※ ご予約は空き状況によります。ご利用回数を保証するものではありません。※ 上記以外の人数・使い方も、ご相談のうえ個別にお見積りします。</p>
 </div></section>
 </div>
 
