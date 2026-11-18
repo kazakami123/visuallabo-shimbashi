@@ -8,102 +8,53 @@ paths:
 
 # CTA・予約導線（正典）
 
-2026-09-12 オーナー確認。
+2026-11-18 オーナー確認。
 
-## 公式LINEのURL（男女で別アカウント）
+## 男性のお客様の予約
 
-| | URL |
-|---|---|
-| **男性のお客様** | `https://lin.ee/VAjIUgc` |
-| **女性のお客様** | `https://lin.ee/8YFMCSD` |
+- 公式LINE：`https://lin.ee/VAjIUgc`
+- ホットペッパービューティー：`http://b.hpr.jp/kr/hp/H000797603`
+- 電話：`03-6205-4900`
 
-**男性向けページのCTAは男性用に、女性向けページのCTAは女性用に繋ぐ。**
-新しくCTAを作るときも、既存のCTAを直すときも、どちらのページかを必ず確認する。
+各ページは、原則としてLINE・ホットペッパー・初回体験予約の3導線を維持する。
+LINEを主導線、ホットペッパーを副導線とする。
 
-### 女性用に繋ぐ範囲（2026-11-12 オーナー指摘で修正）
+## 女性ゲストの案内
 
-- `ladies.html` のすべてのLINEリンク（ナビCTA・追従バー2本・末尾CTA・
-  フッターの連絡先とRESERVE列・本文）
-- 女性向けコラム `learn-ladies-*.html` のすべてのLINEリンク（同上）
-- `index.html` の `#news-days` にある「女性のご予約（公式LINE）」ボタン
-  （`data-cta="news_days_line_ladies"`）
+- 女性本人が単独で予約する導線は設けない
+- 女性用LINE `https://lin.ee/8YFMCSD` は、公式サイトの予約CTAには使用しない
+- 女性をご招待できるのはVIP月額会員の男性のみ
+- VIP月額会員ご本人が、ご自身のVIP予約に「女性同伴オプション」を追加する
+- 女性ゲスト1名＋¥10,000（税込）、同じVIP ROOMで120分
+- 女性単独の予約・来店・入会は不可
 
-コラムは `tools/column-template.html` の `<!--LADIES-->` ブロックが持っている。
-front matter の `ladies: true` で切り替わる。**男性向けページのLINEは変えない。**
+`ladies.html` と `learn-ladies-*.html` は女性ゲスト向けの説明ページとして維持する。
+CTAは女性本人の予約ではなく、VIP月額会員が同伴オプションを相談する男性用LINEへつなぐ。
 
-### 共通ページの文章内リンク（2026-11-12 追加）
-
-`faq.html` / `flow.html` / `guide.html` / `price.html` / `news.html` / `area-ginza.html` の
-「女性のお客様のご予約は公式LINEのみで承ります」の**「公式LINE」を女性用URLのリンク**にしてある。
-`data-cta` は `faq_ladies_line` / `flow_ladies_line` / `guide_ladies_line` /
-`price_ladies_line` / `news_ladies_line`（area-ginza は原稿 `drafts/area-ginza.md` 側）。
-
-**FAQPage構造化データ側にはリンクを入れない。** 構造化データはプレーンテキストで持つ。
-画面テキストとの突き合わせはタグを外して比較するので、画面だけリンクにしてもずれない。
-
-### 書き方
+## CTAの書き方
 
 ```html
 <a class="btn btn-gold" href="https://lin.ee/VAjIUgc"
    target="_blank" rel="noopener" data-cta="任意のID">初回体験 60分 ¥2,980</a>
 ```
 
-- `target="_blank"` と `rel="noopener"` を必ず付ける
-- `data-cta` はGAのCTA計測に使っている。**どのボタンから押されたかを区別**
-  するため、ページ・位置ごとに固有の値を付ける
-  （例：`hero_reserve` / `final_line` / `bbar_line_contact` / `lp_hero_reserve`）
+- `target="_blank"` と `rel="noopener"` を付ける
+- `data-cta` はページ・位置ごとに固有の値を付ける
+- 女性ゲスト向けのCTA文言は「VIP女性同伴オプションを相談する」とする
+- 「女性の予約」「女性の初回体験」「女性専用LINE」と書かない
 
-### 使ってはいけない旧URL
+## 追従バー
 
-```
-https://visuallabo-line.visuallabo.workers.dev/auth/line?
-```
+- 通常ページは `.bbar.b3` にLINE相談・ホットペッパー・初回体験予約の3本
+- `ladies.html` と `learn-ladies-*.html` も、VIP月額会員向けの相談導線として男性用LINEを使う
+- corporate.html は法人向けのため、3本目は導入相談。ホットペッパーは置かない
+- price.html はモバイルだけLINE・ホットペッパーを隠し、予約1本に絞る
+- index.html と shindan.html は独自CSSのため、バーの見た目を変えるときは3箇所を確認する
 
-2026-09-12 に全47ファイル・169箇所から撤去済み。**復活させないこと。**
-（Cloudflare Workers の中継URL。役割が残っている場合は
-  オーナーに確認してから扱う）
+## 使ってはいけない旧URL・旧導線
 
-## ホットペッパービューティーのURL
+- `https://visuallabo-line.visuallabo.workers.dev/auth/line?`
+- 女性単独予約用の `https://lin.ee/8YFMCSD`
+- LADIES DAY／UNISEX DAYを前提とした予約ボタン
 
-```
-http://b.hpr.jp/kr/hp/H000797603
-```
-
-2026-09-17 オーナー確認。**LINEに次ぐ第2の予約導線。**
-
-パソコンでLINEを使っていない人、LINEの友だち追加に抵抗がある人が
-そのまま予約できるように置いている。LINEの代わりではなく、並べて出す。
-
-### 書き方
-
-```html
-<a class="btn btn-out" href="http://b.hpr.jp/kr/hp/H000797603"
-   target="_blank" rel="noopener" data-cta="任意のID">ホットペッパーで予約する</a>
-```
-
-- LINEより控えめな見た目にする（アウトライン系）。主導線はあくまでLINE
-- 追従バーでは `.bh` クラスを使う
-
-## CTAの構成
-
-- 各ページ末尾に `<section class="sec cta">` を置く
-- 画面下の追従バー `<div class="bbar b3">` に3本
-  （LINE相談 `.bl` ／ ホットペッパー `.bh` ／ 初回体験予約 `.br`）
-  - `b3` はモバイルで3本が収まるように文字を詰めるクラス。付け忘れると溢れる
-  - **実ページは全部に置く。モバイルもPCも、常に出しておく**（2026-09-17 オーナー指示）
-  - 対象外は2種類だけ。リダイレクト用のスタブ11本（care-ninoude 等・即転送するため）と、
-    社内資料の chapter1_viewer
-  - corporate.html は法人向けなので3本目は「導入について相談する」。ホットペッパーは置かない
-  - **ladies.html と女性向けコラム（`learn-ladies-*.html`）は公式LINEのみの2本**（`.bbar`）。
-    女性のご予約は公式LINEのみなので、ホットペッパーの導線を置かない。
-    コラムは `drafts/*.md` の front matter に `ladies: true` と書くと切り替わる
-    （ナビCTA・末尾のCTA・追従バー・フッターの紹介文の4か所）
-  - price.html はモバイルだけ `.bl` `.bh` を隠し、予約1本に絞っている
-  - style.css を読み込まない index.html / shindan.html は、同じCSSを各ファイル内に持つ。
-    バーの見た目を直すときは3箇所すべて直す
-- フッターの連絡先行にも、電話番号と並べてホットペッパーのリンクを置く（全ページ）
-
-## 価格の表記
-
-CTAに金額を書くときは `.claude/rules/pricing.md` を必ず確認する。
-現行は初回体験 60分 ¥2,980（通常 ¥9,800）。
+CTAに金額を書くときは `.claude/rules/pricing.md` を確認する。

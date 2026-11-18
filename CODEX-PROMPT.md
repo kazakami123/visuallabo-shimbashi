@@ -13,7 +13,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
 ## 先に読むファイル（ここが正典です）
 
 - `CLAUDE.md` … 作業ルール全般
-- `.claude/rules/operating-days.md` … 営業区分（MEN'S DAY / LADIES DAY / UNISEX DAY）の正典
+- `.claude/rules/operating-days.md` … 営業日と女性ゲスト利用条件の正典
 - `.claude/rules/pricing.md` … 価格の正典
 - `compliance.yaml` と `.claude/compliance/blocklist.txt` … 使ってはいけない語
 
@@ -35,7 +35,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
 | 1/10・1/24 | 営業（通常は定休の第2・第4日曜） |
 | 1/17・1/31 | 営業（通常の日曜） |
 
-- **日曜日の区分は UNISEX DAY（男女共通）のまま。** 男女どちらも利用できます
+- **曜日による男女区分は設けない。** 女性はVIP月額会員の男性同伴・VIP ROOM限定です
 - **営業時間は変えません。** 平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00
 - **1月3日は日曜ですが休業です。** 「1月は毎週日曜日営業」とだけ書かないでください
 

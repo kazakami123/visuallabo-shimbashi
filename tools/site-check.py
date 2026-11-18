@@ -96,7 +96,10 @@ CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html':
             'learn-cold.html': 'learn-onkatsu.html',
             'learn-mukumi.html': 'learn-lymph.html',
             'learn-circulation.html': 'learn-lymph.html',
-            'learn-posture.html': 'care-soriko.html'}
+            'learn-posture.html': 'care-soriko.html',
+            'learn-ladies-hajimete.html': 'ladies.html',
+            'learn-ladies-kahanshin.html': 'ladies.html',
+            'learn-ladies-ninoude.html': 'ladies.html'}
 for p in pages:
     if not p.endswith('.html') or p.startswith('tools/'):
         continue
@@ -122,10 +125,8 @@ for p in pages:
         if d in s:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
 
-# 6) 本文に¥980（帯・CTA以外）が出ていないか
-#    ladies.html と女性向けコラムは、女性の初回体験が通年¥980なのでページごと対象外。
-#    コラムのテンプレートも、女性向けのCTA（¥980）を持っているので対象外にする
-LADIES_PAGES = ('ladies.html', 'tools/column-template.html')
+# 6) 本文に旧価格¥980（帯・CTA以外）が出ていないか
+LADIES_PAGES = ()
 for p in pages:
     if p in LADIES_PAGES or p.startswith('learn-ladies-'):
         continue
@@ -143,47 +144,30 @@ for p in pages:
                                       '終了しました', '終了いたしました')):
             errs.append('%s 本文に¥980があります（12/1に残骸になります）' % p)
 
-# 7) 営業区分（MEN'S DAY / LADIES DAY / UNISEX DAY）と矛盾する表記
-#    正典は .claude/rules/operating-days.md
-#    「男性のみ」「女性のお客様と一緒に」を無条件に書くと、男性客への約束違反になる
-DAY_SCOPE = ("MEN'S DAY", 'MEN&#39;S DAY', 'MEN’S DAY', '男性専用DAY', '男性専用ＤＡＹ')
+# 7) 女性ゲスト条件と矛盾する旧表記
 for p in pages:
     s = read(p)
-    for m in re.finditer(r'お客様は男性(のみ|だけ)', s):
-        ctx = s[max(0, m.start() - 90):m.start()]
-        if not any(k in ctx for k in DAY_SCOPE):
-            errs.append('%s 「お客様は男性のみ」に曜日の限定がありません' % p)
-    for m in re.finditer(r'女性のお客様と一緒になること', s):
-        ctx = s[max(0, m.start() - 160):m.start()]
-        if not any(k in ctx for k in DAY_SCOPE):
-            errs.append('%s 「女性のお客様と一緒になりません」に曜日の限定がありません' % p)
-    for d in ('完全男性専用', '男性以外利用不可', '毎週日曜日営業',
-              '女性のお客様のご利用はお受けしていません。</p>'):
+    for d in ('女性専用DAY', '男女共通DAY', '女性の初回体験 ¥980',
+              'お腹まわり痩身体験 ¥980', '女性単独で予約できます'):
         if d in s:
-            errs.append('%s 営業区分と矛盾する「%s」があります' % (p, d))
+            errs.append('%s 女性ゲスト条件と矛盾する「%s」があります' % (p, d))
 
-# 8) 営業区分の案内が、要のページから消えていないか
-for p, mark in (('index.html', 'news-days'), ('flow.html', 'flow-days')):
+# 8) 女性ゲスト条件の案内が、要のページから消えていないか
+for p, mark in (('index.html', 'news-days'), ('flow.html', 'flow-ladies')):
     if os.path.exists(p) and mark not in read(p):
-        errs.append('%s 営業区分の案内（#%s）がありません' % (p, mark))
+        errs.append('%s 女性ゲスト条件の案内（#%s）がありません' % (p, mark))
 for p in ('faq.html', 'llms.txt', 'terms.html', 'guide.html'):
-    if os.path.exists(p) and 'LADIES DAY' not in read(p):
-        errs.append('%s LADIES DAY（女性専用）の記載がありません' % p)
+    if os.path.exists(p) and '＋¥10,000' not in read(p) and '＋10,000円' not in read(p):
+        errs.append('%s 女性同伴オプション＋10,000円の記載がありません' % p)
 
-# 8b) 女性向けページのLINEが、男性用アカウントに繋がっていないか
-#     男性 https://lin.ee/VAjIUgc ／ 女性 https://lin.ee/8YFMCSD
-#     正典は .claude/rules/cta-line.md
+# 8b) 女性ゲストの予約はVIP月額会員の男性本人が公式LINEから行う
 LINE_MEN = 'lin.ee/VAjIUgc'
-LINE_LADIES = 'lin.ee/8YFMCSD'
 for p in pages:
     if p != 'ladies.html' and not p.startswith('learn-ladies-'):
         continue
     s = read(p)
-    n = s.count(LINE_MEN)
-    if n:
-        errs.append('%s 女性向けページに男性用LINEが%d件あります' % (p, n))
-    if LINE_LADIES not in s:
-        errs.append('%s 女性用LINEの導線がありません' % p)
+    if p == 'ladies.html' and LINE_MEN not in s:
+        errs.append('%s VIP会員向け公式LINEの導線がありません' % p)
 
 # 9) 女性の初回体験（通年¥980）に、個人差の注記が添えてあるか
 for p in pages:
