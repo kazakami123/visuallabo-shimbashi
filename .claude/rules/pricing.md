@@ -291,7 +291,7 @@ NGが出るとワークフローが失敗して通知が飛ぶ。
 | note | https://note.com/visuallabo_diet |
 | ホットペッパービューティー | http://b.hpr.jp/kr/hp/H000797603 |
 | 公式LINE（男性） | https://lin.ee/VAjIUgc |
-| 公式LINE（女性） | https://lin.ee/8YFMCSD |
+| 公式LINE（VIP会員からの女性同伴相談） | https://lin.ee/VAjIUgc |
 | PR TIMES | https://prtimes.jp/main/html/rd/p/000000003.000174536.html |
 
 `sameAs` は「この事業者＝これらのアカウント」を検索エンジンとAIに伝える項目。
