@@ -84,13 +84,13 @@ Googleは2024年から、検索順位を狙った大量生成コンテンツを�
 
 ---
 
-## お連れ様向けのコラム
+## 女性向けのコラム
 
-front matter に **`ladies: true`** と書くと、次の4か所がお連れ様向けに切り替わります。
+front matter に **`ladies: true`** と書くと、次の4か所が女性向けに切り替わります。
 
-- ナビのCTA → 「同伴のご相談」（女性用の公式LINEへ）
-- 末尾のCTA → 「同伴について相談する」＋個人差の注記
-- 画面下の追従バー → LINE相談と同伴相談の2本（**ホットペッパーを出さない**）
+- ナビのCTA → 「VIP同伴 ＋¥10,000」（女性はVIP月額会員の男性同伴・VIP ROOM限定）
+- 末尾のCTA → 「公式LINEで初回体験を予約する」＋個人差の注記
+- 画面下の追従バー → LINE相談とLINE予約の2本（**ホットペッパーを出さない**）
 - フッターの紹介文 → 「男性専用」を外した文面
 
 あわせて `camp: false` と `back_href: ladies.html` も指定してください。
@@ -99,14 +99,11 @@ front matter に **`ladies: true`** と書くと、次の4か所がお連れ様�
 camp: false
 ladies: true
 back_href: ladies.html
-back_label: お連れ様へのご案内
-tag: GUEST ／ 読みもの
-crumb_name: お連れ様へのご案内
+back_label: 女性のお客様へ
+tag: LADIES ／ 読みもの
+crumb_name: 女性のお客様へ
 crumb_url: ladies.html
 ```
-
-**女性単独のご予約・女性の初回体験 ¥980・LADIES DAY は書かないでください**
-（いずれも 2026-11-18 に廃止）。正典は `.claude/rules/operating-days.md`。
 
 ## キャンペーン帯
 

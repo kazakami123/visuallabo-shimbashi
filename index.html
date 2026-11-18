@@ -11,7 +11,7 @@
   一般会員: 月2回90分 ¥14,800／単発90分 ¥14,800（月2回＝単発1回分と同額が訴求軸）
   入会金: ¥16,500（体験当日入会で¥0・体験翌日から7日後までは半額¥8,250、特典には申込当日の支払い完了が必要）／退会後の再入会金 ¥16,500（休会からの復帰は不要）
   営業時間: 平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00／定休日：第2・第4日曜、年末年始、大型連休
-  営業体制: 全営業日が男性専用（2026-11-18 オーナー確定で曜日ごとの区分を廃止）。女性のご来店はVIP月額会員の男性のお連れ様として同じVIP ROOMで120分ご一緒に過ごす場合のみ（＋¥10,000・施術込み）
+  女性の利用条件: VIP月額会員の男性同伴・VIP ROOM限定／女性ゲスト1名／120分／＋10,000円（税込）／女性単独利用不可
   住所: 東京都港区新橋１丁目１４−８ VORT新橋1丁目 3F
   LINE: https://lin.ee/VAjIUgc
   予約導線: LINEのみ（HP予約枠は2026-08-09廃止）
@@ -42,7 +42,7 @@
  "@id": "https://visuallabo.com/#salon",
  "name": "VISUAL LABO 新橋店",
  "alternateName": "ビジュアルラボ 新橋店",
- "description": "新橋駅 徒歩3分の男性専用の会員制体型管理サロン。体型管理は、お腹から。高周波×HYPER EMSの自社開発マシンMystiCoreで、横になったままお腹まわりを中心にケアします。すべての営業日が男性専用です。",
+ "description": "新橋駅徒歩3分の男性専用・会員制体型管理サロン。女性はVIP月額会員の男性同伴・VIP ROOM限定で、120分＋10,000円（税込）です。",
  "url": "https://visuallabo.com/",
  "image": [
   "https://visuallabo.com/images/hyper-ems-diet.webp",
@@ -50,7 +50,7 @@
  ],
  "logo": "https://visuallabo.com/images/logo.png",
  "telephone": "+81-3-6205-4900",
- "priceRange": "¥2,980〜¥198,000",
+ "priceRange": "¥2,980〜¥159,800",
  "currenciesAccepted": "JPY",
  "paymentAccepted": "クレジットカード, 電子マネー, 現金",
  "sameAs": ["https://www.instagram.com/visuallabo_official/", "https://note.com/visuallabo_diet", "https://prtimes.jp/main/html/rd/p/000000003.000174536.html", "http://b.hpr.jp/kr/hp/H000797603"],
@@ -167,7 +167,7 @@
    ],
    "opens": "12:00",
    "closes": "21:00",
-   "description": "定休日：第2・第4日曜日、年末年始、大型連休。全営業日が男性専用です。女性のお客様は、VIP月額会員の男性のお連れ様として、同じVIP ROOMで120分ご一緒に過ごす場合にかぎりご来店いただけます（＋¥10,000・税込・施術を含む）"
+   "description": "新橋駅徒歩3分の男性専用・会員制体型管理サロン。女性はVIP月額会員の男性同伴・VIP ROOM限定で、120分＋10,000円（税込）です。"
   },
   {
    "@type": "OpeningHoursSpecification",
@@ -178,7 +178,7 @@
    ],
    "opens": "10:00",
    "closes": "18:00",
-   "description": "定休日：第2・第4日曜日、年末年始、大型連休。全営業日が男性専用です。女性のお客様は、VIP月額会員の男性のお連れ様として、同じVIP ROOMで120分ご一緒に過ごす場合にかぎりご来店いただけます（＋¥10,000・税込・施術を含む）"
+   "description": "新橋駅徒歩3分の男性専用・会員制体型管理サロン。女性はVIP月額会員の男性同伴・VIP ROOM限定で、120分＋10,000円（税込）です。"
   }
  ],
  "makesOffer": [
@@ -345,24 +345,29 @@ header.solid{background:rgba(17,17,17,.93);backdrop-filter:blur(14px)}
 .nav-cta{font-size:12.5px;font-weight:600;padding:10px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-d);white-space:nowrap;transition:.3s}
 .nav-cta:hover{background:var(--gold);color:#111}
 @media(max-width:1120px){.navlinks{display:none}}
-/* お連れ様同伴のご案内（#news-days） */
-.cmp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.cmp-c{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 14px;text-align:center}
-.cmp-c.on{border-color:var(--gold);background:#fdfbf7}
-.cmp-k{display:block;font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);margin-bottom:8px}
-.cmp-v{display:block;font-size:clamp(17px,3.4vw,22px);font-weight:700;letter-spacing:.01em;line-height:1.3;color:var(--ink)}
-.cmp-v small{font-size:12px;font-weight:400;color:var(--ink-mute);margin-left:2px}
-.cmp-s{display:block;font-size:11.5px;line-height:1.8;color:var(--ink-mute);margin-top:7px}
-.cmp-cond{margin:16px 0 0;padding:16px 18px;background:var(--paper);border:1px solid var(--gold);border-radius:12px;list-style:none}
-.cmp-cond li{font-size:13.5px;line-height:1.95;color:var(--ink-soft)}
-.cmp-cond li + li{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
-.cmp-cond b{color:var(--ink)}
-.cmp-note{margin:12px 0 0;font-size:12px;line-height:1.95;color:var(--ink-mute)}
-@media(max-width:560px){
-  .cmp-grid{grid-template-columns:1fr;gap:8px}
-  .cmp-c{text-align:left;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:14px}
-  .cmp-k{margin-bottom:0}
-  .cmp-s{width:100%;margin-top:5px}
+/* 営業区分の週表（#news-days） */
+.wk-row{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.wk-d{border-radius:10px;padding:14px 4px;text-align:center;border:1px solid var(--line);background:var(--paper)}
+.wk-day{display:block;font-size:clamp(13px,2.6vw,17px);font-weight:700;letter-spacing:.02em;line-height:1.3}
+.wk-lb{display:block;font-size:clamp(10px,1.9vw,12px);margin-top:6px;letter-spacing:.02em}
+.wk-men{background:var(--paper);color:var(--ink)}
+.wk-men .wk-lb{color:var(--ink-mute)}
+.wk-lad{background:#f3ece4;border-color:var(--gold);color:var(--gold-d)}
+.wk-lad .wk-lb{color:var(--gold-d)}
+.wk-uni{background:#1f1b16;border-color:#1f1b16;color:#f4efe6}
+.wk-uni .wk-lb{color:#d8cdb8}
+.wk-leg{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:12.5px;color:var(--ink-soft);line-height:1.9}
+.wk-leg span{display:inline-flex;align-items:center;gap:7px}
+.wk-leg b{font-family:'Futura','Century Gothic','Outfit','Noto Sans JP',sans-serif;font-size:11.5px;letter-spacing:.1em;color:var(--ink);margin-right:4px}
+.wk-sw{width:13px;height:13px;border-radius:4px;border:1px solid var(--line);flex:0 0 auto}
+.wk-next{margin:16px 0 0;font-size:clamp(13.5px,2.6vw,16px);line-height:1.95;color:var(--ink-soft);
+  background:var(--paper);border:1px solid var(--gold);border-radius:10px;padding:14px 16px}
+.wk-next b{color:var(--ink)}
+.wk-note{margin:12px 0 0;font-size:12px;line-height:1.95;color:var(--ink-mute)}
+@media(max-width:430px){
+  .wk-row{gap:4px}
+  .wk-d{padding:11px 2px;border-radius:8px}
+  .wk-leg{font-size:12px;gap:6px 14px}
 }
 
 /* ナビのCTAはスクロール枠（.navlinks）の外に出してある。常に見えるようにするため。
@@ -724,7 +729,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <div class="nav-r">
       <div class="navlinks">
         <a href="news.html"><span class="te">NEWS</span><span class="tj">お知らせ</span></a>
-        <a href="ladies.html"><span class="te">GUEST</span><span class="tj">お連れ様へ</span></a>
+        <a href="ladies.html"><span class="te">VIP GUEST</span><span class="tj">女性ゲストの方へ</span></a>
         <a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
         <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
         <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">ビフォーアフター</span></a>
@@ -744,7 +749,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
     <a class="hot" href="flow.html"><span class="te">FIRST TRIAL</span><span class="tj">初回体験</span></a>
     
     <a href="news.html"><span class="te">NEWS</span><span class="tj">お知らせ</span></a>
-        <a href="ladies.html"><span class="te">GUEST</span><span class="tj">お連れ様へ</span></a><a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
+        <a href="ladies.html"><span class="te">VIP GUEST</span><span class="tj">女性ゲストの方へ</span></a><a href="menu.html"><span class="te">MENU</span><span class="tj">メニュー</span></a>
     <a href="price.html"><span class="te">PRICE</span><span class="tj">料金</span></a>
     <a href="beforeafter.html"><span class="te">BEFORE&amp;AFTER</span><span class="tj">ビフォーアフター</span></a>
     <a href="rf.html"><span class="te">RF</span><span class="tj">高周波とは</span></a>
@@ -781,44 +786,17 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
   <div class="scr" aria-hidden="true"><i>SCROLL</i><u></u></div>
 </section>
 
-<!-- 2026-11-18: 営業体制の変更（曜日ごとの区分を廃止・全営業日が男性専用）とお連れ様同伴のご案内 -->
+<!-- 女性のご利用はVIP月額会員の男性同伴・VIP ROOM限定です -->
 <section class="sec" id="news-days" style="background:var(--wash);padding-top:clamp(36px,6vw,60px);padding-bottom:clamp(36px,6vw,60px)">
   <div class="wrap" style="max-width:780px">
-    <div class="kicker c rv">Information ｜ お知らせ</div>
-    <h2 class="rv" style="text-align:center;font-size:clamp(20px,3.4vw,27px);letter-spacing:.04em;line-height:1.7;margin:0 0 clamp(16px,3vw,24px)">営業体制の変更と、お連れ様同伴のご案内</h2>
-
+    <div class="kicker c rv">VIP COMPANION ｜ 女性ゲストのご案内</div>
+    <h2 class="rv" style="text-align:center;font-size:clamp(20px,3.4vw,27px);letter-spacing:.04em;line-height:1.7;margin:0 0 clamp(16px,3vw,24px)">大切な方と、同じVIP ROOMで過ごす120分。</h2>
     <div class="rv" style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,4vw,30px)">
-      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0 0 14px"><b style="color:var(--ink)">2026年11月18日より、曜日ごとの営業区分を廃止しました。</b>LADIES DAY（女性専用）とUNISEX DAY（男女共通）はいずれも取りやめ、<b style="color:var(--ink)">全営業日が男性専用</b>に戻ります。</p>
-      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0 0 14px">11月15日以降、一部の日曜日・祝日を男女共通として、また12月3日（木）より毎週木曜日を女性専用としてご案内しておりましたが、いずれも取りやめます。<b style="color:var(--ink)">女性のお客様のみでのご予約は承っておりません。</b>ご案内を楽しみにしてくださっていた方には、お詫び申し上げます。</p>
-      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0">男性のお客様のご利用は、これまでどおりすべての営業日で変わりません。<b style="color:var(--ink)">女性のお客様には、VIP ROOMのお連れ様同伴という形でご来店いただけます。</b></p>
+      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0 0 14px">女性のお客様は、<b style="color:var(--ink)">VIP月額会員の男性ご本人が予約・来店・同伴する場合のみ</b>ご利用いただけます。完全個室のVIP ROOMで、お二人一緒に120分お過ごしいただけます。</p>
+      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0 0 14px"><b style="color:var(--ink)">女性ゲスト1名 ＋¥10,000（税込）</b>。VIP月額会員の通常利用へ、単発で追加できます。</p>
+      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0">女性単独での予約・来店・入会は承っていません。曜日限定のレディースデーは設けていません。</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><a class="btn btn-line" href="https://lin.ee/VAjIUgc" target="_blank" rel="noopener">VIP同伴利用を相談する</a><a class="btn btn-out" href="ladies.html">女性ゲストのご案内</a></div>
     </div>
-
-    <div class="rv" style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,4vw,30px);margin-top:14px">
-      <div style="font-size:13px;font-weight:600;color:var(--ink);letter-spacing:.03em;margin-bottom:12px">お連れ様同伴について</div>
-      <p style="font-size:14px;line-height:2.1;color:var(--ink-soft);margin:0"><b style="color:var(--ink)">VIP月額会員の方は、お連れ様とご一緒にVIP ROOMをご利用いただけます。</b>貸切のお部屋で120分。お連れ様も施術をお受けいただけます。追加の料金は <b style="color:var(--ink)">＋¥10,000（税込）</b> です。</p>
-
-      <div class="cmp-grid">
-        <div class="cmp-c on"><span class="cmp-k">PRICE</span><span class="cmp-v">＋¥10,000<small>税込</small></span><span class="cmp-s">お連れ様お一人さまあたり</span></div>
-        <div class="cmp-c"><span class="cmp-k">TIME</span><span class="cmp-v">120<small>分</small></span><span class="cmp-s">同じVIP ROOMでご一緒に</span></div>
-        <div class="cmp-c"><span class="cmp-k">CARE</span><span class="cmp-v">施術込み</span><span class="cmp-s">お連れ様も施術を受けられます</span></div>
-      </div>
-
-      <ul class="cmp-cond">
-        <li><b>ご利用いただけるのは、VIP月額会員の方です。</b>月額の回数でご利用の回でも、単発でご利用の回でも、同じ ＋¥10,000 で承ります。</li>
-        <li><b>120分、同じVIP ROOMでご一緒に過ごしていただきます。</b>別のお部屋のご用意はありません。お二人同時の施術は1室にスタッフ2名でご対応し、室内にはパーテーションをご用意しています。</li>
-        <li><b>お連れ様は男女どちらも承ります。</b>女性のお客様のみでのご予約、女性お一人での初回体験は承っておりません。</li>
-        <li><b>ご予約時の特記欄にご記入のうえ、7日前までにお申し込みください。</b>スタッフの人員を確保するためです。7日前を切っている場合は、お電話または公式LINEでご相談ください。</li>
-      </ul>
-
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
-        <a class="btn btn-gold" href="ladies.html" data-cta="news_days_ladies">お連れ様へのご案内を見る</a>
-        <a class="btn btn-out" href="vip.html" data-cta="news_days_vip">VIP ROOMについて</a>
-        <a class="btn btn-line" href="https://lin.ee/8YFMCSD" target="_blank" rel="noopener" data-cta="news_days_line_ladies">同伴のご相談（公式LINE）</a>
-      </div>
-      <p class="cmp-note">※ お連れ様の施術は、お腹まわりに2部位まで加えた120分のコースです。女性のお連れ様は二の腕・ヒップ・太もも（前・内・裏・外）もお選びいただけます。※ 効果・感じ方には個人差があります。</p>
-    </div>
-
-    <p class="note rv" style="margin-top:14px;text-align:left">※ 営業時間は平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00 です。定休日（毎月第2・第4日曜日／年末年始／大型連休）は変わりません。最新の営業日は<a href="http://b.hpr.jp/kr/hp/H000797603" target="_blank" rel="noopener" style="border-bottom:1px solid var(--gold-d)">ホットペッパービューティー</a>とGoogleマップでもご確認いただけます。</p>
   </div>
 </section>
 
@@ -1040,7 +1018,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">安心して受けていただくために、<em>お約束すること</em>。</h2>
     </div>
     <div class="pgrid rv">
-      <div class="pcard"><span class="n">01</span><h3>お客様は、男性だけ</h3><p>すべての営業日が男性専用です。ご予約は男性のお客様のみ。カウンセリングから施術まで完全個室ですので、ほかのお客様と顔を合わせることもありません。エステ特有の入りにくさは、ここにはありません。VIP月額会員の方は、<a href="#news-days" style="border-bottom:1px solid var(--gold-d)">お連れ様とご一緒にVIP ROOMをご利用いただけます</a>。</p></div>
+      <div class="pcard"><span class="n">01</span><h3>男性向け・完全個室</h3><p>女性はVIP月額会員の男性同伴・VIP ROOM限定です。女性ゲスト1名を、120分の同伴利用に単発＋¥10,000（税込）でご案内します。女性単独の予約・来店は承っていません。</p></div>
       <div class="pcard"><span class="n">02</span><h3>すべて、完全個室</h3><p>カウンセリングから施術まで個室です。人目を気にせず、体型の悩みもそのまま話していただけます。</p></div>
       <div class="pcard"><span class="n">03</span><h3>手ぶらで、仕事帰りに</h3><p>お着替えとアメニティはご用意しています。新橋駅から徒歩3分、夜は21時まで。スーツのままお越しください。</p></div>
       <div class="pcard"><span class="n">04</span><h3>無理な勧誘は、しません</h3><p>その場でのご契約を無理にお願いすることはありません。料金・契約期間・退会条件は、ご契約の前にすべてご確認いただけます。</p></div>
@@ -1134,7 +1112,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <dt>Tel</dt><dd><a href="tel:0362054900" data-cta="access_tel" style="border-bottom:1px solid currentColor">03-6205-4900</a></dd>
         <dt>Open</dt><dd>平日 12:00 — 21:00<br>土日祝 10:00 — 18:00</dd>
         <dt>定休日</dt><dd>毎月第2・第4日曜日／年末年始／大型連休</dd>
-        <dt>ご利用いただける方</dt><dd>全営業日が男性専用です。女性のお客様は、VIP月額会員の男性のお連れ様として、同じVIP ROOMで120分ご一緒に過ごす場合にかぎりご来店いただけます（＋¥10,000・税込）。<a href="#news-days" style="border-bottom:1px solid var(--gold-d)">お連れ様同伴のご案内 →</a></dd>
+        <dt>女性のご利用</dt><dd>VIP月額会員の男性同伴・VIP ROOM限定<br>女性ゲスト1名／120分／＋¥10,000（税込）<br>女性単独の予約・来店は不可</dd>
         <dt>Station</dt><dd>JR「新橋駅」日比谷口 徒歩3分・地下鉄 徒歩3分<br>銀座駅から東京メトロ銀座線で1駅（約0.9km）<br>有楽町駅からJR山手線・京浜東北線で1駅<br>汐留・内幸町・虎ノ門からも徒歩圏です<br><a href="area-ginza.html" style="border-bottom:1px solid var(--gold-d)">銀座・有楽町からお越しの方へ →</a></dd>
       </dl>
       <div>
@@ -1189,7 +1167,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
       <h2 class="tt">はじめての方の、<em>よくあるご質問</em>。</h2>
     </div>
     <div class="faq-list rv">
-      <details><summary>男性専用・会員制ですか？</summary><div class="a">はい。すべての営業日が男性専用で、ご予約は男性のお客様のみ承っております。女性のお客様のみでのご利用はお受けしていません。VIP月額会員の方は、お連れ様とご一緒にVIP ROOMをご利用いただけます（＋¥10,000・税込・120分・施術を含む）。お連れ様は男女どちらも承り、120分を同じお部屋でご一緒にお過ごしいただきます。会員制ですが、ご入会前に初回体験をご利用いただけます。</div></details>
+      <details><summary>男性専用・会員制ですか？</summary><div class="a">男性専用・会員制の体型管理サロンです。女性のお客様は、VIP月額会員の男性ご本人が同伴し、完全個室のVIP ROOMを120分一緒に利用する場合に限り、単発＋10,000円（税込）でご案内します。女性単独での予約・来店はできません。ご入会前に初回体験をご利用いただけます。</div></details>
       <details><summary>無理な勧誘はありませんか？</summary><div class="a">ありません。体験後にプランのご案内はしますが、その場でのご入会を強く勧めることはありません。</div></details>
       <details><summary>運動や食事制限は必要ですか？</summary><div class="a">施術はベッドに横になったまま受けられます。厳しい食事制限の指導もありません。生活を大きく変えずに始められるのがVISUAL LABOの特長です。</div></details>
       <details><summary>どれくらいの頻度で通えばいいですか？</summary><div class="a">まずは月1回・60分から始められます。しっかりケアしたい方は月2回・90分がおすすめ。毎週通う必要はないので、忙しい方でも続けやすい設計です。</div></details>
@@ -1259,7 +1237,7 @@ var t0=Date.now();document.addEventListener('DOMContentLoaded',function(){setTim
         <a href="news.html">お知らせ</a>
         <a href="menu.html">メニュー</a>
         <a href="price.html">料金</a>
-        <a href="ladies.html">お連れ様へのご案内</a>
+        <a href="ladies.html">女性ゲストの方へ</a>
         <a href="beforeafter.html">ビフォーアフター</a>
         <a href="machine.html">MystiCore</a>
         <a href="flow.html">初回体験の流れ</a>

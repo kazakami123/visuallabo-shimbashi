@@ -13,7 +13,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
 ## 先に読むファイル（ここが正典です）
 
 - `CLAUDE.md` … 作業ルール全般
-- `.claude/rules/operating-days.md` … 営業体制とお連れ様同伴の正典（**2026-11-18 に曜日ごとの区分は廃止**）
+- `.claude/rules/operating-days.md` … 営業日と女性ゲスト利用条件の正典
 - `.claude/rules/pricing.md` … 価格の正典
 - `compliance.yaml` と `.claude/compliance/blocklist.txt` … 使ってはいけない語
 
@@ -35,7 +35,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
 | 1/10・1/24 | 営業（通常は定休の第2・第4日曜） |
 | 1/17・1/31 | 営業（通常の日曜） |
 
-- **日曜日も男性専用です**（2026-11-18 に LADIES DAY・UNISEX DAY を廃止）。区分の名前を書かないでください
+- **曜日による男女区分は設けない。** 女性はVIP月額会員の男性同伴・VIP ROOM限定です
 - **営業時間は変えません。** 平日 12:00 — 21:00 ／ 土日祝 10:00 — 18:00
 - **1月3日は日曜ですが休業です。** 「1月は毎週日曜日営業」とだけ書かないでください
 
@@ -46,7 +46,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
    **画面テキストとFAQPage構造化データの2箇所に同じ文が入っています。必ず両方そろえてください。**
 2. `index.html` … `#news-days` の曜日表の下にある注記
 3. `news.html` … お知らせの記事。手順は `NEWS-HOWTO.md`
-4. `llms.txt` … 営業体制の行と定休日の行
+4. `llms.txt` … 営業区分の行と定休日の行
 5. `.claude/rules/operating-days.md` … 正典
 6. `drafts/area-ginza.md` … **`area-ginza.html` はこの原稿から生成されます。** HTMLだけ直すと、次に誰かが原稿を足したときに巻き戻ります
 
@@ -58,9 +58,7 @@ VISUAL LABO 新橋店の公式サイト（静的HTML・GitHub Pages）に、営�
 - **効果を言い切らない。** 「※効果・感じ方には個人差があります」を近くに置く
 - 封印語を使わない（`.claude/compliance/blocklist.txt`）
 - **容姿を評価する言い方をしない**
-- **LADIES DAY・UNISEX DAY・MEN'S DAY と書かない**（2026-11-18 に廃止した呼び方）。「すべての営業日が男性専用」と書く
-- **女性の初回体験 ¥980 と書かない**（2026-11-18 に廃止）
-- 「女性のお客様がいらっしゃることは一切ありません」と書かない。お連れ様同伴があるため
+- 無条件に「お客様は男性のみ」と書かない。必ず「MEN'S DAY（男性専用／月・火・水・金・土）は」を付ける
 - **モバイルでは共通の `<br>` が非表示**になります（`p br,li br,dd br,.fa br,.a br{display:none}`）。改行に頼った組版をしないでください
 - `index.html` だけ `style.css` を読み込まず、CSSを全部インラインで持っています。CSSを変えるときは複数箇所
 - 生成物である `learn-*.html` を直接編集しないでください。原稿は `drafts/*.md`、変換は `python3 tools/column.py`
