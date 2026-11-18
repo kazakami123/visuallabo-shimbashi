@@ -15,26 +15,34 @@ paths:
 | | URL |
 |---|---|
 | **男性のお客様** | `https://lin.ee/VAjIUgc` |
-| **女性のお客様** | `https://lin.ee/8YFMCSD` |
+| **女性のお客様（お連れ様のご相談）** | `https://lin.ee/8YFMCSD` |
+
+**2026-11-18 に女性用LINEの役割が変わった。** 女性単独のご予約は廃止したので、
+女性用LINEは**お連れ様同伴のご相談窓口**。ご予約そのものはVIP月額会員の男性が取る。
+「女性のご予約は公式LINEのみ」とは書かない。
 
 **男性向けページのCTAは男性用に、女性向けページのCTAは女性用に繋ぐ。**
 新しくCTAを作るときも、既存のCTAを直すときも、どちらのページかを必ず確認する。
 
-### 女性用に繋ぐ範囲（2026-11-12 オーナー指摘で修正）
+### 女性用に繋ぐ範囲（2026-11-18 更新）
 
 - `ladies.html` のすべてのLINEリンク（ナビCTA・追従バー2本・末尾CTA・
   フッターの連絡先とRESERVE列・本文）
-- 女性向けコラム `learn-ladies-*.html` のすべてのLINEリンク（同上）
-- `index.html` の `#news-days` にある「女性のご予約（公式LINE）」ボタン
+- お連れ様向けコラム `learn-ladies-*.html` のすべてのLINEリンク（同上）
+- `index.html` の `#news-days` にある「お連れ様同伴のご相談」ボタン
   （`data-cta="news_days_line_ladies"`）
+
+**ボタンの文言は「ご予約」ではなく「ご相談」。** 女性がご自身で予約を取ることはない。
 
 コラムは `tools/column-template.html` の `<!--LADIES-->` ブロックが持っている。
 front matter の `ladies: true` で切り替わる。**男性向けページのLINEは変えない。**
 
-### 共通ページの文章内リンク（2026-11-12 追加）
+### 共通ページの文章内リンク（2026-11-18 更新）
 
 `faq.html` / `flow.html` / `guide.html` / `price.html` / `news.html` / `area-ginza.html` の
-「女性のお客様のご予約は公式LINEのみで承ります」の**「公式LINE」を女性用URLのリンク**にしてある。
+お連れ様同伴の案内文のなかの**「公式LINE」を女性用URLのリンク**にしてある。
+**文言は「女性のお客様のご予約は公式LINEのみ」から、同伴のご相談窓口の案内に
+書き換えた**（2026-11-18。女性単独のご予約を廃止したため）。
 `data-cta` は `faq_ladies_line` / `flow_ladies_line` / `guide_ladies_line` /
 `price_ladies_line` / `news_ladies_line`（area-ginza は原稿 `drafts/area-ginza.md` 側）。
 
@@ -94,8 +102,8 @@ http://b.hpr.jp/kr/hp/H000797603
   - 対象外は2種類だけ。リダイレクト用のスタブ11本（care-ninoude 等・即転送するため）と、
     社内資料の chapter1_viewer
   - corporate.html は法人向けなので3本目は「導入について相談する」。ホットペッパーは置かない
-  - **ladies.html と女性向けコラム（`learn-ladies-*.html`）は公式LINEのみの2本**（`.bbar`）。
-    女性のご予約は公式LINEのみなので、ホットペッパーの導線を置かない。
+  - **ladies.html とお連れ様向けコラム（`learn-ladies-*.html`）は公式LINEのみの2本**（`.bbar`）。
+    お連れ様のご相談は公式LINEで承るので、ホットペッパーの導線を置かない。
     コラムは `drafts/*.md` の front matter に `ladies: true` と書くと切り替わる
     （ナビCTA・末尾のCTA・追従バー・フッターの紹介文の4か所）
   - price.html はモバイルだけ `.bl` `.bh` を隠し、予約1本に絞っている
