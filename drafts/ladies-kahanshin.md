@@ -17,7 +17,7 @@ crumb_url: ladies.html
 related:
   learn-lymph.html|LEARN|リンパとは|流れのしくみを、もう少し詳しく。
   ladies.html|VIP GUEST|女性ゲストの方へ|VIP会員の同伴条件と120分のご案内。
-  learn-ladies-ninoude.html|LADIES|腕は使っているのに|二の腕が使われにくい理由。
+  learn-ladies-ninoude.html|VIP GUEST|腕は使っているのに|二の腕が使われにくい理由。
 ---
 
 @はじめに

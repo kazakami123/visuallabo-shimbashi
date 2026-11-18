@@ -15,7 +15,7 @@ tag: VIP GUEST ／ 読みもの
 crumb_name: 女性ゲストの方へ
 crumb_url: ladies.html
 related:
-  learn-ladies-kahanshin.html|LADIES|夕方、脚が重い|下半身との向き合い方。
+  learn-ladies-kahanshin.html|VIP GUEST|夕方、脚が重い|下半身との向き合い方。
   care-katakubi.html|CARE|肩・首・肩甲骨|こりと巻き肩のケア。
   ladies.html|VIP GUEST|女性ゲストの方へ|VIP会員の同伴条件と120分のご案内。
 ---

@@ -96,10 +96,7 @@ CANON_OK = {'index.html': '', 'lp-ladies-hie.html': '', 'lp-ladies-kubire.html':
             'learn-cold.html': 'learn-onkatsu.html',
             'learn-mukumi.html': 'learn-lymph.html',
             'learn-circulation.html': 'learn-lymph.html',
-            'learn-posture.html': 'care-soriko.html',
-            'learn-ladies-hajimete.html': 'ladies.html',
-            'learn-ladies-kahanshin.html': 'ladies.html',
-            'learn-ladies-ninoude.html': 'ladies.html'}
+            'learn-posture.html': 'care-soriko.html'}
 for p in pages:
     if not p.endswith('.html') or p.startswith('tools/'):
         continue
@@ -126,19 +123,12 @@ for p in pages:
             errs.append('%s 旧表記「%s」が残っています' % (p, d))
 
 # 6) 本文に旧価格¥980（帯・CTA以外）が出ていないか
-LADIES_PAGES = ()
 for p in pages:
-    if p in LADIES_PAGES or p.startswith('learn-ladies-'):
-        continue
     s = read(p)
     for m in re.finditer(r'(?<![0-9,])¥980', s):
         ctx = s[max(0, m.start() - 260):m.end() + 160]
         if not any(k in ctx for k in ('camp-', 'bbar_', 'br-full', 'br-mini',
                                       'setAttribute', 'campBand', 'pt-camp',
-                                      # 女性の初回体験¥980は通年価格。キャンペーンではないので対象外
-                                      '痩身体験', '女性のお客様の初回体験', '初回体験（女性）',
-                                      '女性のお客様', 'ladies',
-                                      # 構造化データの価格帯（下限が女性の¥980）
                                       'priceRange',
                                       # お知らせページで「終了しました」と書いている分も対象外
                                       '終了しました', '終了いたしました')):
@@ -147,8 +137,9 @@ for p in pages:
 # 7) 女性ゲスト条件と矛盾する旧表記
 for p in pages:
     s = read(p)
-    for d in ('女性専用DAY', '男女共通DAY', '女性の初回体験 ¥980',
-              'お腹まわり痩身体験 ¥980', '女性単独で予約できます'):
+    for d in ('女性専用DAY', '男女共通DAY', 'MEN\'S DAY', 'LADIES DAY', 'UNISEX DAY',
+              '女性の初回体験 ¥980', 'お腹まわり痩身体験 ¥980',
+              '女性単独で予約できます', 'lin.ee/8YFMCSD'):
         if d in s:
             errs.append('%s 女性ゲスト条件と矛盾する「%s」があります' % (p, d))
 
@@ -169,11 +160,14 @@ for p in pages:
     if p == 'ladies.html' and LINE_MEN not in s:
         errs.append('%s VIP会員向け公式LINEの導線がありません' % p)
 
-# 9) 女性の初回体験（通年¥980）に、個人差の注記が添えてあるか
-for p in pages:
+# 9) 女性ゲスト向けページに4条件がそろっているか
+for p in ('ladies.html', 'vip.html'):
+    if not os.path.exists(p):
+        continue
     s = read(p)
-    if '痩身体験' in s and '個人差' not in s:
-        errs.append('%s 痩身体験の近くに個人差の注記がありません' % p)
+    for mark in ('VIP月額会員', '120分', '10,000', '女性単独'):
+        if mark not in s:
+            errs.append('%s 女性ゲスト条件「%s」がありません' % (p, mark))
 
 for w in sorted(set(warns)):
     print('WARN  ' + w)

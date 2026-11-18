@@ -100,7 +100,7 @@ camp: false
 ladies: true
 back_href: ladies.html
 back_label: 女性のお客様へ
-tag: LADIES ／ 読みもの
+tag: VIP GUEST ／ 読みもの
 crumb_name: 女性のお客様へ
 crumb_url: ladies.html
 ```
