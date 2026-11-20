@@ -37,6 +37,7 @@ VISUAL LABO 新橋店サイト（https://visuallabo.com/）の作業引き継ぎ
 | `DESIGN.md` / `TYPOGRAPHY.md` | デザインシステム |
 | `SETUP-SEO.md` | GA4・Search Consoleの設定、`cta` の変更履歴 |
 | `HOTPEPPER-FIX.md` / `GOOGLE-FIX.md` / `SNS-FIX.md` | 外部チャネルに出す内容。**貼れる文面つき** |
+| `SQUARE-ITEMS.md` | Squareに登録する品目と価格。デポジットの消費記録に使う |
 | `AUDIT-CHANNELS.md` | 全チャネルの掲載内容をそろえる点検手順 |
 
 `compliance.yaml` と `.claude/compliance/blocklist.txt` に禁止語があります。
